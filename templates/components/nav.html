@@ -1,19 +1,31 @@
-<nav class="main-nav">
+<nav class="nav">
     <div class="container">
-        <div class="nav-brand">
-            <a href="/">Keith Williams</a>
+        <div class="nav-content">
+            <a href="/" class="logo">
+                <div class="logo-text">
+                    <span class="logo-main">Everyday AI</span>
+                    <span class="logo-sub">WITH KEITH WILLIAMS</span>
+                </div>
+            </a>
+            <div class="nav-links">
+                {% for item in navigation %}
+                    {% if not item.highlight %}
+                    <a href="{{ item.url }}" 
+                       {% if item.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+                        {{ item.title }}
+                    </a>
+                    {% endif %}
+                {% endfor %}
+                {% for item in navigation %}
+                    {% if item.highlight %}
+                    <a href="{{ item.url }}" 
+                       class="cta-button"
+                       {% if item.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+                        {{ item.title }}
+                    </a>
+                    {% endif %}
+                {% endfor %}
+            </div>
         </div>
-        
-        <ul class="nav-menu">
-            {% for item in navigation %}
-            <li>
-                <a href="{{ item.url }}" 
-                   {% if item.external %}target="_blank" rel="noopener noreferrer"{% endif %}
-                   {% if item.highlight %}class="nav-highlight"{% endif %}>
-                    {{ item.title }}
-                </a>
-            </li>
-            {% endfor %}
-        </ul>
     </div>
 </nav>
