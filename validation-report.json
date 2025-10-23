@@ -1,0 +1,92 @@
+{
+  "timestamp": "2025-10-23T18:37:38.397891",
+  "results": [
+    {
+      "name": "HTML: index.html",
+      "passed": true,
+      "error_count": 0,
+      "warning_count": 0,
+      "errors": [],
+      "warnings": [],
+      "info": [
+        "Valid HTML5 structure",
+        "No images found",
+        "Total links: 21",
+        "Heading structure: h1 -> h2 -> h2 -> h2 -> h2",
+        "Title: Keith Williams | Fourth Turning + AI Era"
+      ]
+    },
+    {
+      "name": "HTML: about.html",
+      "passed": true,
+      "error_count": 0,
+      "warning_count": 2,
+      "errors": [],
+      "warnings": [
+        {
+          "message": "Title too short (20 chars, recommended 30-60)",
+          "location": null
+        },
+        {
+          "message": "Incomplete Open Graph tags (missing title, description, or image)",
+          "location": null
+        }
+      ],
+      "info": [
+        "Valid HTML5 structure",
+        "No images found",
+        "Total links: 19",
+        "Heading structure: h1 -> h2 -> h2 -> h2 -> h2",
+        "Title: About Keith Williams"
+      ]
+    },
+    {
+      "name": "HTML: contact.html",
+      "passed": true,
+      "error_count": 0,
+      "warning_count": 3,
+      "errors": [],
+      "warnings": [
+        {
+          "message": "Form input missing associated label: email",
+          "location": null
+        },
+        {
+          "message": "Title too short (22 chars, recommended 30-60)",
+          "location": null
+        },
+        {
+          "message": "Incomplete Open Graph tags (missing title, description, or image)",
+          "location": null
+        }
+      ],
+      "info": [
+        "Valid HTML5 structure",
+        "No images found",
+        "Total links: 19",
+        "Heading structure: h1 -> h2 -> h2 -> h2 -> h3",
+        "Title: Contact Keith Williams"
+      ]
+    },
+    {
+      "name": "CSS: styles.css",
+      "passed": true,
+      "error_count": 0,
+      "warning_count": 0,
+      "errors": [],
+      "warnings": [],
+      "info": [
+        "Total CSS rules: 430",
+        "Unique colors used: 24",
+        "File size: 62.97 KB"
+      ]
+    }
+  ],
+  "summary": {
+    "total_tests": 4,
+    "passed": 4,
+    "failed": 0,
+    "total_errors": 0,
+    "total_warnings": 5
+  }
+}

@@ -13,19 +13,19 @@ The best way to connect is through our community platforms:
 
 ### Discord Community
 Join our active community discussing the Fourth Turning, AI, and educational transformation.  
-[Join Discord →](https://discord.gg/FsAbagAEbg)
+<a href="https://discord.gg/FsAbagAEbg" target="_blank" rel="noopener noreferrer">Join Discord →</a>
 
 ### LinkedIn
 Connect with Keith and follow daily insights on navigating civilizational transition.  
-[Connect on LinkedIn →](https://www.linkedin.com/in/keithwilliams5/)
+<a href="https://www.linkedin.com/in/keithwilliams5/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn →</a>
 
 ### YouTube
 Watch full town halls and talk recordings.  
-[Subscribe on YouTube →](https://www.youtube.com/@EAIKW)
+<a href="https://www.youtube.com/@EAIKW" target="_blank" rel="noopener noreferrer">Subscribe on YouTube →</a>
 
 ### GitHub
 Explore open-source projects and production AI systems.  
-[Follow on GitHub →](https://github.com/kaw393939)
+<a href="https://github.com/kaw393939" target="_blank" rel="noopener noreferrer">Follow on GitHub →</a>
 
 ---
 

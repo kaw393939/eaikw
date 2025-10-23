@@ -1,0 +1,36 @@
+# Network Intelligence Crawler Requirements
+
+# Core dependencies
+requests==2.31.0
+beautifulsoup4==4.12.3
+lxml==5.1.0
+pandas==2.2.0
+
+# LinkedIn/Web scraping (respecting rate limits)
+selenium==4.16.0
+webdriver-manager==4.0.1
+
+# GitHub API
+PyGithub==2.1.1
+
+# Data storage
+# sqlite3 is built-in to Python, no need to install
+
+# Rate limiting and retry
+ratelimit==2.2.1
+backoff==2.2.1
+
+# Data export
+openpyxl==3.1.2  # For Excel export
+
+# Environment variables
+python-dotenv==1.0.0
+
+# Progress bars
+tqdm==4.66.1
+
+# Data validation
+pydantic==2.5.3
+
+# OpenAI for enrichment (optional)
+openai==1.7.1

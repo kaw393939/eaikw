@@ -1,0 +1,173 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  quality-gates:
+    runs-on: ubuntu-latest
+    name: Quality Gates
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          npm install -g stylelint htmlhint
+
+      - name: Validate YAML files
+        run: |
+          python3 -c "
+          import yaml
+          import sys
+          from pathlib import Path
+          
+          errors = []
+          for yaml_file in Path('content').rglob('*.yaml'):
+              try:
+                  with open(yaml_file) as f:
+                      yaml.safe_load(f)
+                  print(f'✓ {yaml_file}')
+              except Exception as e:
+                  errors.append(f'✗ {yaml_file}: {e}')
+          
+          if errors:
+              print('\n'.join(errors))
+              sys.exit(1)
+          "
+
+      - name: Check for duplicate code
+        run: |
+          python3 -c "
+          import sys
+          from pathlib import Path
+          
+          # Check navigation.yaml for duplicates
+          nav_file = Path('content/data/navigation.yaml')
+          if nav_file.exists():
+              import yaml
+              with open(nav_file) as f:
+                  data = yaml.safe_load(f)
+              
+              if 'navigation' in data:
+                  nav_items = data['navigation']
+                  seen = {}
+                  duplicates = []
+                  
+                  for item in nav_items:
+                      key = (item.get('title'), item.get('url'))
+                      if key in seen:
+                          duplicates.append(f\"Duplicate nav item: {item.get('title')} -> {item.get('url')}\")
+                      seen[key] = True
+                  
+                  if duplicates:
+                      print('\n'.join(duplicates))
+                      sys.exit(1)
+                  print('✓ No duplicate navigation items')
+          "
+
+      - name: Lint CSS
+        run: |
+          if [ -f "static/css/styles.css" ]; then
+            stylelint "static/css/*.css" --config .stylelintrc.json || true
+            echo "✓ CSS linting complete"
+          fi
+
+      - name: Run build with validation
+        run: |
+          python3 build.py
+          
+      - name: Validate HTML output
+        run: |
+          if [ -d "docs" ]; then
+            htmlhint docs/*.html --config .htmlhintrc || true
+            echo "✓ HTML validation complete"
+          fi
+
+      - name: Check accessibility
+        run: |
+          python3 -c "
+          from pathlib import Path
+          import re
+          
+          issues = []
+          for html_file in Path('docs').glob('*.html'):
+              content = html_file.read_text()
+              
+              # Check for alt attributes on images
+              imgs = re.findall(r'<img[^>]*>', content)
+              for img in imgs:
+                  if 'alt=' not in img:
+                      issues.append(f'{html_file.name}: Image missing alt attribute')
+              
+              # Check for skip link
+              if 'skip-link' not in content and 'skip to content' not in content.lower():
+                  issues.append(f'{html_file.name}: Missing skip to content link')
+              
+              # Check for lang attribute
+              if '<html' in content and 'lang=' not in content[:200]:
+                  issues.append(f'{html_file.name}: Missing lang attribute on html tag')
+          
+          if issues:
+              print('⚠️  Accessibility issues found:')
+              print('\n'.join(issues))
+          else:
+              print('✓ Basic accessibility checks passed')
+          "
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-build
+          path: docs/
+          retention-days: 1
+
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    needs: quality-gates
+    runs-on: ubuntu-latest
+    name: Deploy to GitHub Pages
+    
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: site-build
+          path: docs/
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact for Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

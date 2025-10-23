@@ -1,0 +1,34 @@
+{
+  "messages": [
+    {
+      "type": "error",
+      "lastLine": 142,
+      "lastColumn": 108,
+      "firstColumn": 25,
+      "message": "Bad value “mailto:kwilliam@njit.edu?subject=RSVP: AI Town Hall” for attribute “href” on element “a”: Illegal character in query: space is not allowed.",
+      "extract": "          <a href=\"mailto:kwilliam@njit.edu?subject=RSVP: AI Town Hall\" class=\"btn-secondary\">Email ",
+      "hiliteStart": 10,
+      "hiliteLength": 84
+    },
+    {
+      "type": "error",
+      "lastLine": 575,
+      "lastColumn": 9,
+      "message": "Saw “<!--” within a comment. Probable cause: Nested comment (not allowed).",
+      "extract": "tion>\n\n    <!-- Credibility - ",
+      "hiliteStart": 15,
+      "hiliteLength": 1
+    },
+    {
+      "type": "info",
+      "lastLine": 575,
+      "lastColumn": 9,
+      "subType": "warning",
+      "message": "The document is not mappable to XML 1.0 due to two consecutive hyphens in a comment.",
+      "extract": "tion>\n\n    <!-- Credibility - ",
+      "hiliteStart": 15,
+      "hiliteLength": 1
+    }
+  ],
+  "language": "en"
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Everyone builds RAG POCs. Few ship them to production. Here's what actually matters: chunk size, retrieval strategy, and cost control.">
+    <title>Why RAG Systems Fail in Production - Keith Williams</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="../index.html" class="logo">Keith Williams</a>
+                <div class="nav-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../about.html">About</a>
+                    <a href="../system.html">The System</a>
+                    <a href="../blog.html">Blog</a>
+                    <a href="../index.html#contact" class="cta-button">Work With Me</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <article style="max-width: 800px; margin: 0 auto; padding: 5rem 2rem;">
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <span style="color: var(--primary); font-weight: 600; font-size: 0.95rem;">COMING SOON</span>
+            <h1 style="font-size: 2.5rem; color: var(--secondary); margin: 1rem 0; line-height: 1.2;">
+                Why RAG Systems Fail in Production<br>
+                <span style="font-size: 1.5rem; color: var(--gray-600); font-weight: 400;">(And How to Fix Them)</span>
+            </h1>
+            <p style="color: var(--gray-600);">A guide from someone who's actually shipped them</p>
+        </div>
+
+        <div style="background: var(--gray-100); padding: 2rem; border-radius: var(--radius); margin-bottom: 3rem; border-left: 4px solid var(--primary);">
+            <p style="margin: 0; line-height: 1.7; color: var(--gray-700);">
+                <strong>This post is coming soon.</strong> I'm writing it based on real production experience—not tutorials or blog theory. 
+                Topics covered: chunk sizing strategies, retrieval optimization, cost control patterns, hybrid search approaches, 
+                and the mistakes I see teams make over and over.
+            </p>
+        </div>
+
+        <h2 style="font-size: 1.75rem; color: var(--secondary); margin: 2rem 0 1rem;">What You'll Learn</h2>
+        
+        <ul style="line-height: 2; color: var(--gray-700); margin-bottom: 2rem;">
+            <li><strong>Why chunk size matters more than you think</strong> - The math behind retrieval quality</li>
+            <li><strong>Hybrid search patterns</strong> - When to use semantic search, keyword search, or both</li>
+            <li><strong>Cost optimization</strong> - How to avoid $10K+ monthly embedding bills</li>
+            <li><strong>Retrieval strategies</strong> - Dense retrieval, re-ranking, query expansion techniques</li>
+            <li><strong>Production gotchas</strong> - The bugs that only show up at scale</li>
+            <li><strong>Knowledge graph + vector hybrid</strong> - When you need both (and how to architect it)</li>
+        </ul>
+
+        <h2 style="font-size: 1.75rem; color: var(--secondary); margin: 2rem 0 1rem;">Who This Is For</h2>
+        
+        <p style="line-height: 1.8; color: var(--gray-700); margin-bottom: 1rem;">
+            This post is for engineering teams who have a RAG POC working but are struggling to ship it to production. 
+            You understand the basics (embeddings, vector search, context windows) but production is where theory meets reality.
+        </p>
+
+        <p style="line-height: 1.8; color: var(--gray-700); margin-bottom: 2rem;">
+            I'll share patterns from my 20K+ line production system with 100% test coverage—real code, real problems, real solutions.
+        </p>
+
+        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 3rem; border-radius: var(--radius-lg); margin: 3rem 0; text-align: center;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Want to be notified when this goes live?</h3>
+            <p style="margin-bottom: 2rem; opacity: 0.95;">
+                Connect with me on LinkedIn. I'll share the post there as soon as it's published.
+            </p>
+            <a href="https://linkedin.com/in/keithwilliams5" target="_blank" 
+               style="display: inline-block; background: white; color: #667eea; padding: 1rem 2rem; 
+                      border-radius: 8px; text-decoration: none; font-weight: 600;">
+                Connect on LinkedIn →
+            </a>
+        </div>
+
+        <div style="background: var(--gray-50); padding: 2rem; border-radius: var(--radius); margin-top: 3rem;">
+            <h3 style="color: var(--secondary); margin-bottom: 1rem;">Can't Wait? Need Help Now?</h3>
+            <p style="color: var(--gray-700); line-height: 1.7; margin-bottom: 1.5rem;">
+                If your RAG system is stuck in POC hell and you need production help now, let's talk. 
+                I've architected these systems before—I can help you ship yours.
+            </p>
+            <a href="../index.html#contact" class="btn-primary" style="display: inline-block; padding: 0.75rem 1.5rem;">
+                Get In Touch →
+            </a>
+        </div>
+
+        <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--gray-200);">
+            <p style="text-align: center; color: var(--gray-600);">
+                <a href="../blog.html" style="color: var(--primary); text-decoration: none; font-weight: 600;">← Back to Blog</a>
+            </p>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2025 Keith Williams. Builder. Creator. Magician. Sage. Explorer.</p>
+                    <p class="footer-tagline">"I believe in practice that builds theory, not the other way around."</p>
+                </div>
+                <div class="footer-right">
+                    <a href="https://github.com/kaw393939" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com/in/keithwilliams5" target="_blank">LinkedIn</a>
+                    <a href="../blog.html">Blog</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
