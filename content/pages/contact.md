@@ -17,7 +17,7 @@ Join our active community discussing the Fourth Turning, AI, and educational tra
 
 ### LinkedIn
 Connect with Keith and follow daily insights on navigating civilizational transition.  
-[Connect on LinkedIn →](https://www.linkedin.com/in/keith-williams-njit/)
+[Connect on LinkedIn →](https://www.linkedin.com/in/keithwilliams5/)
 
 ### YouTube
 Watch full town halls and talk recordings.  
