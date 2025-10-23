@@ -202,6 +202,17 @@ class SiteBuilder:
                 shutil.rmtree(img_dest)
             shutil.copytree(img_src, img_dest)
             print(f"   ✓ Copied images/ directory")
+        
+        # Copy CNAME if it exists
+        cname_file = self.project_root / 'CNAME'
+        if cname_file.exists():
+            shutil.copy2(cname_file, self.output_dir / 'CNAME')
+            print("   ✓ Copied CNAME")
+        
+        # Create .nojekyll for GitHub Pages
+        nojekyll_file = self.output_dir / '.nojekyll'
+        nojekyll_file.touch()
+        print("   ✓ Created .nojekyll")
     
     def clean_output(self):
         """Clean the output directory"""

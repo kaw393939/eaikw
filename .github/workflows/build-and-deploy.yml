@@ -136,6 +136,31 @@ jobs:
               print('✓ Basic accessibility checks passed')
           "
 
+      - name: Run Lighthouse CI
+        run: |
+          npm install -g @lhci/cli
+          
+          # Start server in background
+          cd docs
+          python3 -m http.server 8085 > /dev/null 2>&1 &
+          SERVER_PID=$!
+          cd ..
+          
+          # Wait for server
+          sleep 3
+          
+          # Run Lighthouse
+          lhci autorun --collect.url=http://localhost:8085 \
+            --assert.preset=lighthouse:recommended \
+            --assert.assertions.performance=0.9 \
+            --assert.assertions.accessibility=1.0 \
+            --assert.assertions.best-practices=0.9 \
+            --assert.assertions.seo=1.0 \
+            || echo "Lighthouse assertions failed but continuing"
+          
+          # Cleanup
+          kill $SERVER_PID 2>/dev/null || true
+
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
