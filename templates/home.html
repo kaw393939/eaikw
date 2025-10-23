@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>{{ page.hero.title }}</h1>
+            <p class="hero-subtitle">{{ page.hero.subtitle }}</p>
+            <p class="hero-description">{{ page.hero.description }}</p>
+            
+            <div class="hero-ctas">
+                <a href="{{ page.hero.cta_primary.url }}" class="btn btn-primary">
+                    {{ page.hero.cta_primary.text }}
+                </a>
+                <a href="{{ page.hero.cta_secondary.url }}" class="btn btn-secondary">
+                    {{ page.hero.cta_secondary.text }}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Two Themes Section -->
+{% if page.sections.show_themes %}
+<section class="themes">
+    <div class="container">
+        <h2>The Framework</h2>
+        <div class="themes-grid">
+            {% for theme in themes %}
+            <div class="theme-card theme-{{ theme.id }}">
+                <div class="theme-number">Theme {{ theme.number }}</div>
+                <h3>{{ theme.title }}</h3>
+                <p class="theme-subtitle">{{ theme.subtitle }}</p>
+                <p>{{ theme.description }}</p>
+                <a href="/themes#{{ theme.id }}" class="btn btn-outline">Learn More</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Upcoming Events -->
+{% if page.sections.show_upcoming_events %}
+<section class="upcoming-events" id="upcoming">
+    <div class="container">
+        <h2>Upcoming Town Halls</h2>
+        {% set upcoming = townhalls | selectattr('status', 'equalto', 'upcoming') | list %}
+        {% if upcoming %}
+        <div class="events-grid">
+            {% for event in upcoming %}
+            <div class="event-card{% if event.featured %} featured{% endif %}">
+                <div class="event-date">
+                    <span class="event-day">{{ event.date | date('%d') }}</span>
+                    <span class="event-month">{{ event.date | date('%b') }}</span>
+                </div>
+                <div class="event-content">
+                    <h3>{{ event.title }}</h3>
+                    <p class="event-meta">{{ event.time }} • Virtual + In-Person</p>
+                    <p>{{ event.description | truncate(150) }}</p>
+                    <a href="/townhalls/{{ event.slug }}" class="btn btn-primary">Learn More & Join</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p>Next town hall coming soon. <a href="{{ site.discord }}">Join Discord</a> for announcements.</p>
+        {% endif %}
+    </div>
+</section>
+{% endif %}
+
+<!-- Recent Talks -->
+{% if page.sections.show_recent_talks %}
+<section class="recent-talks">
+    <div class="container">
+        <h2>Recent Talks</h2>
+        {% set recent = talks | selectattr('video.youtube_id') | sort(attribute='date', reverse=True) | list %}
+        {% if recent %}
+        <div class="talks-grid">
+            {% for talk in recent[:3] %}
+            <div class="talk-card">
+                {% if talk.video.thumbnail %}
+                <img src="{{ talk.video.thumbnail }}" alt="{{ talk.title }}">
+                {% endif %}
+                <h3>{{ talk.title }}</h3>
+                <p class="talk-meta">{{ talk.date | date('%B %d, %Y') }} • Theme {{ talk.theme }}</p>
+                <a href="/talks/{{ talk.slug }}" class="btn btn-outline">Watch Talk</a>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p>First talks coming after the launch town hall.</p>
+        {% endif %}
+    </div>
+</section>
+{% endif %}
+
+<!-- Discord CTA -->
+{% if page.sections.show_discord_cta %}
+<section class="discord-cta">
+    <div class="container">
+        <h2>Join the Community</h2>
+        <p>Connect with others navigating this transition. Discuss ideas, ask questions, and be part of the dialogue.</p>
+        <a href="{{ site.discord }}" class="btn btn-primary">Join Discord Community</a>
+    </div>
+</section>
+{% endif %}
+
+<!-- Main Content -->
+<section class="page-content">
+    <div class="container">
+        {{ content | safe }}
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,84 @@
+# EAIKW - Private Planning & Archive
+# Keep private content, drafts, and archives out of public repo
+
+# Private Planning & Strategy
+planning/
+archive/
+legsontheground.com/
+
+# Environment & Secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+secrets/
+config.local.yaml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Build System
+*.log
+node_modules/
+package-lock.json
+
+# Content Drafts (before publishing)
+drafts/
+wip/
+scratch/
+
+# CRM & Private Data
+contacts/
+crm-data/
+*.csv
+*.xlsx
+!content/data/*.csv  # Allow content data CSVs
+
+# Video Production
+raw-footage/
+video-projects/
+*.mov
+*.mp4
+*.avi
+!docs/videos/*.mp4  # Allow published videos
+
+# Analytics & Private Reports
+analytics/
+reports/
+metrics/
+
+# Backup Files
+*.backup
+*.bak
+*.old

@@ -1,0 +1,62 @@
+# Town Hall Events
+
+townhalls:
+  - id: launch-2025-01
+    title: "Navigating the Fourth Turning + AI Era"
+    slug: "launch-town-hall-january-2025"
+    date: "2025-01-15"
+    time: "6:00 PM EST"
+    status: "upcoming"
+    
+    # Event Details
+    location:
+      virtual: true
+      virtual_url: "https://discord.gg/eaikw"
+      in_person: true
+      in_person_location: "NJIT Campus, Newark NJ"
+      in_person_address: "123 Campus Center, Newark, NJ 07102"
+    
+    registration:
+      required: false
+      url: null
+      capacity: 100
+    
+    # Content
+    theme: "both"
+    description: |
+      Join Keith Williams for the inaugural town hall exploring where we are 
+      in history and how we prepare for what's coming. We'll discuss the 
+      Fourth Turning pattern, the convergence of AI/Clean Energy/Biotech, 
+      and the educational revolution we need.
+      
+      This is a no-agenda conversation—come with your questions, perspectives, 
+      and curiosity. We're here to think together, not to be told what to think.
+    
+    topics:
+      - "The 1787→1865→1945→2025 civilizational pattern"
+      - "Three tipping points happening simultaneously"
+      - "Macro forces: $37T debt, inflation, labor-capital divide"
+      - "Why education must change NOW"
+      - "Open Q&A—bring your toughest questions"
+    
+    # Media (to be added after event)
+    video:
+      youtube_id: null
+      duration: null
+      thumbnail: null
+    
+    transcript:
+      available: false
+      url: null
+    
+    clips: []
+    
+    # Metadata
+    featured: true
+    image: "images/events/launch-townhall.jpg"
+    image_alt: "Keith Williams town hall on navigating the Fourth Turning and AI era"
+
+# Future town halls - add as you schedule them
+# - id: education-revolution-2025-02
+#   title: "The Education Revolution: Socratic Method Meets AI"
+#   ...

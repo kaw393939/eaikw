@@ -1,0 +1,22 @@
+# Navigation Configuration
+
+navigation:
+  - title: "Home"
+    url: "/"
+    
+  - title: "The Framework"
+    url: "/themes"
+    
+  - title: "Town Halls"
+    url: "/townhalls"
+    
+  - title: "Talks"
+    url: "/talks"
+    
+  - title: "About"
+    url: "/about"
+    
+  - title: "Join Discord"
+    url: "https://discord.gg/eaikw"
+    external: true
+    highlight: true

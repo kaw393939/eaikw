@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="{{ site.language }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>{{ page.title }}</title>
+    <meta name="title" content="{{ page.title }}">
+    <meta name="description" content="{{ page.description }}">
+    <meta name="keywords" content="{{ site.keywords | join(', ') }}">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="{{ page.get('seo', {}).get('og_type', 'website') }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.get('seo', {}).get('canonical', '/') }}">
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.description }}">
+    {% if page.get('seo', {}).get('og_image') %}
+    <meta property="og:image" content="{{ page.seo.og_image }}">
+    {% endif %}
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="{{ page.get('seo', {}).get('twitter_card', 'summary_large_image') }}">
+    <meta property="twitter:url" content="{{ site.url }}{{ page.get('seo', {}).get('canonical', '/') }}">
+    <meta property="twitter:title" content="{{ page.title }}">
+    <meta property="twitter:description" content="{{ page.description }}">
+    {% if page.get('seo', {}).get('twitter_image') %}
+    <meta property="twitter:image" content="{{ page.seo.twitter_image }}">
+    {% endif %}
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ site.url }}{{ page.get('seo', {}).get('canonical', '/') }}">
+    
+    <!-- Robots -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Skip to Content Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    {% include 'components/nav.html' %}
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        {% block content %}{% endblock %}
+    </main>
+    
+    {% include 'components/footer.html' %}
+
+    <script src="/main.js"></script>
+</body>
+</html>

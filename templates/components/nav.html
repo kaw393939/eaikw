@@ -1,0 +1,19 @@
+<nav class="main-nav">
+    <div class="container">
+        <div class="nav-brand">
+            <a href="/">Keith Williams</a>
+        </div>
+        
+        <ul class="nav-menu">
+            {% for item in navigation %}
+            <li>
+                <a href="{{ item.url }}" 
+                   {% if item.external %}target="_blank" rel="noopener"{% endif %}
+                   {% if item.highlight %}class="nav-highlight"{% endif %}>
+                    {{ item.title }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,48 @@
+# Site Configuration
+# Edit this file to update global site settings
+
+site:
+  title: "Keith Williams | Fourth Turning + AI Era"
+  tagline: "Navigating Civilizational Transition Through Education & Technology"
+  description: "Understanding the challenge of the Fourth Turning + AI convergence and building the educational response for the next era."
+  url: "https://eaikw.com"
+  author: "Keith Williams"
+  language: "en"
+  
+  # Contact Information
+  email: "keith@eaikw.com"
+  linkedin: "https://linkedin.com/in/keithwilliams"
+  discord: "https://discord.gg/eaikw"
+  youtube: "https://youtube.com/@keithwilliams"
+  
+  # Brand
+  brand:
+    primary_color: "#1a365d"      # Navy blue
+    secondary_color: "#2b6cb0"    # Lighter blue
+    accent_color: "#ed8936"       # Orange (urgency)
+  
+  # SEO Keywords
+  keywords:
+    - "Fourth Turning"
+    - "AI education"
+    - "civilizational transition"
+    - "educational revolution"
+    - "Socratic method AI"
+    - "technology ethics"
+    - "Keith Williams NJIT"
+    - "AI and society"
+    - "macro economic forces"
+    - "labor capital divide"
+
+# Build Configuration
+build:
+  output_dir: "docs"
+  static_dir: "static"
+  template_dir: "templates"
+  
+# Feature Flags
+features:
+  show_upcoming_events: true
+  show_past_talks: true
+  show_discord_invite: true
+  enable_analytics: false

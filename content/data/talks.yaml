@@ -1,0 +1,64 @@
+# Individual Talks & Presentations
+
+talks:
+  # Example talk - update after first town hall
+  - id: fourth-turning-intro
+    title: "Understanding the Fourth Turning Pattern"
+    slug: "fourth-turning-pattern"
+    date: "2025-01-15"
+    
+    # Link to town hall if part of one
+    townhall_id: "launch-2025-01"
+    
+    theme: "challenge"
+    
+    description: |
+      A deep dive into the 80-year civilizational cycle pattern that has 
+      shaped American history and what it tells us about 2025.
+    
+    key_points:
+      - "The four turnings: High, Awakening, Unraveling, Crisis"
+      - "Historical examples: 1787, 1865, 1945, 2025"
+      - "Why crises lead to 25-year buildout periods"
+      - "What to expect in the 2025-2050 era"
+      - "How leaders can navigate uncertainty"
+    
+    # Media (add after recording)
+    video:
+      youtube_id: null
+      duration: null
+      thumbnail: null
+    
+    transcript:
+      available: false
+      url: null
+    
+    clips: []
+    
+    # Resources mentioned
+    resources:
+      - title: "The Fourth Turning (Book)"
+        url: "https://www.amazon.com/Fourth-Turning-American-Prophecy-Rendezvous/dp/0767900464"
+        type: "book"
+        author: "William Strauss & Neil Howe"
+    
+    # Metadata
+    featured: true
+    tags:
+      - "history"
+      - "fourth turning"
+      - "civilizational cycles"
+      - "pattern recognition"
+
+# Add more talks as you record them
+# Template:
+# - id: unique-id
+#   title: "Talk Title"
+#   slug: "url-friendly-slug"
+#   date: "YYYY-MM-DD"
+#   townhall_id: "link-to-townhall" (optional)
+#   theme: "challenge" or "response"
+#   description: "..."
+#   key_points: [...]
+#   video: {...}
+#   resources: [...]

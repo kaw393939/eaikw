@@ -1,0 +1,68 @@
+# The Two-Theme Framework
+
+themes:
+  - id: challenge
+    number: 1
+    title: "The Challenge"
+    subtitle: "Understanding the Fourth Turning + AI Convergence"
+    description: |
+      We're at a once-in-80-years civilizational transition. Three technologies 
+      (AI, Clean Energy, Biotech) are hitting tipping point while we navigate 
+      $37T debt, inflation, and labor-capital disconnect.
+    
+    icon: "compass"
+    color: "navy"
+    
+    key_concepts:
+      - "Fourth Turning Pattern (1787→1865→1945→2025)"
+      - "Technology Tipping Points (AI, Clean Energy, Biotech)"
+      - "Macro-Economic Pressures ($37T debt, inflation)"
+      - "Labor-Capital Divide"
+      - "System Breakdown & Rebuilding Cycles"
+    
+    target_audience:
+      - "C-suite Executives"
+      - "Government Officials"
+      - "Policy Makers"
+      - "Business Leaders"
+    
+    sample_topics:
+      - "The 2025 Inflection Point: Why This Decade Matters"
+      - "AI + Debt + Energy: Three Forces Reshaping Everything"
+      - "What History Tells Us About 80-Year Transitions"
+      - "The Labor-Capital Split in the Age of AI"
+      - "Navigating Uncertainty: Lessons from 1865 and 1945"
+  
+  - id: response
+    number: 2
+    title: "The Response"
+    subtitle: "Rebuilding Education & Technology Culture"
+    description: |
+      Our education system was built for the last era. We need to blend 
+      Socratic method with AI capabilities to create ethical, strategic, 
+      creative thinkers who can navigate unprecedented technological power.
+    
+    icon: "lightbulb"
+    color: "blue"
+    
+    key_concepts:
+      - "Socratic Method + AI Synthesis"
+      - "Production-First Learning (Code as Textbook)"
+      - "Ethical AI Development Framework"
+      - "Strategic Thinking Development"
+      - "Classical Education Meets Modern Technology"
+    
+    target_audience:
+      - "Educators (K-12, University)"
+      - "EdTech Leaders"
+      - "Technology Professionals"
+      - "Parents & Students"
+      - "Lifelong Learners"
+    
+    sample_topics:
+      - "Why Silicon Valley's Education Model is Broken"
+      - "Socratic Method Meets Machine Learning"
+      - "The Classroom of 2030: What Needs to Change Now"
+      - "From Bootcamps to Critical Thinking: Rethinking Tech Ed"
+      - "Building Ethical AI Developers from Day One"
+      - "Production AI Systems: What Students Actually Need to Know"
