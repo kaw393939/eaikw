@@ -47,9 +47,10 @@ That's why I host **town halls**—no agenda, just dialogue. We explore hard que
 
 ## Connect
 
-- **LinkedIn:** [Keith Williams](https://linkedin.com/in/keithwilliams)
-- **YouTube:** [@keithwilliams](https://youtube.com/@keithwilliams)
-- **Discord:** [Join the Community](https://discord.gg/eaikw)
+- **LinkedIn:** [Keith Williams](https://www.linkedin.com/in/keith-williams-njit/)
+- **YouTube:** [@EAIKW](https://www.youtube.com/@EAIKW)
+- **Discord:** [Join the Community](https://discord.gg/FsAbagAEbg)
+- **GitHub:** [kaw393939](https://github.com/kaw393939)
 - **Email:** keith@eaikw.com
 
 ## Credentials

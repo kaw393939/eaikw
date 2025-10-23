@@ -16,7 +16,16 @@ navigation:
   - title: "About"
     url: "/about"
     
+  - title: "Contact"
+    url: "/contact"
+    
+  - title: "About"
+    url: "/about"
+    
+  - title: "Contact"
+    url: "/contact"
+    
   - title: "Join Discord"
-    url: "https://discord.gg/eaikw"
+    url: "https://discord.gg/FsAbagAEbg"
     external: true
     highlight: true
