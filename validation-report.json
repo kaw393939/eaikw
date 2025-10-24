@@ -1,28 +1,41 @@
 {
-  "timestamp": "2025-10-23T18:37:38.397891",
+  "timestamp": "2025-10-23T19:27:23.002578",
   "results": [
     {
       "name": "HTML: index.html",
       "passed": true,
       "error_count": 0,
-      "warning_count": 0,
+      "warning_count": 2,
       "errors": [],
-      "warnings": [],
+      "warnings": [
+        {
+          "message": "1 images missing width/height attributes",
+          "location": null
+        },
+        {
+          "message": "External link missing security attributes: https://www.linkedin.com/in/keithwilliams5/",
+          "location": null
+        }
+      ],
       "info": [
         "Valid HTML5 structure",
-        "No images found",
-        "Total links: 21",
-        "Heading structure: h1 -> h2 -> h2 -> h2 -> h2",
-        "Title: Keith Williams | Fourth Turning + AI Era"
+        "Total images: 1",
+        "Total links: 14",
+        "Heading structure: h1 -> h2 -> h2 -> h2 -> h3",
+        "Title: EverydayAI | Monthly Town Hall with Keith Williams"
       ]
     },
     {
       "name": "HTML: about.html",
       "passed": true,
       "error_count": 0,
-      "warning_count": 2,
+      "warning_count": 3,
       "errors": [],
       "warnings": [
+        {
+          "message": "Heading hierarchy skip: h2 to h4",
+          "location": null
+        },
         {
           "message": "Title too short (20 chars, recommended 30-60)",
           "location": null
@@ -35,7 +48,7 @@
       "info": [
         "Valid HTML5 structure",
         "No images found",
-        "Total links: 19",
+        "Total links: 14",
         "Heading structure: h1 -> h2 -> h2 -> h2 -> h2",
         "Title: About Keith Williams"
       ]
@@ -63,7 +76,7 @@
       "info": [
         "Valid HTML5 structure",
         "No images found",
-        "Total links: 19",
+        "Total links: 14",
         "Heading structure: h1 -> h2 -> h2 -> h2 -> h3",
         "Title: Contact Keith Williams"
       ]
@@ -87,6 +100,6 @@
     "passed": 4,
     "failed": 0,
     "total_errors": 0,
-    "total_warnings": 5
+    "total_warnings": 8
   }
 }

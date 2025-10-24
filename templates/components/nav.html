@@ -20,6 +20,7 @@
                     {% if item.highlight %}
                     <a href="{{ item.url }}" 
                        class="cta-button"
+                       onclick="gtag('event', 'click', {'event_category': 'cta', 'event_label': 'Nav CTA - {{ item.title }}', 'value': 1});"
                        {% if item.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
                         {{ item.title }}
                     </a>

@@ -18,23 +18,23 @@
             <div class="footer-right">
                 <h4 class="footer-heading">Connect</h4>
                 <div class="footer-links">
-                    <a href="{{ site.linkedin }}" target="_blank" rel="noopener noreferrer">
+                    <a href="{{ site.linkedin }}" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'click', {'event_category': 'social', 'event_label': 'LinkedIn Footer', 'value': 1});">
                         <i class="fab fa-linkedin"></i>
                         <span>LinkedIn</span>
                     </a>
-                    <a href="{{ site.youtube }}" target="_blank" rel="noopener noreferrer">
+                    <a href="{{ site.youtube }}" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'click', {'event_category': 'social', 'event_label': 'YouTube Footer', 'value': 1});">
                         <i class="fab fa-youtube"></i>
                         <span>YouTube</span>
                     </a>
-                    <a href="{{ site.discord }}" target="_blank" rel="noopener noreferrer">
+                    <a href="{{ site.discord }}" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'click', {'event_category': 'social', 'event_label': 'Discord Footer', 'value': 1});">
                         <i class="fab fa-discord"></i>
                         <span>Discord</span>
                     </a>
-                    <a href="{{ site.github }}" target="_blank" rel="noopener noreferrer">
+                    <a href="{{ site.github }}" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'click', {'event_category': 'social', 'event_label': 'GitHub Footer', 'value': 1});">
                         <i class="fab fa-github"></i>
                         <span>GitHub</span>
                     </a>
-                    <a href="mailto:{{ site.email }}">
+                    <a href="mailto:{{ site.email }}" onclick="gtag('event', 'click', {'event_category': 'contact', 'event_label': 'Email Footer', 'value': 1});">
                         <i class="fas fa-envelope"></i>
                         <span>Email</span>
                     </a>

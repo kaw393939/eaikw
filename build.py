@@ -178,13 +178,22 @@ class SiteBuilder:
             print(f"   ⚠️  Static directory not found: {self.static_dir}")
             return
         
-        # Copy CSS
+        # Copy CSS - prioritize minified version
         css_src = self.static_dir / 'css'
         css_dest = self.output_dir
         if css_src.exists():
-            for css_file in css_src.glob('*.css'):
-                shutil.copy2(css_file, css_dest / css_file.name)
-                print(f"   ✓ Copied {css_file.name}")
+            # Copy minified CSS as styles.css (production version)
+            minified_css = css_src / 'styles.min.css'
+            if minified_css.exists():
+                shutil.copy2(minified_css, css_dest / 'styles.css')
+                print("   ✓ Copied styles.min.css → styles.css (production)")
+            else:
+                # Fallback to regular CSS if minified doesn't exist
+                regular_css = css_src / 'styles.css'
+                if regular_css.exists():
+                    shutil.copy2(regular_css, css_dest / 'styles.css')
+                    print("   ⚠️  Using non-minified styles.css")
+                    print("   💡 Run: csso static/css/styles.css -o static/css/styles.min.css")
         
         # Copy JS
         js_src = self.static_dir / 'js'

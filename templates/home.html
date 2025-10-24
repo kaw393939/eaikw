@@ -5,11 +5,11 @@
 <section class="hero">
     <div class="container">
         <div class="hero-grid">
-            <div class="hero-visual">
-                <div class="hero-icon-wrapper">
-                    <img src="/images/logo.png" alt="Everyday AI" class="hero-icon">
+                            <div class="hero-visual">
+                    <div class="hero-icon-wrapper">
+                        <img src="/images/logo.png" alt="EverydayAI" class="hero-icon" width="240" height="253" loading="eager">
+                    </div>
                 </div>
-            </div>
             <div class="hero-content">
                 <h1 class="hero-title">
                     <span class="hero-title-sub">{{ page.hero.subtitle }}</span>
@@ -18,11 +18,11 @@
                     <p class="hero-description">{{ page.hero.description }}</p>
                 </div>
                 <div class="hero-actions">
-                    <a href="{{ page.hero.cta_primary.url }}" class="btn-primary">
+                    <a href="{{ page.hero.cta_primary.url }}" class="btn-primary" onclick="gtag('event', 'click', {'event_category': 'cta', 'event_label': 'Hero Primary - {{ page.hero.cta_primary.text }}', 'value': 5});">
                         <span>{{ page.hero.cta_primary.text }}</span>
                         <span class="btn-arrow">→</span>
                     </a>
-                    <a href="{{ page.hero.cta_secondary.url }}" class="btn-secondary">{{ page.hero.cta_secondary.text }}</a>
+                    <a href="{{ page.hero.cta_secondary.url }}" class="btn-secondary" onclick="gtag('event', 'click', {'event_category': 'cta', 'event_label': 'Hero Secondary - {{ page.hero.cta_secondary.text }}', 'value': 3});">{{ page.hero.cta_secondary.text }}</a>
                 </div>
             </div>
         </div>
@@ -121,13 +121,13 @@
                 <div class="cta-option">
                     <div class="cta-icon"><i class="fas fa-envelope"></i></div>
                     <h4>Email</h4>
-                    <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+                    <p><a href="mailto:{{ site.email }}" onclick="gtag('event', 'click', {'event_category': 'contact', 'event_label': 'Email CTA Section', 'value': 5});">{{ site.email }}</a></p>
                     <span class="option-note">Best for detailed questions</span>
                 </div>
                 <div class="cta-option">
                     <div class="cta-icon"><i class="fab fa-linkedin"></i></div>
                     <h4>LinkedIn</h4>
-                    <p><a href="{{ site.linkedin }}" target="_blank" rel="noopener">Connect on LinkedIn</a></p>
+                    <p><a href="{{ site.linkedin }}" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'click', {'event_category': 'social', 'event_label': 'LinkedIn CTA Section', 'value': 5});">Connect on LinkedIn</a></p>
                     <span class="option-note">Connect and follow updates</span>
                 </div>
             </div>
