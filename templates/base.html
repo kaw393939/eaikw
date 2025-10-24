@@ -11,7 +11,94 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-0NDSMWK4WS');
+      gtag('config', 'G-0NDSMWK4WS', {
+        // Enhanced configuration
+        send_page_view: true,
+        cookie_flags: 'SameSite=None;Secure',
+        
+        // Custom parameters for lead tracking
+        custom_map: {
+          'lead_score': 'lead_score',
+          'visitor_type': 'visitor_type',
+          'engagement_level': 'engagement_level',
+          'funnel_stage': 'funnel_stage'
+        }
+      });
+
+      // Initialize lead scoring
+      let leadScore = 0;
+      let pageViews = 0;
+      let startTime = Date.now();
+      
+      // Track page engagement
+      document.addEventListener('DOMContentLoaded', function() {
+        pageViews++;
+        
+        // Track scroll depth
+        let maxScroll = 0;
+        window.addEventListener('scroll', function() {
+          const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+          if (scrollPercent > maxScroll) {
+            maxScroll = scrollPercent;
+            
+            // Track significant scroll milestones
+            if (scrollPercent >= 25 && scrollPercent < 50) {
+              gtag('event', 'scroll_depth', {
+                event_category: 'Engagement',
+                event_label: '25_percent',
+                value: scrollPercent
+              });
+            } else if (scrollPercent >= 50 && scrollPercent < 75) {
+              gtag('event', 'scroll_depth', {
+                event_category: 'Engagement', 
+                event_label: '50_percent',
+                value: scrollPercent
+              });
+            } else if (scrollPercent >= 90) {
+              leadScore += 10; // Deep engagement
+              gtag('event', 'scroll_depth', {
+                event_category: 'Engagement',
+                event_label: '90_percent_complete',
+                value: scrollPercent,
+                lead_score: leadScore
+              });
+            }
+          }
+        });
+        
+        // Track time on page
+        setTimeout(function() {
+          leadScore += 5;
+          gtag('event', 'engagement_time', {
+            event_category: 'Engagement',
+            event_label: '30_seconds',
+            value: 30,
+            lead_score: leadScore
+          });
+        }, 30000);
+        
+        setTimeout(function() {
+          leadScore += 15;
+          gtag('event', 'engagement_time', {
+            event_category: 'Engagement',
+            event_label: '2_minutes',
+            value: 120,
+            lead_score: leadScore,
+            engagement_level: 'high'
+          });
+        }, 120000);
+      });
+      
+      // Track page exit intent
+      window.addEventListener('beforeunload', function() {
+        const timeOnPage = Math.round((Date.now() - startTime) / 1000);
+        gtag('event', 'page_exit', {
+          event_category: 'Engagement',
+          event_label: 'session_end',
+          value: timeOnPage,
+          lead_score: leadScore
+        });
+      });
     </script>
     
     <!-- Primary Meta Tags -->
@@ -67,5 +154,6 @@
     {% include 'components/footer.html' %}
 
     <script src="/main.js"></script>
+    <script src="/analytics.js"></script>
 </body>
 </html>
