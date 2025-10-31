@@ -449,7 +449,7 @@ npm run lint:duplication
 
 # Test locally
 npm start
-# Visit: http://localhost:8080/is117_ai_test_practice/[PAGE_NAME]/
+# Visit: http://localhost:8080/[PAGE_NAME]/
 
 # Test responsiveness
 # Resize browser window

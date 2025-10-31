@@ -209,7 +209,7 @@ npm start
 [11ty] Writing _site/about/index.html from ./src/about.md
 [11ty] Wrote 3 files in 0.08 seconds
 [11ty] Watching…
-[11ty] Server at http://localhost:8080/is117_ai_test_practice/
+[11ty] Server at http://localhost:8080/
 ```
 
 **Use this when:** Actively developing and want to see changes instantly
@@ -496,7 +496,7 @@ Here are some cool projects I'm working on!
 ```
 
 2. Build: `npm start`
-3. Visit: <http://localhost:8080/is117_ai_test_practice/projects/>
+3. Visit: <http://localhost:8080/projects/>
 4. See your new page! ✅
 
 **Working?** You understand Eleventy!

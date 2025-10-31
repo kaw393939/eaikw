@@ -76,7 +76,7 @@ This is a **static website** that demonstrates modern web development practices:
 
 ### Live Site:
 
-👉 **<https://kaw393939.github.io/is117_ai_test_practice/>**
+👉 **<https://eaikw.com/>**
 
 ### What It Looks Like:
 

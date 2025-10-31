@@ -250,7 +250,7 @@ npm start
 [11ty] Writing _site/index.html from ./src/index.md
 [11ty] Wrote 3 files in 0.08 seconds
 [11ty] Watching…
-[11ty] Server at http://localhost:8080/is117_ai_test_practice/
+[11ty] Server at http://localhost:8080/
 ```
 
 **✅ Success!** Your development server is running.
@@ -260,7 +260,7 @@ npm start
 ### Test 2: View in Browser
 
 1. Open browser
-2. Go to: <http://localhost:8080/is117_ai_test_practice/>
+2. Go to: <http://localhost:8080/>
 3. You should see the website
 
 **See the site?** ✅ Working! **404 Error?** Check the URL includes the repo
@@ -385,7 +385,7 @@ Before moving to the next lesson, verify:
 - [ ] Repository cloned locally
 - [ ] Dependencies installed (`npm install` succeeded)
 - [ ] Dev server runs (`npm start` works)
-- [ ] Site loads in browser (<http://localhost:8080/is117_ai_test_practice/>)
+- [ ] Site loads in browser (<http://localhost:8080/>)
 - [ ] Tests pass (`npm test` succeeds)
 - [ ] Git configured (name and email set)
 
@@ -405,8 +405,7 @@ VS Code's built-in terminal is better than external terminal because:
 
 ### Tip 2: Bookmark Local Dev URL
 
-Add <http://localhost:8080/is117_ai_test_practice/> to bookmarks for quick
-access
+Add <http://localhost:8080/> to bookmarks for quick access
 
 ### Tip 3: Keep Dev Server Running
 
@@ -429,7 +428,7 @@ git push             # Push to GitHub
 **Verify everything works:**
 
 1. Start dev server: `npm start`
-2. Open <http://localhost:8080/is117_ai_test_practice/>
+2. Open <http://localhost:8080/>
 3. Edit `src/index.md` - change the heading
 4. Save the file
 5. Refresh browser - see your change!

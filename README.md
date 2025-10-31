@@ -289,10 +289,12 @@ Don't want to type? We got you. Pre-written prompts for every step:
 - 🚀 [**Quick Start Guide**](QUICK-START.md) - TL;DR command reference
 - 📖 [**Development Guide**](DEVELOPMENT.md) - Complete development
   documentation
-- 🔍 [**5 Whys Analysis**](DEVELOPMENT-ENVIRONMENT-5-WHYS-ANALYSIS.md) - How we
-  fixed the dev environment
-- ✅ [**What's Fixed**](DEVELOPMENT-ENVIRONMENT-FIXED.md) - Summary of
-  improvements
+- 🔍
+  [**5 Whys Analysis**](archive/documentation/DEVELOPMENT-ENVIRONMENT-5-WHYS-ANALYSIS.md) -
+  How we fixed the dev environment
+- ✅
+  [**What's Fixed**](archive/documentation/DEVELOPMENT-ENVIRONMENT-FIXED.md) -
+  Summary of improvements
 
 ### **Course Content**
 
