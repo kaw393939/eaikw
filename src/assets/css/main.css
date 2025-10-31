@@ -1,14 +1,21 @@
 /* ============================================
-   EverydayAI Design System v2.0
-   Fortune 100-Level Responsive Architecture
-   - Container Queries
-   - Fluid Typography (Utopia)
-   - Screenshot-Optimized
-   - Token-Driven
+   EverydayAI Design System v3.0
+   RISD-Inspired Educational Design Language
+   
+   Philosophy:
+   - Swiss/International Typographic Style
+   - Generous whitespace for cognitive clarity
+   - Precise hierarchy for learning progression
+   - Modular educational components
+   - Fortune 100 + Classical Design Integration
    ============================================ */
 
+/* Import RISD-inspired design system foundation */
+@import url('design-system.css');
+@import url('educational-components.css');
+
 /* ============================================
-   Design Tokens - Single Source of Truth
+   Site-Specific Overrides & Extensions
    ============================================ */
 
 :root {
