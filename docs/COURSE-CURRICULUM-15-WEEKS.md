@@ -673,30 +673,92 @@ _Migrating to Another System Later:_
      - Understanding package.json
      - Global vs. local packages
 
-2. **Git Fundamentals**
-   - Version control concepts (why it matters)
-   - Git workflow: Working directory → Staging → Repository
-   - Core commands:
+2. **Git Fundamentals & Professional Practices**
+   - **Version Control Concepts (Why It Matters):**
+     - Professional collaboration requirement
+     - Portfolio evidence (hiring managers check GitHub)
+     - Backup and versioning for projects
+     - Open source contribution pathway
+   - **Git Workflow: Working directory → Staging → Repository**
+   - **Core Commands:**
      - `git init`, `git clone`
      - `git add`, `git commit`, `git status`
      - `git log`, `git diff`
      - `git branch`, `git checkout`, `git merge`
-   - Commit message best practices (conventional commits)
-   - `.gitignore` files
+   - **ATOMIC Commits (Professional Standard):**
+     - **One logical change per commit** (not "end of day dump")
+     - **Clear, specific commit messages** (hiring managers read these)
+     - **Present tense, imperative mood:** "Add responsive navigation" (not
+       "Added nav")
+     - **Why it matters:** Shows professional thinking, makes debugging easier,
+       demonstrates clear problem-solving process
+   - **Professional Commit Message Patterns:**
 
-3. **GitHub Collaboration**
-   - Repository creation and management
+     ```
+     ✅ Good Examples:
+     "Add responsive navigation with mobile hamburger menu"
+     "Fix accessibility contrast issues in CTA buttons"
+     "Implement Cialdini reciprocity principle in hero section"
+     "Update README with deployment instructions"
+
+     ❌ Avoid These:
+     "stuff"
+     "fixed bugs"
+     "end of day commit"
+     "working on project"
+     ```
+
+   - **Conventional Commits Standard:**
+     - `feat: add new feature`
+     - `fix: bug fix`
+     - `docs: documentation changes`
+     - `style: formatting, CSS changes`
+     - `refactor: code improvement without feature change`
+     - `test: add or update tests`
+   - **`.gitignore` Files (Professional Hygiene):**
+     - Never commit `node_modules/`, `.env` files, IDE settings
+     - Use standard templates for your tech stack
+     - Keep repositories clean and focused
+
+3. **GitHub Collaboration & Professional Presence**
+   - **Repository Creation and Management:**
+     - Professional README standards (hiring managers read these first)
+     - Repository naming conventions (kebab-case, descriptive)
+     - Professional repository descriptions
+     - Pinned repositories strategy (showcase best work)
+   - **GitHub Profile as Professional Portfolio:**
+     - Profile README (your digital business card)
+     - Contribution graph (shows consistency and activity)
+     - Repository organization (pin best projects)
+     - Professional profile photo and bio
+     - Contact information and portfolio links
    - **Issues for Project Management:**
      - Creating issues (user stories, bugs, features)
      - Labels and milestones
      - Assigning team members
      - Issue templates
+     - **Professional Issue Writing:**
+       - Clear titles and descriptions
+       - Acceptance criteria
+       - Screenshots/mockups when helpful
+       - Professional tone (you're practicing for real jobs)
    - **Pull Request Workflow:**
      - Fork vs. clone
-     - Feature branches
+     - Feature branches (descriptive names: `feature/responsive-nav`,
+       `fix/accessibility-contrast`)
      - Creating pull requests
+     - **Professional PR Descriptions:**
+       - What changed and why
+       - Screenshots of visual changes
+       - Testing checklist
+       - Reference related issues
      - Code review process
      - Merge strategies
+   - **GitHub as Career Tool:**
+     - Hiring managers check GitHub profiles
+     - Open source contributions (start small)
+     - Professional networking through code
+     - Documentation demonstrates communication skills
    - **GitHub Pages Deployment:**
      - Repository settings
      - Branch configuration
@@ -1281,6 +1343,153 @@ My brand archetype is [archetype]."
 - Use professional critique language
 - Document learnings
 
+### **Portfolio Monetization & Professional Networking**
+
+**Now that your portfolio is live, turn it into a business development tool:**
+
+#### **Freelancing Platforms (Immediate Income Opportunities)**
+
+**Upwork (Largest marketplace):**
+
+- **Profile Strategy:** Use your portfolio as proof of capability
+- **Proposal Writing:** Reference specific projects you've built
+- **Starting Rates:** $25-50/hour (increase as you gain reviews)
+- **Best For:** Ongoing client relationships, larger projects
+
+**Fiverr (Service-based marketplace):**
+
+- **Gig Strategy:** "I will build a professional business website using modern
+  design principles"
+- **Portfolio Integration:** Link to your live sites in gig descriptions
+- **Pricing:** Start at $200-500 per site, package add-ons
+- **Best For:** Quick turnaround projects, international clients
+
+**99designs (Design-focused):**
+
+- **Contest Participation:** Enter logo/web design contests
+- **Portfolio Showcase:** Your group project demonstrates e-commerce capability
+- **Client Relationships:** Move beyond contests to direct client work
+- **Best For:** Brand and visual design projects
+
+**LinkedIn ProFinder (Professional network):**
+
+- **Service Offerings:** Web design, digital marketing, brand strategy
+- **Network Leverage:** Use your LinkedIn connections
+- **Professional Positioning:** Emphasize business strategy, not just coding
+- **Best For:** Local business clients, professional services
+
+**Other Platforms:**
+
+- **Toptal** (top-tier, requires application/testing)
+- **Guru** (similar to Upwork, smaller but less competitive)
+- **PeoplePerHour** (European-focused)
+- **Thumbtack** (local services marketplace)
+
+#### **In-Person Networking Strategy (High-Value Approach)**
+
+**Professional Events to Target:**
+
+**Meetup.com Event Types:**
+
+- **Local Business Meetups:** Small business owners (your ideal clients)
+- **Marketing/Digital Marketing Groups:** Strategic partnerships
+- **Entrepreneur/Startup Events:** Growing companies need web presence
+- **Chamber of Commerce Events:** Established local businesses
+- **Industry-Specific Meetups:** Real estate, law, consulting (high-value
+  niches)
+
+**Eventbrite Professional Events:**
+
+- **Business conferences** (excellent for high-value networking)
+- **Marketing workshops** (attendees are decision-makers)
+- **Industry conferences** in your local area
+- **Professional development seminars**
+
+**University/Alumni Events:**
+
+- **Career fairs** (as a service provider, not job seeker)
+- **Alumni networking events**
+- **Guest speaker events** (business leaders attend)
+
+**Business Cards Strategy:**
+
+**What Your Card Should Say:**
+
+```
+[Your Name]
+Web Strategist & Digital Consultant
+[or "Student & Aspiring Digital Consultant"]
+
+• Modern Web Presence Design
+• E-commerce Development
+• Brand Strategy & Psychology
+
+[Phone] | [Email]
+[Portfolio URL] | [LinkedIn]
+```
+
+**Networking Conversation Framework:**
+
+1. **Introduce yourself:** "I'm [name], I help businesses create professional
+   web presence that actually converts visitors to customers."
+2. **Ask about them:** "What kind of business are you in?" (listen for web
+   needs)
+3. **Offer value:** "I'd love to see your website and give you some quick
+   feedback"
+4. **Exchange cards:** "I'll send you some ideas after I take a look"
+5. **Follow up:** Within 48 hours with specific suggestions
+
+**LinkedIn Content Strategy:**
+
+**Weekly Posting Schedule:**
+
+- **Monday:** Industry insight (share article with your commentary)
+- **Wednesday:** Project showcase (screenshot of your work with explanation)
+- **Friday:** Professional tip (design principle, business strategy)
+
+**Content Ideas:**
+
+- "3 psychology principles I used in this e-commerce design"
+- "Why most small business websites fail (and how to fix it)"
+- "Before/after: How proper visual hierarchy increased conversions"
+- "What I learned building my first client project"
+
+**GitHub as Portfolio Evidence:**
+
+Your GitHub profile tells a professional story:
+
+- **Consistent commit history** (shows work ethic)
+- **Clear documentation** (shows communication skills)
+- **Collaborative projects** (shows teamwork)
+- **Professional commit messages** (shows attention to detail)
+- **Issue tracking usage** (shows project management ability)
+
+**Resume Skills Section (Based on Course Work):**
+
+**Technical Skills:**
+
+- Front-end Development (HTML5, CSS3, JavaScript)
+- Static Site Generation (Eleventy)
+- Version Control (Git, GitHub)
+- CI/CD Workflows (GitHub Actions)
+- Performance Optimization (Lighthouse)
+- Web Accessibility (WCAG AA)
+
+**Business Skills:**
+
+- UX/UI Design Principles
+- Conversion Psychology (Cialdini Principles)
+- Brand Strategy & Archetypal Positioning
+- E-commerce Design & Strategy
+- Project Management (Agile, GitHub Issues)
+- Client Communication & Requirements Gathering
+
+**Demonstrated Through:**
+
+- Live portfolio website ([your-url].github.io)
+- Collaborative e-commerce project (GitHub repository)
+- Professional development workflow (atomic commits, code reviews)
+
 ---
 
 ## PART 3: GROUP PROJECT (Weeks 11-15)
@@ -1311,21 +1520,81 @@ My brand archetype is [archetype]."
      - Technical Lead (implementation, deployment)
      - _Note: All members contribute to all areas, but roles provide ownership_
 
-2. **Product Selection Strategy**
-   - **Generic Product Options:**
-     - Clothing: Plain white t-shirt, denim jeans
-     - Food: Italian restaurant, coffee shop, bakery
-     - Service: Barbershop, yoga studio, consulting
-   - **Selection Criteria:**
-     - Simple enough to focus on design/psychology
-     - Complex enough to demonstrate e-commerce features
-     - Audience is well-understood
-     - Can create compelling brand story
-   - **Market Research Exercise:**
-     - Analyze 5 competitors in chosen category
-     - Identify common patterns and gaps
-     - Define unique positioning
-     - Choose target customer segment
+2. **Product Selection Strategy & Pre-Made Business Scenarios**
+
+   **Choose from these complete business scenarios (instructor-provided):**
+
+   **Option 1: Premium T-Shirt Company - "Threads & Co"**
+   - **Business Owner Persona:** Sarah Chen, 28, former fashion buyer turned
+     entrepreneur
+   - **Target Customer Personas:**
+     - _Minimalist Mike:_ 32, tech worker, values quality over quantity, shops
+       online
+     - _Conscious Claire:_ 26, marketing professional, eco-friendly, willing to
+       pay premium
+     - _Gift-Giver Gary:_ 45, corporate manager, buying for team/family, needs
+       bulk options
+   - **Business Goals:** Launch premium basics line, target $500K first year
+     revenue
+   - **Unique Positioning:** Sustainable materials, perfect fit guarantee,
+     minimalist aesthetic
+   - **Key Challenges:** Competing with established brands, justifying premium
+     pricing
+
+   **Option 2: Local Coffee Shop - "Grind Coffee Co"**
+   - **Business Owner Persona:** Marcus Williams, 34, former corporate lawyer,
+     coffee enthusiast
+   - **Target Customer Personas:**
+     - _Remote Rachel:_ 29, freelance designer, needs workspace and wifi, daily
+       customer
+     - _Meeting Mike:_ 41, sales manager, hosts client meetings, values ambiance
+     - _Student Sam:_ 22, college junior, budget-conscious, needs study space
+   - **Business Goals:** Build community hub, expand to catering, launch
+     subscription service
+   - **Unique Positioning:** Single-origin beans, laptop-friendly environment,
+     local art showcase
+   - **Key Challenges:** Competition from chains, seasonal fluctuations,
+     building regular customer base
+
+   **Option 3: Boutique Marketing Consultancy - "Strategy Studio"**
+   - **Business Owner Persona:** Emma Rodriguez, 31, former Fortune 500
+     marketing director
+   - **Target Customer Personas:**
+     - _Startup Steve:_ 27, tech founder, needs go-to-market strategy, limited
+       budget but equity potential
+     - _Small Business Barbara:_ 52, owns local service business, traditional
+       mindset, needs digital transformation
+     - _Scale-up Susan:_ 38, growing company CEO, needs systematic marketing
+       processes
+   - **Business Goals:** Build 6-figure consultancy, develop productized
+     services, build thought leadership
+   - **Unique Positioning:** Data-driven strategies, startup + enterprise
+     experience, results guarantee
+   - **Key Challenges:** Establishing credibility, pricing services, scaling
+     beyond time-for-money
+
+   **Option 4: Artisan Bakery - "Rise & Thrive Bakery"**
+   - **Business Owner Persona:** David Thompson, 45, former chef, pastry
+     specialist
+   - **Target Customer Personas:**
+     - _Special Occasion Sophie:_ 35, busy mom, needs custom cakes and catering
+     - _Daily Bread Dan:_ 58, retiree, wants fresh artisan bread and pastries
+     - _Corporate Caterer Carol:_ 42, office manager, orders for meetings and
+       events
+   - **Business Goals:** Expand beyond storefront, build catering business,
+     develop signature products
+   - **Unique Positioning:** Old-world techniques, locally-sourced ingredients,
+     custom creations
+   - **Key Challenges:** Seasonal demand, labor-intensive production, competing
+     with grocery stores
+
+   **Each scenario includes:**
+   - Complete business owner backstory and motivations
+   - 3 detailed customer personas with demographics, behaviors, pain points
+   - Competitive landscape analysis
+   - Brand voice and visual direction guidelines
+   - Sample product catalog and pricing structure
+   - Success metrics and business objectives
 
 3. **GitHub Collaboration Workflow**
    - **Repository Setup:**
@@ -2013,7 +2282,149 @@ wholesale, gift wrapping. Professional but friendly tone."
 - Tuesday: Final content review and polish
 - Wednesday: Presentation preparation
 - Thursday: Presentations (all teams)
-- Friday: Reflection and course wrap-up
+- Friday: Reflection and course wrap-up + **Professional Skills Translation
+  Workshop**
+
+### **Professional Skills Translation Workshop (Friday)**
+
+**Learning Objective:** Transform your course work into professional skills for
+resume, LinkedIn, and job interviews.
+
+**Workshop Structure:**
+
+#### **Part 1: Project-to-Skills Translation (30 minutes)**
+
+**Exercise: Skills Inventory from Your Work**
+
+Students work through their GitHub repositories and projects to identify
+professional skills:
+
+**From Individual Portfolio Project:**
+
+- **Technical Skills Demonstrated:**
+  - "Responsive web design" (mobile-first CSS)
+  - "Static site generation" (Eleventy)
+  - "Performance optimization" (Lighthouse 90+ scores)
+  - "Web accessibility implementation" (WCAG AA compliance)
+  - "Version control" (Git/GitHub workflow)
+  - "CI/CD pipeline setup" (GitHub Actions)
+
+- **Soft Skills Demonstrated:**
+  - "User experience research" (persona development, user journey mapping)
+  - "Brand strategy" (archetype selection, positioning)
+  - "Content strategy" (SEO, copywriting)
+  - "Project management" (GitHub issues, milestone planning)
+
+**From Group E-Commerce Project:**
+
+- **Collaboration Skills:**
+  - "Agile project management" (sprint planning, issue tracking)
+  - "Code review process" (pull request workflow)
+  - "Cross-functional teamwork" (design, content, technical, PM roles)
+  - "Conflict resolution" (team charter, decision-making protocols)
+
+- **Business Skills:**
+  - "Conversion psychology implementation" (Cialdini principles)
+  - "E-commerce strategy" (customer journey, checkout optimization)
+  - "A/B testing methodology" (design variation testing)
+  - "Analytics and measurement" (performance metrics, user behavior)
+
+#### **Part 2: LinkedIn Profile Optimization (45 minutes)**
+
+**Exercise: Rewrite Your LinkedIn Using Course Vocabulary**
+
+**Before (Typical Student Profile):**
+
+```
+"Computer Science student at [University].
+Interested in web development and technology."
+```
+
+**After (Using Course Work as Evidence):**
+
+```
+"Digital strategist combining psychology principles with modern
+web development. Skilled in conversion optimization, responsive
+design, and collaborative development workflows.
+
+Recent projects:
+• Built professional portfolio site with 95+ Lighthouse scores
+• Led e-commerce team project using Agile/GitHub workflow
+• Implemented Cialdini persuasion principles for 40% conversion improvement
+• Achieved WCAG AA accessibility compliance across all projects
+
+Technical: HTML5, CSS3, JavaScript, Git/GitHub, Eleventy, CI/CD
+Business: UX/UI Design, Brand Strategy, Performance Analytics"
+```
+
+**LinkedIn Content Calendar (Next 30 Days):**
+
+- Week 1: Share portfolio project with insights learned
+- Week 2: Post about group collaboration and Git workflow
+- Week 3: Write about psychology in web design (Cialdini principles)
+- Week 4: Share performance optimization techniques
+
+#### **Part 3: Resume Enhancement Workshop (30 minutes)**
+
+**Exercise: Transform Course Work into Resume Experience**
+
+**Projects Section:**
+
+```
+Professional Web Presence Development | Oct 2025
+• Designed and developed responsive portfolio site using modern CSS Grid/Flexbox
+• Implemented accessibility standards (WCAG AA) achieving 98% Lighthouse score
+• Integrated business automation tools (Calendly, Stripe) for client acquisition
+• Applied conversion psychology principles resulting in measurable engagement
+
+Collaborative E-commerce Development | Nov-Dec 2025
+• Led team of 4 in Agile development of full e-commerce site for [Business Type]
+• Managed project using GitHub issues, pull requests, and code review process
+• Implemented persuasion psychology (Cialdini principles) in user experience design
+• Achieved 90+ Lighthouse performance scores and WCAG accessibility compliance
+```
+
+**Skills Section Enhancement:**
+
+```
+Technical Skills:
+• Front-end Development: HTML5, CSS3, JavaScript ES6+
+• Build Tools: Eleventy (Static Site Generator), npm, GitHub Actions
+• Version Control: Git, GitHub (Issues, Pull Requests, Code Review)
+• Performance: Lighthouse Optimization, Web Accessibility (WCAG)
+• Deployment: GitHub Pages, CI/CD Pipelines
+
+Business & Design Skills:
+• User Experience Design & Testing
+• Conversion Psychology & Optimization
+• Brand Strategy & Archetypal Positioning
+• Project Management (Agile, Issue Tracking)
+• Cross-functional Team Leadership
+```
+
+#### **Part 4: Interview Story Preparation (15 minutes)**
+
+**Exercise: STAR Method Stories from Course Projects**
+
+**Example: "Tell me about a time you worked on a challenging team project"**
+
+**Situation:** "In my web development course, I was assigned to a 4-person team
+to build an e-commerce site for a local coffee shop. We had 5 weeks and needed
+to use professional development workflows."
+
+**Task:** "I was the project manager, responsible for coordinating the team,
+managing our GitHub workflow, and ensuring we met all technical requirements
+including 90+ Lighthouse scores."
+
+**Action:** "I set up our GitHub repository with issue templates, established
+our code review process, and created a sprint schedule. When conflicts arose
+over design decisions, I facilitated team discussions and helped us reach
+consensus using our team charter."
+
+**Result:** "We delivered the project on time with all requirements met. Our
+site achieved 96% Lighthouse performance, implemented all 6 Cialdini persuasion
+principles, and our team collaboration was so effective that our instructor used
+our GitHub workflow as an example for future classes."
 
 **Final Deliverables:**
 
@@ -2024,6 +2435,8 @@ wholesale, gift wrapping. Professional but friendly tone."
 - Project report (10-15 pages)
 - Individual reflections (1-2 pages per student)
 - Case study for portfolio
+- **NEW: Updated LinkedIn profile and resume incorporating course skills**
+- **NEW: 3 STAR method interview stories prepared**
 
 **Grading Criteria:**
 
