@@ -1,12 +1,15 @@
 ---
 layout: lesson.njk
-title: 'What We're Building - Your Web Presence'
+title: What We're Building - Your Web Presence
 lessonNumber: 1
-description: "Build your professional web presence - portfolio, resume, or consulting business"
-timeEstimate: '3 minutes'
-level: 'Beginner'
-tags: ['lessons']
-permalink: '/lessons/01-what-is-this/'
+description:
+  Build your professional web presence - portfolio, resume, or consulting
+  business
+timeEstimate: 3 minutes
+level: Beginner
+tags:
+  - lessons
+permalink: /lessons/01-what-is-this/
 ---
 
 ⏱️ **Time:** 3 minutes 📚 **Level:** Beginner 🎯 **Goal:** Understand what
