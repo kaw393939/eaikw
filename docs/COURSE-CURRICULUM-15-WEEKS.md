@@ -313,11 +313,39 @@ Workflow
    - Color psychology in branding
    - Typography and readability
 
+5. **The Principle of Self-Evident Design**
+   - **Core Insight:** Users are on their own—no one is there to help
+   - **Designer's Job:** Anticipate needs, answer questions preemptively, guide
+     without being present
+   - **User Expectations:** Things should "just work" without explanation
+   - **Psychological Safety:** Clear affordances reduce anxiety, increase
+     confidence
+   - **Feedback Loops:** Users need confirmation their actions worked
+   - **Error Recovery:** When things go wrong, users need a path forward
+
+**Connection to Persuasion:**
+
+Clear, self-evident design builds TRUST (Cialdini's Authority principle):
+
+- "This site knows what it's doing" → Professional credibility
+- "I can figure this out" → User feels smart (Liking principle)
+- "This is safe to use" → Reduces friction to action
+
+Confusing design breaks trust:
+
+- "What does this button do?" → Hesitation
+- "Did that work?" → Anxiety
+- "How do I undo this?" → Fear of mistakes
+
 **Assignments:**
 
 - Identify archetype of 5 major brands (Apple, Nike, etc.)
 - Analyze one e-commerce site: What persuasion techniques are used?
 - Define your personal brand archetype
+- **NEW:** User test exercise: Watch someone use a website for the first time
+  (record their screen and audio). Document: Where do they pause? What do they
+  click that doesn't work? What questions do they ask? Create report on
+  self-evidence failures.
 
 ---
 
@@ -386,6 +414,68 @@ Workflow
 - "Critique this site as a professional brand consultant"
 - "Evaluate this layout using design principles: balance, hierarchy, contrast"
 - "Suggest improvements for accessibility and WCAG compliance"
+
+7. **Self-Evident Communication**
+
+**The Designer's Responsibility:**
+
+Design must achieve the user's goal when **no one is there to help or provide
+additional information**. The user depends entirely on you, the designer, to
+guide them through the process.
+
+**Why This Matters:**
+
+- Your site must work at 2am when you're asleep
+- Users don't read instructions—they expect things to just work
+- Confusion = abandonment = lost opportunities
+- Clear, self-evident design = conversions
+
+**The Three Communication Layers:**
+
+1. **Visual Affordances** (What can I do here?)
+   - Buttons look clickable (shadows, hover states, visual weight)
+   - Links are underlined or distinctly colored
+   - Interactive elements respond to hover/focus
+   - Disabled elements appear grayed out
+   - Forms show required fields before submission
+
+2. **Information Architecture** (Where am I and where can I go?)
+   - Clear navigation hierarchy
+   - Breadcrumbs show location
+   - Progress indicators for multi-step processes
+   - Consistent layout patterns
+   - Obvious escape routes (back, cancel, close)
+
+3. **Feedback & Guidance** (Did my action work? What happens next?)
+   - Loading states for async actions
+   - Success messages after submission
+   - Error messages that SOLVE problems ("Use format: name@example.com")
+   - Empty states with clear next actions
+   - Confirmation before destructive actions
+
+**Common Self-Evidence Failures:**
+
+❌ **Mystery Meat Navigation:** Icons without labels  
+✅ **Clear Signposts:** Icons + text labels
+
+❌ **Hidden Interactions:** Hover-only menus with no visual clue  
+✅ **Visible Affordances:** Show what's possible upfront
+
+❌ **Generic Errors:** "Error occurred"  
+✅ **Actionable Guidance:** "Email already registered. [Log in] or use different
+email."
+
+❌ **Assumptive Design:** Using jargon users don't know  
+✅ **Plain Language:** Write for humans, explain when needed
+
+❌ **Silent Actions:** Button clicked, no visible response  
+✅ **Immediate Feedback:** Loading state, then success confirmation
+
+**The Golden Rule:**
+
+> "If you have to explain how to use it, the design has failed."
+
+Your interface is the only teacher. Users are on their own. Design accordingly.
 
 7. **Design Systems: Philosophy & Selection**
 
@@ -545,10 +635,16 @@ _Migrating to Another System Later:_
 - Build a design vocabulary flashcard deck (50+ terms)
 - Critique 3 websites using professional terminology
 - Practice prompting AI with design vocabulary
-- **NEW:** Compare 3 design systems (ours, Bootstrap, Material Design) -
-  document pros/cons for educational use case
-- **NEW:** Customize one design token (color, spacing, or type scale) in our
-  system and document your reasoning
+- **Self-Evidence Audit:** Test 2 websites with someone unfamiliar. Document
+  where they get confused, what they click that doesn't work, what questions
+  they ask. Identify self-evidence failures.
+- **Affordance Fix Exercise:** Take a poorly designed button/form/navigation.
+  Redesign it to be self-evident using: visual affordances, clear labels,
+  feedback states.
+- Compare 3 design systems (ours, Bootstrap, Material Design) - document
+  pros/cons for educational use case
+- Customize one design token (color, spacing, or type scale) in our system and
+  document your reasoning
 
 ---
 
@@ -1494,6 +1590,15 @@ My brand archetype is [archetype]."
      - Auto-fill support
      - Error prevention (real-time validation)
      - Progress indicators
+   - **Self-Evident E-Commerce Design:**
+     - Product images show what you're buying (multiple angles, zoom)
+     - Prices are clear and upfront (no hidden fees until checkout)
+     - "Add to Cart" button is obvious (size, color, placement)
+     - Cart icon shows item count (feedback that action worked)
+     - Size/color selection is required before adding (prevent errors)
+     - Shipping calculator answers "how much?" question
+     - Return policy is visible (reduces purchase anxiety)
+     - Each step of checkout explains what's next (progress indicator)
 
 2. **Applying All 6 Cialdini Principles**
    - **Reciprocity Implementation:**
@@ -1543,14 +1648,34 @@ My brand archetype is [archetype]."
      - FAQ section (answer common questions)
      - Live chat (reduce uncertainty)
 
-4. **Interactive Features**
-   - Product image gallery with zoom
-   - Quantity selector
-   - Size/color picker
-   - Add to cart with feedback
-   - Cart update (add/remove items)
-   - Filtering with real-time results
-   - Search with suggestions
+4. **Interactive Features (Self-Evidence in Action)**
+   - **Product image gallery with zoom**
+     - Visual cue: Magnifying glass icon on hover
+     - Feedback: Cursor changes to indicate zoomable
+   - **Quantity selector**
+     - Clear labels: "Quantity" or "Qty"
+     - Plus/minus buttons (obvious interaction)
+     - Number input (keyboard access)
+   - **Size/color picker**
+     - Visual swatches (see the color)
+     - Disabled states (out of stock appears grayed)
+     - Selected state (border or checkmark)
+   - **Add to cart with feedback**
+     - Button changes: "Add to Cart" → "Adding..." → "Added ✓"
+     - Cart icon animates or shows +1
+     - Optional: Success message or mini-cart preview
+   - **Cart update (add/remove items)**
+     - Trash icon for remove (universal symbol)
+     - Confirmation: "Are you sure?" for remove
+     - Immediate visual update (item disappears)
+   - **Filtering with real-time results**
+     - Result count updates: "Showing 12 of 48 products"
+     - Applied filters shown as removable tags
+     - "Clear all filters" option visible
+   - **Search with suggestions**
+     - Autocomplete dropdown appears while typing
+     - Search icon indicates searchable field
+     - "No results" provides alternative suggestions
 
 5. **A/B Testing Concepts**
    - What to test:
