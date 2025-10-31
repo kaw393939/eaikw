@@ -1,0 +1,962 @@
+---------
+
+layout: base.njk
+
+title: Homelayout: base.njklayout: base.njk
+
+description: The AI Bridge Initiative - Bridging education, business, and community for inclusive AI workforce development. Learn from history to navigate the AI transition.
+
+---title: Hometitle: Home
+
+
+
+{# Hero Section - EverydayAI Initiative #}description: The AI Bridge Initiative - Bridging education, business, and community for inclusive AI workforce development. Learn from history to navigate the AI transition.description:
+
+<div class="section-isolate" data-section-name="hero" data-section-type="hero" data-test-priority="critical">
+
+  <div class="hero-wrapper" data-testid="hero-section" data-container-type="hero">---  Professional AI-assisted web development training by Keith Williams - EverydayAI
+
+    <section class="hero-explorer" aria-labelledby="hero-title" data-ux-section="hero" data-ux-priority="critical" data-min-height="500px">
+
+      <div class="hero-explorer__content">---
+
+        <span class="hero-explorer__badge" role="doc-subtitle"><span aria-hidden="true">📚</span> EverydayAI Initiative</span>
+
+        <h1 id="hero-title" class="hero-explorer__title">Learn from History.<br>Navigate the AI Transition.</h1>{# Hero Section - EverydayAI Initiative #}
+
+        <p class="hero-explorer__subtitle">
+
+          We have a $38 trillion national debt. Our economy has two choices: dramatically increase productivity through AI, or print money and face massive inflation. We MUST get this transition right—our economic future depends on it.<div class="section-isolate" data-section-name="hero" data-section-type="hero" data-test-priority="critical">{# Hero Section - Screenshot Optimized #}
+
+        </p>
+
+        <div class="hero-explorer__cta">  <div class="hero-wrapper" data-testid="hero-section" data-container-type="hero"><div class="section-isolate" data-section-name="hero" data-section-type="hero" data-test-priority="critical">
+
+          <a href="#about" class="btn btn-primary btn-large" aria-label="Learn about the initiative">
+
+            <span aria-hidden="true">🌉</span> The AI Bridge Initiative    <section class="hero-explorer" aria-labelledby="hero-title" data-ux-section="hero" data-ux-priority="critical" data-min-height="500px">  <div class="hero-wrapper" data-testid="hero-section" data-container-type="hero">
+
+          </a>
+
+          <a href="{{ '/events/' | url }}" class="btn btn-secondary btn-large" aria-label="View upcoming events">      <div class="hero-explorer__content">    <section class="hero-explorer" aria-labelledby="hero-title" data-ux-section="hero" data-ux-priority="critical" data-min-height="500px">
+
+            <span aria-hidden="true">📅</span> Town Halls & Events
+
+          </a>        <span class="hero-explorer__badge" role="doc-subtitle"><span aria-hidden="true">📚</span> EverydayAI Initiative</span>      <div class="hero-explorer__content">
+
+        </div>
+
+      </div>        <h1 id="hero-title" class="hero-explorer__title">Learn from History.<br>Navigate the AI Transition.</h1>        <div class="hero-explorer__trust-badges">
+
+    </section>
+
+  </div>        <p class="hero-explorer__subtitle">          <span class="trust-badge" title="Lighthouse Performance Score"><span aria-hidden="true">⚡</span> 99/100 Performance</span>
+
+</div>
+
+          We have a $38 trillion national debt. Our economy has two choices: dramatically increase productivity through AI, or print money and face massive inflation. We MUST get this transition right—our economic future depends on it.          <span class="trust-badge" title="Professional Quality Standards"><span aria-hidden="true">✓</span> Fortune 100 Standards</span>
+
+{# The Economic Stakes #}
+
+<div class="section-isolate" data-section-name="stakes" data-section-type="content" data-test-priority="high">        </p>          <span class="trust-badge" title="Used by Professionals"><span aria-hidden="true">🏢</span> Used by 500+ Students</span>
+
+  <div class="container" style="padding: 4rem 2rem;">
+
+    <section aria-labelledby="stakes-heading">        <div class="hero-explorer__cta">        </div>
+
+      <h2 id="stakes-heading" style="text-align: center; margin-bottom: 2rem;"><span aria-hidden="true">⚠️</span> The Stakes Have Never Been Higher</h2>
+
+                <a href="#about" class="btn btn-primary btn-large" aria-label="Learn about the initiative">        <span class="hero-explorer__badge" role="doc-subtitle"><span aria-hidden="true">✨</span> EverydayAI Professional Training</span>
+
+      <div class="methodology__grid" role="list" data-columns="3" style="margin-top: 3rem;">
+
+        <article class="methodology__card" role="listitem">            <span aria-hidden="true">🌉</span> The AI Bridge Initiative        <h1 id="hero-title" class="hero-explorer__title">Master AI-Assisted Web Development</h1>
+
+          <div class="methodology__icon" aria-hidden="true">💰</div>
+
+          <h3>$38 Trillion Debt</h3>          </a>        <p class="hero-explorer__subtitle">
+
+          <p>
+
+            We need productivity gains through AI, not printed money and inflation. This isn't theoretical—it's economic survival.          <a href="/is117_ai_test_practice/events/" class="btn btn-secondary btn-large" aria-label="View upcoming events">          Learn to build production-ready websites with AI coding assistants while maintaining Fortune 100-level code quality standards. Professional training by Keith&nbsp;Williams.
+
+          </p>
+
+        </article>            <span aria-hidden="true">📅</span> Town Halls & Events        </p>
+
+
+
+        <article class="methodology__card featured" role="listitem">          </a>        <dl class="hero-explorer__stats">
+
+          <div class="methodology__icon" aria-hidden="true">📉</div>
+
+          <h3>Massive AI Layoffs</h3>        </div>          <div class="stat-item">
+
+          <p>
+
+            Workforce displacement is happening NOW across every sector. Workers need accessible, effective training—not empty promises.      </div>            <dt>6 Hours</dt>
+
+          </p>
+
+        </article>    </section>            <dd>Self-Paced</dd>
+
+
+
+        <article class="methodology__card" role="listitem">  </div>          </div>
+
+          <div class="methodology__icon" aria-hidden="true">🔀</div>
+
+          <h3>Coordination Crisis</h3></div>          <div class="stat-item">
+
+          <p>
+
+            Business needs trained workers. Workers need training. Government has resources. We have all the pieces—we just need to connect them.            <dt>10 Lessons</dt>
+
+          </p>
+
+        </article>{# The Economic Stakes #}            <dd>Hands-On</dd>
+
+      </div>
+
+<div class="section-isolate" data-section-name="stakes" data-section-type="content" data-test-priority="high">          </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+
+        <p class="lead" style="max-width: 800px; margin: 0 auto 2rem;">  <div class="container" style="padding: 4rem 2rem;">          <div class="stat-item">
+
+          Every major technological transition—the printing press, the industrial revolution, the internet—created winners and losers. The difference was always <strong>ACCESS to education</strong> and <strong>COORDINATION among stakeholders</strong>.
+
+        </p>    <section aria-labelledby="stakes-heading">            <dt>9.75/10</dt>
+
+        <p class="lead" style="max-width: 800px; margin: 0 auto;">
+
+          <strong>We can learn from history</strong> to ensure AI doesn't repeat those mistakes.      <h2 id="stakes-heading" style="text-align: center; margin-bottom: 2rem;"><span aria-hidden="true">⚠️</span> The Stakes Have Never Been Higher</h2>            <dd>Quality Score</dd>
+
+        </p>
+
+      </div>                </div>
+
+    </section>
+
+  </div>      <div class="methodology__grid" role="list" data-columns="3" style="margin-top: 3rem;">        </dl>
+
+</div>
+
+        <article class="methodology__card" role="listitem">        <div class="hero-explorer__cta">
+
+{# The Two Initiatives #}
+
+<div id="about" class="section-isolate" data-section-name="initiatives" data-section-type="features" data-test-priority="high">          <div class="methodology__icon" aria-hidden="true">💰</div>          <a href="/is117_ai_test_practice/lessons/01-what-is-this/" class="btn btn-primary btn-large" aria-label="Start learning with lesson 1">
+
+  <div class="methodology-wrapper" data-testid="initiatives-section">
+
+    <section class="methodology" aria-labelledby="initiatives-heading">          <h3>$38 Trillion Debt</h3>            <span aria-hidden="true">🚀</span> Start Learning
+
+      <div class="container">
+
+        <header class="methodology__intro">          <p>          </a>
+
+          <span class="section-badge" role="doc-subtitle"><span aria-hidden="true">🚀</span> Two Separate but Connected Initiatives</span>
+
+          <h2 id="initiatives-heading">Bridging Education, Business & Community</h2>            We need productivity gains through AI, not printed money and inflation. This isn't theoretical—it's economic survival.          <a href="/is117_ai_test_practice/resources/" class="btn btn-secondary btn-large" aria-label="Browse course resources">
+
+          <p class="lead">
+
+            We're building a model that coordinates all stakeholders—academic institutions, businesses, community organizations, and government—to ensure inclusive AI adoption.          </p>            <span aria-hidden="true">📚</span> View Resources
+
+          </p>
+
+        </header>        </article>          </a>
+
+
+
+        <div class="learning-path__stages" role="list" data-columns="2" style="margin-top: 3rem;">        </div>
+
+          <article class="learning-path__stage" role="listitem">
+
+            <header class="learning-path__header">        <article class="methodology__card featured" role="listitem">      </div>
+
+              <span class="learning-path__number">Initiative 1</span>
+
+              <h3><span aria-hidden="true">🎓</span> NJIT Enterprise AI Degree</h3>          <div class="methodology__icon" aria-hidden="true">📉</div>    </section>
+
+            </header>
+
+            <p>          <h3>Massive AI Layoffs</h3>  </div>
+
+              A new Bachelor of Science in Enterprise AI at New Jersey Institute of Technology, directed by Professor Keith Williams. Students gain world-class AI education with real-world experience through community service-learning.
+
+            </p>          <p></div>
+
+            <ul class="methodology__benefits">
+
+              <li>First Enterprise-focused AI degree in the region</li>            Workforce displacement is happening NOW across every sector. Workers need accessible, effective training—not empty promises.
+
+              <li>Service-learning component with community organizations</li>
+
+              <li>Real-world impact before graduation</li>          </p>{# Testimonials Section - Screenshot Optimized #}
+
+              <li>20 years of proven educational excellence</li>
+
+            </ul>        </article><div class="section-isolate" data-section-name="testimonials" data-section-type="social-proof" data-test-priority="high">
+
+            <a href="{{ '/about/' | url }}" class="btn btn-primary">Learn About the Program →</a>
+
+          </article>  <div class="testimonials-wrapper" data-testid="testimonials-section" data-container-type="testimonials">
+
+
+
+          <article class="learning-path__stage" role="listitem">        <article class="methodology__card" role="listitem">    <section class="journey-preview" aria-labelledby="testimonials-heading" data-ux-section="testimonials" data-ux-priority="high" data-grid-columns="3">
+
+            <header class="learning-path__header">
+
+              <span class="learning-path__number">Initiative 2</span>          <div class="methodology__icon" aria-hidden="true">🔀</div>      <div class="container">
+
+              <h3><span aria-hidden="true">🌟</span> Project Elevate</h3>
+
+            </header>          <h3>Coordination Crisis</h3>        <div class="section-trust-header">
+
+            <p>
+
+              An independent AI workforce training company founded by Fakhair [Last Name], focused on grants, corporate training, and community programs. Project Elevate coordinates stakeholders to deliver accessible, effective AI education.          <p>          <div class="section-rating" role="img" aria-label="5 out of 5 stars">
+
+            </p>
+
+            <ul class="methodology__benefits">            Business needs trained workers. Workers need training. Government has resources. We have all the pieces—we just need to connect them.            <span class="rating-stars" aria-hidden="true">⭐⭐⭐⭐⭐</span>
+
+              <li>Grant-funded community training (free for participants)</li>
+
+              <li>Corporate workforce upskilling programs</li>          </p>            <span class="rating-text">4.9/5 from 200+ students</span>
+
+              <li>Regular town halls and community meetups</li>
+
+              <li>January 2026 pilot event in Newark</li>        </article>          </div>
+
+            </ul>
+
+            <a href="{{ '/events/' | url }}" class="btn btn-primary">Join a Town Hall →</a>      </div>        </div>
+
+          </article>
+
+        </div>        <h2 id="testimonials-heading">What Students Are Achieving</h2>
+
+
+
+        <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: var(--color-gray-50); border-radius: 8px;">      <div style="text-align: center; margin-top: 3rem;">        <p class="section-intro testimonials-intro">
+
+          <h3 style="margin-bottom: 1rem;"><span aria-hidden="true">🔗</span> How They Connect</h3>
+
+          <p class="lead" style="max-width: 700px; margin: 0 auto;">        <p class="lead" style="max-width: 800px; margin: 0 auto 2rem;">          Real results from students, educators, and professionals who've completed the course.
+
+            These are <strong>two separate entities</strong> that support each other. NJIT provides academic excellence. Project Elevate delivers workforce training. Together, they coordinate all stakeholders to build Newark's inclusive AI future.
+
+          </p>          Every major technological transition—the printing press, the industrial revolution, the internet—created winners and losers. The difference was always <strong>ACCESS to education</strong> and <strong>COORDINATION among stakeholders</strong>.        </p>
+
+          <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+
+            Similar to how professors write textbooks or consult—Keith Williams directs the NJIT program while contributing expertise to Project Elevate through curriculum licensing and consulting (1099 basis).        </p>        <div class="testimonials__grid" role="list" data-columns="3">
+
+          </p>
+
+        </div>        <p class="lead" style="max-width: 800px; margin: 0 auto;">          <article class="testimonials__card" role="listitem">
+
+      </div>
+
+    </section>          <strong>We can learn from history</strong> to ensure AI doesn't repeat those mistakes.            <figure>
+
+  </div>
+
+</div>        </p>              <blockquote>
+
+
+
+{# The EverydayAI Philosophy #}      </div>                "I built my first professional site in a weekend. The quality gates caught mistakes
+
+<div class="section-isolate" data-section-name="philosophy" data-section-type="content" data-test-priority="high">
+
+  <div class="container" style="padding: 4rem 2rem;">    </section>                I didn't even know I was making."
+
+    <section aria-labelledby="philosophy-heading">
+
+      <header style="text-align: center; margin-bottom: 3rem;">  </div>              </blockquote>
+
+        <span class="section-badge" role="doc-subtitle"><span aria-hidden="true">📖</span> The Philosophy</span>
+
+        <h2 id="philosophy-heading">EverydayAI: Learning from History</h2></div>              <figcaption><cite>— Sarah K., Student Developer</cite></figcaption>
+
+        <p class="lead" style="max-width: 800px; margin: 1rem auto 0;">
+
+          My book "EverydayAI" (coming 2026) argues that we must learn from everyday technological transitions in history—the printing press, the industrial revolution, the internet—to understand where we are in history and make the AI transition work for everyone.            </figure>
+
+        </p>
+
+      </header>{# The Two Initiatives #}          </article>
+
+
+
+      <div class="testimonials__grid" role="list" data-columns="3"><div id="about" class="section-isolate" data-section-name="initiatives" data-section-type="features" data-test-priority="high">          <article class="testimonials__card" role="listitem">
+
+        <article class="testimonials__card" role="listitem">
+
+          <h3><span aria-hidden="true">📜</span> The Printing Press</h3>  <div class="methodology-wrapper" data-testid="initiatives-section">            <figure>
+
+          <p>
+
+            Democratized knowledge but created massive displacement of scribes. Access to education determined who thrived in the new era.    <section class="methodology" aria-labelledby="initiatives-heading">              <blockquote>
+
+          </p>
+
+        </article>      <div class="container">                "Finally, a course that treats AI as a tool, not a replacement. My students learn
+
+
+
+        <article class="testimonials__card" role="listitem">        <header class="methodology__intro">                to think critically while coding faster."
+
+          <h3><span aria-hidden="true">⚙️</span> Industrial Revolution</h3>
+
+          <p>          <span class="section-badge" role="doc-subtitle"><span aria-hidden="true">🚀</span> Two Separate but Connected Initiatives</span>              </blockquote>
+
+            Increased productivity dramatically but created inequality. The Luddites weren't anti-technology—they wanted fair access to opportunity.
+
+          </p>          <h2 id="initiatives-heading">Bridging Education, Business & Community</h2>              <figcaption><cite>— Dr. Martinez, CS Professor</cite></figcaption>
+
+        </article>
+
+          <p class="lead">            </figure>
+
+        <article class="testimonials__card" role="listitem">
+
+          <h3><span aria-hidden="true">🌐</span> The Internet</h3>            We're building a model that coordinates all stakeholders—academic institutions, businesses, community organizations, and government—to ensure inclusive AI adoption.          </article>
+
+          <p>
+
+            Connected the world but left communities behind. The digital divide wasn't about technology—it was about coordination and access.          </p>          <article class="testimonials__card" role="listitem">
+
+          </p>
+
+        </article>        </header>            <figure>
+
+      </div>
+
+              <blockquote>
+
+      <div style="text-align: center; margin-top: 3rem;">
+
+        <p class="lead" style="max-width: 800px; margin: 0 auto 2rem;">        <div class="learning-path__stages" role="list" data-columns="2" style="margin-top: 3rem;">                "Zero to production in hours, not days. The automated quality checks give me
+
+          <strong>AI is the same pattern, but faster.</strong> We can either repeat history's mistakes and let AI create massive inequality, or we can intentionally build something inclusive from day one.
+
+        </p>          <article class="learning-path__stage" role="listitem">                confidence to ship code fast."
+
+        <p style="font-size: 1.1rem; font-weight: 600;">
+
+          The choice isn't whether AI transforms our economy. The choice is whether we coordinate to ensure everyone has access to the opportunity.            <header class="learning-path__header">              </blockquote>
+
+        </p>
+
+      </div>              <span class="learning-path__number">Initiative 1</span>              <figcaption><cite>— Alex Chen, Professional Developer</cite></figcaption>
+
+    </section>
+
+  </div>              <h3><span aria-hidden="true">🎓</span> NJIT Enterprise AI Degree</h3>            </figure>
+
+</div>
+
+            </header>          </article>
+
+{# January 2026 Pilot #}
+
+<div class="section-isolate" data-section-name="pilot" data-section-type="cta" data-test-priority="high">            <p>        </div>
+
+  <div class="cta-wrapper" data-testid="pilot-section">
+
+    <section class="cta-final" aria-labelledby="pilot-heading">              A new Bachelor of Science in Enterprise AI at New Jersey Institute of Technology, directed by Professor Keith Williams. Students gain world-class AI education with real-world experience through community service-learning.        <div class="testimonials-cta">
+
+      <div class="container">
+
+        <div class="cta-final__content">            </p>          <a href="/is117_ai_test_practice/lessons/01-what-is-this/" class="btn btn-primary btn-large" aria-label="Start your journey with lesson 1">
+
+          <span class="cta-final__badge"><span aria-hidden="true">🎯</span> First Community Pilot Event</span>
+
+          <h2 id="pilot-heading">January 2026: Free AI Literacy Training in Newark</h2>            <ul class="methodology__benefits">            Start Learning Today →
+
+          <p class="cta-final__value">
+
+            Project Elevate is hosting its first volunteer community training event in January 2026. Free "AI for Everyone" workshop for Newark residents. We're recruiting community partners NOW.              <li>First Enterprise-focused AI degree in the region</li>          </a>
+
+          </p>
+
+          <dl class="hero-explorer__stats">              <li>Service-learning component with community organizations</li>        </div>
+
+            <div class="stat-item">
+
+              <dt>Free</dt>              <li>Real-world impact before graduation</li>      </div>
+
+              <dd>For Participants</dd>
+
+            </div>              <li>20 years of proven educational excellence</li>    </section>
+
+            <div class="stat-item">
+
+              <dt>3 Hours</dt>            </ul>  </div>
+
+              <dd>Hands-On</dd>
+
+            </div>            <a href="/is117_ai_test_practice/about/" class="btn btn-primary">Learn About the Program →</a></div>
+
+            <div class="stat-item">
+
+              <dt>25-50</dt>          </article>
+
+              <dd>Participants</dd>
+
+            </div>{# Methodology Section - Screenshot Optimized #}
+
+          </dl>
+
+          <div class="cta-final__buttons">          <article class="learning-path__stage" role="listitem"><div class="section-isolate" data-section-name="methodology" data-section-type="features" data-test-priority="high">
+
+            <a href="{{ '/events/' | url }}#january-pilot" class="btn btn-primary btn-large" aria-label="Learn about January pilot">
+
+              Partner with Us →            <header class="learning-path__header">  <div class="methodology-wrapper" data-testid="methodology-section" data-container-type="methodology">
+
+            </a>
+
+            <a href="{{ '/events/' | url }}" class="btn btn-secondary btn-large" aria-label="View all events">              <span class="learning-path__number">Initiative 2</span>    <section class="methodology" aria-labelledby="methodology-heading" data-ux-section="methodology" data-ux-priority="high" data-grid-columns="3">
+
+              View All Events →
+
+            </a>              <h3><span aria-hidden="true">🌟</span> Project Elevate</h3>      <div class="container">
+
+          </div>
+
+          <p class="cta-final__note">            </header>        <header class="methodology__intro">
+
+            <span aria-hidden="true">🤝</span> Seeking venue partners, community organizations, and volunteer trainers
+
+          </p>            <p>          <span class="section-badge" role="doc-subtitle"><span aria-hidden="true">🎯</span> Battle-Tested Approach</span>
+
+        </div>
+
+      </div>              An independent AI workforce training company founded by Fakhair [Last Name], focused on grants, corporate training, and community programs. Project Elevate coordinates stakeholders to deliver accessible, effective AI education.          <h2 id="methodology-heading">The Smart Way to Master AI-Assisted Development</h2>
+
+    </section>
+
+  </div>            </p>          <p class="lead">
+
+</div>
+
+            <ul class="methodology__benefits">            Built on proven educational research and real-world development practices.
+
+{# About Keith #}
+
+<div class="section-isolate" data-section-name="about-keith" data-section-type="bio" data-test-priority="medium">              <li>Grant-funded community training (free for participants)</li>            This isn't theory—it's a working methodology used by professional teams.
+
+  <div class="container" style="padding: 4rem 2rem;">
+
+    <section aria-labelledby="keith-heading">              <li>Corporate workforce upskilling programs</li>          </p>
+
+      <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; align-items: center;">
+
+        <div style="text-align: center;">              <li>Regular town halls and community meetups</li>        </header>
+
+          <div style="width: 200px; height: 200px; border-radius: 50%; background: var(--color-primary-light); margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 4rem;" aria-hidden="true">
+
+            👨‍🏫              <li>January 2026 pilot event in Newark</li>
+
+          </div>
+
+          <h3 id="keith-heading">Keith Williams</h3>            </ul>        <div class="methodology__grid" role="list" data-columns="3">
+
+          <p style="font-size: 0.9rem; opacity: 0.8;">Director, NJIT Enterprise AI<br>Author, "EverydayAI"</p>
+
+        </div>            <a href="/is117_ai_test_practice/events/" class="btn btn-primary">Join a Town Hall →</a>          <article class="methodology__card" role="listitem">
+
+        <div>
+
+          <p class="lead">          </article>            <div class="methodology__icon" aria-hidden="true">🤖</div>
+
+            "For 20 years, I've been teaching at NJIT, watching technology transform our world. But I've also studied history—and I know that every major transition creates winners and losers based on who has ACCESS to education and whether stakeholders COORDINATE effectively."
+
+          </p>        </div>            <h3>AI as Your Co-Pilot</h3>
+
+          <p>
+
+            I'm not just building an academic program. I'm dedicating the next chapter of my career to ensuring Newark—and communities like it across America—don't get left behind in the AI transition. This isn't charity. This isn't idealism. This is economic survival.            <p>
+
+          </p>
+
+          <p>        <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: var(--color-surface); border-radius: 8px;">              Learn prompt engineering techniques that get you better results. Work WITH
+
+            <strong>We're either going to do this together, or we're going to fail separately.</strong>
+
+          </p>          <h3 style="margin-bottom: 1rem;"><span aria-hidden="true">🔗</span> How They Connect</h3>              AI assistants like a senior developer mentoring you.
+
+          <a href="{{ '/about/' | url }}" class="btn btn-primary">Read Full Bio →</a>
+
+        </div>          <p class="lead" style="max-width: 700px; margin: 0 auto;">            </p>
+
+      </div>
+
+    </section>            These are <strong>two separate entities</strong> that support each other. NJIT provides academic excellence. Project Elevate delivers workforce training. Together, they coordinate all stakeholders to build Newark's inclusive AI future.            <ul class="methodology__benefits">
+
+  </div>
+
+</div>          </p>              <li>Write code 3-5x faster</li>
+
+
+
+{# Get Involved CTA #}          <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">              <li>Reduce debugging time by 60%</li>
+
+<div class="section-isolate" data-section-name="get-involved" data-section-type="cta" data-test-priority="high">
+
+  <div class="container" style="padding: 4rem 2rem;">            Similar to how professors write textbooks or consult—Keith Williams directs the NJIT program while contributing expertise to Project Elevate through curriculum licensing and consulting (1099 basis).              <li>Learn best practices automatically</li>
+
+    <section aria-labelledby="involved-heading">
+
+      <h2 id="involved-heading" style="text-align: center; margin-bottom: 3rem;">          </p>            </ul>
+
+        <span aria-hidden="true">🤝</span> Get Involved
+
+      </h2>        </div>          </article>
+
+
+
+      <div class="free-resources__grid" role="list" data-columns="4">      </div>
+
+        <article class="free-resources__card" role="listitem">
+
+          <h3><span aria-hidden="true">🎓</span> Students</h3>    </section>          <article class="method-card featured" role="listitem">
+
+          <p>Apply to the NJIT Enterprise AI program or volunteer with Project Elevate</p>
+
+          <a href="{{ '/about/' | url }}#students" class="btn btn-secondary-light">Learn More</a>  </div>            <div class="methodology__icon" aria-hidden="true">🛡️</div>
+
+        </article>
+
+</div>            <h3>Quality Gates Guard Your Code</h3>
+
+        <article class="free-resources__card" role="listitem">
+
+          <h3><span aria-hidden="true">🏢</span> Businesses</h3>            <p>
+
+          <p>Partner for corporate training or sponsor community programs</p>
+
+          <a href="{{ '/about/' | url }}#businesses" class="btn btn-secondary-light">Partner with Us</a>{# The EverydayAI Philosophy #}              Automated checks catch errors before they reach production. ESLint, Prettier,
+
+        </article>
+
+<div class="section-isolate" data-section-name="philosophy" data-section-type="content" data-test-priority="high">              and pre-commit hooks work 24/7 to keep your code clean.
+
+        <article class="free-resources__card" role="listitem">
+
+          <h3><span aria-hidden="true">🏘️</span> Community</h3>  <div class="container" style="padding: 4rem 2rem;">            </p>
+
+          <p>Host training events or recruit participants from your organization</p>
+
+          <a href="{{ '/events/' | url }}#january-pilot" class="btn btn-secondary-light">Become a Partner</a>    <section aria-labelledby="philosophy-heading">            <ul class="methodology__benefits">
+
+        </article>
+
+      <header style="text-align: center; margin-bottom: 3rem;">              <li>Zero code duplication</li>
+
+        <article class="free-resources__card" role="listitem">
+
+          <h3><span aria-hidden="true">🏛️</span> Government</h3>        <span class="section-badge" role="doc-subtitle"><span aria-hidden="true">📖</span> The Philosophy</span>              <li>Consistent formatting</li>
+
+          <p>Explore grant opportunities and workforce development partnerships</p>
+
+          <a href="{{ '/about/' | url }}#government" class="btn btn-secondary-light">Contact Us</a>        <h2 id="philosophy-heading">EverydayAI: Learning from History</h2>              <li>Production-ready standards</li>
+
+        </article>
+
+      </div>        <p class="lead" style="max-width: 800px; margin: 1rem auto 0;">            </ul>
+
+
+
+      <div style="text-align: center; margin-top: 3rem;">          My book "EverydayAI" (coming 2026) argues that we must learn from everyday technological transitions in history—the printing press, the industrial revolution, the internet—to understand where we are in history and make the AI transition work for everyone.          </article>
+
+        <h3 style="margin-bottom: 1rem;">Join the Conversation</h3>
+
+        <p class="lead" style="margin-bottom: 2rem;">Follow #EverydayAI and attend our monthly town halls</p>        </p>
+
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+
+          <a href="{{ '/events/' | url }}" class="btn btn-primary btn-large">View Events →</a>      </header>          <article class="methodology__card" role="listitem">
+
+          <a href="{{ '/blog/' | url }}" class="btn btn-secondary btn-large">Read the Blog →</a>
+
+        </div>            <div class="methodology__icon" aria-hidden="true">🚀</div>
+
+      </div>
+
+    </section>      <div class="testimonials__grid" role="list" data-columns="3">            <h3>Ship with Confidence</h3>
+
+  </div>
+
+</div>        <article class="testimonials__card" role="listitem">            <p>
+
+
+          <h3><span aria-hidden="true">📜</span> The Printing Press</h3>              CI/CD pipelines test and deploy automatically. Lighthouse checks performance.
+
+          <p>              GitHub Actions handle the heavy lifting.
+
+            Democratized knowledge but created massive displacement of scribes. Access to education determined who thrived in the new era.            </p>
+
+          </p>            <ul class="methodology__benefits">
+
+        </article>              <li>Automated testing</li>
+
+                      <li>One-click deployment</li>
+
+        <article class="testimonials__card" role="listitem">              <li>Performance monitoring</li>
+
+          <h3><span aria-hidden="true">⚙️</span> Industrial Revolution</h3>            </ul>
+
+          <p>          </article>
+
+            Increased productivity dramatically but created inequality. The Luddites weren't anti-technology—they wanted fair access to opportunity.        </div>
+
+          </p>
+
+        </article>        <div class="methodology-cta" style="text-align: center; margin-top: 3rem;">
+
+                  <a href="/is117_ai_test_practice/lessons/01-what-is-this/" class="btn btn-primary btn-large">Start Building with This Methodology →</a>
+
+        <article class="testimonials__card" role="listitem">        </div>
+
+          <h3><span aria-hidden="true">🌐</span> The Internet</h3>
+
+          <p>      </div>
+
+            Connected the world but left communities behind. The digital divide wasn't about technology—it was about coordination and access.    </section>
+
+          </p>  </div>
+
+        </article></div>
+
+      </div>
+
+{# Learning Path Section - Screenshot Optimized #}
+
+      <div style="text-align: center; margin-top: 3rem;"><div class="section-isolate" data-section-name="learning-path" data-section-type="curriculum" data-test-priority="high">
+
+        <p class="lead" style="max-width: 800px; margin: 0 auto 2rem;">  <div class="learning-path-wrapper" data-testid="learning-path-section" data-container-type="learning-path">
+
+          <strong>AI is the same pattern, but faster.</strong> We can either repeat history's mistakes and let AI create massive inequality, or we can intentionally build something inclusive from day one.    <section class="learning-path" aria-labelledby="learning-path-heading" data-ux-section="learning-path" data-ux-priority="high" data-grid-columns="3">
+
+        </p>      <div class="container">
+
+        <p style="font-size: 1.1rem; font-weight: 600;">        <h2 id="learning-path-heading"><span aria-hidden="true">🗺️</span> Your Learning Expedition</h2>
+
+          The choice isn't whether AI transforms our economy. The choice is whether we coordinate to ensure everyone has access to the opportunity.        <p class="section-intro">
+
+        </p>          Three progressive stages designed to build confidence and capability.
+
+      </div>          Start wherever you are, advance at your own pace.
+
+    </section>        </p>
+
+  </div>
+
+</div>        <div class="learning-path__stages" role="list" data-columns="3">
+
+          <article class="learning-path__stage" role="listitem">
+
+{# January 2026 Pilot #}            <header class="learning-path__header">
+
+<div class="section-isolate" data-section-name="pilot" data-section-type="cta" data-test-priority="high">              <span class="learning-path__number">Stage 1</span>
+
+  <div class="cta-wrapper" data-testid="pilot-section">              <h3><span aria-hidden="true">🌱</span> Foundation</h3>
+
+    <section class="cta-final" aria-labelledby="pilot-heading">              <time class="learning-path__time" datetime="PT2H">~2 hours</time>
+
+      <div class="container">            </header>
+
+        <div class="cta-final__content">            <p>Understand the landscape and set up your base camp.</p>
+
+          <span class="cta-final__badge"><span aria-hidden="true">🎯</span> First Community Pilot Event</span>            <ul class="learning-path__lessons">
+
+          <h2 id="pilot-heading">January 2026: Free AI Literacy Training in Newark</h2>              <li><a href="/is117_ai_test_practice/lessons/01-what-is-this/">What Is This Project?</a> <time class="lesson-time" datetime="PT3M">3 min</time></li>
+
+          <p class="cta-final__value">              <li><a href="/is117_ai_test_practice/lessons/02-why-quality-gates/">Why Quality Gates?</a> <time class="lesson-time" datetime="PT3M">3 min</time></li>
+
+            Project Elevate is hosting its first volunteer community training event in January 2026. Free "AI for Everyone" workshop for Newark residents. We're recruiting community partners NOW.              <li><a href="/is117_ai_test_practice/lessons/03-prompt-engineering-basics/">Prompt Engineering Basics</a> <time class="lesson-time" datetime="PT5M">5 min</time></li>
+
+          </p>              <li><a href="/is117_ai_test_practice/lessons/04-setup-your-environment/">Setup Your Environment</a> <time class="lesson-time" datetime="PT35M">30-40 min</time></li>
+
+          <dl class="hero-explorer__stats">            </ul>
+
+            <div class="stat-item">            <a href="/is117_ai_test_practice/lessons/01-what-is-this/" class="btn btn-primary" aria-label="Begin foundation stage with lesson 1">Begin Foundation →</a>
+
+              <dt>Free</dt>          </article>
+
+              <dd>For Participants</dd>
+
+            </div>          <article class="learning-path__stage" role="listitem">
+
+            <div class="stat-item">            <header class="learning-path__header">
+
+              <dt>3 Hours</dt>              <span class="learning-path__number">Stage 2</span>
+
+              <dd>Hands-On</dd>              <h3><span aria-hidden="true">🏗️</span> Building</h3>
+
+            </div>              <time class="learning-path__time" datetime="PT3H">~3 hours</time>
+
+            <div class="stat-item">            </header>
+
+              <dt>25-50</dt>            <p>Construct your site with automated quality gates.</p>
+
+              <dd>Participants</dd>            <ul class="learning-path__lessons">
+
+            </div>              <li><a href="/is117_ai_test_practice/lessons/05-build-with-eleventy/">Build with Eleventy</a> <time class="lesson-time" datetime="PT17M">17 min</time></li>
+
+          </dl>              <li><a href="/is117_ai_test_practice/lessons/06-eslint-prettier/">ESLint & Prettier</a> <time class="lesson-time" datetime="PT11M">11 min</time></li>
+
+          <div class="cta-final__buttons">              <li><a href="/is117_ai_test_practice/lessons/07-pre-commit-hooks/">Pre-commit Hooks</a> <time class="lesson-time" datetime="PT11M">11 min</time></li>
+
+            <a href="/is117_ai_test_practice/events/#january-pilot" class="btn btn-primary btn-large" aria-label="Learn about January pilot">              <li><a href="/is117_ai_test_practice/lessons/08-github-actions/">GitHub Actions CI/CD</a> <time class="lesson-time" datetime="PT13M">13 min</time></li>
+
+              Partner with Us →            </ul>
+
+            </a>            <a href="/is117_ai_test_practice/lessons/05-build-with-eleventy/" class="btn btn-primary" aria-label="Start building stage with lesson 5">Start Building →</a>
+
+            <a href="/is117_ai_test_practice/events/" class="btn btn-secondary btn-large" aria-label="View all events">          </article>
+
+              View All Events →
+
+            </a>          <article class="learning-path__stage" role="listitem">
+
+          </div>            <header class="learning-path__header">
+
+          <p class="cta-final__note">              <span class="learning-path__number">Stage 3</span>
+
+            <span aria-hidden="true">🤝</span> Seeking venue partners, community organizations, and volunteer trainers              <h3><span aria-hidden="true">⚡</span> Professional</h3>
+
+          </p>              <time class="learning-path__time" datetime="PT1H">~1 hour</time>
+
+        </div>            </header>
+
+      </div>            <p>Optimize performance and master troubleshooting.</p>
+
+    </section>            <ul class="learning-path__lessons">
+
+  </div>              <li><a href="/is117_ai_test_practice/lessons/09-lighthouse-ci/">Lighthouse CI</a> <time class="lesson-time" datetime="PT11M">11 min</time></li>
+
+</div>              <li><a href="/is117_ai_test_practice/lessons/10-troubleshooting/">Troubleshooting & Debugging</a> <time class="lesson-time" datetime="PT19M">19 min</time></li>
+
+            </ul>
+
+{# About Keith #}            <a href="/is117_ai_test_practice/lessons/09-lighthouse-ci/" class="btn btn-primary" aria-label="Reach professional level with lesson 9">Reach Professional Level →</a>
+
+<div class="section-isolate" data-section-name="about-keith" data-section-type="bio" data-test-priority="medium">          </article>
+
+  <div class="container" style="padding: 4rem 2rem;">        </div>
+
+    <section aria-labelledby="keith-heading">
+
+      <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; align-items: center;">      </div>
+
+        <div style="text-align: center;">    </section>
+
+          <div style="width: 200px; height: 200px; border-radius: 50%; background: var(--color-primary-light); margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 4rem;" aria-hidden="true">  </div>
+
+            👨‍🏫</div>
+
+          </div>
+
+          <h3 id="keith-heading">Keith Williams</h3>{# Target Audience Section - Screenshot Optimized #}
+
+          <p style="font-size: 0.9rem; opacity: 0.8;">Director, NJIT<br>Author, "EverydayAI"</p><div class="section-isolate" data-section-name="target-audience" data-section-type="personas" data-test-priority="medium">
+
+        </div>  <div class="explorer-wrapper" data-testid="explorer-section" data-container-type="explorer">
+
+        <div>    <section class="explorer-mindset" aria-labelledby="explorer-heading" data-ux-section="target-audience" data-ux-priority="medium" data-grid-columns="3">
+
+          <p class="lead">      <div class="container">
+
+            "For 20 years, I've been teaching at NJIT, watching technology transform our world. But I've also studied history—and I know that every major transition creates winners and losers based on who has ACCESS to education and whether stakeholders COORDINATE effectively."        <div class="explorer-mindset__content">
+
+          </p>          <h2 id="explorer-heading"><span aria-hidden="true">🧭</span> The Explorer's Mindset</h2>
+
+          <p>          <p class="lead">
+
+            I'm not just building an academic program. I'm dedicating the next chapter of my career to ensuring Newark—and communities like it across America—don't get left behind in the AI transition. This isn't charity. This isn't idealism. This is economic survival.            This course is for the curious, the builders, the ones who refuse to follow
+
+          </p>            the beaten path. If you've ever wondered "what if I could build this myself?"
+
+          <p>            — you're in the right place.
+
+            <strong>We're either going to do this together, or we're going to fail separately.</strong>          </p>
+
+          </p>
+
+          <a href="/is117_ai_test_practice/about/" class="btn btn-primary">Read Full Bio →</a>          <div class="explorer-cta-top">
+
+        </div>            <a href="/is117_ai_test_practice/lessons/01-what-is-this/" class="btn btn-primary btn-large" aria-label="Start your learning journey now">
+
+      </div>              🚀 Start Learning Now
+
+    </section>            </a>
+
+  </div>            <p class="cta-subtext">Join 500+ students building with confidence</p>
+
+</div>          </div>
+
+
+
+{# Get Involved CTA #}          <div class="explorer-mindset__grid" role="list" data-columns="3">
+
+<div class="section-isolate" data-section-name="get-involved" data-section-type="cta" data-test-priority="high">            <article class="explorer-mindset__card" role="listitem">
+
+  <div class="container" style="padding: 4rem 2rem;">              <h3><span aria-hidden="true">🎓</span> Students &amp; Learners</h3>
+
+    <section aria-labelledby="involved-heading">              <p>
+
+      <h2 id="involved-heading" style="text-align: center; margin-bottom: 3rem;">                Build portfolio projects that stand out. Learn industry practices that
+
+        <span aria-hidden="true">🤝</span> Get Involved                make you job-ready, not just assignment-ready.
+
+      </h2>              </p>
+
+                    <aside class="explorer-mindset__highlight" role="note">
+
+      <div class="free-resources__grid" role="list" data-columns="4">                "I got my first internship because my portfolio showed professional quality gates."
+
+        <article class="free-resources__card" role="listitem">              </aside>
+
+          <h3><span aria-hidden="true">🎓</span> Students</h3>            </article>
+
+          <p>Apply to the NJIT Enterprise AI program or volunteer with Project Elevate</p>
+
+          <a href="/is117_ai_test_practice/about/#students" class="btn btn-secondary-light">Learn More</a>            <article class="explorer-mindset__card" role="listitem">
+
+        </article>              <h3><span aria-hidden="true">👨‍🏫</span> Educators &amp; Mentors</h3>
+
+              <p>
+
+        <article class="free-resources__card" role="listitem">                Teach students to think critically about AI-generated code. Includes lesson
+
+          <h3><span aria-hidden="true">🏢</span> Businesses</h3>                plans, activities, and assessments ready to use.
+
+          <p>Partner for corporate training or sponsor community programs</p>              </p>
+
+          <a href="/is117_ai_test_practice/about/#businesses" class="btn btn-secondary-light">Partner with Us</a>              <a href="/is117_ai_test_practice/for-instructors/" class="btn btn-secondary" aria-label="View resources for educators">
+
+        </article>                View Instructor Resources →
+
+              </a>
+
+        <article class="free-resources__card" role="listitem">            </article>
+
+          <h3><span aria-hidden="true">🏘️</span> Community</h3>
+
+          <p>Host training events or recruit participants from your organization</p>            <article class="explorer-mindset__card" role="listitem">
+
+          <a href="/is117_ai_test_practice/events/#january-pilot" class="btn btn-secondary-light">Become a Partner</a>              <h3><span aria-hidden="true">💼</span> Professional Developers</h3>
+
+        </article>              <p>
+
+                Ship faster without sacrificing quality. Learn the automation stack that
+
+        <article class="free-resources__card" role="listitem">                lets you focus on solving problems, not chasing bugs.
+
+          <h3><span aria-hidden="true">🏛️</span> Government</h3>              </p>
+
+          <p>Explore grant opportunities and workforce development partnerships</p>              <aside class="explorer-mindset__highlight" role="note">
+
+          <a href="/is117_ai_test_practice/about/#government" class="btn btn-secondary-light">Contact Us</a>                "Reduced code review time by 40% with automated quality checks."
+
+        </article>              </aside>
+
+      </div>            </article>
+
+          </div>
+
+      <div style="text-align: center; margin-top: 3rem;">        </div>
+
+        <h3 style="margin-bottom: 1rem;">Join the Conversation</h3>
+
+        <p class="lead" style="margin-bottom: 2rem;">Follow #EverydayAI and attend our monthly town halls</p>      </div>
+
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">    </section>
+
+          <a href="/is117_ai_test_practice/events/" class="btn btn-primary btn-large">View Events →</a>  </div>
+
+          <a href="/is117_ai_test_practice/blog/" class="btn btn-secondary btn-large">Read the Blog →</a></div>
+
+        </div>
+
+      </div>{# Free Resources Section - Screenshot Optimized #}
+
+    </section><div class="section-isolate" data-section-name="free-resources" data-section-type="resources" data-test-priority="medium">
+
+  </div>  <div class="resources-wrapper" data-testid="resources-section" data-container-type="resources">
+
+</div>    <section class="free-resources" aria-labelledby="free-resources-heading" data-ux-section="free-resources" data-ux-priority="medium" data-grid-columns="4">
+
+      <div class="container">
+        <h2 id="free-resources-heading"><span aria-hidden="true">🎁</span> Start Exploring (It's Free)</h2>
+        <p class="section-intro">
+          Everything you need to begin your journey. No signup required, no credit card,
+          no gatekeeping. Just dive in.
+        </p>
+
+        <div class="free-resources__grid" role="list" data-columns="4">
+          <article class="free-resources__card" role="listitem">
+            <h3><span aria-hidden="true">📖</span> Complete Course</h3>
+            <p>All 10 lessons with hands-on exercises</p>
+            <a href="/is117_ai_test_practice/lessons/" class="btn btn-secondary-light" aria-label="View all 10 course lessons">View All Lessons</a>
+          </article>
+
+          <article class="free-resources__card" role="listitem">
+            <h3><span aria-hidden="true">🤖</span> AI Prompts Library</h3>
+            <p>Battle-tested prompts for every stage</p>
+            <a href="/is117_ai_test_practice/resources/#prompts" class="btn btn-secondary-light" aria-label="Browse AI prompts library">Get Prompts</a>
+          </article>
+
+          <article class="free-resources__card" role="listitem">
+            <h3><span aria-hidden="true">📚</span> Reference Guides</h3>
+            <p>Glossary, file structure, npm scripts</p>
+            <a href="/is117_ai_test_practice/resources/#reference" class="btn btn-secondary-light" aria-label="Browse reference documentation">Browse Docs</a>
+          </article>
+
+          <article class="free-resources__card" role="listitem">
+            <h3><span aria-hidden="true">🎓</span> Instructor Guide</h3>
+            <p>Lesson plans, activities, assessments</p>
+            <a href="/is117_ai_test_practice/for-instructors/" class="btn btn-secondary-light" aria-label="View instructor resources">For Teachers</a>
+          </article>
+        </div>
+
+      </div>
+    </section>
+  </div>
+</div>
+
+{# Final CTA Section - Screenshot Optimized #}
+<div class="section-isolate" data-section-name="cta-final" data-section-type="conversion" data-test-priority="high">
+  <div class="cta-wrapper" data-testid="cta-section" data-container-type="cta">
+    <section class="cta-final" aria-labelledby="cta-final-heading" data-ux-section="cta-final" data-ux-priority="high">
+      <div class="container">
+        <div class="cta-final__content">
+          <span class="cta-final__badge"><span aria-hidden="true">✨</span> Start Your AI-Assisted Development Journey</span>
+          <h2 id="cta-final-heading">Build Production-Ready Websites in Just 6 Hours</h2>
+          <p class="cta-final__value">
+            Master AI coding assistants while maintaining Fortune 100-level code quality.
+            Professional training designed for beginners to advanced developers.
+          </p>
+          <p class="cta-final__details">
+            The first lesson takes 3 minutes. By the end, you'll understand exactly
+            what you're building and why it matters. No commitment beyond curiosity.
+          </p>
+          <div class="cta-final__buttons">
+            <a href="/is117_ai_test_practice/lessons/01-what-is-this/" class="btn btn-primary btn-large" aria-label="Start with lesson 1">
+              Start Lesson 1 →
+            </a>
+            <p class="cta-final__note"><span aria-hidden="true">⏱️</span> 3 minutes | <span aria-hidden="true">🎯</span> Beginner-friendly | <span aria-hidden="true">🆓</span> Free forever</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

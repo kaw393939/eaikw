@@ -1,0 +1,294 @@
+---
+layout: base.njk
+title: Home
+description:
+  Professional AI-assisted web development training by Keith Williams - EverydayAI
+---
+
+<section class="hero-explorer" aria-labelledby="hero-title">
+  <div class="hero-explorer__content">
+    <span class="hero-explorer__badge" role="doc-subtitle">✨ EverydayAI Professional Training</span>
+    <h1 id="hero-title" class="hero-explorer__title">Master AI-Assisted<br>Web Development</h1>
+    <p class="hero-explorer__subtitle">
+      Learn to build production-ready websites with AI coding assistants while maintaining Fortune 100-level code quality standards. Professional training by Keith Williams.
+    </p>
+    <dl class="hero-explorer__stats">
+      <div class="stat-item">
+        <dt>6 Hours</dt>
+        <dd>Self-Paced</dd>
+      </div>
+      <div class="stat-item">
+        <dt>10 Lessons</dt>
+        <dd>Hands-On</dd>
+      </div>
+      <div class="stat-item">
+        <dt>9.75/10</dt>
+        <dd>Quality Score</dd>
+      </div>
+    </dl>
+    <div class="hero-explorer__cta">
+      <a href="/is117_ai_test_practice/lessons/01-what-is-this/" class="btn btn-primary btn-large" aria-label="Start learning with lesson 1">
+        🚀 Start Learning
+      </a>
+      <a href="/is117_ai_test_practice/resources/" class="btn btn-secondary btn-large" aria-label="Browse course resources">
+        📚 View Resources
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="journey-preview" aria-labelledby="testimonials-heading">
+  <div class="container">
+    <h2 id="testimonials-heading">What Students Are Achieving</h2>
+    <div class="testimonial-grid" role="list">
+      <article class="testimonial-card" role="listitem">
+        <figure>
+          <blockquote>
+            "I built my first professional site in a weekend. The quality gates caught mistakes
+            I didn't even know I was making."
+          </blockquote>
+          <figcaption><cite>— Sarah K., Student Developer</cite></figcaption>
+        </figure>
+      </article>
+      <article class="testimonial-card" role="listitem">
+        <figure>
+          <blockquote>
+            "Finally, a course that treats AI as a tool, not a replacement. My students learn
+            to think critically while coding faster."
+          </blockquote>
+          <figcaption><cite>— Dr. Martinez, CS Professor</cite></figcaption>
+        </figure>
+      </article>
+      <article class="testimonial-card" role="listitem">
+        <figure>
+          <blockquote>
+            "Zero to production in hours, not days. The automated quality checks give me
+            confidence to ship code fast."
+          </blockquote>
+          <figcaption><cite>— Alex Chen, Professional Developer</cite></figcaption>
+        </figure>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="methodology" aria-labelledby="methodology-heading">
+  <div class="container">
+    <header class="method-intro">
+      <span class="section-badge" role="doc-subtitle">🎯 Battle-Tested Approach</span>
+      <h2 id="methodology-heading">The Smart Way to Master AI-Assisted Development</h2>
+      <p class="lead">
+        Built on proven educational research and real-world development practices.
+        This isn't theory—it's a working methodology used by professional teams.
+      </p>
+    </header>
+
+    <div class="method-grid" role="list">
+      <article class="method-card" role="listitem">
+        <div class="method-icon" aria-hidden="true">🤖</div>
+        <h3>AI as Your Co-Pilot</h3>
+        <p>
+          Learn prompt engineering techniques that get you better results. Work WITH
+          AI assistants like a senior developer mentoring you.
+        </p>
+        <ul class="method-benefits">
+          <li>Write code 3-5x faster</li>
+          <li>Reduce debugging time by 60%</li>
+          <li>Learn best practices automatically</li>
+        </ul>
+      </article>
+
+      <article class="method-card featured" role="listitem">
+        <div class="method-icon" aria-hidden="true">🛡️</div>
+        <h3>Quality Gates Guard Your Code</h3>
+        <p>
+          Automated checks catch errors before they reach production. ESLint, Prettier,
+          and pre-commit hooks work 24/7 to keep your code clean.
+        </p>
+        <ul class="method-benefits">
+          <li>Zero code duplication</li>
+          <li>Consistent formatting</li>
+          <li>Production-ready standards</li>
+        </ul>
+      </article>
+
+      <article class="method-card" role="listitem">
+        <div class="method-icon" aria-hidden="true">🚀</div>
+        <h3>Ship with Confidence</h3>
+        <p>
+          CI/CD pipelines test and deploy automatically. Lighthouse checks performance.
+          GitHub Actions handle the heavy lifting.
+        </p>
+        <ul class="method-benefits">
+          <li>Automated testing</li>
+          <li>One-click deployment</li>
+          <li>Performance monitoring</li>
+        </ul>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+<section class="learning-path" aria-labelledby="learning-path-heading">
+  <div class="container">
+    <h2 id="learning-path-heading">🗺️ Your Learning Expedition</h2>
+    <p class="section-intro">
+      Three progressive stages designed to build confidence and capability.
+      Start wherever you are, advance at your own pace.
+    </p>
+
+    <div class="path-stages" role="list">
+      <article class="stage-card" role="listitem">
+        <header class="stage-header">
+          <span class="stage-number">Stage 1</span>
+          <h3>🌱 Foundation</h3>
+          <time class="stage-time" datetime="PT2H">~2 hours</time>
+        </header>
+        <p>Understand the landscape and set up your base camp.</p>
+        <ul class="stage-lessons">
+          <li><a href="/is117_ai_test_practice/lessons/01-what-is-this/">What Is This Project?</a> <time class="lesson-time" datetime="PT3M">3 min</time></li>
+          <li><a href="/is117_ai_test_practice/lessons/02-why-quality-gates/">Why Quality Gates?</a> <time class="lesson-time" datetime="PT3M">3 min</time></li>
+          <li><a href="/is117_ai_test_practice/lessons/03-prompt-engineering-basics/">Prompt Engineering Basics</a> <time class="lesson-time" datetime="PT5M">5 min</time></li>
+          <li><a href="/is117_ai_test_practice/lessons/04-setup-your-environment/">Setup Your Environment</a> <time class="lesson-time" datetime="PT35M">30-40 min</time></li>
+        </ul>
+        <a href="/is117_ai_test_practice/lessons/01-what-is-this/" class="stage-cta" aria-label="Begin foundation stage with lesson 1">Begin Foundation →</a>
+      </article>
+
+      <article class="stage-card" role="listitem">
+        <header class="stage-header">
+          <span class="stage-number">Stage 2</span>
+          <h3>🏗️ Building</h3>
+          <time class="stage-time" datetime="PT3H">~3 hours</time>
+        </header>
+        <p>Construct your site with automated quality gates.</p>
+        <ul class="stage-lessons">
+          <li><a href="/is117_ai_test_practice/lessons/05-build-with-eleventy/">Build with Eleventy</a> <time class="lesson-time" datetime="PT17M">17 min</time></li>
+          <li><a href="/is117_ai_test_practice/lessons/06-eslint-prettier/">ESLint & Prettier</a> <time class="lesson-time" datetime="PT11M">11 min</time></li>
+          <li><a href="/is117_ai_test_practice/lessons/07-pre-commit-hooks/">Pre-commit Hooks</a> <time class="lesson-time" datetime="PT11M">11 min</time></li>
+          <li><a href="/is117_ai_test_practice/lessons/08-github-actions/">GitHub Actions CI/CD</a> <time class="lesson-time" datetime="PT13M">13 min</time></li>
+        </ul>
+        <a href="/is117_ai_test_practice/lessons/05-build-with-eleventy/" class="stage-cta" aria-label="Start building stage with lesson 5">Start Building →</a>
+      </article>
+
+      <article class="stage-card" role="listitem">
+        <header class="stage-header">
+          <span class="stage-number">Stage 3</span>
+          <h3>⚡ Professional</h3>
+          <time class="stage-time" datetime="PT1H">~1 hour</time>
+        </header>
+        <p>Optimize performance and master troubleshooting.</p>
+        <ul class="stage-lessons">
+          <li><a href="/is117_ai_test_practice/lessons/09-lighthouse-ci/">Lighthouse CI</a> <time class="lesson-time" datetime="PT11M">11 min</time></li>
+          <li><a href="/is117_ai_test_practice/lessons/10-troubleshooting/">Troubleshooting & Debugging</a> <time class="lesson-time" datetime="PT19M">19 min</time></li>
+        </ul>
+        <a href="/is117_ai_test_practice/lessons/09-lighthouse-ci/" class="stage-cta" aria-label="Reach professional level with lesson 9">Reach Professional Level →</a>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+<section class="explorer-mindset" aria-labelledby="explorer-heading">
+  <div class="container">
+    <div class="mindset-content">
+      <h2 id="explorer-heading">🧭 The Explorer's Mindset</h2>
+      <p class="lead">
+        This course is for the curious, the builders, the ones who refuse to follow
+        the beaten path. If you've ever wondered "what if I could build this myself?"
+        — you're in the right place.
+      </p>
+
+      <div class="mindset-grid" role="list">
+        <article class="mindset-card" role="listitem">
+          <h3>🎓 Students & Learners</h3>
+          <p>
+            Build portfolio projects that stand out. Learn industry practices that
+            make you job-ready, not just assignment-ready.
+          </p>
+          <aside class="mindset-highlight" role="note">
+            "I got my first internship because my portfolio showed professional quality gates."
+          </aside>
+        </article>
+
+        <article class="mindset-card" role="listitem">
+          <h3>👨‍🏫 Educators & Mentors</h3>
+          <p>
+            Teach students to think critically about AI-generated code. Includes lesson
+            plans, activities, and assessments ready to use.
+          </p>
+          <a href="/is117_ai_test_practice/for-instructors/" class="mindset-link" aria-label="View resources for educators">
+            View Instructor Resources →
+          </a>
+        </article>
+
+        <article class="mindset-card" role="listitem">
+          <h3>💼 Professional Developers</h3>
+          <p>
+            Ship faster without sacrificing quality. Learn the automation stack that
+            lets you focus on solving problems, not chasing bugs.
+          </p>
+          <aside class="mindset-highlight" role="note">
+            "Reduced code review time by 40% with automated quality checks."
+          </aside>
+        </article>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="free-resources" aria-labelledby="free-resources-heading">
+  <div class="container">
+    <h2 id="free-resources-heading">🎁 Start Exploring (It's Free)</h2>
+    <p class="section-intro">
+      Everything you need to begin your journey. No signup required, no credit card,
+      no gatekeeping. Just dive in.
+    </p>
+
+    <div class="resource-grid" role="list">
+      <article class="resource-card" role="listitem">
+        <h3>📖 Complete Course</h3>
+        <p>All 10 lessons with hands-on exercises</p>
+        <a href="/is117_ai_test_practice/lessons/" class="btn btn-secondary-light" aria-label="View all 10 course lessons">View All Lessons</a>
+      </article>
+
+      <article class="resource-card" role="listitem">
+        <h3>🤖 AI Prompts Library</h3>
+        <p>Battle-tested prompts for every stage</p>
+        <a href="/is117_ai_test_practice/resources/#prompts" class="btn btn-secondary-light" aria-label="Browse AI prompts library">Get Prompts</a>
+      </article>
+
+      <article class="resource-card" role="listitem">
+        <h3>📚 Reference Guides</h3>
+        <p>Glossary, file structure, npm scripts</p>
+        <a href="/is117_ai_test_practice/resources/#reference" class="btn btn-secondary-light" aria-label="Browse reference documentation">Browse Docs</a>
+      </article>
+
+      <article class="resource-card" role="listitem">
+        <h3>🎓 Instructor Guide</h3>
+        <p>Lesson plans, activities, assessments</p>
+        <a href="/is117_ai_test_practice/for-instructors/" class="btn btn-secondary-light" aria-label="View instructor resources">For Teachers</a>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta-final" aria-labelledby="cta-final-heading">
+  <div class="container">
+    <div class="cta-content">
+      <h2 id="cta-final-heading">🚀 Ready to Begin Your Journey?</h2>
+      <p>
+        The first lesson takes 3 minutes. By the end, you'll understand exactly
+        what you're building and why it matters. No commitment beyond curiosity.
+      </p>
+      <div class="cta-buttons">
+        <a href="/is117_ai_test_practice/lessons/01-what-is-this/" class="btn btn-primary btn-large" aria-label="Start with lesson 1">
+          Start Lesson 1 →
+        </a>
+        <p class="cta-note">⏱️ 3 minutes | 🎯 Beginner-friendly | 🆓 Free forever</p>
+      </div>
+    </div>
+  </div>
+</section>
