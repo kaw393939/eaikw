@@ -1,10 +1,13 @@
 ---
 title: 15-Week Course Curriculum - Enterprise Web Presence & E-Commerce
-description: Comprehensive 15-week curriculum building professional web presence with AI, psychology, and business fundamentals. From zero to professional deployment with RISD-inspired design principles.
+description:
+  Comprehensive 15-week curriculum building professional web presence with AI,
+  psychology, and business fundamentals. From zero to professional deployment
+  with RISD-inspired design principles.
 layout: base.njk
 ---
 
-# 15-Week Course Curriculum: Enterprise Web Presence & E-Commerce
+## 15-Week Course Curriculum: Enterprise Web Presence & E-Commerce
 
 ## Building Professional Web Presence with AI, Psychology, and Business Fundamentals
 

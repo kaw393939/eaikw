@@ -1,0 +1,14 @@
+# Markdownlint configuration
+# Disable rules that conflict with educational content design
+
+# Allow multiple H1 headings in documents (common in educational content)
+MD025: false
+
+# Allow indented code blocks within HTML containers
+MD046: false
+
+# Allow inline HTML (needed for educational components)
+MD033: false
+
+# Allow duplicate headings (useful for section organization)
+MD024: false

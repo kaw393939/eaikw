@@ -1,10 +1,13 @@
 ---
 title: RISD-Inspired Educational Design System
-description: Comprehensive design system guide embodying Rhode Island School of Design principles with Swiss/International Typographic Style for modern educational needs and AI superpowers philosophy.
+description:
+  Comprehensive design system guide embodying Rhode Island School of Design
+  principles with Swiss/International Typographic Style for modern educational
+  needs and AI superpowers philosophy.
 layout: base.njk
 ---
 
-# RISD-Inspired Educational Design System
+## RISD-Inspired Educational Design System
 
 ## Design Philosophy
 

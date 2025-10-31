@@ -12,7 +12,7 @@
     "lint": "npm run lint:js && npm run lint:css && npm run lint:md && npm run lint:format && npm run lint:duplication",
     "lint:js": "eslint \"src/**/*.js\"",
     "lint:css": "stylelint \"src/**/*.css\"",
-    "lint:md": "markdownlint \"**/*.md\" --ignore node_modules --ignore _site --ignore references --ignore qa_agents --ignore archive --ignore private_strategy",
+    "lint:md": "markdownlint \"**/*.md\" --ignore node_modules --ignore _site --ignore references --ignore qa_agents --ignore archive --ignore private_strategy --config .markdownlint.yaml",
     "lint:format": "prettier --check \"**/*.{js,css,md,html,json}\" --ignore-path .gitignore",
     "lint:duplication": "jscpd src/",
     "lint:links": "npm run lint:links:md && npm run lint:links:html",
