@@ -542,9 +542,11 @@ blockquote {
 .grid--2 {
   grid-template-columns: repeat(2, 1fr);
 }
+
 .grid--3 {
   grid-template-columns: repeat(3, 1fr);
 }
+
 .grid--4 {
   grid-template-columns: repeat(4, 1fr);
 }
@@ -591,21 +593,27 @@ blockquote {
 .mt-0 {
   margin-top: 0;
 }
+
 .mt-1 {
   margin-top: var(--space-1);
 }
+
 .mt-2 {
   margin-top: var(--space-2);
 }
+
 .mt-4 {
   margin-top: var(--space-4);
 }
+
 .mt-6 {
   margin-top: var(--space-6);
 }
+
 .mt-8 {
   margin-top: var(--space-8);
 }
+
 .mt-12 {
   margin-top: var(--space-12);
 }
@@ -613,18 +621,23 @@ blockquote {
 .mb-0 {
   margin-bottom: 0;
 }
+
 .mb-2 {
   margin-bottom: var(--space-2);
 }
+
 .mb-4 {
   margin-bottom: var(--space-4);
 }
+
 .mb-6 {
   margin-bottom: var(--space-6);
 }
+
 .mb-8 {
   margin-bottom: var(--space-8);
 }
+
 .mb-12 {
   margin-bottom: var(--space-12);
 }
@@ -633,9 +646,11 @@ blockquote {
 .text-center {
   text-align: center;
 }
+
 .text-left {
   text-align: left;
 }
+
 .text-right {
   text-align: right;
 }
@@ -643,9 +658,11 @@ blockquote {
 .text-primary {
   color: var(--text-primary);
 }
+
 .text-secondary {
   color: var(--text-secondary);
 }
+
 .text-tertiary {
   color: var(--text-tertiary);
 }
@@ -653,12 +670,15 @@ blockquote {
 .font-normal {
   font-weight: var(--font-weight-normal);
 }
+
 .font-medium {
   font-weight: var(--font-weight-medium);
 }
+
 .font-semibold {
   font-weight: var(--font-weight-semibold);
 }
+
 .font-bold {
   font-weight: var(--font-weight-bold);
 }
@@ -667,6 +687,7 @@ blockquote {
 .subtle {
   opacity: 0.6;
 }
+
 .muted {
   opacity: 0.5;
 }

@@ -1,12 +1,14 @@
-## <!-- markdownlint-disable MD046 -->
-
-layout: lesson.njk title: Design System Demo - Visual Language for Education
-lessonNumber: 0 description: Demonstration of the RISD-inspired design system
-components timeEstimate: 5 minutes level: Reference tags:
-
-- lessons
-- design permalink: /lessons/design-system-demo/
-
+---
+layout: lesson.njk
+title: Design System Demo - Visual Language for Education
+lessonNumber: 0
+description: Demonstration of the RISD-inspired design system components
+timeEstimate: 5 minutes
+level: Reference
+tags:
+  - lessons
+  - design
+permalink: /lessons/design-system-demo/
 ---
 
 This lesson demonstrates all components in our RISD-inspired design system.

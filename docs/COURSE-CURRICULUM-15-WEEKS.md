@@ -1,3 +1,9 @@
+---
+title: 15-Week Course Curriculum - Enterprise Web Presence & E-Commerce
+description: Comprehensive 15-week curriculum building professional web presence with AI, psychology, and business fundamentals. From zero to professional deployment with RISD-inspired design principles.
+layout: base.njk
+---
+
 # 15-Week Course Curriculum: Enterprise Web Presence & E-Commerce
 
 ## Building Professional Web Presence with AI, Psychology, and Business Fundamentals
@@ -455,21 +461,20 @@ guide them through the process.
 
 **Common Self-Evidence Failures:**
 
-❌ **Mystery Meat Navigation:** Icons without labels  
-✅ **Clear Signposts:** Icons + text labels
+❌ **Mystery Meat Navigation:** Icons without labels ✅ **Clear Signposts:**
+Icons + text labels
 
-❌ **Hidden Interactions:** Hover-only menus with no visual clue  
-✅ **Visible Affordances:** Show what's possible upfront
+❌ **Hidden Interactions:** Hover-only menus with no visual clue ✅ **Visible
+Affordances:** Show what's possible upfront
 
-❌ **Generic Errors:** "Error occurred"  
-✅ **Actionable Guidance:** "Email already registered. [Log in] or use different
-email."
+❌ **Generic Errors:** "Error occurred" ✅ **Actionable Guidance:** "Email
+already registered. [Log in] or use different email."
 
-❌ **Assumptive Design:** Using jargon users don't know  
-✅ **Plain Language:** Write for humans, explain when needed
+❌ **Assumptive Design:** Using jargon users don't know ✅ **Plain Language:**
+Write for humans, explain when needed
 
-❌ **Silent Actions:** Button clicked, no visible response  
-✅ **Immediate Feedback:** Loading state, then success confirmation
+❌ **Silent Actions:** Button clicked, no visible response ✅ **Immediate
+Feedback:** Loading state, then success confirmation
 
 **The Golden Rule:**
 

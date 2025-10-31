@@ -1,19 +1,19 @@
-## <!-- markdownlint-disable MD046 -->
-
-layout: lesson.njk title: "Lesson 0: Foundations - AI Superpowers & Historical
-Context" lessonNumber: 0 description: Understand AI as discovery not technology,
-how it gives you superpowers, and the historical context of transformative
-innovations timeEstimate: 25 minutes level: Foundation tags:
-
-- lessons
-- foundations permalink: /lessons/00-foundations-ai-superpowers/
-
+---
+layout: lesson.njk
+title: "Lesson 0: Foundations - AI Superpowers & Historical Context"
+lessonNumber: 0
+description: Understand AI as discovery not technology, how it gives you superpowers, and the historical context of transformative innovations
+timeEstimate: 25 minutes
+level: Foundation
+tags:
+  - lessons
+  - foundations
+permalink: /lessons/00-foundations-ai-superpowers/
 ---
 
-⏱️ **Time:** 25 minutes  
-📚 **Level:** Foundation  
-🎯 **Goal:** Understand why AI is a discovery, how it gives you superpowers, and
-how to think strategically about LLMs
+⏱️ **Time:** 25 minutes 📚 **Level:** Foundation 🎯 **Goal:** Understand why AI
+is a discovery, how it gives you superpowers, and how to think strategically
+about LLMs
 
 ---
 
@@ -288,28 +288,29 @@ boss.
     <h4>❌ Beginner Approach:</h4>
     <p><strong>Prompt:</strong> "How do I get more customers from my website?"</p>
     <p><strong>AI Response:</strong> Generic advice about SEO, social media, and "engaging content"</p>
-    
+
     <hr style="margin: 2rem 0; border: none; border-top: 1px solid #e5e5e5;">
-    
+
     <h4>✓ Strategic Approach:</h4>
     <p><strong>Step 1 - Define with Vocabulary:</strong><br>
     "I need to increase conversion rate on my consulting site. Current metrics: 1000 visitors/month, 2% inquiry rate. Issues: unclear value proposition, weak call-to-action prominence, no social proof."</p>
-    
+
     <p><strong>Step 2 - Break into Sub-Problems:</strong></p>
     <ul style="margin-left: 1.5rem;">
       <li>Value proposition clarity (messaging)</li>
       <li>CTA visual hierarchy (design)</li>
       <li>Trust signals (social proof)</li>
     </ul>
-    
+
     <p><strong>Step 3 - Precise Prompts:</strong></p>
     <ol style="margin-left: 1.5rem;">
       <li>"Review my value proposition using the 'StoryBrand' framework. Identify where it fails to clearly state the customer problem, solution, and transformation."</li>
       <li>"Analyze this page's visual hierarchy. The primary CTA should be the most prominent element. Suggest specific changes: color contrast, size, placement, white space."</li>
       <li>"Recommend 3 types of social proof for a consulting business, prioritized by conversion impact. Format: testimonials, case studies, credentials."</li>
     </ol>
-    
+
     <p><strong>Result:</strong> Specific, actionable improvements based on professional frameworks</p>
+
   </div>
 </div>
 
@@ -446,7 +447,7 @@ Think of context like a budget:
     <span class="knowledge-check__icon">?</span>
     <h3 class="knowledge-check__title">Test Your Understanding</h3>
   </div>
-  
+
   <p class="knowledge-check__question"><strong>1. Why is AI considered a "discovery" rather than just a technology?</strong></p>
   <ul class="knowledge-check__options">
     <li class="knowledge-check__option">It's a marketing term to make it sound important</li>
@@ -454,7 +455,7 @@ Think of context like a budget:
     <li class="knowledge-check__option">It was discovered by accident</li>
     <li class="knowledge-check__option">It's been around for decades</li>
   </ul>
-  
+
   <p class="knowledge-check__question"><strong>2. What are the three superpowers AI gives you?</strong></p>
   <ul class="knowledge-check__options">
     <li class="knowledge-check__option">Coding, design, marketing</li>
@@ -462,7 +463,7 @@ Think of context like a budget:
     <li class="knowledge-check__option">Speed, accuracy, creativity</li>
     <li class="knowledge-check__option">Automation, optimization, prediction</li>
   </ul>
-  
+
   <p class="knowledge-check__question"><strong>3. What is the "vocabulary gap"?</strong></p>
   <ul class="knowledge-check__options">
     <li class="knowledge-check__option">AI doesn't know enough words</li>
@@ -470,7 +471,7 @@ Think of context like a budget:
     <li class="knowledge-check__option">Some languages work better than others with AI</li>
     <li class="knowledge-check__option">You need to learn programming vocabulary</li>
   </ul>
-  
+
   <p class="knowledge-check__question"><strong>4. What is a "context window"?</strong></p>
   <ul class="knowledge-check__options">
     <li class="knowledge-check__option">The time period AI was trained on</li>
@@ -478,7 +479,7 @@ Think of context like a budget:
     <li class="knowledge-check__option knowledge-check__option--correct">The limited amount of information (measured in tokens) that AI can "see" at once</li>
     <li class="knowledge-check__option">The cultural context AI understands</li>
   </ul>
-  
+
   <p class="knowledge-check__question"><strong>5. Why do LLMs sometimes "hallucinate" false information?</strong></p>
   <ul class="knowledge-check__options">
     <li class="knowledge-check__option">They're trying to trick you</li>
@@ -497,7 +498,7 @@ Think of context like a budget:
     <span class="assignment__badge">✍️</span>
     <h2 class="assignment__title">Reflection Exercise</h2>
   </div>
-  
+
   <div class="assignment__meta">
     <div class="assignment__meta-item">
       <span class="assignment__meta-label">Time</span>
@@ -508,24 +509,25 @@ Think of context like a budget:
       <span class="assignment__meta-value">Written Reflection</span>
     </div>
   </div>
-  
+
   <h3>Questions to Answer:</h3>
   <ol>
     <li><strong>Historical Parallel:</strong> Which historical discovery (printing press, electricity, internet) resonates most with you? Why?</li>
-    
+
     <li><strong>Your Vocabulary Gap:</strong> What professional domain do you want to work in? What vocabulary do you currently lack?
       <ul>
         <li>Example: "I want to do freelance consulting, but I don't know branding terminology or persuasion psychology vocabulary."</li>
       </ul>
     </li>
-    
+
     <li><strong>AI Experience:</strong> Describe a time you used AI and got mediocre results. Looking back, how could better vocabulary have helped?</li>
-    
+
     <li><strong>Context Strategy:</strong> How will you manage context in long projects? (Choose one strategy from this lesson to try)</li>
-    
+
     <li><strong>Vocabulary Commitment:</strong> Which vocabulary area from this course are you most excited to learn? (design, psychology, business, technical)</li>
+
   </ol>
-  
+
   <h3>Save Your Answers</h3>
   <p>Keep these reflections. You'll refer back to them as you build your professional web presence throughout the course.</p>
 </div>

@@ -14,10 +14,9 @@ tags:
 permalink: /lessons/03-self-evident-design/
 ---
 
-⏱️ **Time:** 20 minutes  
-📚 **Level:** Foundation  
-🎯 **Goal:** Understand the designer's responsibility to communicate effectively
-when no one is there to help
+⏱️ **Time:** 20 minutes 📚 **Level:** Foundation 🎯 **Goal:** Understand the
+designer's responsibility to communicate effectively when no one is there to
+help
 
 ---
 
@@ -222,18 +221,19 @@ Users need constant orientation. They should never feel lost.
       <li>Field validation on blur (email format check)</li>
       <li>Submit button disabled until valid</li>
     </ul>
-    
+
     <h4>During Submission:</h4>
     <ul style="margin-left: 1.5rem;">
       <li>Submit button: "Submitting..." with spinner</li>
       <li>Form becomes disabled (prevent double-submit)</li>
     </ul>
-    
+
     <h4>After Submission:</h4>
     <p style="margin-left: 1.5rem;"><strong>Success:</strong> Green banner: "✓ Message sent! We'll reply within 24 hours."<br>
     <strong>Error:</strong> Red banner: "❌ Submission failed. Please check your internet connection and try again."</p>
-    
+
     <p style="margin-top: 1rem;"><strong>Why this works:</strong> User is guided through the entire process. Errors are explained and solvable.</p>
+
   </div>
 </div>
 
@@ -475,7 +475,7 @@ interface—they just accomplish their goal.
     <span class="knowledge-check__icon">?</span>
     <h3 class="knowledge-check__title">Test Your Understanding</h3>
   </div>
-  
+
   <p class="knowledge-check__question"><strong>1. What is the core principle of self-evident design?</strong></p>
   <ul class="knowledge-check__options">
     <li class="knowledge-check__option">Design should be pretty</li>
@@ -483,7 +483,7 @@ interface—they just accomplish their goal.
     <li class="knowledge-check__option">Design should have lots of instructions</li>
     <li class="knowledge-check__option">Design should be minimal</li>
   </ul>
-  
+
   <p class="knowledge-check__question"><strong>2. What is an affordance?</strong></p>
   <ul class="knowledge-check__options">
     <li class="knowledge-check__option">A feature users can afford to use</li>
@@ -491,7 +491,7 @@ interface—they just accomplish their goal.
     <li class="knowledge-check__option">A discount or sale price</li>
     <li class="knowledge-check__option">An advanced feature</li>
   </ul>
-  
+
   <p class="knowledge-check__question"><strong>3. What makes a good error message self-evident?</strong></p>
   <ul class="knowledge-check__options">
     <li class="knowledge-check__option">It's red and scary</li>
@@ -499,7 +499,7 @@ interface—they just accomplish their goal.
     <li class="knowledge-check__option knowledge-check__option--correct">It explains the problem AND provides a solution</li>
     <li class="knowledge-check__option">It apologizes profusely</li>
   </ul>
-  
+
   <p class="knowledge-check__question"><strong>4. Why should buttons have hover states?</strong></p>
   <ul class="knowledge-check__options">
     <li class="knowledge-check__option">To look modern</li>
@@ -507,7 +507,7 @@ interface—they just accomplish their goal.
     <li class="knowledge-check__option">To match the brand colors</li>
     <li class="knowledge-check__option">To slow down users</li>
   </ul>
-  
+
   <p class="knowledge-check__question"><strong>5. What is the "Fresh Eyes" test?</strong></p>
   <ul class="knowledge-check__options">
     <li class="knowledge-check__option">Testing color contrast</li>
@@ -526,7 +526,7 @@ interface—they just accomplish their goal.
     <span class="assignment__badge">🔍</span>
     <h2 class="assignment__title">Self-Evidence Audit Exercise</h2>
   </div>
-  
+
   <div class="assignment__meta">
     <div class="assignment__meta-item">
       <span class="assignment__meta-label">Time</span>
@@ -537,7 +537,7 @@ interface—they just accomplish their goal.
       <span class="assignment__meta-value">User Testing + Report</span>
     </div>
   </div>
-  
+
   <h3>Part 1: Conduct Fresh Eyes Test</h3>
   <ol>
     <li>Choose a website (e-commerce, portfolio, or SaaS product)</li>
@@ -545,7 +545,7 @@ interface—they just accomplish their goal.
     <li>Give them a specific task: "Find and buy a blue t-shirt" or "Sign up for a free trial"</li>
     <li><strong>Critical rule:</strong> DO NOT HELP. Just observe and take notes.</li>
   </ol>
-  
+
   <h3>Part 2: Document Your Observations</h3>
   <p>Create a report answering:</p>
   <ul>
@@ -555,7 +555,7 @@ interface—they just accomplish their goal.
     <li><strong>Success/Failure:</strong> Did they complete the task? How long did it take?</li>
     <li><strong>Emotional Response:</strong> Did they seem confident, frustrated, anxious?</li>
   </ul>
-  
+
   <h3>Part 3: Identify Self-Evidence Failures</h3>
   <p>For each problem you documented, identify the failure type:</p>
   <ul>
@@ -564,7 +564,7 @@ interface—they just accomplish their goal.
     <li>Feedback failure (didn't know if action worked)</li>
     <li>Language failure (jargon or unclear labels)</li>
   </ul>
-  
+
   <h3>Part 4: Propose Solutions</h3>
   <p>For each failure, describe how you would fix it:</p>
   <ul>
@@ -572,7 +572,7 @@ interface—they just accomplish their goal.
     <li>Explain why: "User didn't know cards were clickable"</li>
     <li>Show before/after if possible (sketches or wireframes)</li>
   </ul>
-  
+
   <h3>Submit:</h3>
   <ul>
     <li>1-2 page report with your findings</li>
@@ -610,7 +610,7 @@ This principle applies to everything you'll build in this course:
 Keep asking: **"Would a stranger understand this without my help?"**
 
 <div class="lesson-nav">
-  <a href="/lessons/00-design-system-demo/" class="lesson-nav__link lesson-nav__link--prev">
+  <a href="/lessons/design-system-demo/" class="lesson-nav__link lesson-nav__link--prev">
     <span class="lesson-nav__label">← Previous</span>
     <span class="lesson-nav__title">Design System Demo</span>
   </a>

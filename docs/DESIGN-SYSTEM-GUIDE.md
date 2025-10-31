@@ -1,3 +1,9 @@
+---
+title: RISD-Inspired Educational Design System
+description: Comprehensive design system guide embodying Rhode Island School of Design principles with Swiss/International Typographic Style for modern educational needs and AI superpowers philosophy.
+layout: base.njk
+---
+
 # RISD-Inspired Educational Design System
 
 ## Design Philosophy
@@ -507,23 +513,21 @@ If they struggle, your design isn't communicating effectively.
 
 **Common Failures of Self-Evident Design:**
 
-❌ **Mystery Meat Navigation:** Icons without labels (what does this do?)  
-✅ **Clear Labels:** Icons + text, or universally recognized icons only (home,
+❌ **Mystery Meat Navigation:** Icons without labels (what does this do?) ✅
+**Clear Labels:** Icons + text, or universally recognized icons only (home,
 search, cart)
 
-❌ **Hidden Actions:** Hover-only menus, no visual clue they exist  
-✅ **Visible Options:** Show available actions, use progressive disclosure if
-complex
+❌ **Hidden Actions:** Hover-only menus, no visual clue they exist ✅ **Visible
+Options:** Show available actions, use progressive disclosure if complex
 
-❌ **Generic Errors:** "Error occurred" (what do I do now?)  
-✅ **Actionable Errors:** "Email already registered. [Log in] or use different
-email."
+❌ **Generic Errors:** "Error occurred" (what do I do now?) ✅ **Actionable
+Errors:** "Email already registered. [Log in] or use different email."
 
-❌ **Assumptive Design:** Assuming users know industry jargon  
-✅ **Plain Language:** Write for humans, explain when necessary
+❌ **Assumptive Design:** Assuming users know industry jargon ✅ **Plain
+Language:** Write for humans, explain when necessary
 
-❌ **No Feedback:** Button clicked, nothing visible happens  
-✅ **Immediate Response:** Loading state, progress indicator, success message
+❌ **No Feedback:** Button clicked, nothing visible happens ✅ **Immediate
+Response:** Loading state, progress indicator, success message
 
 **The Golden Rule:**
 

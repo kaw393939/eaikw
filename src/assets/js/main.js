@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       } catch (error) {
         // Silently handle any selector errors
-        console.warn('Smooth scroll error:', error.message);
+        // Note: Error logging available for debugging if needed
       }
     });
   });
