@@ -39,6 +39,195 @@ Workflow
 
 ## Detailed Weekly Breakdown
 
+### **WEEK 0: Foundations - AI as Superpower & Strategic Framework**
+
+**Learning Objectives:**
+
+- Understand AI as discovery (not just technology) and its historical
+  significance
+- Grasp how AI gives you superpowers through vocabulary and strategic thinking
+- Learn practical LLM concepts: context windows, tokens, and effective prompting
+- Develop framework for translating challenges into solutions
+
+**Topics:**
+
+1. **AI as Discovery, Not Technology**
+
+   _Historical Parallels:_
+   - **Printing Press (1440s):** Democratized knowledge, transformed society
+   - **Electricity (1880s-1920s):** Enabled entirely new industries and
+     lifestyles
+   - **Internet (1990s-2000s):** Collapsed geography, created digital economy
+   - **AI/LLMs (2020s-present):** Augments human cognition, democratizes
+     expertise
+
+   _The Discovery Pattern:_
+   - Initial discovery → Experimentation → Applications → Resistance →
+     Acceleration → Transformation → New normal
+   - Where we are now: Stages 3-5 (early acceleration phase)
+   - Window to become early adapter still open
+
+   _Why "Discovery" Matters:_
+   - Technologies can be controlled; discoveries transform everything
+   - Society reorganizes around discoveries
+   - Understanding this shapes your strategy
+
+2. **Your AI Superpowers Explained**
+
+   _Three Core Superpowers:_
+   - **Superhuman Reading:** Process and synthesize vast information instantly
+   - **Superhuman Writing:** Generate, refine, iterate content at unprecedented
+     speed
+   - **Superhuman Translation:** Convert between domains (idea → code, concept →
+     design, challenge → solution)
+
+   _The Critical Catch - The Vocabulary Gap:_
+   - AI can only be as precise as your instructions
+   - Without professional vocabulary: Generic, mediocre output
+   - With professional vocabulary: Precise, professional results
+   - **Formula:** Superpower = AI Tools + Professional Vocabulary + Strategic
+     Thinking
+
+   _Example of Vocabulary Advantage:_
+
+   ```
+   Without Vocabulary: "Make my website look better"
+   → AI gives generic improvements
+
+   With Vocabulary: "Improve visual hierarchy: the CTA lacks prominence.
+   Increase contrast between primary and secondary actions. The type scale
+   needs more differentiation between H2 and body text."
+   → AI gives precise, professional improvements
+   ```
+
+3. **Understanding LLMs: Practical Framework**
+
+   _What Is an LLM?_
+   - Statistical system trained on massive text datasets
+   - Predicts likely next words based on learned patterns
+   - "Autocomplete on steroids" that learned from reading most of the internet
+   - Not magic - sophisticated pattern matching
+
+   _Critical Concept: Context Window_
+   - AI's "working memory" - limited amount of information it can "see" at once
+   - Measured in tokens (chunks of text)
+   - Everything you say + everything it generates fills this window
+   - When full, AI "forgets" earliest information
+   - **Practical Implication:** Manage context like a budget
+
+   _Understanding Tokens:_
+   - Roughly: 1 token ≈ 0.75 words
+   - 100 words ≈ 133 tokens
+   - Context windows: GPT-4 (128K tokens ≈ 96K words)
+   - Longer prompts = fewer responses before context fills
+   - **Strategy:** Be economical with words
+
+   _Why LLMs Make "Mistakes":_
+   - Hallucinations: Pattern-match false info confidently
+   - Recency bias: Training data has cutoff date
+   - Context confusion: Mix up earlier conversation points
+   - No common sense: No real-world experience
+   - **Your Job:** Be the strategic thinker; AI is your assistant
+
+4. **Strategies for Effective Prompting**
+
+   _The Vocabulary Advantage Framework:_
+   - **Step 1:** Define challenge in professional vocabulary
+   - **Step 2:** Break into specific, actionable sub-problems
+   - **Step 3:** Prompt AI with precise terminology and constraints
+
+   _Example: Website Conversion Problem_
+
+   ```
+   ❌ Beginner: "How do I get more customers from my website?"
+   → Generic SEO and social media advice
+
+   ✓ Strategic:
+   Step 1: "I need to increase conversion rate. Current: 1000
+   visitors/month, 2% inquiry rate. Issues: unclear value proposition,
+   weak CTA prominence, no social proof."
+
+   Step 2: Break down: value prop clarity, CTA hierarchy, trust signals
+
+   Step 3: Precise prompts:
+   - "Review my value prop using StoryBrand framework"
+   - "Analyze visual hierarchy. Primary CTA should be most prominent.
+     Suggest changes: color contrast, size, placement, white space"
+   - "Recommend 3 types of social proof for consulting business,
+     prioritized by conversion impact"
+
+   → Specific, actionable, professional improvements
+   ```
+
+   _The 4 C's of Effective Prompting:_
+   - **Clear:** Use precise terminology
+   - **Contextual:** Provide relevant background
+   - **Constrained:** Set specific parameters
+   - **Checkable:** Request verifiable outputs
+
+5. **Managing Context Strategically**
+
+   _Context Budget Mindset:_
+   - You have fixed amount (context window)
+   - Every interaction "spends" tokens
+   - Manage wisely for best results
+
+   _Strategies for Long Projects:_
+   - **System Prompt:** Set professional role at start
+   - **Focused Sessions:** Break work into: brand → design → content → technical
+   - **Summarize & Resume:** Before hitting limits, ask AI to summarize
+     decisions
+   - **External Storage:** Save key outputs in your own files, don't rely on AI
+     memory
+
+6. **Why Professional Vocabulary Multiplies Your Power**
+
+   _The Multiplication Effect:_
+   - Without vocabulary: AI is 2x helpful
+   - With vocabulary: AI is 10x-100x helpful
+   - **This course teaches the vocabulary that unlocks the multiplier**
+
+   _What You'll Learn:_
+   - **Design Vocabulary** (Week 3): Typography, layout, color, UI/UX
+     terminology
+   - **Psychology Vocabulary** (Week 2): Cialdini, cognitive biases, archetypes
+   - **Business Vocabulary** (Weeks 9, 11-15): Value props, conversion, customer
+     journey
+   - **Technical Vocabulary** (Weeks 4-8): Git, CI/CD, performance,
+     accessibility
+
+   _Before vs. After This Course:_
+   - Before: "Make my site professional" → generic output
+   - After: "Apply Sage archetype with authority positioning. Improve visual
+     hierarchy: CTA needs prominence through size, contrast, white space.
+     Incorporate Cialdini's reciprocity principle in hero" → professional,
+     strategic output
+
+**Hands-On Reflection Exercise:**
+
+- Write about which historical discovery resonates most and why
+- Identify your current vocabulary gap in your chosen domain
+- Describe a time AI gave mediocre results - how could vocabulary have helped?
+- Choose one context management strategy to practice
+- Commit to learning one vocabulary area from this course
+
+**AI Prompting Practice:**
+
+- Prompt AI to explain any concept from this lesson in depth
+- Practice the 3-step translation: Challenge → Vocabulary → Sub-problems →
+  Precise prompts
+- Start a "vocabulary notebook" to track professional terms you learn
+
+**Key Takeaways:**
+
+- AI is a discovery that transforms society, not just a technology
+- Your superpower = AI + professional vocabulary + strategic thinking
+- Context is limited - manage it like a budget
+- Vocabulary multiplies AI's value exponentially
+- You remain the strategist - AI is your assistant, not your replacement
+
+---
+
 ### **WEEK 1: History & Context of the Internet & E-Commerce**
 
 **Learning Objectives:**
@@ -198,11 +387,168 @@ Workflow
 - "Evaluate this layout using design principles: balance, hierarchy, contrast"
 - "Suggest improvements for accessibility and WCAG compliance"
 
+7. **Design Systems: Philosophy & Selection**
+
+**What is a Design System?**
+
+- Comprehensive set of design standards, components, and guidelines
+- Single source of truth for visual language
+- Ensures consistency across all touchpoints
+- Accelerates development through reusable components
+- Examples: Material Design (Google), Human Interface Guidelines (Apple), Carbon
+  (IBM)
+
+**Why Design Systems Matter:**
+
+- **Consistency:** Users recognize patterns, reducing cognitive load
+- **Efficiency:** Build faster with pre-designed components
+- **Quality:** Professional standards baked into the system
+- **Scalability:** Easy to maintain and expand
+- **Collaboration:** Shared vocabulary for designers and developers
+
+**Our Design System: RISD-Inspired Educational Framework**
+
+We've built a design system specifically for educational content, inspired by
+Rhode Island School of Design (RISD) principles and Swiss/International
+Typographic Style:
+
+**Core Philosophy:**
+
+- **Clarity Through Hierarchy:** Visual weight reflects information importance
+- **Generous Whitespace:** Cognitive breathing room for complex concepts
+- **Functional Elegance:** Every design choice serves pedagogy
+- **Modular Consistency:** Reusable components reduce cognitive load
+
+**Why This System?**
+
+_For Educational Content:_
+
+- Purpose-built components (learning objectives, callouts, steps, knowledge
+  checks)
+- Optimized for long-form reading and comprehension
+- Clear hierarchy guides learning progression
+- Accessibility-first (WCAG AAA where possible)
+
+_For AI Leverage:_
+
+- **Vocabulary Advantage:** Precise terminology enables better prompting
+- Professional components you can request by name
+- Design tokens make customization systematic
+- Documentation enables AI to help you effectively
+
+_For Professional Development:_
+
+- Fortune 100-quality standards
+- Modern CSS practices (custom properties, container queries)
+- Performance-optimized (minimal, semantic HTML)
+- Demonstrates strategic thinking to employers/clients
+
+**Design System Components We Use:**
+
+_Typography System:_
+
+- Swiss-style type scale (Perfect Fourth ratio: 1.333)
+- Clear hierarchy: Display → Headings → Body → Captions
+- Optimized line-heights for readability
+- Professional font pairing (Sans-serif primary, Serif optional, Monospace for
+  code)
+
+_Color System:_
+
+- Restrained palette (primary, secondary, neutrals, semantic)
+- WCAG AA/AAA compliant throughout
+- Color communicates meaning (info, success, warning, error)
+- Swiss-style gray scale for structure
+
+_Spacing System:_
+
+- 8px base grid for consistent rhythm
+- Fluid spacing (viewport-aware)
+- Vertical rhythm for reading flow
+- Swiss-style asymmetric balance
+
+_Educational Components:_
+
+- Learning objectives boxes
+- Callouts (info, success, warning, error)
+- Key concept highlights
+- Step-by-step instructions
+- Example boxes (basic and comparison)
+- Knowledge checks
+- Glossary terms
+- Assignment briefs
+
+**Alternative Design System Options:**
+
+Students should know they have choices:
+
+1. **Build Your Own (This Course's Approach)**
+   - _Pros:_ Custom-fit for your needs, complete control, learning experience
+   - _Cons:_ Time investment, requires design knowledge
+   - _Best for:_ Educational content, unique brand needs, portfolio
+     demonstration
+
+2. **CSS Frameworks (Bootstrap, Tailwind, Bulma)**
+   - _Pros:_ Fast setup, battle-tested, large community
+   - _Cons:_ Generic look, steeper learning curve, bloated CSS
+   - _Best for:_ Rapid prototyping, standard business sites, team projects
+
+3. **Component Libraries (Material UI, Chakra UI, Ant Design)**
+   - _Pros:_ React-integrated, accessible by default, comprehensive
+   - _Cons:_ Framework lock-in, JavaScript-heavy, recognizable style
+   - _Best for:_ Web applications, React projects, startups
+
+4. **No-Code Platforms (Webflow, Squarespace, Wix)**
+   - _Pros:_ Visual editing, no code needed, hosting included
+   - _Cons:_ Limited customization, monthly costs, vendor lock-in
+   - _Best for:_ Non-technical users, simple sites, quick launches
+
+5. **Utility-First CSS (Tailwind CSS)**
+   - _Pros:_ Highly customizable, fast development, small final bundle
+   - _Cons:_ Verbose HTML, learning curve, requires build process
+   - _Best for:_ Custom designs, modern workflows, React/Vue projects
+
+**Why We Chose Custom for This Course:**
+
+1. **Pedagogical Value:** You learn design principles by implementing them
+2. **AI Synergy:** Custom vocabulary = better prompting = better results
+3. **Professional Signal:** Shows strategic thinking and execution capability
+4. **No Lock-In:** Pure CSS, no framework dependencies, portable
+5. **Portfolio Piece:** Demonstrates you can create systems, not just use them
+
+**How to Extend This System:**
+
+_Adding New Components:_
+
+- Follow existing patterns (BEM naming, design tokens)
+- Stay on 8px grid for spacing
+- Use defined color palette
+- Maintain accessibility standards
+- Document with examples
+
+_Customizing for Your Brand:_
+
+- Adjust design tokens (colors, fonts, spacing scale)
+- Keep component structure intact
+- Test accessibility after changes
+- Update documentation
+
+_Migrating to Another System Later:_
+
+- Semantic HTML makes conversion easier
+- Design principles transfer across systems
+- Components concepts map to other frameworks
+- Vocabulary learned here applies everywhere
+
 **Assignments:**
 
 - Build a design vocabulary flashcard deck (50+ terms)
 - Critique 3 websites using professional terminology
 - Practice prompting AI with design vocabulary
+- **NEW:** Compare 3 design systems (ours, Bootstrap, Material Design) -
+  document pros/cons for educational use case
+- **NEW:** Customize one design token (color, spacing, or type scale) in our
+  system and document your reasoning
 
 ---
 

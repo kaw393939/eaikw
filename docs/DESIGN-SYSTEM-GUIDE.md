@@ -6,6 +6,26 @@ This design system embodies the principles taught at Rhode Island School of
 Design (RISD), integrating Swiss/International Typographic Style with modern
 educational needs.
 
+### The AI Superpowers Principle
+
+**AI gives you superpowers:** The ability to read and write an inhuman amount of
+information. But these powers require three critical foundations:
+
+1. **Vocabulary** - Professional terminology to communicate precisely with AI
+2. **Concepts** - Mental models to structure complex problems
+3. **Strategic Thinking** - Framework to translate challenges into solutions
+
+This design system teaches **visual vocabulary** - the professional language of
+design that enables you to:
+
+- **Critique effectively:** "The hierarchy is unclear" (not "it looks bad")
+- **Prompt precisely:** "Review this as a Fortune 100 marketing executive"
+- **Think systematically:** "Apply Swiss grid principles to this layout"
+
+Without vocabulary, AI is like having a Ferrari with no steering wheel. With it,
+you can process and create at superhuman scale while maintaining classical
+design excellence.
+
 ### Core Principles
 
 1. **Clarity Through Hierarchy**
@@ -27,6 +47,11 @@ educational needs.
    - Reusable components for scalability
    - Predictable patterns reduce cognitive load
    - System thinking enables rapid prototyping
+
+5. **Vocabulary-Driven Design**
+   - Learn professional terminology to leverage AI effectively
+   - Build mental models through named patterns
+   - Translate visual problems into precise language
 
 ---
 
@@ -460,6 +485,69 @@ Info: #3b82f6 (Blue)
 
 ---
 
+## AI Superpowers in Practice
+
+### The Vocabulary Advantage
+
+**Without Design Vocabulary:**
+
+```
+Student to AI: "Make this look better"
+AI: *Makes generic improvements with no clear direction*
+Result: Superficial changes, no strategic thinking
+```
+
+**With Design Vocabulary:**
+
+```
+Student to AI: "Analyze this layout's visual hierarchy.
+The h2 headings feel weak relative to body text.
+Suggest type scale adjustments following Swiss design principles
+to create clearer information architecture."
+
+AI: *Provides specific typographic improvements with rationale*
+Result: Strategic, principled design decisions
+```
+
+### Translation Framework: Challenge → Solution
+
+This design system teaches you to **translate problems into solutions** by
+providing:
+
+1. **Named Patterns** (vocabulary to describe what you see)
+   - "Visual hierarchy is unclear"
+   - "Whitespace is cramped"
+   - "Color contrast fails WCAG AA"
+
+2. **Mental Models** (concepts to structure thinking)
+   - Swiss grid systems
+   - Typographic scales
+   - 8px spacing rhythm
+
+3. **Strategic Frameworks** (methods to solve problems)
+   - "Apply modular scale to establish hierarchy"
+   - "Use asymmetric balance for visual tension"
+   - "Constrain line length to 65 characters for readability"
+
+### Superhuman Scale with Human Excellence
+
+AI enables you to:
+
+- **Read:** Analyze 100 design systems in minutes
+- **Write:** Generate 50 layout variations in seconds
+- **Iterate:** Test accessibility across all components instantly
+
+But only if you can:
+
+- **Articulate** what makes design good or bad
+- **Recognize** patterns and anti-patterns
+- **Evaluate** results against classical principles
+
+**The power isn't in the AI. It's in your ability to guide it with professional
+vocabulary and strategic thinking.**
+
+---
+
 ## Accessibility Guidelines
 
 ### Color Contrast
@@ -499,3 +587,22 @@ This system is designed to grow:
 
 Remember: **Restraint is power.** The best design systems enable creativity
 through constraints.
+
+---
+
+## The Meta-Lesson
+
+This entire design system is itself an example of **vocabulary building for AI
+leverage**:
+
+- Every component has a **name** (learning objective, callout, key concept)
+- Every principle has **language** (hierarchy, whitespace, functional elegance)
+- Every decision has **rationale** (accessibility, cognitive load, Swiss
+  tradition)
+
+When you master this vocabulary, you don't just build better websites. You gain
+the superpower to translate any visual challenge into AI-actionable solutions at
+inhuman speed while maintaining human excellence.
+
+**That's the goal: Classical design thinking + Modern AI tools = Superhuman
+creative capacity.**
