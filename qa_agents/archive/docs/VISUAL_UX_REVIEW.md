@@ -1,20 +1,27 @@
 # Visual UX Review with GPT-4o Vision
 
-Automated UX analysis using GPT-4o Vision API with persona-based think-aloud protocol.
+Automated UX analysis using GPT-4o Vision API with persona-based think-aloud
+protocol.
 
 ## Overview
 
-The Visual UX Review system captures screenshots of your website at multiple viewports and analyzes them using GPT-4o Vision with different user personas. Each persona provides detailed think-aloud feedback simulating real user experiences.
+The Visual UX Review system captures screenshots of your website at multiple
+viewports and analyzes them using GPT-4o Vision with different user personas.
+Each persona provides detailed think-aloud feedback simulating real user
+experiences.
 
 ## Features
 
-- **Multi-Viewport Analysis**: Desktop (1920×1080), Tablet (768×1024), Mobile (375×667)
+- **Multi-Viewport Analysis**: Desktop (1920×1080), Tablet (768×1024), Mobile
+  (375×667)
 - **Persona-Based Reviews**:
   - First-Year Student (tech beginner, visual learner)
   - Instructor (expert validator, accessibility focus)
-- **Think-Aloud Protocol**: Detailed commentary on first impressions, usability, design
+- **Think-Aloud Protocol**: Detailed commentary on first impressions, usability,
+  design
 - **GPT-4o Vision**: Advanced image analysis with ~$0.01 per screenshot
-- **Structured Output**: Consistent ratings (excellent/good/needs_improvement/poor)
+- **Structured Output**: Consistent ratings
+  (excellent/good/needs_improvement/poor)
 
 ## Quick Start
 
@@ -36,12 +43,14 @@ qa_agents/venv/bin/python3 qa_agents/visual_ux_review.py
 ### 3. Review Output
 
 The script will:
+
 1. Capture screenshots at 3 viewports (desktop, tablet, mobile)
 2. Analyze with 2 personas = 6 total reviews
 3. Print detailed feedback for each review
 4. Generate overall verdict (EXCELLENT/GOOD/NEEDS_IMPROVEMENT)
 
 Example output:
+
 ```
 📸 Capturing screenshots from http://localhost:8080...
    ✅ Captured 3 screenshots
@@ -86,6 +95,7 @@ Overall good user experience with minor improvements needed...
 ### Environment Variables
 
 In `.env`:
+
 ```bash
 OPENAI_API_KEY=sk-...
 SITE_URL=http://localhost:8080  # URL to analyze
@@ -106,16 +116,19 @@ result = run_visual_ux_review(
 ## Cost Estimation
 
 **GPT-4o Vision Pricing** (as of 2025):
+
 - ~$10 per 1M input tokens
 - 1 screenshot ≈ 765 tokens
 - 1 prompt ≈ 500 tokens
 - **Total per analysis**: ~$0.012
 
 **Full run (6 analyses)**:
+
 - 3 viewports × 2 personas = 6 analyses
 - **Cost**: ~$0.05-0.07 per commit
 
 **Optimization Options**:
+
 1. Run only on HTML/CSS changes (not every commit)
 2. Use fewer viewports (desktop only = $0.02)
 3. Use one persona (student or instructor = $0.03)
@@ -136,12 +149,14 @@ qa_agents/venv/bin/python3 qa_agents/visual_ux_review.py
 ## Personas
 
 ### First-Year Student
+
 - **Profile**: 18-19 years old, basic tech skills, visual learner
 - **Focus**: First impressions, clarity, ease of understanding
 - **Concerns**: "Is this too hard?", "Where do I find help?"
 - **Language**: Casual, honest, beginner-friendly
 
 ### Instructor
+
 - **Profile**: 10+ years teaching, expert in web standards
 - **Focus**: Accessibility, pedagogy, technical excellence
 - **Standards**: WCAG 2.1 AA, responsive design, clear hierarchy
@@ -168,6 +183,7 @@ Each review includes:
 ## Troubleshooting
 
 ### Site Not Running
+
 ```bash
 # Error: Failed to capture screenshots
 # Solution: Start the dev server first
@@ -177,12 +193,14 @@ qa_agents/venv/bin/python3 qa_agents/visual_ux_review.py
 ```
 
 ### Playwright Not Installed
+
 ```bash
 qa_agents/venv/bin/pip install playwright
 qa_agents/venv/bin/playwright install chromium
 ```
 
 ### OpenAI API Errors
+
 ```bash
 # Check .env file has valid key
 cat .env | grep OPENAI_API_KEY
@@ -194,11 +212,13 @@ qa_agents/venv/bin/python3 -c "import os; from dotenv import load_dotenv; load_d
 ## Advanced Usage
 
 ### Analyze Specific URL
+
 ```python
 run_visual_ux_review(site_url="http://localhost:3000/about")
 ```
 
 ### Save Screenshots Only
+
 ```python
 from qa_agents.screenshot_utils import capture_all_viewports_sync
 
@@ -209,6 +229,7 @@ screenshots = capture_all_viewports_sync(
 ```
 
 ### Programmatic Access
+
 ```python
 from qa_agents.visual_ux_review import run_visual_ux_review
 
@@ -257,7 +278,8 @@ qa_agents/venv/bin/python3 qa_agents/visual_ux_review.py
 
 ## Next Steps
 
-- [ ] Add more personas (international student, instructor evaluating accessibility)
+- [ ] Add more personas (international student, instructor evaluating
+      accessibility)
 - [ ] Integrate with pre-commit hook
 - [ ] Add comparison mode (before/after screenshots)
 - [ ] Export reports to HTML/PDF

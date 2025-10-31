@@ -1,26 +1,31 @@
 # Visual UX Review System: Research & Strategy
 
-**Date**: October 28, 2025
-**Objective**: Make the visual UX review system bulletproof, reliable, and extensible
+**Date**: October 28, 2025 **Objective**: Make the visual UX review system
+bulletproof, reliable, and extensible
 
 ---
 
 ## 1. CURRENT STATE ANALYSIS
 
 ### What's Working ✅
-- **Screenshot capture**: Successfully captures 3 viewports (desktop/tablet/mobile)
+
+- **Screenshot capture**: Successfully captures 3 viewports
+  (desktop/tablet/mobile)
 - **GPT-4o Vision integration**: Working with Responses API
 - **Persona-based analysis**: 2 personas providing structured feedback
 - **Cost tracking**: ~$0.08 per full run (6 analyses)
 - **Structured output**: Pydantic models ensure consistent results
 
 ### Pain Points 🔴
-1. **Port conflicts**: Docker containers + dev servers compete for ports 8080-8082
+
+1. **Port conflicts**: Docker containers + dev servers compete for ports
+   8080-8082
 2. **CSS/JS 404 errors**: Path prefix mismatch between server setups
 3. **Full-page only**: Currently captures entire viewport, not page sections
 4. **Single-page limitation**: No support for analyzing multiple pages
 5. **Manual server management**: Requires manually starting HTTP server
-6. **No reliability safeguards**: No retry logic, connection validation, or error recovery
+6. **No reliability safeguards**: No retry logic, connection validation, or
+   error recovery
 
 ---
 
@@ -29,6 +34,7 @@
 ### GPT-4o Vision Best Practices
 
 **Token Costs (from OpenAI docs):**
+
 - **Detail level matters**:
   - `low`: 85 tokens (512x512 image)
   - `high`: 170 tokens per 512px tile + 85 base
@@ -38,45 +44,53 @@
   - Mobile (375x667): ~255 tokens with high detail
 
 **Limitations to consider**:
+
 - Max 50MB payload per request
 - Max 500 images per request
-- Struggles with small text (need to capture at 2x scale factor - already doing this ✅)
+- Struggles with small text (need to capture at 2x scale factor - already doing
+  this ✅)
 - May give approximate counts
 - Best for high-level UX, not pixel-perfect design audits
 
 ### Section-Based Analysis Approaches
 
 **Option 1: Element-based screenshots** (RECOMMENDED)
+
 ```javascript
 // Use Playwright locators to screenshot specific elements
-await page.locator('header').screenshot()
-await page.locator('main').screenshot()
-await page.locator('footer').screenshot()
+await page.locator('header').screenshot();
+await page.locator('main').screenshot();
+await page.locator('footer').screenshot();
 ```
+
 - ✅ Precise section isolation
 - ✅ Better focus for LLM analysis
 - ✅ Lower token costs (smaller images)
 - ❌ Requires HTML structure knowledge
 
 **Option 2: Scroll and crop**
+
 ```javascript
 // Full page screenshot, then crop in post-processing
-await page.screenshot({ fullPage: true })
+await page.screenshot({ fullPage: true });
 // Crop: hero (0-800px), content (800-2000px), footer (2000-end)
 ```
+
 - ✅ Works without HTML knowledge
 - ✅ Captures fold-specific issues
 - ❌ Higher token costs
 - ❌ More complex processing
 
 **Option 3: Viewport scrolling** (HYBRID - BEST)
+
 ```javascript
 // Capture multiple viewport-sized chunks
-await page.evaluate(() => window.scrollTo(0, 0))
-await page.screenshot() // above-fold
-await page.evaluate(() => window.scrollTo(0, 800))
-await page.screenshot() // mid-page
+await page.evaluate(() => window.scrollTo(0, 0));
+await page.screenshot(); // above-fold
+await page.evaluate(() => window.scrollTo(0, 800));
+await page.screenshot(); // mid-page
 ```
+
 - ✅ Simulates real user scrolling
 - ✅ Catches fold-specific issues
 - ✅ Manageable token costs
@@ -89,6 +103,7 @@ await page.screenshot() // mid-page
 ### Phase 1: Reliability & Infrastructure (IMMEDIATE)
 
 #### A. Port Management System
+
 ```python
 # qa_agents/server_manager.py
 class ServerManager:
@@ -108,12 +123,14 @@ class ServerManager:
 ```
 
 **Benefits**:
+
 - ✅ Auto-find available ports
 - ✅ Kill conflicting Docker containers if needed
 - ✅ Validate server before screenshots
 - ✅ Clean shutdown after analysis
 
 #### B. Retry & Error Recovery
+
 ```python
 # qa_agents/reliability.py
 @retry(max_attempts=3, backoff=2.0)
@@ -128,11 +145,13 @@ def handle_partial_failure(results):
 ```
 
 **Benefits**:
+
 - ✅ Resilient to network hiccups
 - ✅ Detects blank/corrupted screenshots
 - ✅ Graceful degradation
 
 #### C. Configuration Management
+
 ```python
 # qa_agents/config.py additions
 class VisualUXConfig:
@@ -150,6 +169,7 @@ class VisualUXConfig:
 #### Strategy: Hybrid Viewport Scrolling
 
 **Implementation**:
+
 ```python
 # qa_agents/screenshot_utils.py additions
 async def capture_page_sections(
@@ -202,6 +222,7 @@ async def capture_page_sections(
 ```
 
 **Updated Agent Prompt**:
+
 ```python
 # qa_agents/visual_ux_agents.py
 def get_section_prompt(section_name: str) -> str:
@@ -235,6 +256,7 @@ def get_section_prompt(section_name: str) -> str:
 ```
 
 **Cost Impact**:
+
 - Before: 1 screenshot per viewport = ~765 tokens (desktop high detail)
 - After: 3 sections per viewport = ~255 tokens each = ~765 tokens total
 - **No cost increase**, but MORE detailed feedback per section!
@@ -244,6 +266,7 @@ def get_section_prompt(section_name: str) -> str:
 ### Phase 3: Multi-Page Support (MEDIUM PRIORITY)
 
 #### Page Configuration System
+
 ```python
 # qa_agents/page_config.yaml
 pages:
@@ -267,6 +290,7 @@ pages:
 ```
 
 #### Orchestrator
+
 ```python
 # qa_agents/multi_page_review.py
 class MultiPageReviewer:
@@ -303,6 +327,7 @@ class MultiPageReviewer:
 **Execution Strategies**:
 
 1. **Full Site Audit** (expensive, thorough)
+
    ```bash
    python qa_agents/multi_page_review.py --mode=full
    # Reviews all pages, all sections, all personas
@@ -310,6 +335,7 @@ class MultiPageReviewer:
    ```
 
 2. **Smart Sampling** (balanced)
+
    ```bash
    python qa_agents/multi_page_review.py --mode=smart
    # Reviews high-priority pages fully
@@ -329,6 +355,7 @@ class MultiPageReviewer:
 ### Phase 4: Advanced Features (FUTURE)
 
 #### A. Visual Regression Testing
+
 ```python
 # Compare screenshots over time
 def detect_visual_changes(before_screenshot, after_screenshot):
@@ -337,6 +364,7 @@ def detect_visual_changes(before_screenshot, after_screenshot):
 ```
 
 #### B. A/B Testing Support
+
 ```python
 # Compare two variants
 async def compare_variants(url_a, url_b, viewport="desktop"):
@@ -344,12 +372,14 @@ async def compare_variants(url_a, url_b, viewport="desktop"):
 ```
 
 #### C. Accessibility Deep Dive
+
 ```python
 # New persona: accessibility_expert
 # Focus: WCAG 2.1 AA compliance, contrast ratios, keyboard nav
 ```
 
 #### D. Performance Integration
+
 ```python
 # Combine with Lighthouse
 def analyze_ux_and_performance(url):
@@ -361,6 +391,7 @@ def analyze_ux_and_performance(url):
 ## 4. IMPLEMENTATION PLAN
 
 ### Week 1: Bulletproofing (Priority 1)
+
 - [ ] Implement `ServerManager` class
   - Port detection
   - Docker container management
@@ -373,6 +404,7 @@ def analyze_ux_and_performance(url):
 **Deliverable**: System that "just works" regardless of port conflicts
 
 ### Week 2: Section Analysis (Priority 2)
+
 - [ ] Implement `capture_page_sections()` function
 - [ ] Add section-specific prompts to agents
 - [ ] Update output formatting for sectioned results
@@ -382,6 +414,7 @@ def analyze_ux_and_performance(url):
 **Deliverable**: Detailed section-by-section UX analysis
 
 ### Week 3: Multi-Page Support (Priority 3)
+
 - [ ] Create `page_config.yaml` structure
 - [ ] Implement `MultiPageReviewer` class
 - [ ] Add report generation (HTML + Markdown)
@@ -391,6 +424,7 @@ def analyze_ux_and_performance(url):
 **Deliverable**: Full-site UX audit capability
 
 ### Week 4: Polish & Documentation (Priority 4)
+
 - [ ] Create comprehensive README with examples
 - [ ] Add `--help` documentation
 - [ ] Create video walkthrough
@@ -404,12 +438,14 @@ def analyze_ux_and_performance(url):
 ### Quick Wins (Can implement in 1-2 hours):
 
 1. **Kill port conflicts automatically**
+
 ```python
 def kill_port(port):
     os.system(f"lsof -ti:{port} | xargs kill -9")
 ```
 
 2. **Add connection validation**
+
 ```python
 def wait_for_server(url, timeout=10):
     for i in range(timeout):
@@ -422,6 +458,7 @@ def wait_for_server(url, timeout=10):
 ```
 
 3. **Better error messages**
+
 ```python
 except ConnectionError as e:
     print(f"""
@@ -444,22 +481,26 @@ except ConnectionError as e:
 ## 6. COST ANALYSIS
 
 ### Current System
+
 - 6 analyses (3 viewports × 2 personas)
 - Full-page screenshots
 - **Cost**: ~$0.08 per run
 
 ### With Section Analysis (3 sections)
+
 - 18 analyses (3 viewports × 3 sections × 2 personas)
 - Smaller images per section
 - **Cost**: ~$0.20 per page
 - **Benefit**: 3x more detailed feedback
 
 ### With Multi-Page (5 pages)
+
 - Full audit: 5 pages × $0.20 = **$1.00**
 - Smart audit: Home ($0.20) + Others sampled ($0.30) = **$0.50**
 - Critical audit: 2 pages above-fold only = **$0.10**
 
 **Budget recommendations**:
+
 - Daily: Run critical path ($0.10/day = $3/month)
 - Pre-deploy: Run smart audit ($0.50/deploy)
 - Monthly: Run full audit ($1.00/month)
@@ -469,6 +510,7 @@ except ConnectionError as e:
 ## 7. EXTENSIBILITY ARCHITECTURE
 
 ### Plugin System
+
 ```python
 # qa_agents/plugins/
 # ├── personas/
@@ -485,6 +527,7 @@ except ConnectionError as e:
 ```
 
 ### Configuration Inheritance
+
 ```yaml
 # qa_agents/presets/
 # ├── quick.yaml      # Fast, cheap, critical path only
@@ -497,16 +540,19 @@ except ConnectionError as e:
 ## 8. SUCCESS METRICS
 
 ### Reliability
+
 - [ ] 99%+ success rate on screenshot capture
 - [ ] <5 seconds to detect and fix port conflicts
 - [ ] Zero manual intervention required
 
 ### Usefulness
+
 - [ ] Identify 10+ actionable UX issues per analysis
 - [ ] Reduce false positives to <10%
 - [ ] Feedback specific enough to implement directly
 
 ### Scalability
+
 - [ ] Analyze 5+ pages in <2 minutes
 - [ ] Support 20+ pages without manual config
 - [ ] Handle 10+ concurrent analyses
@@ -538,6 +584,7 @@ except ConnectionError as e:
    - Performance correlation
 
 **Why this order?**
+
 - Reliability issues are blocking current usage → fix first
 - Section analysis provides immediate value without new infrastructure
 - Multi-page needs reliable foundation → do after #1

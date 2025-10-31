@@ -4,7 +4,7 @@
 
 1. **CNAME File Created**: `src/CNAME` contains `eaikw.com`
 2. **.nojekyll File Added**: Prevents Jekyll processing on GitHub Pages
-3. **Eleventy Config Updated**: 
+3. **Eleventy Config Updated**:
    - Sitemap hostname set to `https://eaikw.com`
    - PathPrefix removed (custom domain doesn't need it)
    - CNAME and .nojekyll files copy to `_site/` on build
@@ -163,7 +163,8 @@ Visit https://eaikw.com and verify:
 ## 📞 Support
 
 - **GitHub Pages Docs**: https://docs.github.com/en/pages
-- **Custom Domain Setup**: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site
+- **Custom Domain Setup**:
+  https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site
 
 ---
 

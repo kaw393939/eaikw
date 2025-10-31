@@ -63,6 +63,7 @@ docker-compose up --build
 ## Troubleshooting
 
 ### CSS not loading?
+
 ```bash
 # Check environment
 docker-compose run web env | grep ELEVENTY_ENV
@@ -73,6 +74,7 @@ docker-compose down && docker-compose up --build
 ```
 
 ### Port 8080 in use?
+
 ```bash
 # Kill existing process
 lsof -ti:8080 | xargs kill -9
@@ -82,6 +84,7 @@ docker-compose up
 ```
 
 ### Server won't start?
+
 ```bash
 # Full reset
 docker-compose down -v
@@ -112,6 +115,7 @@ docker-compose up --build
 ## Environment Variables
 
 Create `.env` file:
+
 ```bash
 OPENAI_API_KEY=sk-proj-your-key-here
 ELEVENTY_ENV=development
@@ -121,14 +125,11 @@ ELEVENTY_ENV=development
 
 ## Best Practices
 
-✅ Always use Docker for consistency
-✅ Run `npm run lint` before committing
-✅ Test CSS loading after changes
-✅ Use `./start-dev.sh` if Docker unavailable
+✅ Always use Docker for consistency ✅ Run `npm run lint` before committing ✅
+Test CSS loading after changes ✅ Use `./start-dev.sh` if Docker unavailable
 
-❌ Don't edit `_site/` directly (it's generated)
-❌ Don't commit `.env` file
-❌ Don't run multiple servers on port 8080
+❌ Don't edit `_site/` directly (it's generated) ❌ Don't commit `.env` file ❌
+Don't run multiple servers on port 8080
 
 ---
 

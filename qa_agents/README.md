@@ -2,7 +2,8 @@
 
 > **Multi-device responsive UX review with specialized AI expert agents**
 
-Automated quality assurance using OpenAI's Agents SDK with a consensus-based approach to identify critical UX issues across all device sizes.
+Automated quality assurance using OpenAI's Agents SDK with a consensus-based
+approach to identify critical UX issues across all device sizes.
 
 ## Overview
 
@@ -20,11 +21,13 @@ Automated quality assurance using OpenAI's Agents SDK with a consensus-based app
 └──────────────────┘
 ```
 
-**Key Innovation:** Multiple expert perspectives create consensus-based feedback that's more reliable than single-agent reviews.
+**Key Innovation:** Multiple expert perspectives create consensus-based feedback
+that's more reliable than single-agent reviews.
 
 ## Architecture
 
-See **[ARCHITECTURE.md](ARCHITECTURE.md)** for complete system design, data flow, and best practices.
+See **[ARCHITECTURE.md](ARCHITECTURE.md)** for complete system design, data
+flow, and best practices.
 
 ## Quick Start
 
@@ -106,6 +109,7 @@ Each agent has specialized knowledge:
 ### Comprehensive Reports
 
 Output includes:
+
 - 📊 JSON data (machine-readable)
 - 📄 Text report (human-readable)
 - 📸 Screenshots (all devices)
@@ -133,18 +137,20 @@ cat screenshots/YYYY-MM-DD-HH-MM-SS/RESPONSIVE-REVIEW-REPORT.txt
 ### Advanced Usage
 
 **Re-analyze existing screenshots (fast):**
+
 ```bash
 python run_consensus_review.py
 ```
 
 **Docker integration:**
+
 ```bash
 # Run QA system in Docker container
 docker-compose run --rm qa python run_responsive_review.py
 ```
 
-**Custom configuration:**
-Edit `config.py` for:
+**Custom configuration:** Edit `config.py` for:
+
 - Model selection (default: gpt-4o-mini)
 - Cost tracking settings
 - Output paths
@@ -154,6 +160,7 @@ Edit `config.py` for:
 ### Severity Levels
 
 **🔴 Critical** - Mentioned by 3+ experts
+
 - Hero below the fold (not visible without scroll)
 - WCAG AA failures (contrast < 4.5:1)
 - Typography below 14px minimum
@@ -161,12 +168,14 @@ Edit `config.py` for:
 - Design system violations (glassmorphism, wrong colors)
 
 **🟡 Important** - Mentioned by 2 experts
+
 - Inconsistent spacing
 - Hierarchy problems
 - Suboptimal CTAs
 - Mobile-specific issues
 
 **🔵 Minor** - Single expert observation
+
 - Refinement opportunities
 - Nice-to-have improvements
 - Stylistic preferences
@@ -174,6 +183,7 @@ Edit `config.py` for:
 ### Cross-Device Issues
 
 Issues appearing across multiple device sizes indicate systemic problems:
+
 - Mobile + Tablet = Touch interface problem
 - Laptop + Desktop = Large screen optimization needed
 - All devices = Fundamental design flaw
@@ -181,16 +191,19 @@ Issues appearing across multiple device sizes indicate systemic problems:
 ### Consensus Scoring
 
 **High Consensus (3+ experts agree):**
+
 - These are your highest priority fixes
 - Multiple perspectives confirm the issue
 - Likely visible to end users
 
 **Medium Consensus (2 experts agree):**
+
 - Important but not critical
 - May depend on context
 - Review and decide
 
 **Low Consensus (1 expert only):**
+
 - Refinement opportunities
 - May be edge cases
 - Consider for future iterations
@@ -199,17 +212,20 @@ Issues appearing across multiple device sizes indicate systemic problems:
 ## Cost Optimization
 
 **Full Responsive Review:**
+
 - 7 devices × 7 experts = 49 reviews
 - ~1500 tokens per review
 - gpt-4o-mini: $0.15 per 1M input tokens, $0.60 per 1M output
 - **Total: ~$0.73 per full review**
 
 **Strategic Usage:**
+
 - Run on major changes (not every commit)
 - Use consensus review for iterations (~$0.10)
 - Set up monthly budget alerts in OpenAI dashboard
 
 **Cost Comparison:**
+
 - gpt-4o-mini (current): $0.73 per review
 - gpt-4o: ~$48 per review (65x more expensive)
 - Manual QA: Hours of human time
@@ -252,17 +268,20 @@ PROJECT_ROOT = Path(__file__).parent.parent
 ## Troubleshooting
 
 **"Cannot connect to browser":**
+
 ```bash
 playwright install chromium
 ```
 
 **"No screenshots found":**
+
 ```bash
 # Run responsive review first
 python run_responsive_review.py
 ```
 
 **"OpenAI API Error":**
+
 ```bash
 # Check API key
 echo $OPENAI_API_KEY
@@ -272,6 +291,7 @@ cat ../.env | grep OPENAI_API_KEY
 ```
 
 **"Port 8080 connection refused":**
+
 ```bash
 # Start development server first
 cd .. && npm start
@@ -280,14 +300,18 @@ docker-compose up web
 ```
 
 **Review seems incomplete:**
+
 ```bash
 # Check expert_agents.py for all 7 agents
 # Verify consensus_review.py includes all experts
 grep "EXPERT_AGENTS" expert_agents.py
 ```
+
 # Switch to gpt-4o-mini in .env
+
 LLM_MODEL=gpt-4o-mini
-```
+
+````
 
 ## Examples
 
@@ -340,7 +364,7 @@ Expert: Brand Expert                    ✓ (7/7 devices)
 🌐 CROSS-DEVICE ISSUES:
    • Typography scale breaks on tablet-landscape
    • CTA buttons too small on all mobile devices (<44px touch target)
-```
+````
 
 ### Optimized Pipeline Output
 
@@ -350,6 +374,7 @@ The optimized pipeline generates TWO complementary reports:
 
 ```markdown
 # UX Review Report
+
 **Generated:** 2025-10-30-14-30-00
 
 ## 📊 Executive Summary
@@ -363,30 +388,38 @@ The optimized pipeline generates TWO complementary reports:
 ## 🔴 ACTION REQUIRED: Critical Issues
 
 ### 1. Hero section not visible on mobile without scrolling
+
 - **Device(s):** mobile-portrait, mobile-landscape
-- **Confidence:** 5/7 experts agree (Layout, Hierarchy, Conversion, Accessibility, Brand)
+- **Confidence:** 5/7 experts agree (Layout, Hierarchy, Conversion,
+  Accessibility, Brand)
 - **Why it matters:** First-time visitors never see main value proposition
-- **How to fix:** Reduce nav height from 80px to 60px on mobile OR increase hero min-height to 100vh
+- **How to fix:** Reduce nav height from 80px to 60px on mobile OR increase hero
+  min-height to 100vh
 
 ### 2. Call-to-action buttons fail WCAG AA touch target size
+
 - **Device(s):** mobile-portrait, mobile-landscape, tablet-portrait
 - **Confidence:** 4/7 experts agree (Accessibility, Conversion, Layout, UX)
 - **Why it matters:** 44px minimum for accessible touch targets, current is 36px
-- **How to fix:** Update .cta-button padding: 12px 24px → 14px 32px (CSS line 342)
+- **How to fix:** Update .cta-button padding: 12px 24px → 14px 32px (CSS
+  line 342)
 
 ---
 
 ## 🌐 Cross-Device Patterns
 
 ### Universal (All Devices)
+
 - Contrast ratio failures on `.hero-subtitle` (3.2:1, needs 4.5:1)
 - Inconsistent spacing in `.stats-grid`
 
 ### Mobile-Only
+
 - Hero below fold (navigation too tall)
 - Touch targets too small (<44px)
 
 ### Desktop-Only
+
 - Excessive whitespace in sidebar (could show more content)
 
 ---
@@ -420,10 +453,7 @@ The optimized pipeline generates TWO complementary reports:
   },
   "device_summaries": {
     "mobile-portrait": {
-      "critical_issues": [
-        "Hero below fold",
-        "CTA buttons too small"
-      ],
+      "critical_issues": ["Hero below fold", "CTA buttons too small"],
       "important_issues": [
         "Typography scale inconsistent",
         "Card spacing irregular"
@@ -438,13 +468,8 @@ The optimized pipeline generates TWO complementary reports:
     "universal_issues": [
       "Contrast ratio 3.2:1 on .hero-subtitle (needs 4.5:1)"
     ],
-    "mobile_only": [
-      "Hero below fold",
-      "Touch targets <44px"
-    ],
-    "desktop_only": [
-      "Excessive sidebar whitespace"
-    ],
+    "mobile_only": ["Hero below fold", "Touch targets <44px"],
+    "desktop_only": ["Excessive sidebar whitespace"],
     "responsive_breakpoint_issues": [
       "Typography scale breaks at 768px breakpoint"
     ],
@@ -484,6 +509,7 @@ The optimized pipeline generates TWO complementary reports:
 ```
 
 **Key Benefits:**
+
 - ✅ **Humans** can quickly scan `.md` for priorities
 - ✅ **AI agents** can parse `.json` to automatically generate fixes
 - ✅ **CI/CD** can track issue counts over time
@@ -492,9 +518,12 @@ The optimized pipeline generates TWO complementary reports:
 
 ## Learn More
 
-- 📖 **[ARCHITECTURE.md](ARCHITECTURE.md)** - Complete system design, data flow, best practices
-- 📊 **[TECHNICAL-DEBT-AUDIT-2024.md](TECHNICAL-DEBT-AUDIT-2024.md)** - Recent cleanup and architecture evolution
-- 🚀 **[Main Project README](../README.md)** - Full course documentation and lessons
+- 📖 **[ARCHITECTURE.md](ARCHITECTURE.md)** - Complete system design, data flow,
+  best practices
+- 📊 **[TECHNICAL-DEBT-AUDIT-2024.md](TECHNICAL-DEBT-AUDIT-2024.md)** - Recent
+  cleanup and architecture evolution
+- 🚀 **[Main Project README](../README.md)** - Full course documentation and
+  lessons
 
 ## Contributing
 

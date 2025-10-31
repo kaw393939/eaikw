@@ -1,19 +1,23 @@
 # CSS Design System Strategy: Fortune 100-Level Framework
+
 ## Post-Mortem Analysis & Next Generation Architecture
 
-**Date:** October 29, 2025
-**Project:** EverydayAI Educational Platform
-**Scope:** Complete CSS framework redesign with enterprise-grade responsive architecture
+**Date:** October 29, 2025 **Project:** EverydayAI Educational Platform
+**Scope:** Complete CSS framework redesign with enterprise-grade responsive
+architecture
 
 ---
 
 ## Executive Summary
 
 ### Current State Analysis
-After comprehensive audit of the existing CSS system, critical issues identified:
+
+After comprehensive audit of the existing CSS system, critical issues
+identified:
 
 1. **Typography Scaling Crisis**
-   - Viewport units (`vw`) scale infinitely, causing oversized text on large displays
+   - Viewport units (`vw`) scale infinitely, causing oversized text on large
+     displays
    - No container-aware scaling
    - Breakpoint ranges too broad (375px → 1440px)
 
@@ -33,7 +37,9 @@ After comprehensive audit of the existing CSS system, critical issues identified
    - Design tokens not truly systematic
 
 ### Recommended Approach
-**Container Query-Based Design System** with **Token-Driven Architecture** and **Composition over Inheritance** principles.
+
+**Container Query-Based Design System** with **Token-Driven Architecture** and
+**Composition over Inheritance** principles.
 
 ---
 
@@ -42,12 +48,14 @@ After comprehensive audit of the existing CSS system, critical issues identified
 ### 1.1 Container Queries: The Foundation
 
 **Why Container Queries?**
+
 - Components respond to their **container**, not viewport
 - Enables true component reusability
 - Eliminates media query hell
 - Future-proof (98%+ browser support as of 2024)
 
 **Implementation:**
+
 ```css
 /* OLD - Viewport-based (breaks on large screens) */
 .card {
@@ -80,14 +88,16 @@ After comprehensive audit of the existing CSS system, critical issues identified
 ```css
 /* CURRENT - Fixed spacing */
 --space-20: 6rem; /* Always 96px */
-.hero { padding: var(--space-20); } /* Pushes below fold */
+.hero {
+  padding: var(--space-20);
+} /* Pushes below fold */
 
 /* NEXT-GEN - Fluid viewport-relative */
---space-fluid-xs: clamp(0.5rem, 2vh, 1rem);    /* 8px → 16px */
---space-fluid-sm: clamp(1rem, 3vh, 2rem);      /* 16px → 32px */
---space-fluid-md: clamp(2rem, 5vh, 3rem);      /* 32px → 48px */
---space-fluid-lg: clamp(3rem, 8vh, 5rem);      /* 48px → 80px */
---space-fluid-xl: clamp(4rem, 12vh, 8rem);     /* 64px → 128px */
+--space-fluid-xs: clamp(0.5rem, 2vh, 1rem); /* 8px → 16px */
+--space-fluid-sm: clamp(1rem, 3vh, 2rem); /* 16px → 32px */
+--space-fluid-md: clamp(2rem, 5vh, 3rem); /* 32px → 48px */
+--space-fluid-lg: clamp(3rem, 8vh, 5rem); /* 48px → 80px */
+--space-fluid-xl: clamp(4rem, 12vh, 8rem); /* 64px → 128px */
 
 .hero {
   padding-block: var(--space-fluid-lg); /* Responsive to viewport height */
@@ -97,25 +107,27 @@ After comprehensive audit of the existing CSS system, critical issues identified
 
 ### 1.3 Typography: Utopia + Container Queries
 
-**Current Issue:** Text scales with viewport width, becoming enormous on large screens.
+**Current Issue:** Text scales with viewport width, becoming enormous on large
+screens.
 
-**Solution:** Hybrid approach with container queries for component-level control:
+**Solution:** Hybrid approach with container queries for component-level
+control:
 
 ```css
 /* BASE SCALE - Utopia formula between 375px → 1440px */
 :root {
-  --text-xs: clamp(0.75rem, 0.73rem + 0.11vw, 0.875rem);   /* 12→14px */
-  --text-sm: clamp(0.875rem, 0.86rem + 0.08vw, 1rem);      /* 14→16px */
-  --text-base: clamp(1rem, 0.98rem + 0.09vw, 1.125rem);    /* 16→18px */
-  --text-lg: clamp(1.125rem, 1.09rem + 0.17vw, 1.375rem);  /* 18→22px */
-  --text-xl: clamp(1.25rem, 1.18rem + 0.34vw, 1.75rem);    /* 20→28px */
+  --text-xs: clamp(0.75rem, 0.73rem + 0.11vw, 0.875rem); /* 12→14px */
+  --text-sm: clamp(0.875rem, 0.86rem + 0.08vw, 1rem); /* 14→16px */
+  --text-base: clamp(1rem, 0.98rem + 0.09vw, 1.125rem); /* 16→18px */
+  --text-lg: clamp(1.125rem, 1.09rem + 0.17vw, 1.375rem); /* 18→22px */
+  --text-xl: clamp(1.25rem, 1.18rem + 0.34vw, 1.75rem); /* 20→28px */
 
   /* Display sizes - MORE CONSERVATIVE */
-  --text-2xl: clamp(1.5rem, 1.39rem + 0.54vw, 2rem);       /* 24→32px */
-  --text-3xl: clamp(1.875rem, 1.71rem + 0.82vw, 2.5rem);   /* 30→40px */
-  --text-4xl: clamp(2rem, 1.86rem + 0.71vw, 3rem);         /* 32→48px */
-  --text-5xl: clamp(2.5rem, 2.14rem + 1.79vw, 4rem);       /* 40→64px */
-  --text-6xl: clamp(3rem, 2.57rem + 2.14vw, 5rem);         /* 48→80px */
+  --text-2xl: clamp(1.5rem, 1.39rem + 0.54vw, 2rem); /* 24→32px */
+  --text-3xl: clamp(1.875rem, 1.71rem + 0.82vw, 2.5rem); /* 30→40px */
+  --text-4xl: clamp(2rem, 1.86rem + 0.71vw, 3rem); /* 32→48px */
+  --text-5xl: clamp(2.5rem, 2.14rem + 1.79vw, 4rem); /* 40→64px */
+  --text-6xl: clamp(3rem, 2.57rem + 2.14vw, 5rem); /* 48→80px */
 }
 
 /* COMPONENT LEVEL - Container query overrides */
@@ -143,6 +155,7 @@ After comprehensive audit of the existing CSS system, critical issues identified
 ### 2.1 Design Token Layers
 
 **Tier 1: Primitive Tokens** (Never used directly in components)
+
 ```css
 :root {
   /* Color primitives */
@@ -154,14 +167,15 @@ After comprehensive audit of the existing CSS system, critical issues identified
   --color-emerald-600: #059669;
 
   /* Size primitives */
-  --size-1: 0.25rem;  /* 4px */
-  --size-2: 0.5rem;   /* 8px */
-  --size-4: 1rem;     /* 16px */
-  --size-8: 2rem;     /* 32px */
+  --size-1: 0.25rem; /* 4px */
+  --size-2: 0.5rem; /* 8px */
+  --size-4: 1rem; /* 16px */
+  --size-8: 2rem; /* 32px */
 }
 ```
 
 **Tier 2: Semantic Tokens** (Component-agnostic meanings)
+
 ```css
 :root {
   /* Semantic colors */
@@ -179,6 +193,7 @@ After comprehensive audit of the existing CSS system, critical issues identified
 ```
 
 **Tier 3: Component Tokens** (Component-specific)
+
 ```css
 :root {
   /* Hero component */
@@ -238,6 +253,7 @@ After comprehensive audit of the existing CSS system, critical issues identified
 ### 3.1 Atomic Design Structure
 
 **File Organization:**
+
 ```
 src/assets/css/
 ├── tokens/
@@ -315,11 +331,11 @@ src/assets/css/
   margin-block-start: var(--stack-space, 1rem);
 }
 
-.stack[data-space="sm"] {
+.stack[data-space='sm'] {
   --stack-space: clamp(0.5rem, 2vh, 1rem);
 }
 
-.stack[data-space="lg"] {
+.stack[data-space='lg'] {
   --stack-space: clamp(2rem, 5vh, 3rem);
 }
 
@@ -367,6 +383,7 @@ src/assets/css/
 ### 4.1 Progressive Enhancement Approach
 
 **Mobile-First Foundation:**
+
 ```css
 /* BASE - Mobile (0-599px) */
 .component {
@@ -406,18 +423,24 @@ src/assets/css/
 ```css
 :root {
   /* Breakpoint tokens */
-  --bp-xs: 375px;   /* Small mobile */
-  --bp-sm: 600px;   /* Large mobile / Small tablet */
-  --bp-md: 900px;   /* Tablet / Small desktop */
-  --bp-lg: 1200px;  /* Desktop */
-  --bp-xl: 1440px;  /* Large desktop */
+  --bp-xs: 375px; /* Small mobile */
+  --bp-sm: 600px; /* Large mobile / Small tablet */
+  --bp-md: 900px; /* Tablet / Small desktop */
+  --bp-lg: 1200px; /* Desktop */
+  --bp-xl: 1440px; /* Large desktop */
   --bp-2xl: 1920px; /* Extra large */
 }
 
 /* Corresponding container query breakpoints */
-@container (min-width: 600px) { /* sm */ }
-@container (min-width: 900px) { /* md */ }
-@container (min-width: 1200px) { /* lg */ }
+@container (min-width: 600px) {
+  /* sm */
+}
+@container (min-width: 900px) {
+  /* md */
+}
+@container (min-width: 1200px) {
+  /* lg */
+}
 ```
 
 ### 4.3 Viewport Height Handling
@@ -453,23 +476,28 @@ src/assets/css/
 ## Part 5: Implementation Roadmap
 
 ### Phase 1: Foundation (Week 1)
+
 **Setup new token system and architecture**
 
 Tasks:
+
 1. Create token hierarchy (primitives → semantic → component)
 2. Implement container query base
 3. Build layout primitives (stack, cluster, grid, sidebar)
 4. Setup new file structure
 
 **Deliverables:**
+
 - `tokens/` folder with complete token system
 - `layout/` folder with container-aware primitives
 - Base reset and typography
 
 ### Phase 2: Component Migration (Week 2)
+
 **Rebuild components with new system**
 
 Priority order:
+
 1. **Hero** - Most visible, highest impact
 2. **Navigation** - Present on every page
 3. **Cards** - Reused across site
@@ -477,6 +505,7 @@ Priority order:
 5. **Typography components** - Headings, paragraphs
 
 **Pattern for each component:**
+
 ```css
 /* 1. Container wrapper */
 .component-wrapper {
@@ -500,23 +529,28 @@ Priority order:
 ```
 
 ### Phase 3: Testing & Optimization (Week 3)
+
 **Cross-device testing and performance**
 
 Testing matrix:
+
 - Mobile: 375px, 414px (iPhone)
 - Tablet: 768px, 834px (iPad)
 - Desktop: 1280px, 1440px, 1920px
 - Viewport heights: 667px, 800px, 1080px
 
 Performance targets:
+
 - CSS file < 50KB gzipped
 - No layout shift (CLS = 0)
 - 60fps scroll performance
 
 ### Phase 4: Documentation (Week 4)
+
 **Create living style guide**
 
 Components:
+
 1. Storybook-style component showcase
 2. Token documentation with visual examples
 3. Layout primitive usage guide
@@ -529,12 +563,14 @@ Components:
 ### 6.1 Typography Scale
 
 **REJECTED: Current aggressive scaling**
+
 ```css
 /* TOO AGGRESSIVE - Causes oversized text */
 --text-6xl: clamp(3.75rem, 2.75rem + 5vw, 6.5rem); /* 60→104px */
 ```
 
 **APPROVED: Conservative with container cap**
+
 ```css
 /* CONSERVATIVE - Proper scaling */
 --text-6xl: clamp(3rem, 2.57rem + 2.14vw, 5rem); /* 48→80px */
@@ -550,11 +586,13 @@ Components:
 ### 6.2 Spacing Philosophy
 
 **REJECTED: Fixed spacing system**
+
 - Predictable but inflexible
 - Causes content to push below fold
 - Doesn't respond to viewport
 
 **APPROVED: Fluid spacing with vh/vw blend**
+
 ```css
 /* Vertical spacing - Uses vh for viewport awareness */
 --space-section-y: clamp(3rem, 10vh, 6rem);
@@ -570,18 +608,21 @@ Components:
 **When to use each:**
 
 **Container Queries (Primary):**
+
 - Component internal layout
 - Typography within components
 - Component spacing/padding
 - Grid column counts
 
 **Viewport Queries (Secondary):**
+
 - Global token adjustments
 - Major layout shifts
 - Navigation behavior
 - Footer layout
 
 **Example:**
+
 ```css
 /* VIEWPORT - Global token adjustment */
 @media (width >= 900px) {
@@ -608,6 +649,7 @@ Components:
 **Don't rewrite everything at once**
 
 Strategy:
+
 1. Create new CSS alongside existing
 2. Wrap new components in `.v2` class
 3. Test thoroughly before switching
@@ -634,6 +676,7 @@ Strategy:
 ### 7.2 Component Refactoring Checklist
 
 For each component:
+
 - [ ] Identify all variants and states
 - [ ] Extract primitive values to tokens
 - [ ] Create semantic token mappings
@@ -646,6 +689,7 @@ For each component:
 ### 7.3 Quality Gates
 
 **Before merging any component:**
+
 1. ✅ Uses only design tokens (no hardcoded values)
 2. ✅ Wrapped in container query
 3. ✅ Tested 375px → 1920px
@@ -663,6 +707,7 @@ For each component:
 **CRITICAL REQUIREMENT: Every section must be screenshot-testable**
 
 Each section needs:
+
 1. **Container query wrapper** (for responsive behavior)
 2. **Isolation padding** (for clean screenshots)
 3. **Data attributes** (for automated testing)
@@ -670,11 +715,15 @@ Each section needs:
 
 ```html
 <!-- SCREENSHOT-OPTIMIZED STRUCTURE -->
-<div class="section-isolate"> <!-- Provides screenshot padding -->
-  <div class="hero-wrapper" data-testid="hero-section"> <!-- Container query -->
+<div class="section-isolate">
+  <!-- Provides screenshot padding -->
+  <div class="hero-wrapper" data-testid="hero-section">
+    <!-- Container query -->
     <section class="hero" data-ux-section="hero">
-      <div class="container"> <!-- Max-width constraint -->
-        <div class="stack" data-space="lg"> <!-- Layout primitive -->
+      <div class="container">
+        <!-- Max-width constraint -->
+        <div class="stack" data-space="lg">
+          <!-- Layout primitive -->
           <h1 class="hero__title">Title</h1>
         </div>
       </div>
@@ -684,6 +733,7 @@ Each section needs:
 ```
 
 **Why this structure?**
+
 - `.section-isolate` → Adds viewport padding (200px) for clean screenshots
 - `.hero-wrapper` → Container query boundary
 - `data-testid` → Playwright can target each section
@@ -692,7 +742,8 @@ Each section needs:
 
 ### 8.2 Grid Consistency Rules (Screenshot-Critical)
 
-**Problem:** Grids that show 2 items when they should show 3 create visual inconsistency in screenshots.
+**Problem:** Grids that show 2 items when they should show 3 create visual
+inconsistency in screenshots.
 
 **Solution:** Smart grid with minimum items per row constraint:
 
@@ -712,7 +763,10 @@ Each section needs:
     minmax(
       max(
         var(--grid-min),
-        calc((100% - (var(--grid-gap) * (var(--grid-items) - 1))) / var(--grid-items))
+        calc(
+          (100% - (var(--grid-gap) * (var(--grid-items) - 1))) /
+            var(--grid-items)
+        )
       ),
       1fr
     )
@@ -733,7 +787,8 @@ Each section needs:
 }
 ```
 
-**Result:** Grid ALWAYS shows intended number of items per row at each breakpoint.
+**Result:** Grid ALWAYS shows intended number of items per row at each
+breakpoint.
 
 ### 8.3 Section Isolation System (Screenshot Padding)
 
@@ -759,13 +814,13 @@ Each section needs:
 }
 
 /* Enable via data attribute for testing */
-[data-screenshot-mode="true"] {
+[data-screenshot-mode='true'] {
   --screenshot-padding: 200px;
 }
 
 /* Or via URL parameter */
 @supports selector(:has(*)) {
-  :root:has(body[data-test-env="screenshot"]) {
+  :root:has(body[data-test-env='screenshot']) {
     --screenshot-padding: 200px;
   }
 }
@@ -776,7 +831,7 @@ Each section needs:
 ```javascript
 // Enable screenshot mode
 await page.addStyleTag({
-  content: ':root { --screenshot-padding: 200px; }'
+  content: ':root { --screenshot-padding: 200px; }',
 });
 
 // Or via data attribute
@@ -796,6 +851,7 @@ await section.screenshot({ path: 'hero.png' });
 ### 13.1 Design Principles for Screenshot Testing
 
 **Core Requirements:**
+
 1. **Viewport-perfect sizing** - Each section fits cleanly in viewport
 2. **Consistent grid behavior** - No orphaned items (2 when should be 3)
 3. **Isolation padding** - Clean boundaries for screenshots
@@ -809,21 +865,16 @@ await section.screenshot({ path: 'hero.png' });
 ```html
 <!-- LAYER 1: Isolation (screenshot padding) -->
 <div class="section-isolate" data-section-name="hero">
-
   <!-- LAYER 2: Container Query Wrapper -->
   <div class="hero-wrapper" data-testid="hero-section">
-
     <!-- LAYER 3: Semantic Section -->
     <section class="hero" data-ux-section="hero" data-ux-priority="critical">
-
       <!-- LAYER 4: Content Container (max-width) -->
       <div class="container">
-
         <!-- LAYER 5: Layout Primitive -->
         <div class="stack" data-space="lg">
           <h1>Content here</h1>
         </div>
-
       </div>
     </section>
   </div>
@@ -831,6 +882,7 @@ await section.screenshot({ path: 'hero.png' });
 ```
 
 **Layer Responsibilities:**
+
 - **Isolation**: Screenshot padding (200px), scroll anchors
 - **Wrapper**: Container query boundary, test targeting
 - **Section**: Semantic meaning, UX tracking
@@ -846,9 +898,9 @@ await section.screenshot({ path: 'hero.png' });
 .section-content {
   /* Available height = viewport height - isolation padding */
   min-height: clamp(
-    400px,                           /* Minimum readable height */
-    calc(100vh - 400px),            /* Viewport minus padding */
-    1200px                          /* Maximum for ultra-wide */
+    400px,
+    /* Minimum readable height */ calc(100vh - 400px),
+    /* Viewport minus padding */ 1200px /* Maximum for ultra-wide */
   );
 
   /* Ensure content doesn't overflow */
@@ -878,17 +930,18 @@ await section.screenshot({ path: 'hero.png' });
 
 ### 13.4 Consistent Grid System (No Orphans)
 
-**Problem:** Auto-fit grids can show 2 items when you want 3, causing visual inconsistency.
+**Problem:** Auto-fit grids can show 2 items when you want 3, causing visual
+inconsistency.
 
 **Solution: Breakpoint-Aware Grid with Item Count Control**
 
 ```css
 /* BASE GRID SYSTEM */
 .grid {
-  --grid-min-width: 280px;      /* Minimum card width */
-  --grid-max-width: 400px;      /* Maximum card width */
+  --grid-min-width: 280px; /* Minimum card width */
+  --grid-max-width: 400px; /* Maximum card width */
   --grid-gap: clamp(1.5rem, 3vw, 2rem);
-  --grid-target-columns: 3;     /* Desired columns */
+  --grid-target-columns: 3; /* Desired columns */
 
   display: grid;
   gap: var(--grid-gap);
@@ -899,7 +952,10 @@ await section.screenshot({ path: 'hero.png' });
     minmax(
       clamp(
         var(--grid-min-width),
-        calc((100% - (var(--grid-gap) * (var(--grid-target-columns) - 1))) / var(--grid-target-columns)),
+        calc(
+          (100% - (var(--grid-gap) * (var(--grid-target-columns) - 1))) /
+            var(--grid-target-columns)
+        ),
         var(--grid-max-width)
       ),
       1fr
@@ -923,15 +979,15 @@ await section.screenshot({ path: 'hero.png' });
 }
 
 /* ITEM COUNT VARIANTS - Explicit grid definitions */
-.grid[data-columns="3"] {
+.grid[data-columns='3'] {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.grid[data-columns="2"] {
+.grid[data-columns='2'] {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.grid[data-columns="1"] {
+.grid[data-columns='1'] {
   grid-template-columns: 1fr;
 }
 ```
@@ -1164,7 +1220,7 @@ for section in sections:
 
 ```css
 /* FREEZE ANIMATIONS FOR SCREENSHOTS */
-[data-screenshot-mode="true"] * {
+[data-screenshot-mode='true'] * {
   animation-play-state: paused !important;
   transition: none !important;
 }
@@ -1284,21 +1340,28 @@ def check_edge_padding(pixels: np.ndarray, min_padding: int) -> bool:
 </style>
 
 <!-- Main CSS - Async load -->
-<link rel="preload" href="main.css" as="style" onload="this.rel='stylesheet'">
+<link rel="preload" href="main.css" as="style" onload="this.rel='stylesheet'" />
 
 <!-- Page-specific CSS - Conditional -->
-<link rel="stylesheet" href="homepage.css" media="print" onload="this.media='all'">
+<link
+  rel="stylesheet"
+  href="homepage.css"
+  media="print"
+  onload="this.media='all'"
+/>
 ```
 
 ### 9.2 CSS Optimization Targets
 
 **Performance budget:**
+
 - Critical CSS: < 15KB inline
 - Main CSS: < 35KB gzipped
 - Page-specific: < 10KB gzipped
 - Total CSS: < 50KB gzipped
 
 **Techniques:**
+
 - Use CSS custom properties (no Sass variables)
 - Eliminate unused styles
 - Scope utility classes
@@ -1333,12 +1396,14 @@ def check_edge_padding(pixels: np.ndarray, min_padding: int) -> bool:
 ### 10.1 Technical Metrics
 
 **CSS Health:**
+
 - Lines of code: Target < 1000 LOC (currently 1990)
 - Specificity: Avg < 20 (no `!important`)
 - Selector depth: Max 3 levels
 - Unused CSS: < 5%
 
 **Performance:**
+
 - First Contentful Paint: < 1.5s
 - Largest Contentful Paint: < 2.5s
 - Cumulative Layout Shift: 0
@@ -1347,12 +1412,14 @@ def check_edge_padding(pixels: np.ndarray, min_padding: int) -> bool:
 ### 10.2 UX Metrics
 
 **Responsiveness:**
+
 - Text readable at all viewport sizes
 - No horizontal scroll
 - Touch targets ≥ 44px
 - Content above fold on all devices
 
 **Accessibility:**
+
 - WCAG 2.1 AA compliance
 - Contrast ratios ≥ 4.5:1
 - Focus indicators visible
@@ -1361,6 +1428,7 @@ def check_edge_padding(pixels: np.ndarray, min_padding: int) -> bool:
 ### 10.3 Developer Experience
 
 **Maintainability:**
+
 - New component development time: < 2 hours
 - Bug fix time: < 30 minutes
 - Documentation coverage: 100%
@@ -1373,6 +1441,7 @@ def check_edge_padding(pixels: np.ndarray, min_padding: int) -> bool:
 ### 11.1 Enterprise Patterns
 
 **1. Design Token Versioning**
+
 ```css
 :root {
   /* Version tokens for backward compatibility */
@@ -1391,6 +1460,7 @@ def check_edge_padding(pixels: np.ndarray, min_padding: int) -> bool:
 ```
 
 **2. Feature Flags**
+
 ```css
 /* Enable/disable features via tokens */
 :root {
@@ -1406,13 +1476,14 @@ def check_edge_padding(pixels: np.ndarray, min_padding: int) -> bool:
 ```
 
 **3. A/B Testing Support**
+
 ```css
 /* Data attributes for variant testing */
-[data-experiment="variant-a"] .hero {
+[data-experiment='variant-a'] .hero {
   background: var(--color-primary);
 }
 
-[data-experiment="variant-b"] .hero {
+[data-experiment='variant-b'] .hero {
   background: var(--color-accent);
 }
 ```
@@ -1420,12 +1491,14 @@ def check_edge_padding(pixels: np.ndarray, min_padding: int) -> bool:
 ### 11.2 Team Collaboration
 
 **Documentation Requirements:**
+
 - Every component has Storybook story
 - Token changes require RFC (Request for Comments)
 - Breaking changes need migration guide
 - Performance impact documented
 
 **Code Review Checklist:**
+
 - [ ] Uses design tokens exclusively
 - [ ] Container query implementation
 - [ ] Cross-browser tested
@@ -1440,18 +1513,21 @@ def check_edge_padding(pixels: np.ndarray, min_padding: int) -> bool:
 ### 12.1 Development Tools
 
 **CSS Architecture:**
+
 - **PostCSS** - Modern CSS processing
 - **Lightning CSS** - Fast, modern bundler
 - **CSS Modules** - Scoped styles
 - **@layer** - Cascade control
 
 **Testing:**
+
 - **Playwright** - Cross-browser testing
 - **Chromatic** - Visual regression testing
 - **Axe DevTools** - Accessibility testing
 - **Lighthouse** - Performance auditing
 
 **Documentation:**
+
 - **Storybook** - Component showcase
 - **Styleguidist** - Living style guide
 - **Zeroheight** - Design system docs
@@ -1459,16 +1535,19 @@ def check_edge_padding(pixels: np.ndarray, min_padding: int) -> bool:
 ### 12.2 Learning Resources
 
 **Container Queries:**
+
 - MDN: Container Queries Guide
 - Ahmad Shadeed: CSS Container Queries
 - Una Kravets: Container Query Solutions
 
 **Fluid Typography:**
+
 - Utopia.fyi - Fluid type calculator
 - Modern CSS: Fluid Typography
 - Type Scale Calculator
 
 **Design Systems:**
+
 - Design Tokens Community Group
 - Brad Frost: Atomic Design
 - Nathan Curtis: Design Systems Handbook
@@ -1480,18 +1559,21 @@ def check_edge_padding(pixels: np.ndarray, min_padding: int) -> bool:
 ### Implementation Priority
 
 **Immediate (Week 1):**
+
 1. ✅ Audit complete (done)
 2. Setup token system
 3. Implement container query base
 4. Create layout primitives
 
 **Short-term (Weeks 2-4):**
+
 1. Migrate hero component
 2. Migrate navigation
 3. Migrate cards & buttons
 4. Test at all breakpoints
 
 **Long-term (Months 2-3):**
+
 1. Complete component migration
 2. Build style guide
 3. Optimize performance
@@ -1500,18 +1582,21 @@ def check_edge_padding(pixels: np.ndarray, min_padding: int) -> bool:
 ### Expected Outcomes
 
 **Technical:**
+
 - 50% reduction in CSS size
 - Zero layout shifts
 - Container-based responsive design
 - Token-driven architecture
 
 **Business:**
+
 - Faster feature development
 - Consistent brand experience
 - Better mobile experience
 - Improved conversion rates
 
 **User Experience:**
+
 - Text readable at all sizes
 - Content above fold on all devices
 - Smooth responsive behavior
@@ -1520,12 +1605,14 @@ def check_edge_padding(pixels: np.ndarray, min_padding: int) -> bool:
 ---
 
 **Next Steps:**
+
 1. Present this strategy to stakeholders
 2. Get approval for gradual migration
 3. Setup new project structure
 4. Begin Phase 1 implementation
 
 **Questions for Review:**
+
 - Approval for container query baseline?
 - Timeline for full migration?
 - Resource allocation for testing?

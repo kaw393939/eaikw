@@ -2,7 +2,8 @@
 
 ## Overview
 
-The QA system uses a **multi-device responsive review** approach with **specialized AI experts** that provide **consensus-based feedback**.
+The QA system uses a **multi-device responsive review** approach with
+**specialized AI experts** that provide **consensus-based feedback**.
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -56,12 +57,14 @@ The QA system uses a **multi-device responsive review** approach with **speciali
 ### 1. Entry Points
 
 **`run_responsive_review.py`** (97 lines)
+
 - Primary CLI entry point
 - Coordinates multi-device screenshot capture
 - Invokes consensus review system
 - Generates comprehensive reports
 
 **`run_consensus_review.py`** (126 lines)
+
 - Secondary CLI for existing screenshots
 - Re-runs expert analysis without re-capturing
 - Useful for iterating on reviews
@@ -69,18 +72,21 @@ The QA system uses a **multi-device responsive review** approach with **speciali
 ### 2. Core Systems
 
 **`responsive_review.py`** (393 lines)
+
 - Multi-device screenshot capture using Playwright
 - 7 device configurations covering mobile → 4K desktop
 - Async screenshot orchestration
 - Cross-device issue identification
 
 **`consensus_review.py`** (297 lines)
+
 - Aggregates findings from all expert agents
 - Runs 7 experts in parallel for each device/screenshot
 - Combines reviews into unified report
 - Identifies consensus issues vs. individual concerns
 
 **`expert_agents.py`** (489 lines)
+
 - 7 specialized AI reviewers with distinct perspectives
 - Recently enhanced with above-the-fold viewport detection
 - Each expert has specific evaluation criteria:
@@ -95,6 +101,7 @@ The QA system uses a **multi-device responsive review** approach with **speciali
 ### 3. Configuration
 
 **`config.py`** (37 lines)
+
 - Central configuration management
 - OpenAI API settings (gpt-4o-mini by default)
 - Cost tracking (~$0.15 per 1M tokens)
@@ -229,6 +236,7 @@ docker-compose run --rm qa python run_responsive_review.py
 ### Adjusting Device Configurations
 
 Edit `responsive_review.py`:
+
 ```python
 DEVICE_CONFIGS = {
     "custom-device": {
@@ -280,24 +288,28 @@ qa_agents/screenshots/
 ## Architecture Evolution
 
 ### Phase 1: Quality Gate (Archived)
+
 - Linear linting approach
 - Generic quality agents
 - Single-perspective review
 - File: `archive/quality-gate-system/`
 
 ### Phase 2: Visual UX Review (Archived)
+
 - Screenshot-based analysis
 - Full-page viewports only
 - Limited expert diversity
 - Files: `archive/visual-ux-system/`
 
 ### Phase 3: Targeted Section Review (Archived)
+
 - Element-specific capture
 - HTML data-attribute discovery
 - Section-by-section analysis
 - Files: `archive/targeted-review-system/`
 
 ### Phase 4: Responsive Multi-Device (Current)
+
 - 7 device configurations
 - 7 specialized expert perspectives
 - Consensus-based aggregation
@@ -307,6 +319,7 @@ qa_agents/screenshots/
 ## Best Practices
 
 ### 1. Run Reviews Before Major Changes
+
 ```bash
 # Capture baseline before edits
 python run_responsive_review.py > before.log
@@ -320,17 +333,20 @@ diff before.log after.log
 ```
 
 ### 2. Focus on Critical Issues First
+
 - Critical issues = mentioned by 3+ experts
 - Cross-device issues = affects multiple viewports
 - Above-the-fold issues = affects immediate visibility
 
 ### 3. Iterate with Consensus Review
+
 ```bash
 # After fixing issues, re-analyze existing screenshots
 python run_consensus_review.py
 ```
 
 ### 4. Monitor Costs
+
 - Original parallel approach: ≈ $0.73 per review
 - Optimized pipeline: ≈ $0.16-0.21 per review (70% savings)
 - Run strategically (not on every commit)
@@ -355,6 +371,7 @@ Phase 5: ACTIONABLE REPORT GENERATION
 ```
 
 **Benefits:**
+
 - 70% token reduction (73,500 → 20,000 tokens)
 - 73% cost reduction ($0.73 → $0.20)
 - Higher quality (experts build on each other)
@@ -362,6 +379,7 @@ Phase 5: ACTIONABLE REPORT GENERATION
 - Better reports (human + machine readable)
 
 **Token Breakdown:**
+
 ```
 Phase 1: Triage (7 devices)        ~2,100 tokens  ($0.03)
 Phase 2: Expert Chain (3-5 devices) ~5,600 tokens  ($0.08 per device)
@@ -383,6 +401,7 @@ Markdown Report
 ```
 
 **Tradeoffs:**
+
 - Faster execution (2-3 min vs 3-4 min)
 - More expensive ($0.73 vs $0.20)
 - Redundant analysis (same issues described 49 times)
@@ -391,24 +410,28 @@ Markdown Report
 ### Key Optimizations Implemented
 
 **1. Triage-Based Prioritization**
+
 - Quick scan identifies which devices need deep review
 - Skips devices that look identical to others
 - Example: If tablet-landscape = desktop, skip tablet-landscape
 - Savings: 40-50% of devices can be skipped
 
 **2. Sequential Expert Chain**
+
 - Experts run in dependency order (Layout → Typography → Contrast → etc.)
 - Each expert sees previous findings, builds on them
 - Reduces redundancy: "I agree with Layout Expert" vs repeating full analysis
 - Improves quality: Experts can validate/challenge each other
 
 **3. Cross-Device Pattern Detection**
+
 - Identifies universal issues (all devices)
 - Flags mobile-specific vs desktop-specific problems
 - Suggests fix order (widest impact first)
 - Prevents fixing same issue 7 times
 
 **4. Dual-Format Reports**
+
 - Human-readable `.md` for quick scanning
 - Machine-readable `.json` for AI automation
 - Structured issues with IDs, severity, file locations
@@ -417,12 +440,14 @@ Markdown Report
 ### When to Use Which Pipeline
 
 **Use Optimized Pipeline When:**
+
 - Regular reviews (weekly/monthly)
 - Budget-conscious projects
 - Want actionable JSON output for automation
 - Need cross-device pattern analysis
 
 **Use Parallel Pipeline When:**
+
 - Quick validation needed (2 min vs 4 min matters)
 - Only need markdown output
 - Budget isn't a concern ($0.73 vs $0.20 doesn't matter)
@@ -431,6 +456,7 @@ Markdown Report
 ## Troubleshooting
 
 ### "No screenshots found"
+
 ```bash
 # Check screenshots directory
 ls -la qa_agents/screenshots/
@@ -440,6 +466,7 @@ python run_responsive_review.py
 ```
 
 ### "Cannot connect to browser"
+
 ```bash
 # Install Playwright browsers
 playwright install chromium
@@ -449,6 +476,7 @@ docker-compose run --rm qa python run_responsive_review.py
 ```
 
 ### "OpenAI API Error"
+
 ```bash
 # Check API key
 echo $OPENAI_API_KEY

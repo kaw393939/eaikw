@@ -2,7 +2,8 @@
 
 ## Overview
 
-The new system uses HTML data attributes to mark sections for UX review. This provides bulletproof, self-documenting screenshot capture.
+The new system uses HTML data attributes to mark sections for UX review. This
+provides bulletproof, self-documenting screenshot capture.
 
 ## 1. Mark Sections in HTML
 
@@ -10,27 +11,17 @@ Add `data-ux-section` to elements you want reviewed:
 
 ```html
 <!-- Critical sections -->
-<header data-ux-section="header" data-ux-priority="critical">
-  ...
-</header>
+<header data-ux-section="header" data-ux-priority="critical">...</header>
 
-<section data-ux-section="hero" data-ux-priority="critical">
-  ...
-</section>
+<section data-ux-section="hero" data-ux-priority="critical">...</section>
 
 <!-- High priority sections -->
-<nav data-ux-section="navigation" data-ux-priority="high">
-  ...
-</nav>
+<nav data-ux-section="navigation" data-ux-priority="high">...</nav>
 
-<section data-ux-section="features" data-ux-priority="high">
-  ...
-</section>
+<section data-ux-section="features" data-ux-priority="high">...</section>
 
 <!-- Medium priority sections -->
-<footer data-ux-section="footer" data-ux-priority="medium">
-  ...
-</footer>
+<footer data-ux-section="footer" data-ux-priority="medium">...</footer>
 ```
 
 ## 2. Auto-Discover Sections
@@ -51,8 +42,11 @@ python qa_agents/discover_ux_sections.py \
   --output qa_agents/ux-review-config.yaml
 ```
 
-This generates a config file showing all discovered sections with smart defaults:
-- **Persona**: Auto-assigned based on section name (hero→first-impression, footer→trust-inspector)
+This generates a config file showing all discovered sections with smart
+defaults:
+
+- **Persona**: Auto-assigned based on section name (hero→first-impression,
+  footer→trust-inspector)
 - **Priority**: Auto-assigned or from HTML attribute (critical/high/medium/low)
 - **Selector**: CSS selector to find the element
 - **Bounds**: Element dimensions and position
@@ -60,6 +54,7 @@ This generates a config file showing all discovered sections with smart defaults
 ## 3. Run Targeted Reviews
 
 ### Option A: Auto-Discovery Mode (Recommended)
+
 Scan and review in one command:
 
 ```bash
@@ -77,6 +72,7 @@ python qa_agents/targeted_review.py --auto-discover --pages / --viewport tablet
 ```
 
 ### Option B: Config-Based Mode
+
 Use pre-generated config:
 
 ```bash
@@ -142,6 +138,7 @@ python qa_agents/targeted_review.py \
 ## Naming Conventions
 
 ### Section Names (kebab-case)
+
 - `hero` - Main hero section
 - `header` - Site header
 - `navigation` - Main navigation
@@ -151,14 +148,16 @@ python qa_agents/targeted_review.py \
 - `footer` - Site footer
 
 ### Auto-Assigned Personas
-| Section Pattern | Persona | Use Case |
-|---|---|---|
-| hero, header, nav | first-impression | Visual hierarchy, brand |
-| features, content, lessons | content-flow | Readability, structure |
-| footer, contact, social | trust-inspector | Credibility, legal |
-| cta, pricing, signup | conversion-optimizer | Actions, forms |
+
+| Section Pattern            | Persona              | Use Case                |
+| -------------------------- | -------------------- | ----------------------- |
+| hero, header, nav          | first-impression     | Visual hierarchy, brand |
+| features, content, lessons | content-flow         | Readability, structure  |
+| footer, contact, social    | trust-inspector      | Credibility, legal      |
+| cta, pricing, signup       | conversion-optimizer | Actions, forms          |
 
 ### Priority Levels
+
 - **critical**: Must review every time (hero, header)
 - **high**: Important UX elements (nav, features, cta)
 - **medium**: Secondary content (footer, sidebar)
@@ -169,6 +168,7 @@ python qa_agents/targeted_review.py \
 ### Priority Filtering
 
 Review only critical sections in CI/CD:
+
 ```bash
 python qa_agents/targeted_review.py \
   --auto-discover \
@@ -179,6 +179,7 @@ python qa_agents/targeted_review.py \
 ### Multi-Viewport Testing
 
 Test all viewports:
+
 ```bash
 for viewport in desktop tablet mobile; do
   python qa_agents/targeted_review.py \
@@ -191,6 +192,7 @@ done
 ### Selective Page Reviews
 
 Review changed pages only:
+
 ```bash
 python qa_agents/targeted_review.py \
   --auto-discover \
@@ -218,6 +220,7 @@ python qa_agents/targeted_review.py \
 ## Comparison with Old System
 
 ### Old (Viewport-Based)
+
 ```python
 # Hardcoded 3 sections
 sections = ["above-fold", "mid-page", "footer"]
@@ -227,20 +230,21 @@ sections = ["above-fold", "mid-page", "footer"]
 ```
 
 **Problems**:
+
 - Fixed 3 sections per page
 - Viewport scrolling is imprecise
 - Breaks when layout changes
 - Manual updates required
 
 ### New (Element-Based)
+
 ```html
 <!-- Self-documenting HTML -->
-<section data-ux-section="hero" data-ux-priority="critical">
-  ...
-</section>
+<section data-ux-section="hero" data-ux-priority="critical">...</section>
 ```
 
 **Benefits**:
+
 - Auto-discover 1-10+ sections per page
 - Precise element targeting
 - Works with any layout
@@ -249,7 +253,9 @@ sections = ["above-fold", "mid-page", "footer"]
 ## Integration with Existing Tools
 
 ### Compatible with Phase 1 & 2
+
 All existing tools still work:
+
 - ✅ `visual_ux_review.py` - Full-page reviews
 - ✅ `section_review.py` - Viewport-based sections
 - ✅ `targeted_review.py` - **NEW** Element-based targeting
@@ -263,22 +269,26 @@ All existing tools still work:
 ## Troubleshooting
 
 ### "Found 0 sections"
+
 - Ensure `data-ux-section` attributes are in HTML
 - Check build output in `_site/` directory
 - Verify server is running and pages load
 
 ### "Element not found"
+
 - Ensure selector is correct in config
 - Check element is visible (not `display: none`)
 - Verify element exists on page
 
 ### "Permission denied"
+
 - Ensure screenshots directory exists
 - Check file permissions on output directory
 
 ## Example Templates
 
 See complete examples in:
+
 - `qa_agents/examples/base-with-data-attributes.njk`
 - `qa_agents/examples/index-with-data-attributes.njk`
 - `qa_agents/DATA-ATTRIBUTES-GUIDE.md`

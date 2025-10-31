@@ -105,7 +105,8 @@ ELEVENTY_ENV=development
 ### Path Configuration
 
 - **Development:** Site served at `http://localhost:8080/`
-- **Production:** Site served at `https://kaw393939.github.io/is117_ai_test_practice/`
+- **Production:** Site served at
+  `https://kaw393939.github.io/is117_ai_test_practice/`
 
 Eleventy automatically handles path prefixes based on `ELEVENTY_ENV`.
 
@@ -162,6 +163,7 @@ npm test
 **Problem:** Page displays but has no styling
 
 **Solution:**
+
 1. Check that `ELEVENTY_ENV=development` is set
 2. Verify `_site/assets/css/main.css` exists
 3. Restart the server: `docker-compose restart web`
@@ -171,6 +173,7 @@ npm test
 **Problem:** Server fails to start with "address already in use"
 
 **Solution:**
+
 ```bash
 # Kill existing process
 lsof -ti:8080 | xargs kill -9
@@ -184,6 +187,7 @@ docker-compose up --scale web=0 && docker-compose run -p 8081:8080 web
 **Problem:** "OPENAI_API_KEY not found"
 
 **Solution:**
+
 1. Create `.env` file with your API key
 2. Restart Docker: `docker-compose down && docker-compose up`
 3. Verify with: `docker-compose run web env | grep OPENAI`
@@ -193,12 +197,14 @@ docker-compose up --scale web=0 && docker-compose run -p 8081:8080 web
 **Problem:** Terminal shows "Server at..." but curl fails
 
 **Solution with Docker (recommended):**
+
 ```bash
 docker-compose down
 docker-compose up --build
 ```
 
 **Solution without Docker:**
+
 ```bash
 pkill -f eleventy
 ./start-dev.sh
@@ -301,21 +307,17 @@ docker-compose run qa python3 qa_agents/run_responsive_review.py
 
 ### DO
 
-✅ Use Docker for development (consistent environment)
-✅ Run `./start-dev.sh` if not using Docker
-✅ Set `ELEVENTY_ENV=development` for local work
-✅ Keep `.env` file with API keys (don't commit it)
-✅ Run linters before committing
-✅ Test in Docker before pushing
+✅ Use Docker for development (consistent environment) ✅ Run `./start-dev.sh`
+if not using Docker ✅ Set `ELEVENTY_ENV=development` for local work ✅ Keep
+`.env` file with API keys (don't commit it) ✅ Run linters before committing ✅
+Test in Docker before pushing
 
 ### DON'T
 
-❌ Start server with random terminal commands
-❌ Commit `.env` file with API keys
-❌ Edit `_site/` directly (it's generated)
-❌ Mix production and development paths
-❌ Run multiple servers on port 8080
-❌ Skip testing after CSS changes
+❌ Start server with random terminal commands ❌ Commit `.env` file with API
+keys ❌ Edit `_site/` directly (it's generated) ❌ Mix production and
+development paths ❌ Run multiple servers on port 8080 ❌ Skip testing after CSS
+changes
 
 ---
 
@@ -384,22 +386,21 @@ Before submitting changes:
 
 ## FAQ
 
-**Q: Why Docker?**
-A: Consistent environment, works the same on every machine, no "works on my machine" issues.
+**Q: Why Docker?** A: Consistent environment, works the same on every machine,
+no "works on my machine" issues.
 
-**Q: Can I develop without Docker?**
-A: Yes, use `./start-dev.sh` script. But Docker is recommended.
+**Q: Can I develop without Docker?** A: Yes, use `./start-dev.sh` script. But
+Docker is recommended.
 
-**Q: Why does CSS sometimes 404?**
-A: Path prefix mismatch. Make sure `ELEVENTY_ENV=development` is set.
+**Q: Why does CSS sometimes 404?** A: Path prefix mismatch. Make sure
+`ELEVENTY_ENV=development` is set.
 
-**Q: How do I update dependencies?**
-A: `npm update && docker-compose build --no-cache`
+**Q: How do I update dependencies?** A:
+`npm update && docker-compose build --no-cache`
 
-**Q: Can I use a different port?**
-A: Edit `docker-compose.yml` ports section or use `./start-dev.sh` and change the port in `.eleventy.js`
+**Q: Can I use a different port?** A: Edit `docker-compose.yml` ports section or
+use `./start-dev.sh` and change the port in `.eleventy.js`
 
 ---
 
-**Last Updated:** October 30, 2025
-**Maintained by:** Development Team
+**Last Updated:** October 30, 2025 **Maintained by:** Development Team

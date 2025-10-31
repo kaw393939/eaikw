@@ -1,6 +1,6 @@
 # Technical Debt Audit - QA Agents Directory
-**Date:** 2024-12-23
-**Purpose:** Identify unused/legacy files for cleanup
+
+**Date:** 2024-12-23 **Purpose:** Identify unused/legacy files for cleanup
 
 ## Current State: 50+ Files
 
@@ -23,6 +23,7 @@ Config Files:                2 files  (4%)
 These are the CORE of the current QA system:
 
 ### **Main Review Systems:**
+
 1. **`responsive_review.py`** (393 lines)
    - Multi-device screenshot & review system
    - Used by: run_responsive_review.py
@@ -42,6 +43,7 @@ These are the CORE of the current QA system:
    - Recently enhanced with above-the-fold detection
 
 ### **Entry Point Scripts:**
+
 4. **`run_responsive_review.py`** (97 lines)
    - CLI runner for responsive reviews
    - Entry point: YES
@@ -53,12 +55,14 @@ These are the CORE of the current QA system:
    - Status: ✅ KEEP - Secondary entry point
 
 ### **Configuration:**
+
 6. **`config.py`** (37 lines)
    - Central configuration (API keys, paths, costs)
    - Used by: All active scripts
    - Status: ✅ KEEP - Required by everything
 
 ### **Older Systems (May Still Be Valid):**
+
 7. **`targeted_review.py`** (379 lines)
    - Section-specific review system
    - Uses: discover_ux_sections.py, element_capture.py
@@ -108,6 +112,7 @@ These support the core functionality:
 These are from earlier iterations and likely superseded:
 
 ### **Old Agent Systems:**
+
 1. **`quality_agents.py`** (178 lines)
    - Original agent definitions (LintAgent, AutoFixAgent, QualityJudge)
    - Used by: quality_gate.py
@@ -121,6 +126,7 @@ These are from earlier iterations and likely superseded:
    - Status: ❌ ARCHIVE - Replaced by consensus system
 
 ### **Old Review Systems:**
+
 3. **`visual_ux_review.py`** (194 lines)
    - Original visual UX review script
    - Uses: visual_ux_agents.py, screenshot_utils.py, server_manager.py
@@ -134,6 +140,7 @@ These are from earlier iterations and likely superseded:
    - Status: ❌ ARCHIVE - Older iteration
 
 ### **Discovery & Capture Systems:**
+
 5. **`discover_ux_sections.py`** (321 lines)
    - Auto-discover UX sections from HTML
    - Used by: targeted_review.py
@@ -166,12 +173,14 @@ These tests don't match the current architecture:
 4. **`test_phase2.py`** (110 lines) - Old phase 2 testing
 5. **`test_playwright.py`** (29 lines) - Basic Playwright test
 6. **`test_targeted_capture.py`** (229 lines) - Tests for targeted system
-7. **`test_phase*.py` - Outdated phased testing approach
+7. \*_`test_phase_.py` - Outdated phased testing approach
 
 **Status:** ❌ DELETE ALL
+
 - Tests don't match current architecture
 - No pytest.ini or proper test suite
-- Better to write NEW tests for current system (responsive_review.py + consensus_review.py)
+- Better to write NEW tests for current system (responsive_review.py +
+  consensus_review.py)
 
 ---
 
@@ -193,6 +202,7 @@ These are old reports from previous audits/phases:
 12. `VISUAL_UX_STRATEGY.md` - Old strategy document
 
 **Status:** ❌ MOVE TO `docs/archive/`
+
 - Historical value, but clutters active workspace
 - Create `qa_agents/docs/archive/` and move all
 
@@ -224,12 +234,14 @@ These are old reports from previous audits/phases:
 **Check:** Does it offer functionality not in `responsive_review.py`?
 
 **If YES (targeted review is unique):**
+
 - ✅ KEEP: targeted_review.py
 - ✅ KEEP: discover_ux_sections.py
 - ✅ KEEP: element_capture.py
 - ✅ KEEP: section_personas.py
 
 **If NO (responsive review covers it):**
+
 - ❌ ARCHIVE ALL of the above
 
 ### Question 2: Is `quality_gate.py` still used?
@@ -237,12 +249,14 @@ These are old reports from previous audits/phases:
 **Check:** Was it replaced by consensus_review.py?
 
 **If YES (quality_gate is replaced):**
+
 - ❌ ARCHIVE: quality_gate.py
 - ❌ ARCHIVE: quality_agents.py
 - ❌ ARCHIVE: utils.py
 - ❌ ARCHIVE: tools.py
 
 **If NO (quality_gate is still used):**
+
 - ✅ KEEP quality_gate.py, quality_agents.py
 - ✅ MERGE utils.py and tools.py (they're duplicates)
 
@@ -251,6 +265,7 @@ These are old reports from previous audits/phases:
 **Check:** Does Docker handle all server management now?
 
 **Answer:** YES - Docker handles it
+
 - ❌ ARCHIVE: server_manager.py
 - All scripts that use it are legacy (visual_ux_review.py, section_review.py)
 
@@ -280,12 +295,14 @@ rm qa_agents/homepage-ux-review-*.txt
 ### Phase 2 (Requires Verification)
 
 **Test if targeted_review.py is still useful:**
+
 ```bash
 cd qa_agents
 python targeted_review.py --help
 ```
 
 **If not needed, archive the targeted review ecosystem:**
+
 ```bash
 mkdir -p archive/targeted-review-system
 mv targeted_review.py archive/targeted-review-system/
@@ -297,6 +314,7 @@ mv section_review.py archive/targeted-review-system/
 ```
 
 **Archive the old quality gate system:**
+
 ```bash
 mkdir -p archive/quality-gate-system
 mv quality_gate.py archive/quality-gate-system/
@@ -304,6 +322,7 @@ mv quality_agents.py archive/quality-gate-system/
 ```
 
 **Archive old visual UX system:**
+
 ```bash
 mkdir -p archive/visual-ux-system
 mv visual_ux_review.py archive/visual-ux-system/
@@ -312,6 +331,7 @@ mv screenshot_utils.py archive/visual-ux-system/
 ```
 
 **Archive server manager (now handled by Docker):**
+
 ```bash
 mkdir -p archive/server-management
 mv server_manager.py archive/server-management/
@@ -319,12 +339,14 @@ mv reliability.py archive/server-management/  # Only if not used by active code
 ```
 
 **Archive all old tests:**
+
 ```bash
 mkdir -p archive/old-tests
 mv test_*.py archive/old-tests/
 ```
 
 **Merge duplicate utilities:**
+
 ```bash
 # If tools.py and utils.py are identical
 diff tools.py utils.py
@@ -334,7 +356,8 @@ diff tools.py utils.py
 ### Phase 3 (Update Documentation)
 
 1. **Update qa_agents/README.md:**
-   - Document current architecture (responsive_review → consensus_review → expert_agents)
+   - Document current architecture (responsive_review → consensus_review →
+     expert_agents)
    - Remove references to archived systems
    - Add "Architecture Decision Records" section explaining evolution
 
@@ -352,6 +375,7 @@ diff tools.py utils.py
 ## 🎯 Expected Result After Cleanup
 
 ### Active Files (~15 files):
+
 ```
 qa_agents/
 ├── config.py                      # Configuration
@@ -369,6 +393,7 @@ qa_agents/
 ```
 
 ### Archived Files (~35 files moved to archive/):
+
 ```
 qa_agents/archive/
 ├── targeted-review-system/        # 5 files
@@ -379,15 +404,15 @@ qa_agents/archive/
 └── docs/                          # 12 md files
 ```
 
-**Files Before:** 50+
-**Files After:** ~15 (70% reduction)
-**Clarity Improvement:** 🚀 MASSIVE
+**Files Before:** 50+ **Files After:** ~15 (70% reduction) **Clarity
+Improvement:** 🚀 MASSIVE
 
 ---
 
 ## 📈 Impact Assessment
 
 ### Benefits:
+
 - ✅ Clear separation of active vs archived code
 - ✅ Easier onboarding (obvious entry points)
 - ✅ Faster navigation
@@ -396,10 +421,12 @@ qa_agents/archive/
 - ✅ Historical code preserved in archive
 
 ### Risks:
+
 - ⚠️ If we archived something still used, easy to restore
 - ⚠️ Need to verify targeted_review.py usage before archiving
 
 ### Mitigation:
+
 - Move to archive/ (not delete)
 - Document in this file what was moved and why
 - Keep git history intact
@@ -408,7 +435,9 @@ qa_agents/archive/
 
 ## 🚀 Next Steps
 
-1. **VERIFY:** Check if `targeted_review.py` and `quality_gate.py` are referenced anywhere:
+1. **VERIFY:** Check if `targeted_review.py` and `quality_gate.py` are
+   referenced anywhere:
+
    ```bash
    grep -r "targeted_review" /Users/kwilliams/Desktop/117_site
    grep -r "quality_gate" /Users/kwilliams/Desktop/117_site
@@ -417,6 +446,7 @@ qa_agents/archive/
 2. **EXECUTE:** Run immediate cleanup (Phase 1)
 
 3. **TEST:** Verify responsive review still works:
+
    ```bash
    cd qa_agents
    python run_responsive_review.py --help
@@ -427,6 +457,7 @@ qa_agents/archive/
 5. **DOCUMENT:** Update README and create ARCHITECTURE.md (Phase 3)
 
 6. **COMMIT:** Git commit with message:
+
    ```
    refactor: Clean up qa_agents technical debt
 
@@ -445,4 +476,5 @@ qa_agents/archive/
 - **Philosophy:** Archive, don't delete (preserve history)
 - **Current Focus:** Responsive multi-device review system
 - **Legacy Systems:** Phased approach, quality gates, section reviews
-- **Architecture Evolution:** Linear agents → Specialized experts → Consensus aggregation
+- **Architecture Evolution:** Linear agents → Specialized experts → Consensus
+  aggregation

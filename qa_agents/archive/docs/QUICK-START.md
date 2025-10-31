@@ -13,11 +13,13 @@ PYTHONPATH=. qa_agents/venv/bin/python3 qa_agents/section_review.py _site deskto
 ## What's New in Phase 2
 
 ### Section-Based Analysis
+
 - **Above-fold**: First impression, value prop, primary CTA
 - **Mid-page**: Content flow, scanability, engagement
 - **Footer**: Contact info, legal links, trust signals
 
 ### Benefits
+
 - Same cost as full-page (~$0.01)
 - 3x more detailed feedback
 - Severity ratings (Critical/Major/Minor)
@@ -60,11 +62,11 @@ PYTHONPATH=. qa_agents/venv/bin/python3 qa_agents/test_phase2.py
 
 ## Cost Comparison
 
-| Mode | Analyses | Cost | Feedback Detail |
-|------|----------|------|----------------|
-| Phase 1 (Full) | 6 (2 personas × 3 viewports) | $0.019 | Generic |
-| Phase 2 (Desktop) | 3 sections | $0.0095 | Targeted |
-| Phase 2 (All viewports) | 9 (3 sections × 3 viewports) | $0.0285 | Comprehensive |
+| Mode                    | Analyses                     | Cost    | Feedback Detail |
+| ----------------------- | ---------------------------- | ------- | --------------- |
+| Phase 1 (Full)          | 6 (2 personas × 3 viewports) | $0.019  | Generic         |
+| Phase 2 (Desktop)       | 3 sections                   | $0.0095 | Targeted        |
+| Phase 2 (All viewports) | 9 (3 sections × 3 viewports) | $0.0285 | Comprehensive   |
 
 ## Documentation
 

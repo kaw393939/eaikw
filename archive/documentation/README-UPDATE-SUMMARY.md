@@ -4,7 +4,8 @@
 
 ## What Changed
 
-Updated the README to clearly explain **how this project actually works** - from development environment to AI-powered quality gates.
+Updated the README to clearly explain **how this project actually works** - from
+development environment to AI-powered quality gates.
 
 ---
 
@@ -13,6 +14,7 @@ Updated the README to clearly explain **how this project actually works** - from
 ### 1. **"How This Works" Section** (Top of README)
 
 Immediately explains the core value proposition:
+
 - Docker vs Local setup options
 - Visual flow diagram (code → auto-reload → quality checks → deploy)
 - Why this matters (30-60 min debugging → one command)
@@ -22,12 +24,14 @@ Immediately explains the core value proposition:
 Now shows **two clear paths**:
 
 **Docker (Recommended):**
+
 ```bash
 docker-compose up
 # Everything just works
 ```
 
 **Local (Alternative):**
+
 ```bash
 ./start-dev.sh
 # Automated script handles everything
@@ -36,6 +40,7 @@ docker-compose up
 ### 3. **AI Quality System Explanation**
 
 Detailed what makes this different:
+
 - 7 AI expert agents (GPT-4 powered)
 - Multi-device testing (7 viewports)
 - WCAG AA compliance automation
@@ -44,6 +49,7 @@ Detailed what makes this different:
 ### 4. **Running the QA System**
 
 Added explicit instructions:
+
 ```bash
 # Responsive review
 docker-compose --profile qa up
@@ -57,6 +63,7 @@ Shows expected output and cost.
 ### 5. **Technology Stack Section**
 
 Now clearly lists:
+
 - Core tech (Eleventy, Node, Docker)
 - Quality tools (ESLint, Prettier, Lighthouse)
 - AI system (OpenAI GPT-4, Playwright, Python)
@@ -64,6 +71,7 @@ Now clearly lists:
 ### 6. **Multi-Layer Quality Gates Table**
 
 Visual breakdown of all 8 quality layers:
+
 - What each checks
 - When it runs
 - Can it be bypassed? (spoiler: no for the first 6)
@@ -71,6 +79,7 @@ Visual breakdown of all 8 quality layers:
 ### 7. **Project Architecture Diagram**
 
 ASCII art showing:
+
 ```
 Development Environment
 ├── Docker Container (web)
@@ -81,6 +90,7 @@ Development Environment
 ### 8. **Common Troubleshooting**
 
 Expanded with specific solutions:
+
 - CSS doesn't load → check ELEVENTY_ENV
 - Port in use → kill and restart
 - Server won't bind → use Docker (it's the fix)
@@ -91,11 +101,13 @@ Expanded with specific solutions:
 Contrasts:
 
 **Traditional:**
+
 - ❌ Manual typing
 - ❌ Fragile environments
 - ❌ "Works on my machine"
 
 **This Project:**
+
 - ✅ AI-assisted
 - ✅ Bulletproof Docker
 - ✅ Fortune 100-level QA
@@ -106,13 +118,18 @@ Contrasts:
 ## Why These Changes Matter
 
 ### Before:
+
 README was about **the course** (what you'll learn, lessons, etc.)
 
 ### After:
-README is about **the system** (how it works, why it's reliable, what makes it special)
+
+README is about **the system** (how it works, why it's reliable, what makes it
+special)
 
 ### Result:
+
 Readers immediately understand:
+
 1. This isn't a toy project
 2. The dev environment is bulletproof
 3. Quality is automated and enforced
@@ -132,6 +149,7 @@ Readers immediately understand:
 ## Documentation Trail
 
 The README now ties together:
+
 - `QUICK-START.md` - Command reference
 - `DEVELOPMENT.md` - Full dev guide
 - `DEVELOPMENT-ENVIRONMENT-5-WHYS-ANALYSIS.md` - Root cause analysis
@@ -144,49 +162,54 @@ Each document has a clear purpose, no duplication.
 ## Before/After Comparison
 
 ### Old Opening:
+
 > "Self-paced course teaching production-ready web development..."
 
-*Focus: Education*
+_Focus: Education_
 
 ### New Opening:
-> "Self-paced course with bulletproof development environment and automated quality gates..."
 
-*Focus: System reliability + Education*
+> "Self-paced course with bulletproof development environment and automated
+> quality gates..."
+
+_Focus: System reliability + Education_
 
 ### Old Quick Start:
+
 ```bash
 npm install
 npm start
 ```
 
-*Problem: Doesn't work reliably*
+_Problem: Doesn't work reliably_
 
 ### New Quick Start:
+
 ```bash
 docker-compose up
 ```
 
-*Solution: Always works*
+_Solution: Always works_
 
 ---
 
 ## Student Impact
 
-**Before reading README:**
-"I need to learn web development"
+**Before reading README:** "I need to learn web development"
 
-**After reading README:**
-"I need to learn web development **AND** I get a professional DevOps setup that actually works **AND** AI-powered quality checks **AND** I can be productive immediately"
+**After reading README:** "I need to learn web development **AND** I get a
+professional DevOps setup that actually works **AND** AI-powered quality checks
+**AND** I can be productive immediately"
 
 ---
 
 ## Instructor Impact
 
-**Before:**
-"This is a web dev course with some linting"
+**Before:** "This is a web dev course with some linting"
 
-**After:**
-"This is a Fortune 100-level development environment that teaches DevOps best practices alongside web development - students graduate with real-world skills"
+**After:** "This is a Fortune 100-level development environment that teaches
+DevOps best practices alongside web development - students graduate with
+real-world skills"
 
 ---
 
@@ -195,13 +218,14 @@ docker-compose up
 The README now **sells the system**, not just the content.
 
 It answers:
+
 - ✅ How do I start? (Docker)
 - ✅ Why is this reliable? (5 Whys → Docker fix)
 - ✅ What makes this special? (AI + Multi-device + WCAG)
 - ✅ Is this production-ready? (Yes, Fortune 100 mirrors)
 - ✅ What if something breaks? (Comprehensive troubleshooting)
 
-**Previous README:** "Here's a course"
-**New README:** "Here's a bulletproof system that teaches you to ship quality software"
+**Previous README:** "Here's a course" **New README:** "Here's a bulletproof
+system that teaches you to ship quality software"
 
 🎯 **Mission accomplished.**

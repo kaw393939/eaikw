@@ -2,7 +2,8 @@
 
 ## Overview
 
-Add `data-ux-section` attributes to your HTML templates to enable automatic UX review discovery and targeted screenshot capture.
+Add `data-ux-section` attributes to your HTML templates to enable automatic UX
+review discovery and targeted screenshot capture.
 
 ## Quick Start
 
@@ -17,11 +18,13 @@ Add `data-ux-section` attributes to your HTML templates to enable automatic UX r
 ### 2. Attributes
 
 **`data-ux-section`** (required)
+
 - Unique identifier for the section
 - Use kebab-case (e.g., `hero-section`, `feature-grid`)
 - Will be used in reports and config files
 
 **`data-ux-priority`** (optional)
+
 - Values: `critical`, `high`, `medium`, `low`
 - Defaults inferred from section name if not specified
 
@@ -32,49 +35,55 @@ Add `data-ux-section` attributes to your HTML templates to enable automatic UX r
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }}</title>
-  <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-  <!-- Navigation - Critical UX element -->
-  <nav class="site-nav" data-ux-section="navigation" data-ux-priority="critical">
-    <div class="site-nav__container">
-      <a href="/" class="site-nav__logo">IS117</a>
-      <ul class="site-nav__menu">
-        <li><a href="/lessons/">Lessons</a></li>
-        <li><a href="/resources/">Resources</a></li>
-        <li><a href="/for-instructors/">For Instructors</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Main content area -->
-  <main>
-    {{ content | safe }}
-  </main>
-
-  <!-- Footer - Always reviewed for trust signals -->
-  <footer class="site-footer" data-ux-section="footer" data-ux-priority="medium">
-    <div class="site-footer__container">
-      <div class="site-footer__links">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="/about/">About</a></li>
-          <li><a href="/contact/">Contact</a></li>
-          <li><a href="/privacy/">Privacy Policy</a></li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- Navigation - Critical UX element -->
+    <nav
+      class="site-nav"
+      data-ux-section="navigation"
+      data-ux-priority="critical"
+    >
+      <div class="site-nav__container">
+        <a href="/" class="site-nav__logo">IS117</a>
+        <ul class="site-nav__menu">
+          <li><a href="/lessons/">Lessons</a></li>
+          <li><a href="/resources/">Resources</a></li>
+          <li><a href="/for-instructors/">For Instructors</a></li>
         </ul>
       </div>
+    </nav>
 
-      <div class="site-footer__social">
-        <h3>Connect</h3>
-        <a href="https://github.com/kaw393939" aria-label="GitHub">GitHub</a>
+    <!-- Main content area -->
+    <main>{{ content | safe }}</main>
+
+    <!-- Footer - Always reviewed for trust signals -->
+    <footer
+      class="site-footer"
+      data-ux-section="footer"
+      data-ux-priority="medium"
+    >
+      <div class="site-footer__container">
+        <div class="site-footer__links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/privacy/">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__social">
+          <h3>Connect</h3>
+          <a href="https://github.com/kaw393939" aria-label="GitHub">GitHub</a>
+        </div>
       </div>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
 ```
 
@@ -83,7 +92,7 @@ Add `data-ux-section` attributes to your HTML templates to enable automatic UX r
 ```html
 ---
 layout: layouts/base.njk
-title: "IS117: AI-Assisted Web Development"
+title: 'IS117: AI-Assisted Web Development'
 ---
 
 <!-- Hero Section - Critical first impression -->
@@ -98,7 +107,11 @@ title: "IS117: AI-Assisted Web Development"
 </section>
 
 <!-- Course Overview - High priority content -->
-<section class="course-overview" data-ux-section="course-overview" data-ux-priority="high">
+<section
+  class="course-overview"
+  data-ux-section="course-overview"
+  data-ux-priority="high"
+>
   <div class="course-overview__container">
     <h2>What You'll Learn</h2>
     <div class="course-overview__grid">
@@ -119,7 +132,11 @@ title: "IS117: AI-Assisted Web Development"
 </section>
 
 <!-- Quality Gates Feature -->
-<section class="features" data-ux-section="quality-gates" data-ux-priority="high">
+<section
+  class="features"
+  data-ux-section="quality-gates"
+  data-ux-priority="high"
+>
   <div class="features__container">
     <h2>Quality Gates Guard Your Code</h2>
     <ul class="features__list">
@@ -131,7 +148,11 @@ title: "IS117: AI-Assisted Web Development"
 </section>
 
 <!-- Call to Action -->
-<section class="cta-section" data-ux-section="cta-secondary" data-ux-priority="medium">
+<section
+  class="cta-section"
+  data-ux-section="cta-secondary"
+  data-ux-priority="medium"
+>
   <div class="cta-section__container">
     <h2>Ready to Begin Your Journey?</h2>
     <a href="/lessons/lesson-01/" class="cta-section__button">Start Lesson 1</a>
@@ -144,11 +165,15 @@ title: "IS117: AI-Assisted Web Development"
 ```html
 ---
 layout: layouts/base.njk
-title: "Course Lessons"
+title: 'Course Lessons'
 ---
 
 <!-- Page Header -->
-<section class="page-header" data-ux-section="lessons-header" data-ux-priority="high">
+<section
+  class="page-header"
+  data-ux-section="lessons-header"
+  data-ux-priority="high"
+>
   <div class="page-header__container">
     <h1>Course Lessons</h1>
     <p>Progress through structured lessons at your own pace</p>
@@ -156,14 +181,18 @@ title: "Course Lessons"
 </section>
 
 <!-- Lesson Grid -->
-<section class="lesson-grid" data-ux-section="lesson-list" data-ux-priority="critical">
+<section
+  class="lesson-grid"
+  data-ux-section="lesson-list"
+  data-ux-priority="critical"
+>
   <div class="lesson-grid__container">
     {% for lesson in collections.lessons %}
-      <article class="lesson-card">
-        <h2>{{ lesson.data.title }}</h2>
-        <p>{{ lesson.data.description }}</p>
-        <a href="{{ lesson.url }}">Start Lesson →</a>
-      </article>
+    <article class="lesson-card">
+      <h2>{{ lesson.data.title }}</h2>
+      <p>{{ lesson.data.description }}</p>
+      <a href="{{ lesson.url }}">Start Lesson →</a>
+    </article>
     {% endfor %}
   </div>
 </section>
@@ -174,28 +203,38 @@ title: "Course Lessons"
 ```html
 ---
 layout: layouts/lesson.njk
-title: "Lesson 1: Getting Started"
+title: 'Lesson 1: Getting Started'
 ---
 
 <!-- Lesson Content -->
-<article class="lesson-content" data-ux-section="lesson-main" data-ux-priority="critical">
+<article
+  class="lesson-content"
+  data-ux-section="lesson-main"
+  data-ux-priority="critical"
+>
   <header class="lesson-content__header">
     <h1>{{ title }}</h1>
   </header>
 
-  <div class="lesson-content__body">
-    {{ content | safe }}
-  </div>
+  <div class="lesson-content__body">{{ content | safe }}</div>
 </article>
 
 <!-- Practice Exercises -->
-<aside class="lesson-exercises" data-ux-section="exercises" data-ux-priority="high">
+<aside
+  class="lesson-exercises"
+  data-ux-section="exercises"
+  data-ux-priority="high"
+>
   <h2>Practice Exercises</h2>
   <!-- Exercise content -->
 </aside>
 
 <!-- Navigation -->
-<nav class="lesson-nav" data-ux-section="lesson-navigation" data-ux-priority="medium">
+<nav
+  class="lesson-nav"
+  data-ux-section="lesson-navigation"
+  data-ux-priority="medium"
+>
   <a href="/lessons/lesson-02/">Next Lesson →</a>
 </nav>
 ```
@@ -203,57 +242,75 @@ title: "Lesson 1: Getting Started"
 ## Section Naming Conventions
 
 ### Critical Sections (Always Reviewed First)
+
 ```html
-data-ux-section="hero"              <!-- Homepage hero -->
-data-ux-section="navigation"        <!-- Main nav -->
-data-ux-section="lesson-main"       <!-- Lesson content -->
-data-ux-section="lesson-list"       <!-- Lesson index -->
+data-ux-section="hero"
+<!-- Homepage hero -->
+data-ux-section="navigation"
+<!-- Main nav -->
+data-ux-section="lesson-main"
+<!-- Lesson content -->
+data-ux-section="lesson-list"
+<!-- Lesson index -->
 ```
 
 ### High Priority Sections
+
 ```html
-data-ux-section="course-overview"   <!-- Feature lists -->
-data-ux-section="quality-gates"     <!-- Key features -->
-data-ux-section="lessons-header"    <!-- Page headers -->
-data-ux-section="exercises"         <!-- Practice content -->
+data-ux-section="course-overview"
+<!-- Feature lists -->
+data-ux-section="quality-gates"
+<!-- Key features -->
+data-ux-section="lessons-header"
+<!-- Page headers -->
+data-ux-section="exercises"
+<!-- Practice content -->
 ```
 
 ### Medium Priority Sections
+
 ```html
-data-ux-section="footer"            <!-- Site footer -->
-data-ux-section="cta-secondary"     <!-- Secondary CTAs -->
-data-ux-section="lesson-navigation" <!-- Lesson nav -->
+data-ux-section="footer"
+<!-- Site footer -->
+data-ux-section="cta-secondary"
+<!-- Secondary CTAs -->
+data-ux-section="lesson-navigation"
+<!-- Lesson nav -->
 ```
 
 ## Persona Mapping (Automatic)
 
 The system automatically assigns personas based on section names:
 
-| Section Name Contains | Assigned Persona | Focus Areas |
-|-----------------------|-----------------|-------------|
-| `hero`, `header`, `nav` | First Impression Specialist | Value prop, CTA visibility |
-| `content`, `features`, `lessons` | Content Flow Analyst | Scanability, hierarchy |
-| `footer`, `contact`, `social` | Trust Inspector | Legal links, contact info |
+| Section Name Contains            | Assigned Persona            | Focus Areas                |
+| -------------------------------- | --------------------------- | -------------------------- |
+| `hero`, `header`, `nav`          | First Impression Specialist | Value prop, CTA visibility |
+| `content`, `features`, `lessons` | Content Flow Analyst        | Scanability, hierarchy     |
+| `footer`, `contact`, `social`    | Trust Inspector             | Legal links, contact info  |
 
 ## Priority Guidelines
 
 **Critical** - Must be perfect
+
 - Hero sections
 - Main navigation
 - Primary content areas
 - Core CTAs
 
 **High** - Important but not blocking
+
 - Feature sections
 - Secondary navigation
 - Important content blocks
 
 **Medium** - Nice to have
+
 - Footers
 - Tertiary content
 - Supplementary elements
 
 **Low** - Optional
+
 - Decorative sections
 - Supplementary widgets
 
@@ -276,6 +333,7 @@ python qa_agents/discover_ux_sections.py _site --pages / --output ux-review-conf
 ### 3. Preview Discoveries
 
 The discovery tool will show:
+
 ```
 🔍 Scanning: /
    ✅ Found 5 sections
@@ -289,6 +347,7 @@ The discovery tool will show:
 ## Best Practices
 
 ### 1. Mark Semantic Containers
+
 ```html
 <!-- ✅ Good - marks the semantic section -->
 <section class="hero" data-ux-section="hero">
@@ -306,17 +365,17 @@ The discovery tool will show:
 ```
 
 ### 2. Use Consistent Naming
+
 ```html
 <!-- ✅ Good - kebab-case, descriptive -->
-data-ux-section="lesson-navigation"
-data-ux-section="course-overview"
+data-ux-section="lesson-navigation" data-ux-section="course-overview"
 
 <!-- ❌ Bad - inconsistent, vague -->
-data-ux-section="lessonNav"
-data-ux-section="section1"
+data-ux-section="lessonNav" data-ux-section="section1"
 ```
 
 ### 3. Don't Over-Mark
+
 ```html
 <!-- ✅ Good - mark major sections only -->
 <main data-ux-section="lesson-content">
@@ -332,9 +391,14 @@ data-ux-section="section1"
 ```
 
 ### 4. Mark Responsive Sections
+
 ```html
 <!-- Mobile-only section -->
-<nav class="mobile-nav" data-ux-section="mobile-navigation" data-ux-priority="critical">
+<nav
+  class="mobile-nav"
+  data-ux-section="mobile-navigation"
+  data-ux-priority="critical"
+>
   <!-- Content -->
 </nav>
 

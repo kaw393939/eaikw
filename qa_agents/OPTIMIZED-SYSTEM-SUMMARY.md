@@ -2,13 +2,17 @@
 
 ## What We Built
 
-A **token-efficient, high-quality** UX review system that uses **intelligent prioritization** and **sequential expert chains** to reduce costs by **73%** while improving insight quality.
+A **token-efficient, high-quality** UX review system that uses **intelligent
+prioritization** and **sequential expert chains** to reduce costs by **73%**
+while improving insight quality.
 
 ## Key Innovation
 
-**Before:** 49 parallel independent reviews (7 devices × 7 experts) = Expensive + Redundant
+**Before:** 49 parallel independent reviews (7 devices × 7 experts) =
+Expensive + Redundant
 
-**After:** 5-phase pipeline with triage → sequential chain → pattern detection = Cheaper + Smarter
+**After:** 5-phase pipeline with triage → sequential chain → pattern detection =
+Cheaper + Smarter
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -48,13 +52,15 @@ A **token-efficient, high-quality** UX review system that uses **intelligent pri
 
 **Core optimization engine with 5 phases:**
 
-- **Triage Agent:** Quick assessment (CRITICAL/HAS_ISSUES/MINOR/PERFECT/SKIP_SIMILAR)
+- **Triage Agent:** Quick assessment
+  (CRITICAL/HAS_ISSUES/MINOR/PERFECT/SKIP_SIMILAR)
 - **Sequential Expert Review:** Experts see previous findings, build on them
 - **Consensus Summarization:** Extract unique actionable issues
 - **Pattern Detection:** Universal vs mobile-specific vs desktop-specific
 - **Report Generation:** Dual-format output (human + machine)
 
 **Key Functions:**
+
 ```python
 async def triage_all_devices()            # Phase 1: ~2,100 tokens
 async def sequential_expert_review()      # Phase 2: ~5,600 tokens
@@ -74,6 +80,7 @@ def generate_actionable_report()          # Phase 5: Free
 - `--auto-confirm` flag for CI/CD
 
 **Usage:**
+
 ```bash
 python qa_agents/run_optimized_review.py --auto-confirm
 ```
@@ -89,23 +96,22 @@ python qa_agents/run_optimized_review.py --auto-confirm
 - Migration guide
 - Decision matrix for which pipeline to use
 
-**Key Stats:**
-| Metric | Optimized | Parallel | Savings |
-|--------|-----------|----------|---------|
-| Cost | $0.20 | $0.73 | **73%** |
-| Tokens | 20,000 | 73,500 | **73%** |
-| Time | 3-4 min | 2-3 min | -1 min |
-| Quality | Higher | Good | **+20%** |
+**Key Stats:** | Metric | Optimized | Parallel | Savings |
+|--------|-----------|----------|---------| | Cost | $0.20 | $0.73 | **73%** | |
+Tokens | 20,000 | 73,500 | **73%** | | Time | 3-4 min | 2-3 min | -1 min | |
+Quality | Higher | Good | **+20%** |
 
 ### 4. Updated Documentation
 
 **README.md:**
+
 - Added "Option A: Optimized Pipeline" section
 - Example output for both formats (.md + .json)
 - Benefits explanation
 - Quick start instructions
 
 **ARCHITECTURE.md:**
+
 - New "Optimization Strategy" section
 - 5-phase pipeline diagram
 - Token breakdown per phase
@@ -117,9 +123,11 @@ python qa_agents/run_optimized_review.py --auto-confirm
 
 ```markdown
 # UX Review Report
+
 **Generated:** 2025-10-30-14-30-00
 
 ## 📊 Executive Summary
+
 - **Devices Reviewed:** 4 (3 skipped as similar)
 - **Critical Issues:** 8
 - **Important Issues:** 12
@@ -127,6 +135,7 @@ python qa_agents/run_optimized_review.py --auto-confirm
 ## 🔴 ACTION REQUIRED: Critical Issues
 
 ### 1. Hero section not visible on mobile without scrolling
+
 - **Device(s):** mobile-portrait, mobile-landscape
 - **Confidence:** 5/7 experts agree
 - **Why it matters:** First-time visitors never see main value prop
@@ -135,13 +144,16 @@ python qa_agents/run_optimized_review.py --auto-confirm
 ## 🌐 Cross-Device Patterns
 
 ### Universal (All Devices)
+
 - Contrast ratio failures on `.hero-subtitle`
 
 ### Mobile-Only
+
 - Hero below fold
 - Touch targets too small
 
 ## 🚀 Recommended Fix Order
+
 1. Universal issues first (widest impact)
 2. Mobile-critical issues (majority of users)
 3. Desktop refinements (optimization)
@@ -194,10 +206,10 @@ python qa_agents/run_optimized_review.py --auto-confirm
 
 ### 1. Cost Efficiency (73% Savings)
 
-**Before:** $0.73 per review
-**After:** $0.20 per review
+**Before:** $0.73 per review **After:** $0.20 per review
 
 **Annual Savings Examples:**
+
 - 4 reviews/month: Save $25.44/year
 - 20 reviews/month: Save $127.20/year
 - 100 reviews/month: Save $636.00/year
@@ -205,15 +217,18 @@ python qa_agents/run_optimized_review.py --auto-confirm
 ### 2. Higher Quality Insights
 
 **Sequential Expert Chain:**
+
 - Layout Expert: "Hero below fold"
 - Typography Expert: "Agrees with Layout. Also, font-size too small on mobile"
-- Conversion Expert: "Confirms both issues. Additionally, CTA not prominent enough"
+- Conversion Expert: "Confirms both issues. Additionally, CTA not prominent
+  enough"
 
 **Result:** Experts validate + build on each other → Deeper insights
 
 ### 3. Actionable Structured Output
 
 **AI-Parseable JSON:**
+
 - Issue IDs for tracking (`MOBILE-001`)
 - Confidence scores (how many experts agree)
 - File locations for fixes
@@ -221,6 +236,7 @@ python qa_agents/run_optimized_review.py --auto-confirm
 - Recommended fix order
 
 **Use Cases:**
+
 - ✅ AI auto-generates fix PRs
 - ✅ CI/CD tracks issue counts over time
 - ✅ Project managers get executive summaries
@@ -229,12 +245,14 @@ python qa_agents/run_optimized_review.py --auto-confirm
 ### 4. Cross-Device Pattern Detection
 
 **Identifies:**
+
 - Universal issues (all devices) → Fix once, benefits all
 - Mobile-specific issues → Optimize for 60% of users
 - Desktop-specific issues → Optimize for power users
 - Responsive breakpoint problems → CSS media query bugs
 
 **Example:**
+
 ```json
 {
   "universal_issues": ["Contrast ratio 3.2:1"],
@@ -249,11 +267,13 @@ python qa_agents/run_optimized_review.py --auto-confirm
 ### 5. Smart Triage
 
 **Avoids wasted reviews:**
+
 - If tablet-landscape looks identical to desktop → Skip it
 - If device has no issues → Quick pass, no deep review
 - Prioritize mobile-portrait (most users) and desktop (reference viewport)
 
 **Token Savings:**
+
 - Can skip 2-3 devices = 40-50% savings
 - Focus deep review on problematic devices
 
@@ -270,6 +290,7 @@ Cost: $0.73
 ```
 
 **Example Redundancy:**
+
 - Layout Expert: "Hero below fold on mobile-portrait"
 - Hierarchy Expert: "Hero section not visible on mobile-portrait"
 - Conversion Expert: "Value proposition below fold on mobile-portrait"
@@ -287,6 +308,7 @@ Cost: $0.20
 ```
 
 **Example Deduplication:**
+
 - Consolidated: "Hero below fold on mobile (5/7 experts agree)"
 - Pattern: "Mobile-only issue (not on desktop)"
 - Fix: "Reduce nav height to 60px (src/assets/css/main.css:156)"
@@ -318,6 +340,7 @@ TOTAL: ~17,000 tokens (worst case ~20,000)
 ```
 
 **Why so efficient?**
+
 - Triage skips 40-50% of deep reviews
 - Sequential chain: Each expert adds ~200 tokens (not 1,500)
 - Summarization deduplicates redundant descriptions
@@ -330,6 +353,7 @@ TOTAL: ~17,000 tokens (worst case ~20,000)
 ```
 
 **Why so expensive?**
+
 - Every expert analyzes every screenshot independently
 - Same issues described 49 times
 - No deduplication
@@ -354,6 +378,7 @@ open qa_agents/screenshots/optimized_review/REVIEW-*.json
 ### 2. Compare Results
 
 Run both pipelines and compare:
+
 ```bash
 # Optimized
 python qa_agents/run_optimized_review.py --auto-confirm
@@ -411,6 +436,7 @@ jobs:
 ### 4. Set Up Cost Monitoring
 
 Track token usage over time:
+
 ```bash
 # Log costs to CSV
 echo "$(date),$(cat qa_agents/screenshots/optimized_review/REVIEW-*.json | jq '.token_usage')" >> costs.csv
@@ -423,29 +449,31 @@ python qa_agents/check_budget.py --max-monthly-cost 10.00
 
 This implementation resolves the following issues from the technical debt audit:
 
-✅ **Token efficiency:** 73% reduction in token usage
-✅ **Quality improvement:** Sequential expert chain for deeper insights
-✅ **Output format:** Both human (.md) and machine (.json) readable
-✅ **Cost optimization:** $0.73 → $0.20 per review
-✅ **Pattern detection:** Cross-device analysis for smarter fixes
-✅ **Actionable issues:** Structured output with file locations
-✅ **Documentation:** Comprehensive guides (README, ARCHITECTURE, COMPARISON)
+✅ **Token efficiency:** 73% reduction in token usage ✅ **Quality
+improvement:** Sequential expert chain for deeper insights ✅ **Output format:**
+Both human (.md) and machine (.json) readable ✅ **Cost optimization:** $0.73 →
+$0.20 per review ✅ **Pattern detection:** Cross-device analysis for smarter
+fixes ✅ **Actionable issues:** Structured output with file locations ✅
+**Documentation:** Comprehensive guides (README, ARCHITECTURE, COMPARISON)
 
 ## Future Enhancements
 
 ### Phase 1 (Current)
+
 - ✅ Triage-based prioritization
 - ✅ Sequential expert chain
 - ✅ Cross-device pattern detection
 - ✅ Dual-format reports
 
 ### Phase 2 (Future)
+
 - 🔲 Screenshot diffing (only review changed sections)
 - 🔲 Historical trend analysis (track issues over time)
 - 🔲 Auto-generated fix PRs (AI creates code changes)
 - 🔲 Expert specialization by device (mobile expert vs desktop expert)
 
 ### Phase 3 (Future)
+
 - 🔲 Real user monitoring integration (validate AI findings with real data)
 - 🔲 A/B testing recommendations (suggest experiments)
 - 🔲 Performance budget integration (add speed/bundle size reviews)
@@ -453,7 +481,8 @@ This implementation resolves the following issues from the technical debt audit:
 
 ## Summary
 
-We've built a **production-ready, token-optimized** multi-agent UX review system that:
+We've built a **production-ready, token-optimized** multi-agent UX review system
+that:
 
 - ✅ Saves **73%** on costs ($0.73 → $0.20)
 - ✅ Improves **quality** through expert collaboration
@@ -466,9 +495,7 @@ We've built a **production-ready, token-optimized** multi-agent UX review system
 
 ---
 
-**Total Lines of Code Added:** ~1,250 lines
-**Documentation Added:** ~1,500 lines
-**Cost Savings:** 73%
-**Quality Improvement:** 20%+ (expert validation)
-**Time Investment:** 3-4 hours to build
-**ROI:** Pays for itself after ~4 reviews
+**Total Lines of Code Added:** ~1,250 lines **Documentation Added:** ~1,500
+lines **Cost Savings:** 73% **Quality Improvement:** 20%+ (expert validation)
+**Time Investment:** 3-4 hours to build **ROI:** Pays for itself after ~4
+reviews
