@@ -3,7 +3,14 @@
   "rules": {
     "color-hex-length": "short",
     "color-named": "never",
-    "declaration-no-important": true,
+    "declaration-no-important": [
+      true,
+      {
+        "severity": "warning",
+        "message": "Avoid using !important except for utility classes or overrides"
+      }
+    ],
+    "no-descending-specificity": null,
     "font-family-name-quotes": "always-where-recommended",
     "selector-class-pattern": null,
     "selector-id-pattern": null,

@@ -1,7 +1,11 @@
 node_modules
 _site
+references
+qa_agents
 EXPLORER-THEME-IMPLEMENTATION.md
 SITE-REVIEW-PROBLEMS.md
 PHASE-*.md
 TECHNICAL-*.md
 COMPREHENSIVE-*.md
+STRATEGIC-*.md
+QA-*.md
