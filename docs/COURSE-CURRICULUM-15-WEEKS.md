@@ -70,6 +70,13 @@ Workflow
    - **AI/LLMs (2020s-present):** Augments human cognition, democratizes
      expertise
 
+   _Jevons Paradox in History:_
+   - **Coal:** More efficient steam engines → more coal consumption, not less
+   - **Computing:** Faster processors → more complex software, not simpler tasks
+   - **Internet:** Faster connections → more data usage, not less time online
+   - **AI Pattern:** Better tools → exponentially more intellectual work, not
+     less thinking
+
    _The Discovery Pattern:_
    - Initial discovery → Experimentation → Applications → Resistance →
      Acceleration → Transformation → New normal
@@ -108,6 +115,28 @@ Workflow
    needs more differentiation between H2 and body text."
    → AI gives precise, professional improvements
    ```
+
+   _Magic Words: Professional Tactics & Tools_
+   - **Strategic Frameworks:** "Technical debt audit," "5 Why analysis," "MVP
+     iteration"
+   - **Design Precision:** "Elegant solution," "Information architecture,"
+     "Progressive disclosure"
+   - **Business Strategy:** "Conversion optimization," "Value proposition
+     canvas," "Customer journey mapping"
+   - These aren't just vocabulary—they're **strategic weapons** that unlock AI's
+     professional capabilities
+
+   _The AI Manager Paradigm:_
+   - **Reality Check:** You can't out-dig a backhoe, out-race a Bugatti, or
+     out-calculate Excel
+   - **AI Parallel:** You can't beat AI for instant knowledge access, idea
+     synthesis, writing, reading, or coding
+   - **The Shift:** We don't do less intellectual work—we do exponentially more
+     (Jevons Paradox)
+   - **Your New Role:** Strategic director of AI capabilities, not manual
+     executor
+   - **Core Skills:** Professional vocabulary + Good taste + Agency + Strategic
+     thinking
 
 3. **Understanding LLMs: Practical Framework**
 
