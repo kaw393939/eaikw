@@ -69,6 +69,12 @@ const CI_STEPS = [
     required: false, // Allow to fail (external links)
     fast: false,
   },
+  {
+    name: 'Lighthouse Performance Audit',
+    cmd: 'npm run lighthouse',
+    required: true,
+    fast: false,
+  },
 ];
 
 /**

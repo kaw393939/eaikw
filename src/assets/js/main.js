@@ -5,13 +5,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
   links.forEach((link) => {
     link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const target = document.querySelector(link.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-        });
+      try {
+        const href = link.getAttribute('href');
+
+        // Skip empty or just "#" hrefs
+        if (!href || href === '#') {
+          return;
+        }
+
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          });
+        }
+      } catch (error) {
+        // Silently handle any selector errors
+        console.warn('Smooth scroll error:', error.message);
       }
     });
   });

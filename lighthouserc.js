@@ -2,14 +2,18 @@ module.exports = {
   ci: {
     collect: {
       staticDistDir: './_site',
-      // Test all important pages
+      // Test all important pages - EverydayAI Initiative site
       url: [
+        // Main pages
         'http://localhost/index.html',
         'http://localhost/about/index.html',
-        'http://localhost/lessons/index.html',
+        'http://localhost/events/index.html',
+        'http://localhost/blog/index.html',
         'http://localhost/resources/index.html',
         'http://localhost/for-instructors/index.html',
-        // All lesson pages
+        'http://localhost/lessons/index.html',
+        'http://localhost/course/index.html',
+        // All lesson pages (IS117 course content)
         'http://localhost/lessons/01-what-is-this/index.html',
         'http://localhost/lessons/02-why-quality-gates/index.html',
         'http://localhost/lessons/03-prompt-engineering-basics/index.html',
@@ -30,9 +34,14 @@ module.exports = {
         'categories:accessibility': ['error', { minScore: 0.9 }],
         'categories:best-practices': ['error', { minScore: 0.9 }],
         'categories:seo': ['error', { minScore: 0.9 }],
-        // Ensure no unrendered markdown (check for common patterns)
-        'unsized-images': 'off', // We use responsive images
-        'unused-css-rules': 'off', // CSS intentionally shared across pages
+        // PWA assertions - not applicable for this static site
+        'installable-manifest': 'off',
+        'splash-screen': 'off',
+        'themed-omnibox': 'off',
+        'maskable-icon': 'off',
+        // These are handled by responsive design and build optimization
+        'unsized-images': 'off',
+        'unused-css-rules': 'off',
       },
     },
     upload: {
