@@ -1,4 +1,13 @@
-# Lesson 7: Pre-commit Hooks 🪝
+---
+layout: lesson.njk
+title: 'Pre-commit Hooks'
+lessonNumber: 7
+description: 'Automatically check code quality before every Git commit'
+timeEstimate: '11 minutes'
+level: 'Beginner'
+tags: ['lessons']
+permalink: '/lessons/07-pre-commit-hooks/'
+---
 
 ⏱️ **Time:** Reading: 6 min | Practice: 5 min | Total: ~11 min 📚 **Level:**
 Beginner 🎯 **Goal:** Automatically check code quality before every Git commit
@@ -550,11 +559,10 @@ Before moving to the next lesson, verify:
 
 Stuck? Use these ready-made prompts with AI assistants:
 
-- **[Configuration Prompts](../prompts/configuration.md)** - Setup
-  Husky/lint-staged
-- **[Debugging Prompts](../prompts/debugging.md)** - Fix Git/hook errors
-- **[Building Pages Prompts](../prompts/building-pages.md)** - Write DRY code
-  that passes hooks
+- **[Configuration Prompts](/resources/#prompts)** - Setup Husky/lint-staged
+- **[Debugging Prompts](/resources/#prompts)** - Fix Git/hook errors
+- **[Building Pages Prompts](/resources/#prompts)** - Write DRY code that passes
+  hooks
 
 ### 📖 Documentation
 
@@ -617,15 +625,15 @@ You've completed:
 
 Now let's set up automated checks in the cloud with GitHub Actions!
 
-### [👉 Continue to Lesson 8: GitHub Actions](08-github-actions.md)
+### [👉 Continue to Lesson 8: GitHub Actions](/lessons/08-github-actions/)
 
 ---
 
 ## 🔗 Quick Links
 
-- [🏠 Back to Course Index](../../README.md)
-- [📝 Configuration Prompts](../prompts/configuration.md)
-- [📚 NPM Scripts Reference](../reference/npm-scripts.md)
+- [🏠 Back to Course Index](/lessons/)
+- [📝 Configuration Prompts](/resources/#prompts)
+- [📚 NPM Scripts Reference](/resources/#reference)
 
 ---
 

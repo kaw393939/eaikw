@@ -1,0 +1,16 @@
+# Docker ignore file - don't copy these to containers
+node_modules/
+_site/
+.git/
+.github/
+*.log
+*.md
+!README.md
+.env
+.DS_Store
+qa_agents/venv/
+qa_agents/__pycache__/
+qa_agents/.pytest_cache/
+qa_agents/screenshots/
+references/
+*.tar.gz

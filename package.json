@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Static site with code quality gates and Lighthouse CI",
   "scripts": {
-    "start": "eleventy --serve",
+    "start": "ELEVENTY_ENV=development eleventy --serve",
     "build": "eleventy",
+    "dev": "ELEVENTY_ENV=development eleventy --serve",
     "clean": "rm -rf _site",
     "lint": "npm run lint:js && npm run lint:css && npm run lint:md && npm run lint:format && npm run lint:duplication",
     "lint:js": "eslint \"src/**/*.js\" \".eleventy.js\"",
@@ -17,8 +18,9 @@
     "lint:links:html": "npm run build && linkinator _site --recurse --skip '^(?!http://localhost|https://kaw393939.github.io)' --markdown",
     "format": "prettier --write \"**/*.{js,css,md,html,json}\" --ignore-path .gitignore",
     "lighthouse": "lhci autorun",
+    "audit:pages": "node scripts/audit-all-pages.js",
     "prepare": "husky install",
-    "test": "npm run lint && npm run build && npm run lint:links"
+    "test": "npm run lint && npm run build && npm run audit:pages && npm run lint:links"
   },
   "keywords": [
     "static-site",
@@ -35,6 +37,7 @@
     "eslint-config-prettier": "^9.1.0",
     "husky": "^8.0.3",
     "jscpd": "^4.0.5",
+    "jsdom": "^27.0.1",
     "linkinator": "^7.3.0",
     "lint-staged": "^15.2.0",
     "markdown-link-check": "^3.14.1",

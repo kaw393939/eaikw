@@ -1,0 +1,62 @@
+---
+layout: base.njk
+---
+
+{%- set currentNumber = lessonNumber -%}
+{%- set prevLesson = null -%}
+{%- set nextLesson = null -%}
+
+{%- for lesson in collections.lessons -%}
+  {%- if lesson.data.lessonNumber == currentNumber - 1 -%}
+    {%- set prevLesson = lesson -%}
+  {%- endif -%}
+  {%- if lesson.data.lessonNumber == currentNumber + 1 -%}
+    {%- set nextLesson = lesson -%}
+  {%- endif -%}
+{%- endfor -%}
+
+<article class="lesson-content">
+  <div class="lesson-header">
+    {% if lessonNumber %}
+    <span class="lesson-number">Lesson {{ lessonNumber }}</span>
+    {% endif %}
+    <h1>{{ title }}</h1>
+    {% if description %}
+    <p class="lesson-description">{{ description }}</p>
+    {% endif %}
+    {% if timeEstimate or level %}
+    <div class="lesson-meta">
+      {% if timeEstimate %}<span class="meta-item">⏱️ {{ timeEstimate }}</span>{% endif %}
+      {% if level %}<span class="meta-item">📊 {{ level }}</span>{% endif %}
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="lesson-body">
+    {{ content | safe }}
+  </div>
+
+  <nav class="lesson-nav">
+    <div class="lesson-nav-links">
+      {% if prevLesson %}
+      <a href="{{ prevLesson.url }}" class="btn btn-secondary">
+        ← Previous: {{ prevLesson.data.title }}
+      </a>
+      {% else %}
+      <a href="/lessons/" class="btn btn-secondary">
+        ← Back to All Lessons
+      </a>
+      {% endif %}
+
+      {% if nextLesson %}
+      <a href="{{ nextLesson.url }}" class="btn btn-primary">
+        Next: {{ nextLesson.data.title }} →
+      </a>
+      {% else %}
+      <a href="/lessons/" class="btn btn-primary">
+        🎉 Finish - Back to All Lessons
+      </a>
+      {% endif %}
+    </div>
+  </nav>
+</article>

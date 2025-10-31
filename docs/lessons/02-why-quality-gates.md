@@ -1,4 +1,13 @@
-# Lesson 2: Why Quality Gates? 🛡️
+---
+layout: lesson.njk
+title: 'Why Quality Gates?'
+lessonNumber: 2
+description: 'Understand the problem with AI-generated code and how to fix it'
+timeEstimate: '3 minutes'
+level: 'Beginner'
+tags: ['lessons']
+permalink: '/lessons/02-why-quality-gates/'
+---
 
 ⏱️ **Time:** 3 minutes 📚 **Level:** Beginner 🎯 **Goal:** Understand the
 problem with AI-generated code and how to fix it
@@ -365,15 +374,15 @@ You've completed:
 Now that you understand **why** quality gates matter, let's learn **how** to
 communicate effectively with AI coding assistants.
 
-### [👉 Continue to Lesson 3: Prompt Engineering Basics](03-prompt-engineering-basics.md)
+### [👉 Continue to Lesson 3: Prompt Engineering Basics](/lessons/03-prompt-engineering-basics/)
 
 ---
 
 ## 🔗 Quick Links
 
-- [🏠 Back to Course Index](../../README.md)
-- [📝 Copy-Paste Prompts](../prompts/configuration.md)
-- [📚 Reference: npm Scripts](../reference/npm-scripts.md)
+- [🏠 Back to Course Index](/lessons/)
+- [📝 Copy-Paste Prompts](/resources/#prompts)
+- [📚 Reference: npm Scripts](/resources/#reference)
 
 ---
 

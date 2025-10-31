@@ -1,4 +1,13 @@
-# Lesson 8: GitHub Actions CI/CD 🚀
+---
+layout: lesson.njk
+title: 'GitHub Actions CI/CD'
+lessonNumber: 8
+description: 'Understand automated testing and deployment with GitHub Actions'
+timeEstimate: '13 minutes'
+level: 'Intermediate'
+tags: ['lessons']
+permalink: '/lessons/08-github-actions/'
+---
 
 ⏱️ **Time:** Reading: 8 min | Practice: 5 min | Total: ~13 min 📚 **Level:**
 Intermediate 🎯 **Goal:** Understand automated testing and deployment with
@@ -610,15 +619,15 @@ You've completed:
 
 Now let's dive deeper into Lighthouse performance testing!
 
-### [👉 Continue to Lesson 9: Lighthouse CI](09-lighthouse-ci.md)
+### [👉 Continue to Lesson 9: Lighthouse CI](/lessons/09-lighthouse-ci/)
 
 ---
 
 ## 🔗 Quick Links
 
-- [🏠 Back to Course Index](../../README.md)
-- [📝 Configuration Prompts](../prompts/configuration.md)
-- [📚 NPM Scripts Reference](../reference/npm-scripts.md)
+- [🏠 Back to Course Index](/lessons/)
+- [📝 Configuration Prompts](/resources/#prompts)
+- [📚 NPM Scripts Reference](/resources/#reference)
 - [🔧 GitHub Actions Docs](https://docs.github.com/en/actions)
 
 ---

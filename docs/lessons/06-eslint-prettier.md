@@ -1,4 +1,14 @@
-# Lesson 6: ESLint & Prettier 🎨
+---
+layout: lesson.njk
+title: 'ESLint & Prettier'
+lessonNumber: 6
+description:
+  'Understand how ESLint and Prettier enforce code quality automatically'
+timeEstimate: '11 minutes'
+level: 'Beginner'
+tags: ['lessons']
+permalink: '/lessons/06-eslint-prettier/'
+---
 
 ⏱️ **Time:** Reading: 6 min | Practice: 5 min | Total: ~11 min 📚 **Level:**
 Beginner 🎯 **Goal:** Understand how ESLint and Prettier enforce code quality
@@ -556,10 +566,9 @@ grep -r "\.button" src/css/
 
 Stuck? Use these ready-made prompts with AI assistants:
 
-- **[Configuration Prompts](../prompts/configuration.md)** - Setup
-  ESLint/Prettier
-- **[Debugging Prompts](../prompts/debugging.md)** - Fix linting errors
-- **[Building Pages Prompts](../prompts/building-pages.md)** - Write DRY code
+- **[Configuration Prompts](/resources/#prompts)** - Setup ESLint/Prettier
+- **[Debugging Prompts](/resources/#prompts)** - Fix linting errors
+- **[Building Pages Prompts](/resources/#prompts)** - Write DRY code
 
 ### 📖 Documentation
 
@@ -628,15 +637,15 @@ You've completed:
 
 Now let's automate these checks with pre-commit hooks!
 
-### [👉 Continue to Lesson 7: Pre-commit Hooks](07-pre-commit-hooks.md)
+### [👉 Continue to Lesson 7: Pre-commit Hooks](/lessons/07-pre-commit-hooks/)
 
 ---
 
 ## 🔗 Quick Links
 
-- [🏠 Back to Course Index](../../README.md)
-- [📝 Configuration Prompts](../prompts/configuration.md)
-- [📚 NPM Scripts Reference](../reference/npm-scripts.md)
+- [🏠 Back to Course Index](/lessons/)
+- [📝 Configuration Prompts](/resources/#prompts)
+- [📚 NPM Scripts Reference](/resources/#reference)
 
 ---
 

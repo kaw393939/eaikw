@@ -1,4 +1,13 @@
-# Lesson 9: Lighthouse CI 💡
+---
+layout: lesson.njk
+title: 'Lighthouse CI'
+lessonNumber: 9
+description: 'Understand performance testing and optimization with Lighthouse'
+timeEstimate: '11 minutes'
+level: 'Intermediate'
+tags: ['lessons']
+permalink: '/lessons/09-lighthouse-ci/'
+---
 
 ⏱️ **Time:** Reading: 6 min | Practice: 5 min | Total: ~11 min 📚 **Level:**
 Intermediate 🎯 **Goal:** Understand performance testing and optimization with
@@ -665,15 +674,15 @@ You've completed:
 
 One final lesson: How to debug and fix common issues!
 
-### [👉 Continue to Lesson 10: Troubleshooting](10-troubleshooting.md)
+### [👉 Continue to Lesson 10: Troubleshooting](/lessons/10-troubleshooting/)
 
 ---
 
 ## 🔗 Quick Links
 
-- [🏠 Back to Course Index](../../README.md)
-- [📝 Debugging Prompts](../prompts/debugging.md)
-- [📚 NPM Scripts Reference](../reference/npm-scripts.md)
+- [🏠 Back to Course Index](/lessons/)
+- [📝 Debugging Prompts](/resources/#prompts)
+- [📚 NPM Scripts Reference](/resources/#reference)
 - [💡 Lighthouse Docs](https://developer.chrome.com/docs/lighthouse/)
 
 ---

@@ -1,4 +1,14 @@
-# Lesson 10: Troubleshooting & Debugging 🔧
+---
+layout: lesson.njk
+title: 'Troubleshooting & Debugging'
+lessonNumber: 10
+description:
+  'Learn to diagnose and fix common issues in your development workflow'
+timeEstimate: '19 minutes'
+level: 'All Levels'
+tags: ['lessons']
+permalink: '/lessons/10-troubleshooting/'
+---
 
 ⏱️ **Time:** Reading: 9 min | Practice: 10 min | Total: ~19 min 📚 **Level:**
 All Levels 🎯 **Goal:** Learn to diagnose and fix common issues in your
@@ -905,10 +915,10 @@ automation, you now know:
 
 ## �🔗 Quick Links
 
-- [🏠 Back to Course Index](../../README.md)
-- [📝 Debugging Prompts](../prompts/debugging.md)
-- [📚 Reference Documentation](../reference/)
-- [🔧 NPM Scripts Guide](../reference/npm-scripts.md)
+- [🏠 Back to Course Index](/lessons/)
+- [📝 Debugging Prompts](/resources/#prompts)
+- [📚 Reference Documentation](/resources/#reference)
+- [🔧 NPM Scripts Guide](/resources/#reference)
 
 ---
 

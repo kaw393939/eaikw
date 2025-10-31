@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{{ description or site.description }}" />
+    <meta name="theme-color" content="#0052CC" />
+    <title>{{ title }} - {{ site.title }}</title>
+    <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | url }}" />
+    <link rel="manifest" href="{{ '/manifest.json' | url }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="dns-prefetch" href="https://github.com" />
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}" />
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ title }} - {{ site.title }}" />
+    <meta property="og:description" content="{{ description or site.description }}" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:site_name" content="{{ site.title }}" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ title }} - {{ site.title }}" />
+    <meta name="twitter:description" content="{{ description or site.description }}" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "{% if page.url == '/' %}Course{% else %}WebPage{% endif %}",
+      "name": "{{ title }}",
+      "description": "{{ description or site.description }}",
+      "provider": {
+        "@type": "Organization",
+        "name": "{{ site.title }}",
+        "url": "{{ site.url }}"
+      }{% if page.url == '/' %},
+      "educationalLevel": "Beginner to Professional",
+      "teaches": [
+        "AI-assisted web development",
+        "Quality assurance automation",
+        "Professional development workflows",
+        "Eleventy static site generation"
+      ],
+      "inLanguage": "en-US",
+      "isAccessibleForFree": true,
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student"
+      }{% endif %}
+    }
+    </script>
+  </head>
+  <body class="{% if bodyClass %}{{ bodyClass }}{% endif %}">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    {# 🎯 UX REVIEW MARKER: Site Header (Navigation)
+       Priority: critical (first impression, navigation clarity)
+       Persona: first-impression (visual hierarchy, brand recognition)
+    #}
+    <header
+      class="site-header"
+      role="banner"
+      data-ux-section="header"
+      data-ux-priority="critical">
+      <div class="container">
+        <h1 class="site-title">
+          <a href="{{ '/' | url }}" aria-label="EverydayAI Home">
+            <span class="brand-mark" aria-hidden="true">EAI</span>
+            {{ site.title }}
+          </a>
+        </h1>
+        <nav class="site-nav" aria-label="Main navigation">
+          <ul role="list">
+            <li><a href="{{ '/' | url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a></li>
+            <li><a href="{{ '/lessons/' | url }}" {% if '/lessons/' in page.url %}aria-current="page"{% endif %}>Lessons</a></li>
+            <li><a href="{{ '/resources/' | url }}" {% if page.url == '/resources/' %}aria-current="page"{% endif %}>Resources</a></li>
+            <li><a href="{{ '/for-instructors/' | url }}" {% if page.url == '/for-instructors/' %}aria-current="page"{% endif %}>For Instructors</a></li>
+            <li><a href="{{ '/about/' | url }}" {% if page.url == '/about/' %}aria-current="page"{% endif %}>About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    {# 🎯 UX REVIEW MARKER: Main Content Area
+       Priority: high (core content)
+       Persona: content-flow (readability, information architecture)
+       Note: Child pages will add their own section markers
+    #}
+    <main
+      id="main-content"
+      class="site-main"
+      role="main"
+      data-ux-section="main-content"
+      data-ux-priority="high">
+      <div class="container">{{ content | safe }}</div>
+    </main>
+
+    {# 🎯 UX REVIEW MARKER: Site Footer
+       Priority: medium (trust signals, accessibility)
+       Persona: trust-inspector (credibility, legal info)
+    #}
+    <footer
+      class="site-footer"
+      role="contentinfo"
+      data-ux-section="footer"
+      data-ux-priority="medium">
+      <div class="container">
+        <p>&copy; {% year %} {{ site.author }}. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script defer src="{{ '/assets/js/main.js' | url }}"></script>
+  </body>
+</html>

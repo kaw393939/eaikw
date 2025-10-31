@@ -1,4 +1,13 @@
-# Lesson 3: Prompt Engineering Basics 🤖
+---
+layout: lesson.njk
+title: 'Prompt Engineering Basics'
+lessonNumber: 3
+description: 'Learn to write effective prompts that generate quality code'
+timeEstimate: '5 minutes'
+level: 'Beginner'
+tags: ['lessons']
+permalink: '/lessons/03-prompt-engineering-basics/'
+---
 
 ⏱️ **Time:** 5 minutes 📚 **Level:** Beginner 🎯 **Goal:** Learn to write
 effective prompts that generate quality code
@@ -540,15 +549,15 @@ You've completed:
 Now that you know **how** to communicate with AI, let's get your development
 environment ready!
 
-### [👉 Continue to Lesson 4: Setup Your Environment](04-setup-your-environment.md)
+### [👉 Continue to Lesson 4: Setup Your Environment](/lessons/04-setup-your-environment/)
 
 ---
 
 ## 🔗 Quick Links
 
-- [🏠 Back to Course Index](../../README.md)
-- [📝 All Copy-Paste Prompts](../prompts/initial-setup.md)
-- [📚 Reference: AI Assistant Guide](../reference/AI-GUIDE.md)
+- [🏠 Back to Course Index](/lessons/)
+- [📝 All Copy-Paste Prompts](/resources/#prompts)
+- [📚 Reference: AI Assistant Guide](/resources/#reference)
 
 ---
 

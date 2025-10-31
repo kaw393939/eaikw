@@ -1,4 +1,13 @@
-# Lesson 1: What Is This Project? 🎯
+---
+layout: lesson.njk
+title: 'What Is This Project?'
+lessonNumber: 1
+description: "Understand what you're building and why it matters"
+timeEstimate: '3 minutes'
+level: 'Beginner'
+tags: ['lessons']
+permalink: '/lessons/01-what-is-this/'
+---
 
 ⏱️ **Time:** 3 minutes 📚 **Level:** Beginner 🎯 **Goal:** Understand what
 you're building and why it matters
@@ -294,15 +303,15 @@ You've completed:
 Now that you understand **what** you're building, let's learn **why** quality
 matters.
 
-### [👉 Continue to Lesson 2: Why Quality Gates?](02-why-quality-gates.md)
+### [👉 Continue to Lesson 2: Why Quality Gates?](/lessons/02-why-quality-gates/)
 
 ---
 
 ## 🔗 Quick Links
 
-- [🏠 Back to Course Index](../../README.md)
-- [📝 Copy-Paste Prompts](../prompts/initial-setup.md)
-- [📚 Reference: File Structure](../reference/file-structure.md)
+- [🏠 Back to Course Index](/lessons/)
+- [📝 Copy-Paste Prompts](/resources/#prompts)
+- [📚 Reference: File Structure](/resources/#reference)
 
 ---
 

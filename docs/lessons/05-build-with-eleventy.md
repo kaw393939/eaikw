@@ -1,4 +1,13 @@
-# Lesson 5: Build with Eleventy 🏗️
+---
+layout: lesson.njk
+title: 'Build with Eleventy'
+lessonNumber: 5
+description: 'Understand how Eleventy transforms Markdown into a static website'
+timeEstimate: '17 minutes'
+level: 'Beginner'
+tags: ['lessons']
+permalink: '/lessons/05-build-with-eleventy/'
+---
 
 ⏱️ **Time:** Reading: 7 min | Practice: 10 min | Total: ~17 min 📚 **Level:**
 Beginner 🎯 **Goal:** Understand how Eleventy transforms Markdown into a static
@@ -500,10 +509,10 @@ Here are some cool projects I'm working on!
 
 Stuck? Use these ready-made prompts with AI assistants:
 
-- **[Building Pages Prompts](../prompts/building-pages.md)** - Create new pages
-  with DRY enforcement
-- **[Debugging Prompts](../prompts/debugging.md)** - Fix build errors
-- **[Configuration Prompts](../prompts/configuration.md)** - Setup Eleventy
+- **[Building Pages Prompts](/resources/#prompts)** - Create new pages with DRY
+  enforcement
+- **[Debugging Prompts](/resources/#prompts)** - Fix build errors
+- **[Configuration Prompts](/resources/#prompts)** - Setup Eleventy
 
 ### � Documentation
 
@@ -624,15 +633,15 @@ You've completed:
 
 Now that you understand Eleventy, let's set up code quality tools!
 
-### [👉 Continue to Lesson 6: ESLint & Prettier](06-eslint-prettier.md)
+### [👉 Continue to Lesson 6: ESLint & Prettier](/lessons/06-eslint-prettier/)
 
 ---
 
 ## 🔗 Quick Links
 
-- [🏠 Back to Course Index](../../README.md)
-- [📝 Building Pages Prompts](../prompts/building-pages.md)
-- [📚 File Structure Guide](../reference/file-structure.md)
+- [🏠 Back to Course Index](/lessons/)
+- [📝 Building Pages Prompts](/resources/#prompts)
+- [📚 File Structure Guide](/resources/#reference)
 
 ---
 

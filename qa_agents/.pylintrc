@@ -1,0 +1,54 @@
+[MASTER]
+# Ignore import errors for external packages (agents, playwright, pydantic)
+ignored-modules=agents,playwright,pydantic
+
+[MESSAGES CONTROL]
+# Disable specific warnings that are not applicable or too strict for this codebase
+disable=
+    # Import related (external packages)
+    import-error,
+    wrong-import-order,
+    wrong-import-position,
+    import-outside-toplevel,
+
+    # Complexity (AI-generated code often has higher complexity)
+    too-many-locals,
+    too-many-arguments,
+    too-many-positional-arguments,
+    too-many-statements,
+    too-many-branches,
+    too-many-return-statements,
+
+    # Documentation (covered by docstrings where needed)
+    missing-module-docstring,
+    missing-class-docstring,
+    missing-function-docstring,
+
+    # Style preferences
+    line-too-long,
+    consider-iterating-dictionary,
+    no-else-return,
+
+    # Exception handling (intentional broad catches)
+    broad-exception-caught,
+
+    # File encoding (Python 3.12+ defaults to UTF-8)
+    unspecified-encoding,
+
+    # Unused imports (some are for type hints)
+    unused-import
+
+[FORMAT]
+# Maximum line length (we'll be flexible)
+max-line-length=120
+
+[BASIC]
+# Good variable names
+good-names=i,j,k,x,y,z,f,_,id,qa
+
+[DESIGN]
+# Maximum number of attributes for a class
+max-attributes=10
+
+# Maximum number of public methods for a class
+max-public-methods=25

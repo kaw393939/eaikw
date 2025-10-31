@@ -1,0 +1,22 @@
+# OpenAI Agents SDK (installed from local reference)
+# Install with: pip install -e ../references/openai-agents-python
+
+# Core dependencies (matching agents SDK requirements)
+openai>=2.2,<3
+pydantic>=2.10,<3
+typing-extensions>=4.12.2,<5
+
+# Environment
+python-dotenv>=1.0.0
+
+# Visual UX Review (Playwright for screenshots)
+playwright>=1.40.0
+
+# Reliability & Validation
+Pillow>=10.0.0
+requests>=2.31.0
+pyyaml>=6.0.0
+
+# Testing
+pytest>=8.0.0
+pytest-asyncio>=0.21.0

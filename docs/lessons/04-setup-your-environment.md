@@ -1,4 +1,13 @@
-# Lesson 4: Setup Your Environment 🛠️
+---
+layout: lesson.njk
+title: 'Setup Your Environment'
+lessonNumber: 4
+description: 'Install required tools and get the project running locally'
+timeEstimate: '30-40 minutes'
+level: 'Beginner'
+tags: ['lessons']
+permalink: '/lessons/04-setup-your-environment/'
+---
 
 ⏱️ **Time:** Reading: 8 min | Practice: 20-30 min | Total: ~30-40 min 📚
 **Level:** Beginner 🎯 **Goal:** Install required tools and get the project
@@ -448,15 +457,15 @@ You've completed:
 Now that your environment is set up, let's learn how to build pages with
 Eleventy!
 
-### [👉 Continue to Lesson 5: Build with Eleventy](05-build-with-eleventy.md)
+### [👉 Continue to Lesson 5: Build with Eleventy](/lessons/05-build-with-eleventy/)
 
 ---
 
 ## 🔗 Quick Links
 
-- [🏠 Back to Course Index](../../README.md)
-- [📝 Initial Setup Prompts](../prompts/initial-setup.md)
-- [📚 File Structure Guide](../reference/file-structure.md)
+- [🏠 Back to Course Index](/lessons/)
+- [📝 Initial Setup Prompts](/resources/#prompts)
+- [📚 File Structure Guide](/resources/#reference)
 
 ---
 

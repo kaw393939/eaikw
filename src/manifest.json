@@ -1,0 +1,22 @@
+{
+  "name": "EverydayAI - Professional AI-Assisted Web Development",
+  "short_name": "EverydayAI",
+  "description": "Learn professional AI-assisted web development with automated quality gates",
+  "start_url": "/is117_ai_test_practice/",
+  "scope": "/is117_ai_test_practice/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0052CC",
+  "orientation": "portrait-primary",
+  "categories": ["education", "productivity"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/is117_ai_test_practice/assets/images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

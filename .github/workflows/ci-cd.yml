@@ -88,6 +88,10 @@ jobs:
       - name: Build site
         run: npm run build
 
+      - name: Audit all pages
+        run: npm run audit:pages
+        continue-on-error: true
+
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
