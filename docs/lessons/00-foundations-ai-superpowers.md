@@ -1,8 +1,10 @@
 ---
 layout: lesson.njk
-title: "Lesson 0: Foundations - AI Superpowers & Historical Context"
+title: 'Lesson 0: Foundations - AI Superpowers & Historical Context'
 lessonNumber: 0
-description: Understand AI as discovery not technology, how it gives you superpowers, and the historical context of transformative innovations
+description:
+  Understand AI as discovery not technology, how it gives you superpowers, and
+  the historical context of transformative innovations
 timeEstimate: 25 minutes
 level: Foundation
 tags:
