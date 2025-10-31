@@ -1,8 +1,8 @@
 ---
 layout: lesson.njk
-title: 'What Is This Project?'
+title: 'What We're Building - Your Web Presence'
 lessonNumber: 1
-description: "Understand what you're building and why it matters"
+description: "Build your professional web presence - portfolio, resume, or consulting business"
 timeEstimate: '3 minutes'
 level: 'Beginner'
 tags: ['lessons']
@@ -10,16 +10,16 @@ permalink: '/lessons/01-what-is-this/'
 ---
 
 ⏱️ **Time:** 3 minutes 📚 **Level:** Beginner 🎯 **Goal:** Understand what
-you're building and why it matters
+you're building and why you need it
 
 ---
 
 ## 🚀 TL;DR
 
-You're going to build a **production-ready website** using **AI coding
-assistants**, while learning to maintain **professional code quality
-standards**. Think of it like having a senior developer pair-programming with
-you.
+You're going to build your **professional web presence** using **AI, branding
+psychology, and professional tools**. Think of it as creating your digital
+storefront—portfolio, consulting business, or thought leadership platform—that
+attracts the right clients and opportunities.
 
 ---
 
@@ -28,47 +28,54 @@ you.
 ### The Old Way:
 
 ```
-You → Type code manually → Make mistakes → Debug for hours
+You → Pay web developer → Wait weeks → Get generic template → No control
 ```
 
-### The AI Way (Without Quality Gates):
+### The "Just Use AI" Way:
 
 ```
-You → Ask AI → Get code → Ship it → Breaks in production 💥
+You → Ask AI for site → Get code → Don't understand it → Can't maintain it 💥
 ```
 
-### The Smart Way (This Project):
+### The Smart Way (This Course):
 
 ```
-You → Prompt AI → Auto-check quality → Fix issues → Ship confidently ✅
+You → Define brand → Use AI strategically → Build professionally → Attract clients ✅
 ```
 
 ---
 
 ## 🏗️ What You're Actually Building
 
-This is a **static website** that demonstrates modern web development practices:
+This is your **professional web presence**—a site that represents who you are
+and attracts opportunities:
 
-### Features:
+### What It Could Be:
 
-- 🎨 **Responsive design** (looks good on phones, tablets, desktops)
-- ⚡ **Fast performance** (optimized loading)
-- ♿ **Accessible** (works for everyone, including screen readers)
-- 🤖 **AI-assisted development** (built with coding assistants)
-- 🔍 **Quality gates** (catches errors automatically)
-- 🚀 **Auto-deployment** (goes live when you push to GitHub)
+- 💼 **Consulting Business Site** - Attract clients, showcase services
+- 📂 **Portfolio** - Display your work, land opportunities
+- 📝 **Thought Leadership Platform** - Establish expertise, build audience
+- 📄 **Professional Resume** - Stand out from applicants with generic PDFs
 
-### Tech Stack:
+### What Makes It Work:
 
-| Technology         | What It Does                       | Why It Matters                     |
-| ------------------ | ---------------------------------- | ---------------------------------- |
-| **Eleventy**       | Static site generator              | Creates fast, secure websites      |
-| **ESLint**         | JavaScript code quality checker    | Catches bugs before they happen    |
-| **Prettier**       | Code formatter                     | Keeps code readable and consistent |
-| **Stylelint**      | CSS code quality checker           | Prevents styling issues            |
-| **Husky**          | Git hooks manager                  | Runs checks before commits         |
-| **GitHub Actions** | CI/CD automation                   | Tests and deploys automatically    |
-| **Lighthouse CI**  | Performance & accessibility tester | Ensures quality user experience    |
+- 🧠 **Strategic Foundation** - Archetypal branding and value proposition
+- 🎯 **Persuasion Psychology** - Cialdini's principles for conversions
+- 🤖 **AI-Powered Creation** - Generate content in minutes, not days
+- 🏢 **Professional Standards** - Fortune 100 quality that signals credibility
+- ⚡ **Fast Performance** - Users stay when it loads instantly
+- 🚀 **Easy Deployment** - Update anytime, no developer needed
+
+### The Complete Framework:
+
+| What You Learn       | Why It Matters                                 | Business Impact                   |
+| -------------------- | ---------------------------------------------- | --------------------------------- |
+| **Brand Archetypes** | Define who you are and who you attract         | Right clients find you naturally  |
+| **Persuasion**       | Cialdini's 6 principles for trust & conversion | Visitors become clients           |
+| **AI Prompting**     | Generate professional copy and content         | Save weeks of writing time        |
+| **Professional Dev** | Tools that Fortune 100 companies use           | Signal competence and seriousness |
+| **Performance**      | Fast, accessible, reliable site                | Users trust you and stay longer   |
+| **Deployment**       | Update instantly, no technical barriers        | Control your own brand narrative  |
 
 ---
 
@@ -107,121 +114,143 @@ This is a **static website** that demonstrates modern web development practices:
 
 ---
 
-## 💡 Why Learn This?
+## 💡 Why You Need This
 
-### 1. **Real-World Skills**
+### 1. **Stand Out in the AI Era**
 
-This is how professional developers work in 2024:
+Everyone has a LinkedIn profile. You need something that:
 
-- Use AI to accelerate development
-- Maintain code quality standards
-- Automate testing and deployment
-- Work with modern tools and frameworks
+- Shows who you are, not just what you've done
+- Demonstrates your thinking, not just credentials
+- Attracts opportunities instead of just listing availability
+- Signals professionalism and strategic thinking
 
-### 2. **Future-Proof Career**
+### 2. **Control Your Narrative**
 
-These skills are in demand:
+Your web presence is yours:
 
-- 🤖 **AI-assisted development** (emerging skill)
-- 🔍 **Code quality practices** (always valued)
-- 🚀 **CI/CD automation** (industry standard)
-- 🏗️ **Static site generation** (growing trend)
+- 🎨 **Brand identity** - Not a generic template
+- 📝 **Your content** - Not algorithm-filtered posts
+- 🎯 **Strategic positioning** - Attract ideal clients/opportunities
+- 🚀 **Full control** - Update instantly, no gatekeepers
 
-### 3. **Confidence**
+### 3. **Creator Economy Skills**
 
-You'll know your code works because:
+Learn the framework that creators use:
 
-- Automated tests catch errors
-- Quality checks enforce standards
-- AI helps you understand concepts
-- Clear feedback at every step
+- 🧠 **Strategic thinking** - Brand archetypes, psychology
+- 🤖 **AI mastery** - Generate content professionally
+- 💼 **Business fundamentals** - Value props, conversion
+- 🏢 **Technical credibility** - Professional tools and standards
+
+### 4. **Immediate Business Value**
+
+This pays off quickly:
+
+- 💰 Land freelance clients with credible presence
+- 🎯 Get noticed by recruiters who research you
+- 📈 Build audience for your expertise
+- 🚀 Launch side business or consulting practice
 
 ---
 
 ## 🎯 Learning Approach
 
-### Traditional Coding Course:
+### Traditional Web Design Course:
 
 ```
-1. Learn syntax → 2. Memorize methods → 3. Build project → 4. Hope it works
+1. Learn HTML/CSS → 2. Study JavaScript → 3. Build site → 4. Looks amateur
 ```
 
-### This Course:
+### "Just Use AI" Approach:
 
 ```
-1. Understand concept → 2. Prompt AI → 3. Verify quality → 4. Deploy confidently
+1. Ask AI for site → 2. Get code → 3. Don't understand it → 4. Can't customize
+```
+
+### This Course (Strategy + AI + Professional Tools):
+
+```
+1. Define brand → 2. Learn psychology → 3. Use AI strategically → 4. Build professionally → 5. Launch confidently
 ```
 
 ### Why This Works:
 
-- ⏱️ **Faster learning** - Focus on concepts, not syntax
-- 🧠 **Better retention** - Learn by doing
-- 💪 **Build confidence** - See results immediately
-- 🎯 **Practical skills** - Use tools professionals use
+- 🧠 **Strategy first** - Know who you are before building
+- 🎯 **Psychology matters** - Understand what makes people trust and act
+- 🤖 **AI as partner** - Generate content, not just code
+- 🏢 **Professional standards** - Signal credibility and competence
+- 💼 **Business focused** - Build to attract opportunities, not just "look good"
 
 ---
 
 ## 📋 What You'll Do in This Course
 
-### Phase 1: Setup (Lessons 1-4)
+### Stage 1: Strategic Foundation (Lessons 1-4)
 
-- [ ] Understand the project
-- [ ] Learn prompt engineering basics
-- [ ] Install necessary tools
-- [ ] Clone and run the starter project
+- [ ] Understand what you're building (web presence)
+- [ ] Learn archetypal branding and Cialdini's persuasion
+- [ ] Master AI prompt engineering for content
+- [ ] Set up professional development environment
 
-### Phase 2: Build (Lessons 5-9)
+### Stage 2: Build Your Presence (Lessons 5-8)
 
-- [ ] Create pages with Eleventy
-- [ ] Configure quality tools
-- [ ] Set up pre-commit hooks
-- [ ] Implement GitHub Actions
-- [ ] Add performance monitoring
+- [ ] Build your site with AI assistance
+- [ ] Apply professional quality standards
+- [ ] Automate quality checks
+- [ ] Set up professional deployment
 
-### Phase 3: Master (Lesson 10)
+### Stage 3: Optimization & Growth (Lessons 9-10)
 
-- [ ] Troubleshoot common issues
-- [ ] Extend the project
-- [ ] Deploy your own version
+- [ ] Optimize performance for conversions
+- [ ] Learn ongoing maintenance
+- [ ] Launch your professional presence
 
 ---
 
 ## 🚨 Important Concepts
 
-### **Static Site Generator (Eleventy)**
+### **Web Presence vs. Just a Website**
 
-> Takes templates + content → Generates HTML pages
+> A website shows information. A web presence attracts opportunities.
 
-**Why use it?**
+**The difference:**
 
-- ⚡ Super fast (no database queries)
-- 🔒 More secure (no server-side code)
-- 💰 Free hosting (GitHub Pages)
-- 📱 Great for blogs, portfolios, documentation
+- 🎯 **Strategic** - Knows who it's for and what action to trigger
+- 🧠 **Psychology-driven** - Uses persuasion principles (not manipulation)
+- 💼 **Business-focused** - Converts visitors to clients/opportunities
+- 🎨 **Brand-aligned** - Reflects archetypal identity consistently
 
-### **Quality Gates**
+### **Archetypal Branding**
 
-> Automated checks that prevent bad code from being deployed
+> Using universal psychological patterns (Jung, Campbell) to define identity
 
-**Layers of protection:**
+**Why it matters:**
 
-1. **Editor** - Real-time hints as you type
-2. **Pre-commit** - Checks before Git commit
-3. **CI/CD** - Tests before deployment
-4. **Lighthouse** - Performance checks
+- 🎭 Instantly communicates who you are
+- 🎯 Attracts people who resonate with your values
+- 📖 Guides all design and content decisions
+- 💡 Examples: Hero (challenger), Sage (expert), Creator (innovator)
 
-### **AI Coding Assistant**
+### **Cialdini's 6 Principles of Persuasion**
 
-> Tool that helps you write code using natural language
+> Psychological triggers that build trust and drive action
 
-**Examples:**
+**The principles:**
 
-- GitHub Copilot
-- ChatGPT
-- Claude
-- Cursor AI
+1. **Reciprocity** - Give value first
+2. **Scarcity** - Limited availability creates urgency
+3. **Authority** - Credentials and expertise build trust
+4. **Consistency** - People align actions with stated values
+5. **Liking** - We say yes to people we like
+6. **Consensus** - Social proof validates decisions
 
-**You'll learn:** How to write effective prompts to get quality code
+### **AI as Creative Partner**
+
+> Tool that accelerates content creation while you maintain strategy
+
+**You'll learn:** How to prompt AI for brand copy, messaging, and content that
+converts
 
 ---
 
@@ -229,30 +258,35 @@ You'll know your code works because:
 
 Before moving on, make sure you understand:
 
-- [ ] What a static site generator is
-- [ ] Why quality gates matter
-- [ ] What AI coding assistants can do
-- [ ] The difference between "just works" and "production-ready"
+- [ ] Difference between website and web presence
+- [ ] Why brand strategy comes before technology
+- [ ] What archetypal branding means
+- [ ] How Cialdini's principles create trust and conversions
 
 ---
 
-## 🎮 Quick Win Activity (30 seconds)
+## 🎮 Quick Win Activity (2 minutes)
 
-Try prompting an AI assistant right now:
+Think about your own brand archetype:
 
-### Prompt:
+### Question:
 
-```
-Explain what a static site generator is in one sentence
-```
+Which of these resonates with you?
 
-### Expected Response (similar to):
+- **Hero** - Overcome challenges, inspire others to do hard things
+- **Sage** - Share knowledge, help others understand complex topics
+- **Creator** - Build innovative solutions, push boundaries
+- **Caregiver** - Support and nurture, help others succeed
 
-> "A static site generator pre-builds all your web pages as HTML files, so they
-> can be served super fast without needing a database or server-side
-> processing."
+### Action:
 
-**Got it?** Great! You just used AI to learn something new. 🎉
+Write one sentence about how your chosen archetype shows up in your work.
+
+**Example (Sage):** "I help beginners understand AI by breaking down complex
+concepts into clear, actionable steps."
+
+**Got it?** You just defined part of your brand strategy. This guides everything
+you build. 🎉
 
 ---
 
@@ -260,29 +294,41 @@ Explain what a static site generator is in one sentence
 
 ### Q: "Do I need to know coding?"
 
-**A:** No! This course teaches you how to **use AI to write code** while
-maintaining quality. You'll learn concepts along the way.
+**A:** No! This course teaches you how to **use AI strategically** while
+understanding professional tools. You'll learn brand strategy first, then use AI
+to implement it.
+
+### Q: "I already have a LinkedIn profile. Why do I need this?"
+
+**A:** LinkedIn is great for networking, but you don't control the platform. A
+web presence lets you:
+
+- Control your brand narrative completely
+- Create custom experiences for different audiences
+- Own your content and SEO
+- Build trust with depth (articles, projects, case studies)
 
 ### Q: "Which AI assistant should I use?"
 
 **A:** Any of these work great:
 
-- GitHub Copilot (best for VS Code integration)
-- ChatGPT (good for explanations)
-- Claude (excellent for detailed code)
-- Cursor (AI-native editor)
+- ChatGPT (good for brand copy and content)
+- Claude (excellent for strategic thinking)
+- GitHub Copilot (helpful for technical parts)
 
 ### Q: "How long will this take?"
 
-**A:** About 40 minutes for the full course. Each lesson is 3-5 minutes.
+**A:** About 6 hours total. Strategic foundation (~2 hours), building (~3
+hours), optimization (~1 hour).
 
-### Q: "What if I get stuck?"
+### Q: "What if I don't have a business yet?"
 
-**A:** We have:
+**A:** Perfect! This helps you:
 
-- Copy-paste prompts for every step
-- Troubleshooting guide (Lesson 10)
-- Common error solutions
+- Define your brand before launching
+- Test positioning with a real presence
+- Build credibility before your first client
+- Attract opportunities as you're getting started
 
 ---
 
@@ -290,20 +336,21 @@ maintaining quality. You'll learn concepts along the way.
 
 You've completed:
 
-- [x] ~~Lesson 1: What Is This Project?~~
-- [ ] Lesson 2: Why Quality Gates?
-- [ ] Lesson 3: Prompt Engineering Basics
-- [ ] Lesson 4: Setup Your Environment
+- [x] ~~Lesson 1: What We're Building~~
+- [ ] Lesson 2: Strategic Foundation - Branding & Psychology
+- [ ] Lesson 3: AI Prompt Engineering
+- [ ] Lesson 4: Professional Environment Setup
 - [ ] Lessons 5-10...
 
 ---
 
 ## 🚀 Next Steps
 
-Now that you understand **what** you're building, let's learn **why** quality
-matters.
+Now that you understand **what** you're building and **why** you need it, let's
+learn the strategic foundation: **archetypal branding and persuasion
+psychology**.
 
-### [👉 Continue to Lesson 2: Why Quality Gates?](/lessons/02-why-quality-gates/)
+### [👉 Continue to Lesson 2: Strategic Foundation - Branding & Psychology](/lessons/02-why-quality-gates/)
 
 ---
 
