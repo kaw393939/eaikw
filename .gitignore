@@ -42,6 +42,7 @@ Thumbs.db
 # Documentation files (not for production)
 EXPLORER-THEME-IMPLEMENTATION.md
 SITE-REVIEW-PROBLEMS.md
+QA-REPORT-2025-10-30.md
 
 # LLM Quality Gate - Python artifacts
 qa_agents/__pycache__/

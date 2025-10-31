@@ -1,10 +1,29 @@
 const sitemap = require('@quasibit/eleventy-plugin-sitemap');
 
 module.exports = function (eleventyConfig) {
+  // ============================================================================
+  // CENTRALIZED SITE CONFIGURATION
+  // ============================================================================
+  // Single source of truth for all URLs and paths
+  const isDev = process.env.ELEVENTY_ENV === 'development';
+  const siteConfig = {
+    url: isDev ? 'http://localhost:8080' : 'https://eaikw.com',
+    pathPrefix: '/',
+    domain: 'eaikw.com',
+    oldGitHubPages: 'https://kaw393939.github.io/is117_ai_test_practice',
+    // Helper to build full URLs
+    buildUrl: function (path) {
+      return `${this.url}${this.pathPrefix}${path.replace(/^\//, '')}`;
+    },
+  };
+
+  // Add global site data available in all templates
+  eleventyConfig.addGlobalData('site', siteConfig);
+
   // Add sitemap plugin
   eleventyConfig.addPlugin(sitemap, {
     sitemap: {
-      hostname: process.env.SITE_URL || 'https://eaikw.com',
+      hostname: siteConfig.url,
     },
   });
 
@@ -43,8 +62,27 @@ module.exports = function (eleventyConfig) {
     });
   });
 
+  // ============================================================================
+  // BUILD-TIME PATH VALIDATION
+  // ============================================================================
+  // Validate that templates don't have hardcoded paths
+  eleventyConfig.on('eleventy.after', async () => {
+    console.log('\n🔍 Validating paths...');
+    try {
+      const validatePaths = require('./scripts/validate-paths');
+      await validatePaths(siteConfig);
+      console.log('✅ Path validation passed\n');
+    } catch (error) {
+      // Only fail if validation script exists
+      if (error.code !== 'MODULE_NOT_FOUND') {
+        console.error('❌ Path validation failed:', error.message);
+        process.exit(1);
+      }
+    }
+  });
+
   return {
-    pathPrefix: '/',
+    pathPrefix: siteConfig.pathPrefix,
     dir: {
       input: '.',
       output: '_site',

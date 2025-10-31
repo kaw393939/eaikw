@@ -7,7 +7,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8080:8080"
+      - '8080:8080'
     volumes:
       # Mount source code for hot reload
       - ./src:/app/src:ro
@@ -20,7 +20,15 @@ services:
       - NODE_ENV=development
     command: npm start
     healthcheck:
-      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:8080/"]
+      test:
+        [
+          'CMD',
+          'wget',
+          '--quiet',
+          '--tries=1',
+          '--spider',
+          'http://localhost:8080/',
+        ]
       interval: 10s
       timeout: 5s
       retries: 3
@@ -41,5 +49,5 @@ services:
       web:
         condition: service_healthy
     profiles:
-      - qa  # Only start with: docker-compose --profile qa up
+      - qa # Only start with: docker-compose --profile qa up
     command: python3 qa_agents/run_responsive_review.py

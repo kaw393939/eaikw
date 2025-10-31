@@ -168,7 +168,6 @@ Visit https://eaikw.com and verify:
 
 ---
 
-**Repository**: https://github.com/kaw393939/eaikw  
-**Target URL**: https://eaikw.com  
-**Build Tool**: Eleventy v2.0.1  
-**Deploy Method**: GitHub Pages (main branch, root folder)
+**Repository**: https://github.com/kaw393939/eaikw **Target URL**:
+https://eaikw.com **Build Tool**: Eleventy v2.0.1 **Deploy Method**: GitHub
+Pages (main branch, root folder)

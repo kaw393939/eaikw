@@ -1,4 +1,8 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+# Run lint-staged for formatting
 npx lint-staged
+
+# Check links in staged lesson files
+npm run lint:links:staged
