@@ -1,0 +1,12 @@
+{
+  "title": "Your Portfolio",
+  "description": "Professional portfolio showcasing my work and expertise",
+  "author": "Your Name",
+  "currentYear": "2025",
+  "url": "https://yourusername.github.io/your-repo-name",
+  "social": {
+    "github": "https://github.com/yourusername",
+    "linkedin": "https://linkedin.com/in/yourusername",
+    "twitter": "https://twitter.com/yourusername"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "eleventy-portfolio",
+  "version": "1.0.0",
+  "description": "Professional portfolio website built with Eleventy and Nunjucks",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve --watch",
+    "serve": "eleventy --serve",
+    "start": "npm run dev",
+    "clean": "rm -rf _site"
+  },
+  "keywords": [
+    "eleventy",
+    "nunjucks",
+    "portfolio",
+    "static-site",
+    "github-pages"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "markdown-it": "^14.1.0"
+  }
+}

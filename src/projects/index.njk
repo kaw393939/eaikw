@@ -1,0 +1,70 @@
+---
+layout: base.njk
+title: Projects
+description: A showcase of my work and portfolio pieces
+---
+
+<section class="page-header">
+    <div class="container">
+        <h1 class="page-title">{{ title }}</h1>
+        <p class="page-description">{{ description }}</p>
+    </div>
+</section>
+
+<section class="projects-content">
+    <div class="container">
+        {% if collections.projects.length > 0 %}
+        <div class="projects-grid">
+            {% for project in collections.projects %}
+            <article class="project-card">
+                {% if project.data.image %}
+                <div class="project-image">
+                    <img src="{{ project.data.image }}" alt="{{ project.data.title }}" loading="lazy">
+                </div>
+                {% endif %}
+                <div class="project-info">
+                    <div class="project-header">
+                        <h2 class="project-title">
+                            <a href="{{ project.url }}">{{ project.data.title }}</a>
+                        </h2>
+                        {% if project.data.status %}
+                        <span class="project-status status-{{ project.data.status | lower }}">
+                            {{ project.data.status }}
+                        </span>
+                        {% endif %}
+                    </div>
+                    <p class="project-description">{{ project.data.description }}</p>
+                    {% if project.data.technologies %}
+                    <div class="project-tech">
+                        {% for tech in project.data.technologies %}
+                        <span class="tech-tag">{{ tech }}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    <div class="project-links">
+                        {% if project.data.github %}
+                        <a href="{{ project.data.github }}" target="_blank" rel="noopener noreferrer" class="project-link github">
+                            Code
+                        </a>
+                        {% endif %}
+                        {% if project.data.demo %}
+                        <a href="{{ project.data.demo }}" target="_blank" rel="noopener noreferrer" class="project-link demo">
+                            Demo
+                        </a>
+                        {% endif %}
+                        <a href="{{ project.url }}" class="project-link details">
+                            Details
+                        </a>
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="no-projects">
+            <h2>No projects yet</h2>
+            <p>Projects will be added here soon!</p>
+        </div>
+        {% endif %}
+    </div>
+</section>

@@ -1,0 +1,88 @@
+---
+layout: base.njk
+title: Blog
+description: Articles, tutorials, and insights about web development
+pagination:
+  data: collections.blog
+  size: 10
+  alias: posts
+---
+
+<section class="page-header">
+    <div class="container">
+        <h1 class="page-title">{{ title }}</h1>
+        <p class="page-description">{{ description }}</p>
+    </div>
+</section>
+
+<section class="blog-content">
+    <div class="container">
+        {% if posts.length > 0 %}
+        <div class="posts-list">
+            {% for post in posts %}
+            <article class="post-card">
+                <div class="post-info">
+                    <h2 class="post-title">
+                        <a href="{{ post.url }}">{{ post.data.title }}</a>
+                    </h2>
+                    <div class="post-meta">
+                        <time class="post-date" datetime="{{ post.data.date.toISOString() }}">
+                            {{ post.data.date | dateFormat }}
+                        </time>
+                        {% if post.data.tags %}
+                        <div class="post-tags">
+                            {% for tag in post.data.tags %}
+                                {% if tag != "blog" %}
+                                <span class="tag">{{ tag }}</span>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+                    <p class="post-excerpt">{{ post.templateContent | excerpt }}</p>
+                    <a href="{{ post.url }}" class="read-more">Read more →</a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+
+        {% if pagination.pages.length > 1 %}
+        <nav class="pagination" aria-label="Blog pagination">
+            <ul class="pagination-list">
+                {% if pagination.previousPageLink %}
+                <li>
+                    <a href="{{ pagination.previousPageLink }}" class="pagination-link" aria-label="Previous page">
+                        ← Previous
+                    </a>
+                </li>
+                {% endif %}
+
+                {% for pageEntry in pagination.pages %}
+                <li>
+                    <a href="{{ pagination.hrefs[ loop.index0 ] }}" 
+                       class="pagination-link {% if page.url == pagination.hrefs[ loop.index0 ] %}current{% endif %}"
+                       aria-label="Page {{ loop.index }}"
+                       {% if page.url == pagination.hrefs[ loop.index0 ] %}aria-current="page"{% endif %}>
+                        {{ loop.index }}
+                    </a>
+                </li>
+                {% endfor %}
+
+                {% if pagination.nextPageLink %}
+                <li>
+                    <a href="{{ pagination.nextPageLink }}" class="pagination-link" aria-label="Next page">
+                        Next →
+                    </a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+        {% endif %}
+        {% else %}
+        <div class="no-posts">
+            <h2>No blog posts yet</h2>
+            <p>Check back later for new content!</p>
+        </div>
+        {% endif %}
+    </div>
+</section>
