@@ -1,6 +1,8 @@
 # Professional Portfolio Website
 
-A modern, responsive portfolio website built with Eleventy (11ty) static site generator, featuring clean design, blog functionality, and project showcase capabilities.
+A modern, responsive portfolio website built with Eleventy (11ty) static site
+generator, featuring clean design, blog functionality, and project showcase
+capabilities.
 
 ## 🚀 Features
 
@@ -65,17 +67,20 @@ A modern, responsive portfolio website built with Eleventy (11ty) static site ge
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/yourusername/your-repo-name.git
    cd your-repo-name
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Start the development server:
+
    ```bash
    npm run dev
    ```
@@ -94,6 +99,7 @@ A modern, responsive portfolio website built with Eleventy (11ty) static site ge
 ### Site Configuration
 
 Edit `src/_data/site.json` to update:
+
 - Site title and description
 - Author information
 - Social media links
@@ -106,10 +112,10 @@ Create new Markdown files in `src/blog/` with front matter:
 ```markdown
 ---
 layout: post.njk
-title: "Your Post Title"
-description: "Post description"
+title: 'Your Post Title'
+description: 'Post description'
 date: 2025-01-01
-tags: ["blog", "tag1", "tag2"]
+tags: ['blog', 'tag1', 'tag2']
 ---
 
 Your blog content here...
@@ -122,12 +128,12 @@ Create new Markdown files in `src/projects/` with front matter:
 ```markdown
 ---
 layout: project.njk
-title: "Project Name"
-description: "Project description"
-technologies: ["Tech1", "Tech2", "Tech3"]
-status: "Completed"
-github: "https://github.com/username/repo"
-demo: "https://demo-link.com"
+title: 'Project Name'
+description: 'Project description'
+technologies: ['Tech1', 'Tech2', 'Tech3']
+status: 'Completed'
+github: 'https://github.com/username/repo'
+demo: 'https://demo-link.com'
 date: 2025-01-01
 ---
 
@@ -136,7 +142,9 @@ Your project description here...
 
 ### Styling
 
-The site uses CSS custom properties for easy theming. Edit `src/css/main.css` to customize:
+The site uses CSS custom properties for easy theming. Edit `src/css/main.css` to
+customize:
+
 - Colors and typography
 - Layout and spacing
 - Component styles
@@ -144,7 +152,8 @@ The site uses CSS custom properties for easy theming. Edit `src/css/main.css` to
 
 ## 🚀 Deployment
 
-The site is configured for automatic deployment to GitHub Pages using GitHub Actions.
+The site is configured for automatic deployment to GitHub Pages using GitHub
+Actions.
 
 ### Setup GitHub Pages
 
@@ -156,6 +165,7 @@ The site is configured for automatic deployment to GitHub Pages using GitHub Act
 ### Custom Domain (Optional)
 
 To use a custom domain:
+
 1. Add a `CNAME` file to the `src/` directory with your domain
 2. Configure your DNS settings
 3. Update the `url` in `src/_data/site.json`
@@ -170,12 +180,14 @@ To use a custom domain:
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
+for details.
 
 ## 🙏 Acknowledgments
 
 - [Eleventy](https://www.11ty.dev/) for the excellent static site generator
-- [Nunjucks](https://mozilla.github.io/nunjucks/) for the powerful templating engine
+- [Nunjucks](https://mozilla.github.io/nunjucks/) for the powerful templating
+  engine
 - [GitHub Pages](https://pages.github.com/) for free hosting
 - The web development community for inspiration and best practices
 
