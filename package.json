@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "eleventy",
-    "dev": "eleventy --serve --watch --port=8080 --host=0.0.0.0",
+    "dev": "eleventy --serve --watch --port=8080",
     "serve": "eleventy --serve",
     "start": "npm run dev",
     "clean": "rm -rf _site",

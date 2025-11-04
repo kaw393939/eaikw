@@ -74,5 +74,9 @@ module.exports = async function (eleventyConfig) {
     markdownTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
     dataTemplateEngine: 'njk',
+    serverOptions: {
+      port: 8080,
+      host: '0.0.0.0',
+    },
   };
 };
