@@ -2,10 +2,10 @@ module.exports = async function (eleventyConfig) {
   const { EleventyHtmlBasePlugin } = await import('@11ty/eleventy');
   
   // Copy static files
-  eleventyConfig.addPassthroughCopy('src/assets');
-  eleventyConfig.addPassthroughCopy('src/css');
-  eleventyConfig.addPassthroughCopy('src/js');
-  eleventyConfig.addPassthroughCopy('src/images');
+  eleventyConfig.addPassthroughCopy({ "src/css": "css" });
+  eleventyConfig.addPassthroughCopy({ "src/js": "js" });
+  eleventyConfig.addPassthroughCopy({ "src/images": "images" });
+  eleventyConfig.addPassthroughCopy("src/assets");
 
   // Add plugins
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
