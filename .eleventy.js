@@ -1,11 +1,11 @@
 module.exports = async function (eleventyConfig) {
   const { EleventyHtmlBasePlugin } = await import('@11ty/eleventy');
-  
+
   // Copy static files
-  eleventyConfig.addPassthroughCopy({ "src/css": "css" });
-  eleventyConfig.addPassthroughCopy({ "src/js": "js" });
-  eleventyConfig.addPassthroughCopy({ "src/images": "images" });
-  eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy({ 'src/css': 'css' });
+  eleventyConfig.addPassthroughCopy({ 'src/js': 'js' });
+  eleventyConfig.addPassthroughCopy({ 'src/images': 'images' });
+  eleventyConfig.addPassthroughCopy('src/assets');
 
   // Add plugins
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
@@ -43,6 +43,12 @@ module.exports = async function (eleventyConfig) {
 
   eleventyConfig.addFilter('currentYear', function () {
     return new Date().getFullYear();
+  });
+
+  // Custom filter for GitHub Pages path prefix
+  eleventyConfig.addFilter('baseUrl', function (url) {
+    const isProduction = process.env.NODE_ENV === 'production';
+    return isProduction ? `/218_portfolio${url}` : url;
   });
 
   // Markdown config
