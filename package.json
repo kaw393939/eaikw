@@ -5,10 +5,14 @@
   "main": "index.js",
   "scripts": {
     "build": "eleventy",
-    "dev": "eleventy --serve --watch",
+    "dev": "eleventy --serve --watch --port=8080 --host=0.0.0.0",
     "serve": "eleventy --serve",
     "start": "npm run dev",
-    "clean": "rm -rf _site"
+    "clean": "rm -rf _site",
+    "docker:dev": "docker compose --profile dev up --build",
+    "docker:prod": "docker compose --profile production up -d --build",
+    "docker:stop": "docker compose --profile dev --profile production down",
+    "docker:clean": "docker compose --profile dev --profile production down -v"
   },
   "keywords": [
     "eleventy",

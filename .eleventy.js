@@ -47,8 +47,9 @@ module.exports = async function (eleventyConfig) {
 
   // Custom filter for GitHub Pages path prefix
   eleventyConfig.addFilter('baseUrl', function (url) {
-    const isProduction = process.env.NODE_ENV === 'production';
-    return isProduction ? `/218_portfolio${url}` : url;
+    // Only apply path prefix if explicitly enabled (for GitHub Pages)
+    const pathPrefix = process.env.PATH_PREFIX || '';
+    return pathPrefix ? `${pathPrefix}${url}` : url;
   });
 
   // Markdown config
