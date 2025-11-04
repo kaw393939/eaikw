@@ -3,13 +3,18 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+.pnp
+.pnp.js
 
 # Build output
 _site/
 dist/
+*.tgz
 
 # Eleventy cache
 .eleventy.cache/
+.cache/
 
 # Environment variables
 .env
@@ -17,6 +22,13 @@ dist/
 .env.development.local
 .env.test.local
 .env.production.local
+.env*.local
+
+# Testing
+coverage/
+.nyc_output
+*.lcov
+.jest/
 
 # OS generated files
 .DS_Store
@@ -26,17 +38,31 @@ dist/
 .Trashes
 ehthumbs.db
 Thumbs.db
+desktop.ini
 
 # IDE/Editor files
-.vscode/
+# Keep shared VS Code settings but ignore user-specific files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
 .idea/
 *.swp
 *.swo
 *~
+*.sublime-project
+*.sublime-workspace
 
 # Logs
 logs/
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
 
 # Runtime data
 pids/
@@ -44,33 +70,85 @@ pids/
 *.seed
 *.pid.lock
 
-# Coverage directory used by tools like istanbul
-coverage/
-
-# nyc test coverage
-.nyc_output
-
 # Dependency directories
 jspm_packages/
 
 # Optional npm cache directory
 .npm
 
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
 # Optional REPL history
 .node_repl_history
-
-# Output of 'npm pack'
-*.tgz
 
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variables file
-.env
+# parcel-bundler cache
+.parcel-cache
+
+# Next.js
+.next/
+out/
+
+# Nuxt.js
+.nuxt/
+
+# Gatsby
+.cache/
+
+# VuePress
+.vuepress/dist
+
+# Serverless
+.serverless/
+
+# FuseBox
+.fusebox/
+
+# DynamoDB Local
+.dynamodb/
+
+# TernJS
+.tern-port
+
+# Stores VSCode versions used for testing
+.vscode-test
 
 # Temporary folders
 tmp/
 temp/
+*.tmp
+
 # Lighthouse reports
 lighthouse-report*.json
 lighthouse-report*.html
+lighthouse-results/
+
+# Docker volumes and data (if any local docker data)
+docker-compose.override.yml
+
+# macOS
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
