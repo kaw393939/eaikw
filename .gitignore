@@ -71,3 +71,6 @@ jspm_packages/
 # Temporary folders
 tmp/
 temp/
+# Lighthouse reports
+lighthouse-report*.json
+lighthouse-report*.html

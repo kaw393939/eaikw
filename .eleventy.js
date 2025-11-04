@@ -6,6 +6,7 @@ module.exports = async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ 'src/js': 'js' });
   eleventyConfig.addPassthroughCopy({ 'src/images': 'images' });
   eleventyConfig.addPassthroughCopy('src/assets');
+  eleventyConfig.addPassthroughCopy({ 'src/favicon.svg': 'favicon.svg' });
 
   // Add plugins
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
