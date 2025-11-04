@@ -11,6 +11,7 @@ capabilities.
 - **Responsive Design** that works on all devices
 - **Blog System** with pagination and tagging
 - **Project Showcase** with detailed project pages
+- **Docker Support** with dev and production profiles
 - **GitHub Pages Deployment** with automated workflows
 - **SEO Optimized** with proper meta tags and semantic HTML
 - **Performance Focused** with optimized assets and fast loading times
@@ -21,6 +22,7 @@ capabilities.
 - [Nunjucks](https://mozilla.github.io/nunjucks/) - Templating engine
 - Vanilla CSS with custom properties for styling
 - Vanilla JavaScript for interactivity
+- Docker & Nginx for containerized deployment
 - GitHub Actions for CI/CD
 - GitHub Pages for hosting
 
@@ -63,8 +65,11 @@ capabilities.
 
 - Node.js (v18 or higher)
 - npm or yarn
+- Docker & Docker Compose (optional, for containerized development)
 
 ### Installation
+
+#### Option 1: Local Development (Node.js)
 
 1. Clone the repository:
 
@@ -86,6 +91,36 @@ capabilities.
    ```
 
 4. Open your browser and visit `http://localhost:8080`
+
+#### Option 2: Docker Development
+
+1. Clone the repository (same as above)
+
+2. Run the setup script:
+
+   ```bash
+   ./docker-setup.sh
+   ```
+
+3. Start development environment:
+
+   ```bash
+   make dev
+   # or
+   npm run docker:dev
+   ```
+
+4. Open your browser and visit `http://localhost:8080`
+
+**Docker Commands:**
+- `make dev` - Development with live reload
+- `make prod` - Production with nginx
+- `make build` - Build production image
+- `make push` - Push to Docker Hub
+- `make stop` - Stop all containers
+- `make clean` - Clean up containers and volumes
+
+📖 See [DOCKER_QUICK_START.md](DOCKER_QUICK_START.md) for detailed Docker documentation.
 
 ## 📝 Available Scripts
 
