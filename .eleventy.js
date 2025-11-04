@@ -41,6 +41,10 @@ module.exports = async function (eleventyConfig) {
     return array.slice(0, limit);
   });
 
+  eleventyConfig.addFilter('currentYear', function () {
+    return new Date().getFullYear();
+  });
+
   // Markdown config
   const markdownIt = await import('markdown-it');
   eleventyConfig.setLibrary(

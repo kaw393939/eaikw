@@ -17,11 +17,10 @@
     "static-site",
     "github-pages"
   ],
-  "author": "Your Name",
+  "author": "Keith Williams",
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "@11ty/eleventy-navigation": "^0.3.5",
     "markdown-it": "^14.1.0"
   }
 }
