@@ -1,0 +1,252 @@
+name: Quality Gates & CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+# Cancel in-progress runs for the same workflow
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality-checks:
+    name: Code Quality & Linting
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check formatting
+        run: npm run format:check
+
+      - name: Lint JavaScript
+        run: npm run lint:js
+
+      - name: Lint CSS
+        run: npm run lint:css
+
+      - name: Lint Markdown
+        run: npm run lint:md
+
+  build:
+    name: Build Site
+    runs-on: ubuntu-latest
+    needs: quality-checks
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+
+      - name: Check build output
+        run: |
+          echo "Checking build artifacts..."
+          ls -lh _site/
+          echo "CSS size:"
+          ls -lh _site/css/main.css
+          gzip -c _site/css/main.css | wc -c | awk '{print "Gzipped CSS: " $1/1024 " KB"}'
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-output
+          path: _site/
+          retention-days: 7
+
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Build site
+        run: npm run build
+
+      - name: Run Playwright tests
+        run: npm test
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
+
+  lighthouse:
+    name: Lighthouse Performance Audit
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+
+      - name: Start dev server
+        run: npm run serve &
+        env:
+          CI: true
+
+      - name: Wait for server
+        run: npx wait-on http://localhost:8080 --timeout 30000
+
+      - name: Run Lighthouse CI
+        run: npm run lighthouse:ci
+        continue-on-error: true
+
+      - name: Upload Lighthouse report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lighthouse-report
+          path: .lighthouseci/
+          retention-days: 30
+
+  bundle-size:
+    name: Bundle Size Check
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+
+      - name: Check bundle sizes
+        run: |
+          echo "## Bundle Size Report" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### CSS" >> $GITHUB_STEP_SUMMARY
+          CSS_SIZE=$(stat -f%z _site/css/main.css 2>/dev/null || stat -c%s _site/css/main.css)
+          CSS_GZIP=$(gzip -c _site/css/main.css | wc -c)
+          echo "- Raw: $(echo "scale=2; $CSS_SIZE/1024" | bc) KB" >> $GITHUB_STEP_SUMMARY
+          echo "- Gzipped: $(echo "scale=2; $CSS_GZIP/1024" | bc) KB" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          echo "### JavaScript Bundles" >> $GITHUB_STEP_SUMMARY
+          for file in _site/js/*.bundle.js; do
+            if [ -f "$file" ]; then
+              FILENAME=$(basename "$file")
+              JS_SIZE=$(stat -f%z "$file" 2>/dev/null || stat -c%s "$file")
+              JS_GZIP=$(gzip -c "$file" | wc -c)
+              echo "- **$FILENAME**" >> $GITHUB_STEP_SUMMARY
+              echo "  - Raw: $(echo "scale=2; $JS_SIZE/1024" | bc) KB" >> $GITHUB_STEP_SUMMARY
+              echo "  - Gzipped: $(echo "scale=2; $JS_GZIP/1024" | bc) KB" >> $GITHUB_STEP_SUMMARY
+            fi
+          done
+
+          # Fail if CSS exceeds 10KB gzipped
+          if [ $CSS_GZIP -gt 10240 ]; then
+            echo "❌ CSS bundle exceeds 10KB gzipped!" >> $GITHUB_STEP_SUMMARY
+            exit 1
+          else
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "✅ All bundles within size limits" >> $GITHUB_STEP_SUMMARY
+          fi
+
+  deploy:
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    needs: [quality-checks, build, test]
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "./_site"
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

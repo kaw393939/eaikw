@@ -30,6 +30,13 @@ coverage/
 *.lcov
 .jest/
 
+# Playwright
+test-results/
+playwright-report/
+playwright/.cache/
+.playwright/
+playwright-results.json
+
 # OS generated files
 .DS_Store
 .DS_Store?
@@ -124,10 +131,20 @@ tmp/
 temp/
 *.tmp
 
+# Old/backup files
+old.*
+*.old
+*.bak
+*.backup
+
+# Reference materials
+references/
+
 # Lighthouse reports
 lighthouse-report*.json
 lighthouse-report*.html
 lighthouse-results/
+.lighthouseci/
 
 # Docker volumes and data (if any local docker data)
 docker-compose.override.yml

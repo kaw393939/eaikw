@@ -1,6 +1,7 @@
 # Docker Setup Guide
 
-This project supports both development and production environments using Docker with profiles.
+This project supports both development and production environments using Docker
+with profiles.
 
 ## Prerequisites
 
@@ -35,6 +36,7 @@ docker compose --profile dev up --build
 ```
 
 **Development features:**
+
 - Live reload on file changes
 - Accessible at `http://localhost:8080`
 - Hot module reloading
@@ -42,6 +44,7 @@ docker compose --profile dev up --build
 - Node modules cached in named volume
 
 **File watching:**
+
 - Changes to files in `src/` directory are automatically detected
 - Browser auto-refreshes on changes
 - Fast incremental builds
@@ -59,6 +62,7 @@ docker compose --profile production up -d
 ```
 
 **Production features:**
+
 - Optimized nginx configuration
 - Gzip compression enabled
 - Static asset caching
@@ -305,6 +309,7 @@ Example GitHub Actions addition:
 ## Support
 
 For issues or questions:
+
 1. Check the logs: `make logs`
 2. Review nginx configuration in `nginx.conf`
 3. Verify environment variables in `.env`

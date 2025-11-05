@@ -1,6 +1,8 @@
 # 🎨 Professional Portfolio Website
 
-> A lightning-fast, production-ready portfolio built with modern web technologies and achieving **perfect 100% Lighthouse scores** across all categories.
+> A lightning-fast, production-ready portfolio built with modern web
+> technologies and achieving **perfect 100% Lighthouse scores** across all
+> categories.
 
 [![Lighthouse Performance](https://img.shields.io/badge/Performance-100%25-brightgreen)](https://developers.google.com/web/tools/lighthouse)
 [![Lighthouse Accessibility](https://img.shields.io/badge/Accessibility-100%25-brightgreen)](https://developers.google.com/web/tools/lighthouse)
@@ -9,13 +11,19 @@
 
 ## 🌟 Overview
 
-This is a modern, high-performance portfolio website showcasing professional work, technical skills, and blog content. Built with Eleventy (11ty) static site generator and optimized for speed, accessibility, and SEO, it features a complete Docker development workflow and automated CI/CD deployment to GitHub Pages.
+This is a modern, high-performance portfolio website showcasing professional
+work, technical skills, and blog content. Built with Eleventy (11ty) static site
+generator and optimized for speed, accessibility, and SEO, it features a
+complete Docker development workflow and automated CI/CD deployment to GitHub
+Pages.
 
-**Live Demo:** [https://kaw393939.github.io/218_portfolio/](https://kaw393939.github.io/218_portfolio/)
+**Live Demo:**
+[https://kaw393939.github.io/218_portfolio/](https://kaw393939.github.io/218_portfolio/)
 
 ## ✨ Key Features
 
 ### 🚀 Performance & Quality
+
 - **Perfect Lighthouse Scores** - 100% across all categories
 - **Core Web Vitals Optimized** - FCP: 1.4s, LCP: 1.4s, CLS: 0.003
 - **Async Font Loading** - Non-blocking web fonts
@@ -23,6 +31,7 @@ This is a modern, high-performance portfolio website showcasing professional wor
 - **SEO Optimized** - Semantic HTML, meta tags, sitemap ready
 
 ### 🎨 Modern Design
+
 - **Responsive Layout** - Mobile-first design that works on all devices
 - **Custom CSS Properties** - Easy theming with CSS variables
 - **Accessible UI** - WCAG AA compliant with proper contrast ratios
@@ -30,18 +39,21 @@ This is a modern, high-performance portfolio website showcasing professional wor
 - **Smooth Interactions** - Vanilla JavaScript for lightweight interactivity
 
 ### 📝 Content Management
+
 - **Blog System** - Markdown-based blog with tagging and pagination
 - **Project Showcase** - Portfolio project pages with tech stack display
 - **Easy Updates** - Simple markdown files for all content
 - **Collections** - Automatic post and project organization
 
 ### 🐳 Docker Support
+
 - **Development Environment** - Live reload with volume mounting
 - **Production Build** - Multi-stage Docker build with Nginx
 - **Docker Compose Profiles** - Easy switching between dev and prod
 - **Ready for Deployment** - Publish to Docker Hub or any container platform
 
 ### 🔄 CI/CD Pipeline
+
 - **GitHub Actions** - Automated build and deployment
 - **GitHub Pages** - Free hosting with custom domain support
 - **Path Prefix Handling** - Works seamlessly on subpaths
@@ -49,16 +61,16 @@ This is a modern, high-performance portfolio website showcasing professional wor
 
 ## 🛠️ Tech Stack
 
-| Category | Technologies |
-|----------|-------------|
-| **Static Site Generator** | [Eleventy 3.x](https://www.11ty.dev/) |
-| **Templating** | [Nunjucks](https://mozilla.github.io/nunjucks/) |
-| **Styling** | Vanilla CSS with Custom Properties |
-| **JavaScript** | Vanilla JS (no frameworks) |
-| **Containerization** | Docker, Docker Compose, Nginx |
-| **CI/CD** | GitHub Actions |
-| **Hosting** | GitHub Pages |
-| **Development** | VS Code, ESLint ready |
+| Category                  | Technologies                                    |
+| ------------------------- | ----------------------------------------------- |
+| **Static Site Generator** | [Eleventy 3.x](https://www.11ty.dev/)           |
+| **Templating**            | [Nunjucks](https://mozilla.github.io/nunjucks/) |
+| **Styling**               | Vanilla CSS with Custom Properties              |
+| **JavaScript**            | Vanilla JS (no frameworks)                      |
+| **Containerization**      | Docker, Docker Compose, Nginx                   |
+| **CI/CD**                 | GitHub Actions                                  |
+| **Hosting**               | GitHub Pages                                    |
+| **Development**           | VS Code, ESLint ready                           |
 
 ## 📁 Project Structure
 
@@ -101,7 +113,8 @@ Before you begin, ensure you have the following installed:
 
 - **Node.js** v18 or higher ([Download](https://nodejs.org/))
 - **npm** or **yarn** (comes with Node.js)
-- **Docker Desktop** (optional, for containerized development) ([Download](https://www.docker.com/products/docker-desktop))
+- **Docker Desktop** (optional, for containerized development)
+  ([Download](https://www.docker.com/products/docker-desktop))
 - **Git** for version control
 
 ### Option 1: Local Development (Recommended for Quick Start)
@@ -120,9 +133,11 @@ npm install
 npm run dev
 ```
 
-🎉 **That's it!** Open [http://localhost:8080](http://localhost:8080) in your browser.
+🎉 **That's it!** Open [http://localhost:8080](http://localhost:8080) in your
+browser.
 
 The development server includes:
+
 - ✅ Live reload - changes appear instantly
 - ✅ Hot module replacement
 - ✅ Error reporting in the browser
@@ -148,6 +163,7 @@ make prod          # Production mode with Nginx (port 8080)
 ```
 
 **Access your site:**
+
 - Development: [http://localhost:3000](http://localhost:3000)
 - Production: [http://localhost:8080](http://localhost:8080)
 
@@ -164,19 +180,21 @@ make shell-dev    # Open shell in dev container
 make shell-prod   # Open shell in prod container
 ```
 
-📚 **Full Docker Documentation:** See [DOCKER_QUICK_START.md](DOCKER_QUICK_START.md) for detailed Docker setup and usage.
+📚 **Full Docker Documentation:** See
+[DOCKER_QUICK_START.md](DOCKER_QUICK_START.md) for detailed Docker setup and
+usage.
 
 ## 📝 NPM Scripts Reference
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start development server with live reload on port 8080 |
-| `npm run build` | Build the static site for production |
-| `npm run serve` | Serve the built site locally (no live reload) |
-| `npm run clean` | Remove the `_site` build directory |
-| `npm run docker:dev` | Start Docker development environment |
-| `npm run docker:prod` | Start Docker production environment |
-| `npm run docker:stop` | Stop all Docker containers |
+| Command               | Description                                            |
+| --------------------- | ------------------------------------------------------ |
+| `npm run dev`         | Start development server with live reload on port 8080 |
+| `npm run build`       | Build the static site for production                   |
+| `npm run serve`       | Serve the built site locally (no live reload)          |
+| `npm run clean`       | Remove the `_site` build directory                     |
+| `npm run docker:dev`  | Start Docker development environment                   |
+| `npm run docker:prod` | Start Docker production environment                    |
+| `npm run docker:stop` | Stop all Docker containers                             |
 
 ## 📁 Project Structure
 
@@ -251,13 +269,13 @@ make shell-prod   # Open shell in prod container
 
 ### Key Files Explained
 
-| File | Purpose | Notes |
-|------|---------|-------|
-| `.eleventy.js` | Main Eleventy config | Defines how the site is built |
-| `src/_data/site.json` | Global site data | Accessible in all templates as `{{ site.title }}` |
-| `src/_layouts/base.njk` | Base HTML template | All pages extend this layout |
-| `nginx.conf` | Production web server | Optimized for performance and security |
-| `docker-compose.yml` | Container orchestration | Use profiles: `dev` or `production` |
+| File                    | Purpose                 | Notes                                             |
+| ----------------------- | ----------------------- | ------------------------------------------------- |
+| `.eleventy.js`          | Main Eleventy config    | Defines how the site is built                     |
+| `src/_data/site.json`   | Global site data        | Accessible in all templates as `{{ site.title }}` |
+| `src/_layouts/base.njk` | Base HTML template      | All pages extend this layout                      |
+| `nginx.conf`            | Production web server   | Optimized for performance and security            |
+| `docker-compose.yml`    | Container orchestration | Use profiles: `dev` or `production`               |
 
 ## ✨ Customization Guide
 
@@ -289,15 +307,16 @@ Create a new file in `src/blog/` (e.g., `my-awesome-post.md`):
 ```markdown
 ---
 layout: post.njk
-title: 'Building Scalable Web Applications'
-description: 'Learn best practices for building scalable applications'
+title: "Building Scalable Web Applications"
+description: "Learn best practices for building scalable applications"
 date: 2025-01-15
-tags: ['blog', 'web-development', 'architecture']
+tags: ["blog", "web-development", "architecture"]
 ---
 
 Your content here using Markdown...
 
 ## Headers work great
+
 - Bullet points too
 - Code blocks with syntax highlighting
 ```
@@ -317,12 +336,12 @@ Create a new file in `src/projects/` (e.g., `my-project.md`):
 ```markdown
 ---
 layout: project.njk
-title: 'E-Commerce Platform'
-description: 'Full-stack online shopping solution'
-technologies: ['React', 'Node.js', 'PostgreSQL', 'Docker']
-status: 'Completed'
-github: 'https://github.com/yourusername/project'
-demo: 'https://project-demo.com'
+title: "E-Commerce Platform"
+description: "Full-stack online shopping solution"
+technologies: ["React", "Node.js", "PostgreSQL", "Docker"]
+status: "Completed"
+github: "https://github.com/yourusername/project"
+demo: "https://project-demo.com"
 date: 2024-12-01
 featured: true
 ---
@@ -345,21 +364,21 @@ The site uses CSS custom properties for easy theming. Edit `src/css/main.css`:
 ```css
 :root {
   /* Brand Colors */
-  --color-primary: #2563eb;      /* Main accent color */
-  --color-secondary: #7c3aed;    /* Secondary accent */
-  
+  --color-primary: #2563eb; /* Main accent color */
+  --color-secondary: #7c3aed; /* Secondary accent */
+
   /* Text Colors */
-  --color-text: #1f2937;         /* Body text */
-  --color-text-muted: #6b7280;   /* Secondary text (WCAG AA compliant) */
-  
+  --color-text: #1f2937; /* Body text */
+  --color-text-muted: #6b7280; /* Secondary text (WCAG AA compliant) */
+
   /* Background Colors */
-  --color-bg: #ffffff;           /* Main background */
-  --color-bg-alt: #f9fafb;       /* Alternate background */
-  
+  --color-bg: #ffffff; /* Main background */
+  --color-bg-alt: #f9fafb; /* Alternate background */
+
   /* Typography */
-  --font-sans: 'Inter', system-ui, sans-serif;
-  --font-mono: 'Fira Code', monospace;
-  
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "Fira Code", monospace;
+
   /* Spacing */
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
@@ -369,7 +388,8 @@ The site uses CSS custom properties for easy theming. Edit `src/css/main.css`:
 }
 ```
 
-**Want a dark theme?** Add a dark mode toggle in `src/js/main.js` and define dark colors:
+**Want a dark theme?** Add a dark mode toggle in `src/js/main.js` and define
+dark colors:
 
 ```css
 @media (prefers-color-scheme: dark) {
@@ -411,6 +431,7 @@ This project is configured for zero-config deployment to GitHub Pages:
 To use your own domain (e.g., `www.yourportfolio.com`):
 
 1. **Add CNAME File**
+
    ```bash
    echo "www.yourportfolio.com" > src/CNAME
    ```
@@ -419,17 +440,18 @@ To use your own domain (e.g., `www.yourportfolio.com`):
 
    Add these records to your domain registrar:
 
-   | Type | Name | Value |
-   |------|------|-------|
-   | CNAME | www | yourusername.github.io |
-   | A | @ | 185.199.108.153 |
-   | A | @ | 185.199.109.153 |
-   | A | @ | 185.199.110.153 |
-   | A | @ | 185.199.111.153 |
+   | Type  | Name | Value                  |
+   | ----- | ---- | ---------------------- |
+   | CNAME | www  | yourusername.github.io |
+   | A     | @    | 185.199.108.153        |
+   | A     | @    | 185.199.109.153        |
+   | A     | @    | 185.199.110.153        |
+   | A     | @    | 185.199.111.153        |
 
 3. **Update Site Configuration**
 
    Edit `src/_data/site.json`:
+
    ```json
    {
      "url": "https://www.yourportfolio.com"
@@ -439,6 +461,7 @@ To use your own domain (e.g., `www.yourportfolio.com`):
 4. **Remove PATH_PREFIX**
 
    In `.github/workflows/deploy.yml`, remove or comment out:
+
    ```yaml
    # env:
    #   PATH_PREFIX: /218_portfolio
@@ -449,12 +472,14 @@ To use your own domain (e.g., `www.yourportfolio.com`):
 To publish your production Docker image:
 
 1. **Configure Environment**
+
    ```bash
    cp .env.example .env
    # Edit .env and set DOCKER_USERNAME=yourusername
    ```
 
 2. **Build and Push**
+
    ```bash
    make build    # Build the production image
    make push     # Push to Docker Hub
@@ -470,12 +495,12 @@ To publish your production Docker image:
 
 This static site can be deployed to any platform:
 
-| Platform | Command |
-|----------|---------|
-| **Netlify** | Drag & drop `_site` folder or connect GitHub repo |
-| **Vercel** | Import GitHub repo, set build command to `npm run build` |
-| **AWS S3** | `aws s3 sync _site/ s3://your-bucket-name --delete` |
-| **Cloudflare Pages** | Connect GitHub repo, auto-detects Eleventy |
+| Platform             | Command                                                  |
+| -------------------- | -------------------------------------------------------- |
+| **Netlify**          | Drag & drop `_site` folder or connect GitHub repo        |
+| **Vercel**           | Import GitHub repo, set build command to `npm run build` |
+| **AWS S3**           | `aws s3 sync _site/ s3://your-bucket-name --delete`      |
+| **Cloudflare Pages** | Connect GitHub repo, auto-detects Eleventy               |
 
 ## 🐛 Troubleshooting
 
@@ -541,7 +566,8 @@ npm install
 
 - Check `PATH_PREFIX` in `.github/workflows/deploy.yml`
 - Ensure it matches your repository name
-- Verify `baseUrl` filter is used in templates: `{{ '/css/main.css' | baseUrl }}`
+- Verify `baseUrl` filter is used in templates:
+  `{{ '/css/main.css' | baseUrl }}`
 
 ### Performance Optimization
 
@@ -561,11 +587,13 @@ Already implemented ✅:
 We welcome contributions! Here's how to get started:
 
 1. **Fork the Repository**
+
    ```bash
    gh repo fork kaw393939/218_portfolio
    ```
 
 2. **Create a Feature Branch**
+
    ```bash
    git checkout -b feature/amazing-feature
    ```
@@ -577,6 +605,7 @@ We welcome contributions! Here's how to get started:
    - Ensure Lighthouse scores remain high
 
 4. **Commit with Conventional Commits**
+
    ```bash
    git commit -m "feat: add dark mode toggle"
    git commit -m "fix: resolve navigation bug on mobile"
@@ -601,29 +630,41 @@ We welcome contributions! Here's how to get started:
 
 ### Documentation
 
-- **[Eleventy Documentation](https://www.11ty.dev/docs/)** - Official Eleventy guides and API reference
-- **[Nunjucks Templating](https://mozilla.github.io/nunjucks/)** - Template syntax and filters
-- **[Docker Documentation](https://docs.docker.com/)** - Container and Compose references
-- **[Nginx Documentation](https://nginx.org/en/docs/)** - Web server configuration guide
-- **[GitHub Pages](https://docs.github.com/en/pages)** - Hosting and custom domain setup
+- **[Eleventy Documentation](https://www.11ty.dev/docs/)** - Official Eleventy
+  guides and API reference
+- **[Nunjucks Templating](https://mozilla.github.io/nunjucks/)** - Template
+  syntax and filters
+- **[Docker Documentation](https://docs.docker.com/)** - Container and Compose
+  references
+- **[Nginx Documentation](https://nginx.org/en/docs/)** - Web server
+  configuration guide
+- **[GitHub Pages](https://docs.github.com/en/pages)** - Hosting and custom
+  domain setup
 
 ### Learning Resources
 
-- **[MDN Web Docs](https://developer.mozilla.org/)** - HTML, CSS, and JavaScript references
+- **[MDN Web Docs](https://developer.mozilla.org/)** - HTML, CSS, and JavaScript
+  references
 - **[web.dev](https://web.dev/)** - Performance and best practices guides
-- **[WCAG Guidelines](https://www.w3.org/WAI/WCAG21/quickref/)** - Accessibility standards
+- **[WCAG Guidelines](https://www.w3.org/WAI/WCAG21/quickref/)** - Accessibility
+  standards
 
 ### Tools Used
 
-- **[Lighthouse CLI](https://github.com/GoogleChrome/lighthouse)** - Performance auditing
-- **[Docker Desktop](https://www.docker.com/products/docker-desktop)** - Container development
-- **[VS Code](https://code.visualstudio.com/)** - Code editor (see `.vscode/` for recommended extensions)
+- **[Lighthouse CLI](https://github.com/GoogleChrome/lighthouse)** - Performance
+  auditing
+- **[Docker Desktop](https://www.docker.com/products/docker-desktop)** -
+  Container development
+- **[VS Code](https://code.visualstudio.com/)** - Code editor (see `.vscode/`
+  for recommended extensions)
 
 ## �📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
+for details.
 
 You are free to:
+
 - ✅ Use this project for personal or commercial purposes
 - ✅ Modify and adapt the code
 - ✅ Distribute copies of the project
@@ -633,14 +674,18 @@ You are free to:
 
 Built with these amazing open-source projects:
 
-- **[Eleventy](https://www.11ty.dev/)** - Simple yet powerful static site generator
-- **[Nunjucks](https://mozilla.github.io/nunjucks/)** - Flexible templating engine
+- **[Eleventy](https://www.11ty.dev/)** - Simple yet powerful static site
+  generator
+- **[Nunjucks](https://mozilla.github.io/nunjucks/)** - Flexible templating
+  engine
 - **[GitHub Pages](https://pages.github.com/)** - Free, reliable hosting
 - **[Docker](https://www.docker.com/)** - Containerization platform
 - **[Nginx](https://nginx.org/)** - High-performance web server
-- **[Lighthouse](https://github.com/GoogleChrome/lighthouse)** - Performance auditing tool
+- **[Lighthouse](https://github.com/GoogleChrome/lighthouse)** - Performance
+  auditing tool
 
-Special thanks to the web development community for inspiration, best practices, and continuous learning resources.
+Special thanks to the web development community for inspiration, best practices,
+and continuous learning resources.
 
 ---
 
@@ -652,6 +697,8 @@ Special thanks to the web development community for inspiration, best practices,
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=flat&logo=docker&logoColor=white)](https://www.docker.com/)
 [![Lighthouse](https://img.shields.io/badge/Lighthouse-100%25-4FC08D?style=flat&logo=lighthouse&logoColor=white)](https://github.com/GoogleChrome/lighthouse)
 
-[Live Demo](https://kaw393939.github.io/218_portfolio/) • [Report Bug](https://github.com/kaw393939/218_portfolio/issues) • [Request Feature](https://github.com/kaw393939/218_portfolio/issues)
+[Live Demo](https://kaw393939.github.io/218_portfolio/) •
+[Report Bug](https://github.com/kaw393939/218_portfolio/issues) •
+[Request Feature](https://github.com/kaw393939/218_portfolio/issues)
 
 </div>

@@ -1,6 +1,7 @@
 # Professional Eleventy Portfolio Site
 
-This is a professional portfolio website built with Eleventy (11ty) static site generator, featuring:
+This is a professional portfolio website built with Eleventy (11ty) static site
+generator, featuring:
 
 - **Nunjucks templating** for clean, maintainable templates
 - **Blog section** for professional articles and insights
@@ -9,6 +10,7 @@ This is a professional portfolio website built with Eleventy (11ty) static site 
 - **Professional styling** and responsive design
 
 ## Project Structure
+
 - `/src/` - Source files for the website
 - `/src/_layouts/` - Nunjucks templates and layouts
 - `/src/blog/` - Blog posts and related content
@@ -17,12 +19,15 @@ This is a professional portfolio website built with Eleventy (11ty) static site 
 - `/_site/` - Generated static site (ignored in git)
 
 ## Development Commands
+
 - `npm run dev` - Start development server with live reload
 - `npm run build` - Build production site
 - `npm run serve` - Serve built site locally
 
 ## Copilot Instructions
+
 When working on this project:
+
 - Use Nunjucks syntax for all templating
 - Follow semantic HTML and accessibility best practices
 - Maintain consistent styling and professional appearance
