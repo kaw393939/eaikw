@@ -1,6 +1,7 @@
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 import Image from "@11ty/eleventy-img";
 import markdownIt from "markdown-it";
+import markdownItAnchor from "markdown-it-anchor";
 import pluginRss from "@11ty/eleventy-plugin-rss";
 
 export default async function (eleventyConfig) {
@@ -135,15 +136,19 @@ export default async function (eleventyConfig) {
     return pathPrefix ? `${pathPrefix}${url}` : url;
   });
 
-  // Markdown config
-  eleventyConfig.setLibrary(
-    "md",
-    markdownIt({
-      html: true,
-      breaks: true,
-      linkify: true,
-    })
-  );
+  // Markdown config with anchor support
+  const md = markdownIt({
+    html: true,
+    breaks: true,
+    linkify: true,
+  });
+  
+  md.use(markdownItAnchor, {
+    permalink: markdownItAnchor.permalink.headerLink(),
+    slugify: (s) => s.toLowerCase().replace(/[^\w\s-]/g, '').replace(/[\s_]+/g, '-').replace(/^-+|-+$/g, '')
+  });
+  
+  eleventyConfig.setLibrary("md", md);
 
   return {
     dir: {

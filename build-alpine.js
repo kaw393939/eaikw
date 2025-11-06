@@ -26,6 +26,7 @@ await Promise.all([
   buildJS("src/js/about-enhanced.js", "_site/js/about-enhanced.bundle.js"),
   buildJS("src/js/stakeholder-enhanced.js", "_site/js/stakeholder-enhanced.bundle.js"),
   buildJS("src/js/path-cards-enhanced.js", "_site/js/path-cards-enhanced.bundle.js"),
+  buildJS("src/js/chapters-nav.js", "_site/js/chapters-nav.bundle.js"),
 ]);
 
 console.log("✓ JavaScript bundles built successfully");

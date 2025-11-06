@@ -1,5 +1,5 @@
 ---
-layout: layouts/project.njk
+layout: layouts/project-chapters.njk
 title: "Building a Swiss Design System with AI: A Vibe Coding Journey"
 description:
   "How an AI and a human collaborated to create an authentic Swiss design system
