@@ -1,12 +1,18 @@
 /**
  * Chapter Navigation System for Swiss Design
- * Handles scroll-spy, progress tracking, and chapter navigation
+ * Handles scroll-spy, progress tracking, chapter navigation, and keyboard controls
  */
 
 class ChaptersNavigation {
   constructor() {
     this.chapters = [];
     this.currentChapter = 0;
+    this.chapterGroups = [
+      { title: "Introduction", start: 0, end: 2 },
+      { title: "The Build Process", start: 3, end: 8 },
+      { title: "Technical Deep Dive", start: 9, end: 12 },
+      { title: "Lessons & Conclusion", start: 13, end: 15 },
+    ];
     this.init();
   }
 
@@ -15,6 +21,7 @@ class ChaptersNavigation {
     this.buildNavigation();
     this.setupScrollSpy();
     this.setupNavButtons();
+    this.setupKeyboardNav();
     this.setupMobileToggle();
   }
 
@@ -35,38 +42,78 @@ class ChaptersNavigation {
   }
 
   /**
-   * Build the navigation list
+   * Build the navigation list with groups and reading times
    */
   buildNavigation() {
-    const navList = document.getElementById('chapters-list');
-    if (!navList || this.chapters.length === 0) return;
+    const navList = document.getElementById("chapters-list");
+    if (!navList || this.chapters.length === 0) {
+      return;
+    }
 
-    navList.innerHTML = this.chapters
-      .map(
-        (chapter) => `
+    let html = "";
+    let currentGroupIndex = 0;
+
+    this.chapters.forEach((chapter, index) => {
+      // Check if we need to add a group title
+      const group = this.chapterGroups.find(
+        (g) => index >= g.start && index <= g.end
+      );
+      if (
+        group &&
+        index === group.start &&
+        (currentGroupIndex === 0 || index !== 0)
+      ) {
+        html += `<li class="chapters-section-title">${group.title}</li>`;
+        currentGroupIndex++;
+      }
+
+      // Calculate reading time (rough estimate: 200 words per minute)
+      const readingTime = this.estimateReadingTime(chapter.element);
+
+      html += `
       <li>
         <a href="#${chapter.id}" data-chapter="${chapter.number}">
-          <span class="chapter-number">${chapter.number}.</span>
-          ${chapter.title}
+          <span class="chapter-number">${chapter.number}</span>
+          <span class="chapter-title">${chapter.title}</span>
+          <span class="chapter-time">${readingTime}</span>
         </a>
       </li>
-    `
-      )
-      .join('');
+    `;
+    });
+
+    navList.innerHTML = html;
 
     // Smooth scroll on click
-    navList.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', (e) => {
+    navList.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", (e) => {
         e.preventDefault();
-        const targetId = link.getAttribute('href').slice(1);
+        const targetId = link.getAttribute("href").slice(1);
         const targetElement = document.getElementById(targetId);
         if (targetElement) {
-          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          // Update URL without scrolling
+          targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
           history.pushState(null, null, `#${targetId}`);
         }
       });
     });
+  }
+
+  /**
+   * Estimate reading time for a chapter section
+   */
+  estimateReadingTime(element) {
+    // Find the next h2 or end of content
+    let content = "";
+    let currentElement = element.nextElementSibling;
+
+    while (currentElement && currentElement.tagName !== "H2") {
+      content += currentElement.textContent || "";
+      currentElement = currentElement.nextElementSibling;
+    }
+
+    const wordCount = content.trim().split(/\s+/).length;
+    const minutes = Math.ceil(wordCount / 200);
+
+    return `${minutes}m`;
   }
 
   /**
@@ -128,11 +175,14 @@ class ChaptersNavigation {
   }
 
   /**
-   * Update scroll progress indicator
+   * Update scroll progress indicator and visual bar
    */
   updateProgress() {
-    const progressEl = document.getElementById('chapters-progress');
-    if (!progressEl) return;
+    const progressEl = document.getElementById("chapters-progress");
+    const progressFill = document.getElementById("chapters-progress-fill");
+    if (!progressEl) {
+      return;
+    }
 
     const windowHeight = window.innerHeight;
     const documentHeight = document.documentElement.scrollHeight;
@@ -144,6 +194,10 @@ class ChaptersNavigation {
     );
 
     progressEl.textContent = `${scrollPercent}%`;
+    
+    if (progressFill) {
+      progressFill.style.width = `${scrollPercent}%`;
+    }
   }
 
   /**
@@ -185,6 +239,47 @@ class ChaptersNavigation {
 
     prevBtn.disabled = this.currentChapter === 0;
     nextBtn.disabled = this.currentChapter === this.chapters.length - 1;
+  }
+
+  /**
+   * Setup keyboard navigation (arrow keys)
+   */
+  setupKeyboardNav() {
+    document.addEventListener("keydown", (e) => {
+      // Only handle if not in an input field
+      if (
+        document.activeElement.tagName === "INPUT" ||
+        document.activeElement.tagName === "TEXTAREA"
+      ) {
+        return;
+      }
+
+      // ArrowUp or 'k' - previous chapter
+      if (e.key === "ArrowUp" || e.key === "k") {
+        e.preventDefault();
+        if (this.currentChapter > 0) {
+          const prevChapter = this.chapters[this.currentChapter - 1];
+          prevChapter.element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+          history.pushState(null, null, `#${prevChapter.id}`);
+        }
+      }
+
+      // ArrowDown or 'j' - next chapter
+      if (e.key === "ArrowDown" || e.key === "j") {
+        e.preventDefault();
+        if (this.currentChapter < this.chapters.length - 1) {
+          const nextChapter = this.chapters[this.currentChapter + 1];
+          nextChapter.element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+          history.pushState(null, null, `#${nextChapter.id}`);
+        }
+      }
+    });
   }
 
   /**

@@ -55,11 +55,16 @@ layout: layouts/base.njk
       <aside class="chapters-nav" id="chapters-nav">
         <nav class="chapters-nav-inner">
           <div class="chapters-nav-header">
-            <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--swiss-gray-600);">Contents</span>
-            <span class="chapters-progress" id="chapters-progress">0%</span>
+            <div class="chapters-header-top">
+              <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--swiss-gray-600);">Contents</span>
+              <span class="chapters-progress" id="chapters-progress">0%</span>
+            </div>
+            <div class="chapters-progress-bar">
+              <div class="chapters-progress-fill" id="chapters-progress-fill"></div>
+            </div>
           </div>
           <ol class="chapters-list" id="chapters-list">
-            {# Populated by JavaScript #}
+            {# Populated by JavaScript with grouped sections #}
           </ol>
         </nav>
       </aside>
@@ -137,18 +142,37 @@ layout: layouts/base.njk
   }
 
   .chapters-nav-header {
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+    border-bottom: 2px solid var(--swiss-black);
+  }
+
+  .chapters-header-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: var(--space-md);
-    padding-bottom: var(--space-sm);
-    border-bottom: 2px solid var(--swiss-black);
+    margin-bottom: var(--space-sm);
   }
 
   .chapters-progress {
     font-size: 0.875rem;
     font-weight: 700;
     color: var(--swiss-red);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .chapters-progress-bar {
+    height: 4px;
+    background-color: var(--swiss-gray-200);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .chapters-progress-fill {
+    height: 100%;
+    background-color: var(--swiss-red);
+    width: 0%;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .chapters-list {
@@ -158,24 +182,46 @@ layout: layouts/base.njk
   }
 
   .chapters-list li {
-    margin-bottom: var(--space-sm);
+    margin-bottom: 0;
+  }
+
+  .chapters-section-title {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--swiss-gray-500);
+    padding: var(--space-md) var(--space-sm) var(--space-xs);
+    border-top: 1px solid var(--swiss-gray-300);
+    margin-top: var(--space-md);
+  }
+
+  .chapters-section-title:first-child {
+    border-top: none;
+    margin-top: 0;
   }
 
   .chapters-list a {
-    display: block;
-    padding: var(--space-xs) var(--space-sm);
-    font-size: 0.875rem;
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-xs);
+    padding: var(--space-sm);
+    font-size: 0.8125rem;
     font-weight: 500;
+    line-height: 1.4;
     color: var(--swiss-gray-700);
     text-decoration: none;
     border-left: 2px solid transparent;
     margin-left: -2px;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
   }
 
   .chapters-list a:hover {
     color: var(--swiss-black);
     border-left-color: var(--swiss-gray-600);
+    background-color: var(--swiss-gray-50);
+    transform: translateX(2px);
   }
 
   .chapters-list a.active {
@@ -185,11 +231,36 @@ layout: layouts/base.njk
     background-color: var(--swiss-gray-100);
   }
 
-  .chapters-list .chapter-number {
-    display: inline-block;
-    width: 1.5em;
+  .chapters-list a.active .chapter-number {
+    color: var(--swiss-red);
+  }
+
+  .chapter-number {
+    flex-shrink: 0;
+    font-size: 0.6875rem;
+    font-weight: 700;
     color: var(--swiss-gray-500);
-    font-size: 0.75rem;
+    font-variant-numeric: tabular-nums;
+    min-width: 1.75em;
+    text-align: right;
+  }
+
+  .chapter-title {
+    flex: 1;
+  }
+
+  .chapter-time {
+    flex-shrink: 0;
+    font-size: 0.6875rem;
+    color: var(--swiss-gray-400);
+    font-weight: 400;
+    margin-left: auto;
+    padding-left: var(--space-xs);
+  }
+
+  .chapters-list a.active .chapter-time {
+    color: var(--swiss-gray-600);
+    font-weight: 500;
   }
 
   /* Chapter content */
