@@ -8,12 +8,16 @@
     <title>{% if title %}{{ title }} | {% endif %}{{ site.title }}</title>
     <meta name="description" content="{{ description or site.description }}">
     <meta name="author" content="{{ site.author }}">
+    {# SEO Keywords #}
+    {% if keywords %}
+    <meta name="keywords" content="{{ keywords | join(', ') }}">
+    {% endif %}
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     
     {# Open Graph Meta Tags for Social Sharing #}
     <meta property="og:type" content="{% if tags and 'blog' in tags %}article{% else %}website{% endif %}">
     <meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}">
-    <meta property="og:description" content="{{ description or site.description }}">
+    <meta property="og:description" content="{{ excerpt or description or site.description }}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:site_name" content="{{ site.title }}">
     <meta property="og:locale" content="en_US">
@@ -35,7 +39,7 @@
     {# Twitter Card Meta Tags #}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}">
-    <meta name="twitter:description" content="{{ description or site.description }}">
+    <meta name="twitter:description" content="{{ excerpt or description or site.description }}">
     {% if image %}
     <meta name="twitter:image" content="{{ site.url }}{{ image }}">
     {% else %}

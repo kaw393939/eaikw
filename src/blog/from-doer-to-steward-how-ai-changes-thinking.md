@@ -1,4 +1,5 @@
 ---
+layout: layouts/post.njk
 title: "From Doer to Steward: How AI Is Rewiring the Way You Think"
 description: "Microsoft researchers tracked 936 real work tasks and found AI doesn't just change what you do—it fundamentally shifts how you think. Here's what's changing, and why it matters."
 date: 2025-11-25

@@ -1,4 +1,5 @@
 ---
+layout: layouts/post.njk
 title: "Don't Let AI Make You Lazy: A Practical Guide to Staying Sharp"
 description: "Microsoft Research found three barriers that kill critical thinking with AI: awareness, motivation, and ability. Here's how to overcome each one and maintain your cognitive edge."
 date: 2025-11-27

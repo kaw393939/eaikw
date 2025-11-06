@@ -1,4 +1,5 @@
 ---
+layout: layouts/post.njk
 title: "The Confidence Trap: Why Trusting AI Makes You Think Less"
 description: "New research reveals a paradox: the more you trust AI to do your work, the less you think critically about it. Here's what 319 knowledge workers taught us about maintaining your edge."
 date: 2025-11-22
