@@ -2,7 +2,7 @@
 layout: layouts/post.njk
 title: "AGI in 5 Years? Why AI Leaders Are Wrong (And Right)"
 description: "OpenAI's CEO says AGI by 2030. 2,700 AI researchers say 2047. Both groups have skin in the game. Here's how to think about wildly divergent predictions."
-date: 2025-11-06
+date: 2025-11-15
 topics: ["AI", "AGI", "Technology", "Future"]
 ---
 

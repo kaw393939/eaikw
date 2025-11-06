@@ -2,7 +2,7 @@
 layout: layouts/post.njk
 title: "The Second Renaissance: Why AI Isn't Like the Printing Press"
 description: "ChatGPT reached 100 million users in 2 months. The printing press took 300 years to transform society. This time, the disruption is compressed—and we need to manage it differently."
-date: 2025-11-06
+date: 2025-11-13
 topics: ["AI", "History", "Technology", "Society"]
 ---
 

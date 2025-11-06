@@ -2,7 +2,7 @@
 layout: layouts/post.njk
 title: "AI Productivity Gains: Reality vs Hype"
 description: "Your AI assistant saves you 2.2 hours a week, not your entire job. Here's what the data actually shows about AI productivity—and why trillion-dollar projections might be premature."
-date: 2025-11-06
+date: 2025-11-18
 topics: ["AI", "Productivity", "Business", "Economics"]
 ---
 

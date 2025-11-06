@@ -2,7 +2,7 @@
 layout: layouts/post.njk
 title: "The Messy Middle: AI's Impact on Jobs (2025-2035)"
 description: "History says you'll have a job in 2035. It just might not be the one you trained for. Here's what the transition period looks like—and how to navigate it."
-date: 2025-11-06
+date: 2025-11-20
 topics: ["AI", "Jobs", "Future of Work", "Career"]
 ---
 
