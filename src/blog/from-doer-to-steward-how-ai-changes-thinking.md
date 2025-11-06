@@ -2,7 +2,9 @@
 title: "From Doer to Steward: How AI Is Rewiring the Way You Think"
 description: "Microsoft researchers tracked 936 real work tasks and found AI doesn't just change what you do—it fundamentally shifts how you think. Here's what's changing, and why it matters."
 date: 2025-11-25
-tags: ["AI", "cognitive skills", "work", "productivity", "critical thinking"]
+tags: ["AI", "cognitive skills", "work", "productivity", "critical thinking", "knowledge work", "cognitive shifts"]
+keywords: ["AI cognitive shifts", "AI work transformation", "information verification", "AI stewardship", "cognitive offloading", "AI problem solving", "knowledge work AI", "AI thinking skills"]
+excerpt: "72-79% of workers report AI makes thinking 'easier.' But cognitive load didn't disappear—it shifted. Three fundamental changes to how your brain works with AI."
 ---
 
 There's a moment I see repeatedly in my EverydayAI training sessions. Someone uses ChatGPT to draft an email, reads it, tweaks a sentence, and hits send. Ten minutes instead of thirty. They feel productive. Efficient. Smart.
@@ -192,6 +194,18 @@ The researchers found that knowledge workers' tendency to reflect on their work 
 But people who don't? AI gives them permission to think even less.
 
 Which group are you in?
+
+---
+
+## Related Reading
+
+This post is part of a series on maintaining critical thinking in the AI era:
+
+- **[The Confidence Trap: Why Trusting AI Makes You Think Less](/blog/confidence-trap-trusting-ai-makes-you-think-less/)** - Research reveals the paradox of AI confidence vs. self-confidence
+- **[Don't Let AI Make You Lazy: A Practical Guide to Staying Sharp](/blog/dont-let-ai-make-you-lazy-staying-sharp/)** - Actionable tactics to overcome barriers and build cognitive fitness
+- **[AI Productivity Gains: Reality vs Hype](/blog/ai-productivity-reality-vs-hype/)** - What the data actually shows about AI's impact on work
+
+**For deeper context:** Read the full [Second Renaissance analysis](/projects/everydayai-community/) on how AI is compressing centuries of transformation into decades—and why that demands different strategies than past technological revolutions.
 
 ---
 

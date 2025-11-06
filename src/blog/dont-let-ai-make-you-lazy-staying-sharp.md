@@ -2,7 +2,9 @@
 title: "Don't Let AI Make You Lazy: A Practical Guide to Staying Sharp"
 description: "Microsoft Research found three barriers that kill critical thinking with AI: awareness, motivation, and ability. Here's how to overcome each one and maintain your cognitive edge."
 date: 2025-11-27
-tags: ["AI", "critical thinking", "productivity", "skills", "career development"]
+tags: ["AI", "critical thinking", "productivity", "skills", "career development", "AI tools", "cognitive fitness"]
+keywords: ["AI critical thinking tactics", "stay sharp with AI", "AI cognitive skills", "AI overreliance prevention", "critical thinking checklist", "AI skill development", "cognitive fitness AI", "AI work strategies"]
+excerpt: "41% of workers don't think critically with AI. Three barriers prevent it: awareness, motivation, ability. Complete guide with checklists, workflows, and weekly practice routines."
 ---
 
 Last month, I watched a marketing director in one of my EverydayAI training sessions copy a ChatGPT output directly into a client presentation. No edits. No fact-checking. No critical evaluation.
@@ -261,6 +263,18 @@ The "just" tasks matter. The "routine" work compounds. The barriers are real but
 You just have to decide: Are you using AI to think better, or to avoid thinking entirely?
 
 The answer shows up in your work long before you realize it.
+
+---
+
+## Related Reading
+
+This post is part of a series on maintaining critical thinking in the AI era:
+
+- **[The Confidence Trap: Why Trusting AI Makes You Think Less](/blog/confidence-trap-trusting-ai-makes-you-think-less/)** - Understand the research behind AI confidence and cognitive offloading
+- **[From Doer to Steward: How AI Is Rewiring the Way You Think](/blog/from-doer-to-steward-how-ai-changes-thinking/)** - The three cognitive shifts changing knowledge work
+- **[The Messy Middle: AI's Impact on Jobs (2025-2035)](/blog/ai-job-messy-middle/)** - Navigate career transitions while maintaining valuable skills
+
+**For comprehensive analysis:** Explore the [Second Renaissance project](/projects/everydayai-community/) for the full picture of AI's transformation and how to prepare for it.
 
 ---
 

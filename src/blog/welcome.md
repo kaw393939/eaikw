@@ -1,11 +1,11 @@
 ---
 layout: layouts/post.njk
 title: "How I Built This Site in 10 Hours (And What That Means for You)"
-description:
-  "You're reading this on a Swiss design system I built with AI in one evening.
-  If I can do this—what can you do with AI tools in your field?"
+description: "You're reading this on a Swiss design system I built with AI in one evening. If I can do this—what can you do with AI tools in your field?"
 date: 2025-01-01
-tags: ["blog", "ai", "meta", "collaboration"]
+tags: ["blog", "AI", "meta", "collaboration", "AI productivity", "development"]
+keywords: ["AI web development", "building with AI", "AI productivity", "agentic AI", "vibe coding", "AI tools for developers", "professional development AI", "AI collaboration"]
+excerpt: "10 hours. 45,000 words. Swiss design system. Automated testing. CI/CD. All with AI. If this is possible—what can you build in your field?"
 ---
 
 You're reading this on a Swiss design system I built with AI in one evening.
@@ -233,3 +233,20 @@ That's what this site is actually for.
 Welcome to the laboratory.
 
 Let's build something.
+
+---
+
+## Explore Further
+
+**Understand the moment:**  
+[The Second Renaissance: A Balanced Look at AI's Transformation](/projects/everydayai-community/) - Why this AI moment is different from any previous technology revolution
+
+**Key insights from the site:**
+- [The Second Renaissance: Why AI Isn't Like the Printing Press](/blog/second-renaissance-not-like-printing-press/) - Compressed disruption timelines
+- [The Confidence Trap: Why Trusting AI Makes You Think Less](/blog/confidence-trap-trusting-ai-makes-you-think-less/) - Research on maintaining cognitive agency
+- [AI Productivity Gains: Reality vs Hype](/blog/ai-productivity-reality-vs-hype/) - What the data actually shows
+- [The Messy Middle: AI's Impact on Jobs (2025-2035)](/blog/ai-job-messy-middle/) - Navigating career transitions
+
+**Get practical:**
+- [Don't Let AI Make You Lazy: A Practical Guide to Staying Sharp](/blog/dont-let-ai-make-you-lazy-staying-sharp/) - Tactics and checklists for critical thinking
+- [From Doer to Steward: How AI Is Rewiring the Way You Think](/blog/from-doer-to-steward-how-ai-changes-thinking/) - Understanding cognitive shifts

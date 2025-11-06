@@ -2,7 +2,9 @@
 title: "The Confidence Trap: Why Trusting AI Makes You Think Less"
 description: "New research reveals a paradox: the more you trust AI to do your work, the less you think critically about it. Here's what 319 knowledge workers taught us about maintaining your edge."
 date: 2025-11-22
-tags: ["AI", "critical thinking", "productivity", "research", "cognitive skills"]
+tags: ["AI", "critical thinking", "productivity", "research", "cognitive skills", "AI confidence", "knowledge work"]
+keywords: ["AI critical thinking", "AI confidence", "ChatGPT productivity", "AI overreliance", "cognitive skills AI", "knowledge worker AI", "AI decision making", "critical thinking skills"]
+excerpt: "Microsoft Research study reveals: 59% of knowledge workers don't engage critical thinking with AI. Higher AI confidence = 23% less evaluation. Learn to maintain your cognitive edge."
 ---
 
 A team at Microsoft Research just published something that should make every knowledge worker pause: [a study of 319 professionals](https://doi.org/10.1145/3706598.3713778) using ChatGPT, Copilot, and other AI tools revealed a troubling pattern. The more confident you are in AI's ability to do a task, the less you engage your own critical thinking—even when that thinking is exactly what separates good work from mediocre output.
@@ -125,6 +127,18 @@ The researchers put it bluntly in their conclusion: *"GenAI tools reduce the per
 Don't let the efficiency gains blind you to the capability losses.
 
 Your competitive advantage in the AI era isn't trusting the tools more. It's trusting yourself enough to question them.
+
+---
+
+## Related Reading
+
+This post is part of a series on maintaining critical thinking in the AI era:
+
+- **[From Doer to Steward: How AI Is Rewiring the Way You Think](/blog/from-doer-to-steward-how-ai-changes-thinking/)** - Understand the three cognitive shifts happening to your brain
+- **[Don't Let AI Make You Lazy: A Practical Guide to Staying Sharp](/blog/dont-let-ai-make-you-lazy-staying-sharp/)** - Concrete tactics for overcoming awareness, motivation, and ability barriers
+- **[The Second Renaissance: Why AI Isn't Like the Printing Press](/blog/second-renaissance-not-like-printing-press/)** - Why this transformation is compressed and what it means for you
+
+**Explore the full analysis:** [The Second Renaissance project page](/projects/everydayai-community/) offers a comprehensive look at AI's transformation of knowledge work.
 
 ---
 

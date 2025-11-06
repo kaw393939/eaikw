@@ -4,6 +4,9 @@ title: "The Messy Middle: AI's Impact on Jobs (2025-2035)"
 description: "History says you'll have a job in 2035. It just might not be the one you trained for. Here's what the transition period looks like—and how to navigate it."
 date: 2025-11-20
 topics: ["AI", "Jobs", "Future of Work", "Career"]
+tags: ["AI jobs", "future of work", "career transitions", "AI unemployment", "job displacement", "reskilling"]
+keywords: ["AI impact on jobs", "will AI take my job", "AI job displacement", "future of work AI", "AI career transitions", "job market AI", "AI unemployment", "reskilling for AI"]
+excerpt: "300M jobs affected. 60% of 2024 jobs didn't exist in 1940. History says you'll work—but the 2025-2035 transition will be compressed, uneven, and challenging."
 ---
 
 "Will AI take my job?"
@@ -171,9 +174,19 @@ Technology doesn't determine outcomes—**our collective choices about managing 
 
 ---
 
-**Read the full "Second Renaissance" analysis:** [The Second Renaissance: A Balanced Look at AI's Transformation](/projects/everydayai-community/)
+## Related Reading
 
-**Related Reading:**
-- [The Second Renaissance: Why AI Isn't Like the Printing Press](/blog/second-renaissance-not-like-printing-press/)
+**Explore the full analysis:**  
+[The Second Renaissance: A Balanced Look at AI's Transformation](/projects/everydayai-community/) - Complete picture of AI's transformation timeline
+
+**Understand the context:**
+- [The Second Renaissance: Why AI Isn't Like the Printing Press](/blog/second-renaissance-not-like-printing-press/) - Compressed disruption timelines
+- [AGI in 5 Years? Why AI Leaders Are Wrong (And Right)](/blog/agi-timelines-who-is-right/) - When capabilities might arrive
+- [AI Productivity Gains: Reality vs Hype](/blog/ai-productivity-reality-vs-hype/) - What the data shows about current impact
+
+**Build resilience:**
+- [The Confidence Trap: Why Trusting AI Makes You Think Less](/blog/confidence-trap-trusting-ai-makes-you-think-less/) - Maintain valuable cognitive skills
+- [Don't Let AI Make You Lazy: A Practical Guide](/blog/dont-let-ai-make-you-lazy-staying-sharp/) - Weekly practice for cognitive fitness
+- [From Doer to Steward: How AI Is Rewiring the Way You Think](/blog/from-doer-to-steward-how-ai-changes-thinking/) - Adapt to new cognitive models
 - [AI Productivity Gains: Reality vs Hype](/blog/ai-productivity-reality-vs-hype/)
 - [The Skills That Matter in an AI World](/blog/skills-that-matter/)

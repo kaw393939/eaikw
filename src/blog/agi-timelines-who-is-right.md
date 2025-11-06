@@ -4,6 +4,9 @@ title: "AGI in 5 Years? Why AI Leaders Are Wrong (And Right)"
 description: "OpenAI's CEO says AGI by 2030. 2,700 AI researchers say 2047. Both groups have skin in the game. Here's how to think about wildly divergent predictions."
 date: 2025-11-15
 topics: ["AI", "AGI", "Technology", "Future"]
+tags: ["AGI", "AI predictions", "artificial general intelligence", "AI timelines", "technology forecasting"]
+keywords: ["AGI timeline", "when will AGI arrive", "AGI predictions", "Sam Altman AGI", "artificial general intelligence", "AI research predictions", "AGI 2030", "human level AI"]
+excerpt: "Sam Altman: AGI by 2030. 2,700 researchers: 2047. Why both might be right—and why it matters less than you think. Understanding incentives behind AI predictions."
 ---
 
 "AGI could arrive in 4-5 years." — Sam Altman, OpenAI CEO  
@@ -197,9 +200,19 @@ Most of us aren't.
 
 ---
 
-**Read the full "Second Renaissance" analysis:** [The Second Renaissance: A Balanced Look at AI's Transformation](/projects/everydayai-community/)
+## Related Reading
 
-**Related Reading:**
+**Understand the bigger picture:**  
+[The Second Renaissance: A Balanced Look at AI's Transformation](/projects/everydayai-community/) - Complete analysis of AI's compressed timeline
+
+**Connect the dots:**
+- [The Second Renaissance: Why AI Isn't Like the Printing Press](/blog/second-renaissance-not-like-printing-press/) - Why speed of change matters
+- [AI Productivity Gains: Reality vs Hype](/blog/ai-productivity-reality-vs-hype/) - Separating real progress from projections
+- [The Messy Middle: AI's Impact on Jobs (2025-2035)](/blog/ai-job-messy-middle/) - What happens before AGI arrives
+
+**Stay sharp in the transition:**
+- [The Confidence Trap: Why Trusting AI Makes You Think Less](/blog/confidence-trap-trusting-ai-makes-you-think-less/) - Maintaining cognitive agency
+- [Don't Let AI Make You Lazy: A Practical Guide](/blog/dont-let-ai-make-you-lazy-staying-sharp/) - Actionable tactics for critical thinking
 - [The Second Renaissance: Why AI Isn't Like the Printing Press](/blog/second-renaissance-not-like-printing-press/)
 - [AI Productivity Gains: Reality vs Hype](/blog/ai-productivity-reality-vs-hype/)
 - [The Messy Middle: AI's Impact on Jobs](/blog/ai-job-messy-middle/)

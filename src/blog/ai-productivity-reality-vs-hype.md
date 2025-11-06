@@ -4,6 +4,9 @@ title: "AI Productivity Gains: Reality vs Hype"
 description: "Your AI assistant saves you 2.2 hours a week, not your entire job. Here's what the data actually shows about AI productivity—and why trillion-dollar projections might be premature."
 date: 2025-11-18
 topics: ["AI", "Productivity", "Business", "Economics"]
+tags: ["AI productivity", "productivity data", "AI business impact", "AI economics", "workplace AI"]
+keywords: ["AI productivity gains", "AI productivity data", "GitHub Copilot productivity", "AI work efficiency", "AI business value", "McKinsey AI report", "Goldman Sachs AI", "AI ROI"]
+excerpt: "Real data: 5.4% time savings, 13% faster task completion. Projections: $7 trillion GDP boost. What's actually happening when knowledge workers use AI daily?"
 ---
 
 "AI will boost global GDP by $7 trillion!" "Generative AI will add $4.4 trillion in annual productivity!" "This changes everything!"
@@ -146,9 +149,18 @@ The difference between hype and reality isn't that AI doesn't matter. It's that 
 
 ---
 
-**Read the full "Second Renaissance" analysis:** [The Second Renaissance: A Balanced Look at AI's Transformation](/projects/everydayai-community/)
+## Related Reading
 
-**Related Reading:**
-- [The Second Renaissance: Why AI Isn't Like the Printing Press](/blog/second-renaissance-not-like-printing-press/)
+**Understand the full context:**  
+[The Second Renaissance: A Balanced Look at AI's Transformation](/projects/everydayai-community/) - Complete analysis with data and predictions
+
+**Make sense of the moment:**
+- [The Second Renaissance: Why AI Isn't Like the Printing Press](/blog/second-renaissance-not-like-printing-press/) - Why compressed timelines matter
+- [AGI in 5 Years? Why AI Leaders Are Wrong (And Right)](/blog/agi-timelines-who-is-right/) - Understanding divergent predictions
+- [The Messy Middle: AI's Impact on Jobs (2025-2035)](/blog/ai-job-messy-middle/) - Navigating the transition period
+
+**Maintain your edge:**
+- [The Confidence Trap: Why Trusting AI Makes You Think Less](/blog/confidence-trap-trusting-ai-makes-you-think-less/) - Don't let productivity gains erode thinking
+- [From Doer to Steward: How AI Is Rewiring the Way You Think](/blog/from-doer-to-steward-how-ai-changes-thinking/) - Understanding cognitive shifts
 - [The Messy Middle: AI's Impact on Jobs (2025-2035)](/blog/ai-job-messy-middle/)
 - [How to Think About AI](/blog/how-to-think-about-ai/)
