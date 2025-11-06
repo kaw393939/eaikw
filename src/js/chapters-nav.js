@@ -29,10 +29,12 @@ class ChaptersNavigation {
    * Find all H2 headings with IDs (chapters)
    */
   findChapters() {
-    const contentArea = document.querySelector('.chapters-content .prose-swiss');
-    if (!contentArea) return;
+    const contentArea = document.querySelector(".chapters-content .prose-swiss");
+    if (!contentArea) {
+      return;
+    }
 
-    const headings = contentArea.querySelectorAll('h2[id]');
+    const headings = contentArea.querySelectorAll("h2[id]");
     this.chapters = Array.from(headings).map((heading, index) => ({
       id: heading.id,
       title: heading.textContent.trim(),
@@ -55,14 +57,8 @@ class ChaptersNavigation {
 
     this.chapters.forEach((chapter, index) => {
       // Check if we need to add a group title
-      const group = this.chapterGroups.find(
-        (g) => index >= g.start && index <= g.end
-      );
-      if (
-        group &&
-        index === group.start &&
-        (currentGroupIndex === 0 || index !== 0)
-      ) {
+      const group = this.chapterGroups.find((g) => index >= g.start && index <= g.end);
+      if (group && index === group.start && (currentGroupIndex === 0 || index !== 0)) {
         html += `<li class="chapters-section-title">${group.title}</li>`;
         currentGroupIndex++;
       }
@@ -120,20 +116,20 @@ class ChaptersNavigation {
    * Setup scroll spy to track current chapter
    */
   setupScrollSpy() {
-    if (this.chapters.length === 0) return;
+    if (this.chapters.length === 0) {
+      return;
+    }
 
     const observerOptions = {
       root: null,
-      rootMargin: '-100px 0px -50% 0px',
+      rootMargin: "-100px 0px -50% 0px",
       threshold: 0,
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const chapterIndex = this.chapters.findIndex(
-            (ch) => ch.element === entry.target
-          );
+          const chapterIndex = this.chapters.findIndex((ch) => ch.element === entry.target);
           if (chapterIndex !== -1) {
             this.setActiveChapter(chapterIndex);
           }
@@ -146,7 +142,7 @@ class ChaptersNavigation {
     });
 
     // Also track scroll progress
-    window.addEventListener('scroll', () => this.updateProgress(), {
+    window.addEventListener("scroll", () => this.updateProgress(), {
       passive: true,
     });
 
@@ -161,12 +157,12 @@ class ChaptersNavigation {
     this.currentChapter = index;
 
     // Update navigation active state
-    const navLinks = document.querySelectorAll('#chapters-list a');
+    const navLinks = document.querySelectorAll("#chapters-list a");
     navLinks.forEach((link, i) => {
       if (i === index) {
-        link.classList.add('active');
+        link.classList.add("active");
       } else {
-        link.classList.remove('active');
+        link.classList.remove("active");
       }
     });
 
@@ -194,7 +190,7 @@ class ChaptersNavigation {
     );
 
     progressEl.textContent = `${scrollPercent}%`;
-    
+
     if (progressFill) {
       progressFill.style.width = `${scrollPercent}%`;
     }
@@ -204,23 +200,25 @@ class ChaptersNavigation {
    * Setup previous/next chapter buttons
    */
   setupNavButtons() {
-    const prevBtn = document.getElementById('prev-chapter');
-    const nextBtn = document.getElementById('next-chapter');
+    const prevBtn = document.getElementById("prev-chapter");
+    const nextBtn = document.getElementById("next-chapter");
 
-    if (!prevBtn || !nextBtn) return;
+    if (!prevBtn || !nextBtn) {
+      return;
+    }
 
-    prevBtn.addEventListener('click', () => {
+    prevBtn.addEventListener("click", () => {
       if (this.currentChapter > 0) {
         const prevChapter = this.chapters[this.currentChapter - 1];
-        prevChapter.element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        prevChapter.element.scrollIntoView({ behavior: "smooth", block: "start" });
         history.pushState(null, null, `#${prevChapter.id}`);
       }
     });
 
-    nextBtn.addEventListener('click', () => {
+    nextBtn.addEventListener("click", () => {
       if (this.currentChapter < this.chapters.length - 1) {
         const nextChapter = this.chapters[this.currentChapter + 1];
-        nextChapter.element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        nextChapter.element.scrollIntoView({ behavior: "smooth", block: "start" });
         history.pushState(null, null, `#${nextChapter.id}`);
       }
     });
@@ -232,10 +230,12 @@ class ChaptersNavigation {
    * Update prev/next button states
    */
   updateNavButtons() {
-    const prevBtn = document.getElementById('prev-chapter');
-    const nextBtn = document.getElementById('next-chapter');
+    const prevBtn = document.getElementById("prev-chapter");
+    const nextBtn = document.getElementById("next-chapter");
 
-    if (!prevBtn || !nextBtn) return;
+    if (!prevBtn || !nextBtn) {
+      return;
+    }
 
     prevBtn.disabled = this.currentChapter === 0;
     nextBtn.disabled = this.currentChapter === this.chapters.length - 1;
@@ -287,8 +287,10 @@ class ChaptersNavigation {
    */
   setupMobileToggle() {
     // Create toggle button for mobile
-    const nav = document.getElementById('chapters-nav');
-    if (!nav) return;
+    const nav = document.getElementById("chapters-nav");
+    if (!nav) {
+      return;
+    }
 
     // Only create toggle on mobile
     if (window.innerWidth <= 768) {
@@ -296,15 +298,17 @@ class ChaptersNavigation {
     }
 
     // Handle resize
-    window.addEventListener('resize', () => {
+    window.addEventListener("resize", () => {
       if (window.innerWidth <= 768) {
-        if (!document.querySelector('.chapters-toggle')) {
+        if (!document.querySelector(".chapters-toggle")) {
           this.createMobileToggle(nav);
         }
       } else {
-        const toggle = document.querySelector('.chapters-toggle');
-        if (toggle) toggle.remove();
-        nav.classList.remove('open');
+        const toggle = document.querySelector(".chapters-toggle");
+        if (toggle) {
+          toggle.remove();
+        }
+        nav.classList.remove("open");
       }
     });
   }
@@ -313,34 +317,36 @@ class ChaptersNavigation {
    * Create mobile toggle button
    */
   createMobileToggle(nav) {
-    const existingToggle = document.querySelector('.chapters-toggle');
-    if (existingToggle) return;
+    const existingToggle = document.querySelector(".chapters-toggle");
+    if (existingToggle) {
+      return;
+    }
 
-    const toggle = document.createElement('button');
-    toggle.className = 'chapters-toggle';
-    toggle.textContent = 'Chapters';
-    toggle.setAttribute('aria-label', 'Toggle chapter navigation');
+    const toggle = document.createElement("button");
+    toggle.className = "chapters-toggle";
+    toggle.textContent = "Chapters";
+    toggle.setAttribute("aria-label", "Toggle chapter navigation");
 
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
-      toggle.textContent = nav.classList.contains('open') ? 'Close' : 'Chapters';
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("open");
+      toggle.textContent = nav.classList.contains("open") ? "Close" : "Chapters";
     });
 
     document.body.appendChild(toggle);
 
     // Close on chapter click
-    nav.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('open');
-        toggle.textContent = 'Chapters';
+    nav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("open");
+        toggle.textContent = "Chapters";
       });
     });
   }
 }
 
 // Initialize when DOM is ready
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => {
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => {
     new ChaptersNavigation();
   });
 } else {

@@ -142,12 +142,17 @@ export default async function (eleventyConfig) {
     breaks: true,
     linkify: true,
   });
-  
+
   md.use(markdownItAnchor, {
     permalink: markdownItAnchor.permalink.headerLink(),
-    slugify: (s) => s.toLowerCase().replace(/[^\w\s-]/g, '').replace(/[\s_]+/g, '-').replace(/^-+|-+$/g, '')
+    slugify: (s) =>
+      s
+        .toLowerCase()
+        .replace(/[^\w\s-]/g, "")
+        .replace(/[\s_]+/g, "-")
+        .replace(/^-+|-+$/g, ""),
   });
-  
+
   eleventyConfig.setLibrary("md", md);
 
   return {
