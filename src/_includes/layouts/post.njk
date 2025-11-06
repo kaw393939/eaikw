@@ -2,13 +2,43 @@
 layout: layouts/base.njk
 ---
 
-{# Structured Data (JSON-LD) for SEO #}
+{# Breadcrumb Schema for Better Search Display #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ '/' | absoluteUrl(site.url) }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "{{ '/blog/' | absoluteUrl(site.url) }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ title }}",
+      "item": "{{ page.url | absoluteUrl(site.url) }}"
+    }
+  ]
+}
+</script>
+
+{# Enhanced BlogPosting Schema with Keywords and Article Section #}
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": "{{ title }}",
-    "description": "{{ description or title }}",
+    "description": "{{ description or title }}"{% if keywords %},
+    "keywords": "{{ keywords }}"{% endif %}{% if tags and tags[1] %},
+    "articleSection": "{{ tags[1] }}"{% endif %},
     "author": {
       "@type": "Person",
       "name": "{{ site.author }}"
