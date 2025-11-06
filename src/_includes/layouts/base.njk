@@ -3,17 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    {# Basic Meta #}
     <title>{% if title %}{{ title }} | {% endif %}{{ site.title }}</title>
     <meta name="description" content="{{ description or site.description }}">
+    <meta name="author" content="{{ site.author }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    
+    {# Open Graph Meta Tags for Social Sharing #}
+    <meta property="og:type" content="{% if tags and 'blog' in tags %}article{% else %}website{% endif %}">
+    <meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:description" content="{{ description or site.description }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:locale" content="en_US">
+    {% if image %}
+    <meta property="og:image" content="{{ site.url }}{{ image }}">
+    <meta property="og:image:alt" content="{{ title or site.title }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    {% else %}
+    <meta property="og:image" content="{{ site.url }}/images/og-default.png">
+    <meta property="og:image:alt" content="{{ site.title }} - {{ site.description }}">
+    {% endif %}
+    {% if tags and 'blog' in tags %}
+    <meta property="article:published_time" content="{{ date | dateToISO }}">
+    <meta property="article:author" content="{{ site.author }}">
+    {% for tag in tags %}{% if tag != 'blog' %}<meta property="article:tag" content="{{ tag }}">{% endif %}{% endfor %}
+    {% endif %}
+    
+    {# Twitter Card Meta Tags #}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{{ description or site.description }}">
+    {% if image %}
+    <meta name="twitter:image" content="{{ site.url }}{{ image }}">
+    {% else %}
+    <meta name="twitter:image" content="{{ site.url }}/images/og-default.png">
+    {% endif %}
+    {% if site.social.twitter %}
+    <meta name="twitter:site" content="{{ site.social.twitter }}">
+    <meta name="twitter:creator" content="{{ site.social.twitter }}">
+    {% endif %}
+    
+    {# Favicon and Icons #}
     <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | baseUrl }}">
+    
+    {# Stylesheets #}
     <link rel="preload" href="{{ '/css/main.css' | baseUrl }}" as="style">
     <link rel="stylesheet" href="{{ '/css/main.css' | baseUrl }}">
     <link rel="stylesheet" href="{{ '/css/print.css' | baseUrl }}" media="print">
+    
+    {# Fonts #}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    
+    {# RSS Feed #}
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS Feed" href="{{ site.url }}/feed.xml">
+    
+    {# JSON-LD Structured Data #}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "{{ site.url }}/#person",
+          "name": "{{ site.author }}",
+          "url": "{{ site.url }}",
+          "description": "{{ site.description }}",
+          {% if site.social.linkedin %}"sameAs": ["{{ site.social.linkedin }}"{% if site.social.github %}, "{{ site.social.github }}"{% endif %}{% if site.social.twitter %}, "{{ site.social.twitter }}"{% endif %}],{% endif %}
+          "jobTitle": "Director of Information Systems & Technology",
+          "worksFor": {
+            "@type": "EducationalOrganization",
+            "name": "New Jersey Institute of Technology"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "{{ site.url }}/#organization",
+          "name": "EverydayAI Community",
+          "url": "{{ site.url }}",
+          "description": "Students teaching Newark residents how to use AI every day—for health, legal help, education, budgets, and productivity.",
+          "founder": {
+            "@id": "{{ site.url }}/#person"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "{{ site.url }}/#website",
+          "url": "{{ site.url }}",
+          "name": "{{ site.title }}",
+          "description": "{{ site.description }}",
+          "publisher": {
+            "@id": "{{ site.url }}/#person"
+          }
+        }
+        {% if tags and 'blog' in tags %},
+        {
+          "@type": "BlogPosting",
+          "@id": "{{ site.url }}{{ page.url }}#article",
+          "headline": "{{ title }}",
+          "description": "{{ description or site.description }}",
+          "datePublished": "{{ date | dateToISO }}",
+          "dateModified": "{{ date | dateToISO }}",
+          "author": {
+            "@id": "{{ site.url }}/#person"
+          },
+          "publisher": {
+            "@id": "{{ site.url }}/#person"
+          },
+          {% if image %}"image": "{{ site.url }}{{ image }}",{% else %}"image": "{{ site.url }}/images/og-default.png",{% endif %}
+          "url": "{{ site.url }}{{ page.url }}",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "{{ site.url }}{{ page.url }}"
+          }
+        }
+        {% elif tags and 'projects' in tags %},
+        {
+          "@type": "CreativeWork",
+          "@id": "{{ site.url }}{{ page.url }}#project",
+          "name": "{{ title }}",
+          "description": "{{ description or site.description }}",
+          "author": {
+            "@id": "{{ site.url }}/#person"
+          },
+          {% if image %}"image": "{{ site.url }}{{ image }}",{% endif %}
+          "url": "{{ site.url }}{{ page.url }}"
+        }
+        {% endif %}
+      ]
+    }
+    </script>
 </head>
 <body class="font-sans antialiased text-neutral-900 bg-white min-h-screen flex flex-col">
     <!-- Swiss International Typographic Style Navigation -->

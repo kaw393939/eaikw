@@ -62,6 +62,9 @@ layout: layouts/base.njk
         <div class="prose-swiss" style="max-width: 65ch;">
           {{ content | safe }}
         </div>
+
+        {# Social Sharing Component #}
+        {% include "components/social-share.njk" %}
       </div>
     </div>
 
