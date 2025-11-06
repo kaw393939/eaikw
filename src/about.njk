@@ -247,6 +247,36 @@ description: Learn more about my background, skills, and experience
               </svg>
             </a>
             {% endif %}
+            {% if site.social.youtube %}
+            <a
+              href="{{ site.social.youtube }}"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-contact-link
+              class="contact-link group"
+              style="
+                display: flex; 
+                align-items: center; 
+                justify-content: space-between;
+                padding: var(--space-lg) var(--space-xl);
+                border: 2px solid var(--swiss-black);
+                background-color: var(--swiss-white);
+                text-decoration: none;
+                color: var(--swiss-black);
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                position: relative;
+                overflow: hidden;
+              "
+            >
+              <span>YouTube</span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition: transform 0.3s ease;">
+                <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="square"/>
+              </svg>
+            </a>
+            {% endif %}
           </div>
         </div>
       </div>

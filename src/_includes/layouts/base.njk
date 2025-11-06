@@ -79,7 +79,7 @@
           "name": "{{ site.author }}",
           "url": "{{ site.url }}",
           "description": "{{ site.description }}",
-          {% if site.social.linkedin %}"sameAs": ["{{ site.social.linkedin }}"{% if site.social.github %}, "{{ site.social.github }}"{% endif %}{% if site.social.twitter %}, "{{ site.social.twitter }}"{% endif %}],{% endif %}
+          {% if site.social.linkedin %}"sameAs": ["{{ site.social.linkedin }}"{% if site.social.github %}, "{{ site.social.github }}"{% endif %}{% if site.social.twitter %}, "{{ site.social.twitter }}"{% endif %}{% if site.social.youtube %}, "{{ site.social.youtube }}"{% endif %}],{% endif %}
           "jobTitle": "Director of Information Systems & Technology",
           "worksFor": {
             "@type": "EducationalOrganization",
