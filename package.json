@@ -51,7 +51,7 @@
   "author": "Keith Williams",
   "license": "MIT",
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy": "^3.1.2",
     "@11ty/eleventy-img": "^6.0.4",
     "@alpinejs/focus": "^3.15.1",
     "@commitlint/cli": "^20.1.0",
