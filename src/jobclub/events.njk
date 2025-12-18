@@ -4,6 +4,8 @@ title: Events - Job Club
 description: Attend Job Club events, workshops, and networking sessions led by industry professionals and NJIT mentors.
 ---
 
+{% import "components/ui.njk" as ui %}
+
 <div class="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
   <div class="max-w-5xl mx-auto">
     <!-- Header -->
@@ -12,158 +14,44 @@ description: Attend Job Club events, workshops, and networking sessions led by i
       <p class="text-xl text-gray-700">Connect with peers, learn from mentors, and build your professional network through our workshops, office hours, and networking events.</p>
     </div>
 
-    <!-- Events Grid -->
-    <div class="space-y-6 mb-12">
-      <!-- Event 1: Workshop -->
-      <article class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden" data-testid="event-card">
-        <div class="grid md:grid-cols-4 gap-6 p-6">
-          <div class="md:col-span-3">
-            <div class="flex items-center gap-2 mb-2">
-              <span class="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-xs font-bold rounded-full">Workshop</span>
-              <span class="inline-block px-3 py-1 bg-green-100 text-green-800 text-xs font-bold rounded-full">Upcoming</span>
-            </div>
-            <h2 class="text-2xl font-bold text-gray-900 mb-2">
-              <a href="#" class="hover:text-blue-600">Building an AI Portfolio That Gets You Interviews</a>
-            </h2>
-            <p class="text-gray-700 mb-4">
-              Learn how to create a portfolio that showcases your AI skills and catches the eye of recruiters. We'll cover project selection, showcasing on GitHub, and portfolio websites.
-            </p>
-            <div class="space-y-2 text-sm text-gray-600">
-              <p><strong>📅 Date:</strong> December 20, 2025 at 6:00 PM</p>
-              <p><strong>📍 Location:</strong> NJIT Campus - Building A, Room 301</p>
-              <p><strong>👤 Led by:</strong> Keith Williams, Enterprise AI Director</p>
-            </div>
-          </div>
-          <div class="flex flex-col gap-3">
-            <a href="https://calendly.com/jobclub" class="inline-block px-4 py-2 bg-blue-600 text-white font-bold text-center rounded-lg hover:bg-blue-700 transition">
-              Register
-            </a>
-            <a href="#" class="inline-block px-4 py-2 border-2 border-gray-300 text-gray-700 font-bold text-center rounded-lg hover:bg-gray-50 transition">
-              Add to Calendar
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Event 2: Office Hours -->
-      <article class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden" data-testid="event-card">
-        <div class="grid md:grid-cols-4 gap-6 p-6">
-          <div class="md:col-span-3">
-            <div class="flex items-center gap-2 mb-2">
-              <span class="inline-block px-3 py-1 bg-purple-100 text-purple-800 text-xs font-bold rounded-full">Office Hours</span>
-              <span class="inline-block px-3 py-1 bg-green-100 text-green-800 text-xs font-bold rounded-full">Recurring</span>
-            </div>
-            <h2 class="text-2xl font-bold text-gray-900 mb-2">
-              <a href="#" class="hover:text-blue-600">Career Mentoring Office Hours</a>
-            </h2>
-            <p class="text-gray-700 mb-4">
-              One-on-one career guidance sessions with mentors. Discuss your goals, get resume feedback, mock interviews, and personalized career roadmaps.
-            </p>
-            <div class="space-y-2 text-sm text-gray-600">
-              <p><strong>📅 When:</strong> Every Tuesday & Thursday, 5:00 PM - 7:00 PM</p>
-              <p><strong>📍 Format:</strong> Zoom (link sent via Discord)</p>
-              <p><strong>💬 Mentors:</strong> Rotating NJIT faculty and industry professionals</p>
-            </div>
-          </div>
-          <div class="flex flex-col gap-3">
-            <a href="https://calendly.com/jobclub" class="inline-block px-4 py-2 bg-blue-600 text-white font-bold text-center rounded-lg hover:bg-blue-700 transition">
-              Schedule Session
-            </a>
-            <a href="https://discord.gg/jobclub" class="inline-block px-4 py-2 border-2 border-gray-300 text-gray-700 font-bold text-center rounded-lg hover:bg-gray-50 transition">
-              Join Discord
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Event 3: Networking -->
-      <article class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden" data-testid="event-card">
-        <div class="grid md:grid-cols-4 gap-6 p-6">
-          <div class="md:col-span-3">
-            <div class="flex items-center gap-2 mb-2">
-              <span class="inline-block px-3 py-1 bg-orange-100 text-orange-800 text-xs font-bold rounded-full">Networking</span>
-              <span class="inline-block px-3 py-1 bg-green-100 text-green-800 text-xs font-bold rounded-full">Upcoming</span>
-            </div>
-            <h2 class="text-2xl font-bold text-gray-900 mb-2">
-              <a href="#" class="hover:text-blue-600">AI in Industry: Meet the Professionals</a>
-            </h2>
-            <p class="text-gray-700 mb-4">
-              Network with AI professionals from leading companies including Google, Microsoft, and AI startups. Learn about career paths, company cultures, and current hiring opportunities.
-            </p>
-            <div class="space-y-2 text-sm text-gray-600">
-              <p><strong>📅 Date:</strong> January 10, 2026 at 5:30 PM</p>
-              <p><strong>📍 Location:</strong> NJIT Student Center - Main Ballroom</p>
-              <p><strong>🎤 Speakers:</strong> AI engineers and tech leads from top companies</p>
-            </div>
-          </div>
-          <div class="flex flex-col gap-3">
-            <a href="https://calendly.com/jobclub" class="inline-block px-4 py-2 bg-blue-600 text-white font-bold text-center rounded-lg hover:bg-blue-700 transition">
-              Register
-            </a>
-            <a href="#" class="inline-block px-4 py-2 border-2 border-gray-300 text-gray-700 font-bold text-center rounded-lg hover:bg-gray-50 transition">
-              Add to Calendar
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Event 4: Hack Night -->
-      <article class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden" data-testid="event-card">
-        <div class="grid md:grid-cols-4 gap-6 p-6">
-          <div class="md:col-span-3">
-            <div class="flex items-center gap-2 mb-2">
-              <span class="inline-block px-3 py-1 bg-red-100 text-red-800 text-xs font-bold rounded-full">Hack Night</span>
-              <span class="inline-block px-3 py-1 bg-green-100 text-green-800 text-xs font-bold rounded-full">Recurring</span>
-            </div>
-            <h2 class="text-2xl font-bold text-gray-900 mb-2">
-              <a href="#" class="hover:text-blue-600">AI Project Hack Nights</a>
-            </h2>
-            <p class="text-gray-700 mb-4">
-              Work on real AI projects, collaborate with peers, and build portfolio-ready work. Bring your laptop and ideas, or join an existing team project.
-            </p>
-            <div class="space-y-2 text-sm text-gray-600">
-              <p><strong>📅 When:</strong> Every Friday, 6:00 PM - 9:00 PM</p>
-              <p><strong>📍 Location:</strong> NJIT Makerspace or Zoom</p>
-              <p><strong>💡 Focus:</strong> AI/ML projects, portfolio building, collaboration</p>
-            </div>
-          </div>
-          <div class="flex flex-col gap-3">
-            <a href="https://discord.gg/jobclub" class="inline-block px-4 py-2 bg-blue-600 text-white font-bold text-center rounded-lg hover:bg-blue-700 transition">
-              Join Discord
-            </a>
-            <a href="#" class="inline-block px-4 py-2 border-2 border-gray-300 text-gray-700 font-bold text-center rounded-lg hover:bg-gray-50 transition">
-              Learn More
-            </a>
-          </div>
-        </div>
-      </article>
+    <!-- Events Grid (data-driven) -->
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      {% for e in events %}
+        {{ ui.simpleCard({
+          kicker: e.when ~ ' · ' ~ e.where,
+          title: e.title,
+          body: e.summary,
+          cta: 'Register',
+          href: e.registerUrl
+        }) }}
+      {% endfor %}
     </div>
 
     <!-- Event Types Legend -->
-    <section class="bg-white rounded-lg p-8 border border-gray-200">
+    <section class="panel">
       <h2 class="text-2xl font-bold text-gray-900 mb-6">Event Types</h2>
       <div class="grid md:grid-cols-2 gap-8">
         <div>
-          <h3 class="font-bold text-blue-600 mb-2">🎓 Workshops</h3>
+          <h3 class="font-bold text-accent mb-2">🎓 Workshops</h3>
           <p class="text-gray-700">Learn specific skills from mentors and professionals. Topics include portfolio building, resume writing, interview prep, and technical AI skills.</p>
         </div>
         <div>
-          <h3 class="font-bold text-purple-600 mb-2">👥 Office Hours</h3>
+          <h3 class="font-bold text-accent mb-2">👥 Office Hours</h3>
           <p class="text-gray-700">One-on-one mentoring sessions. Get personalized guidance on your career path, review your materials, or ask about specific roles and companies.</p>
         </div>
         <div>
-          <h3 class="font-bold text-orange-600 mb-2">🤝 Networking</h3>
+          <h3 class="font-bold text-accent mb-2">🤝 Networking</h3>
           <p class="text-gray-700">Meet professionals from AI companies, startups, and tech firms. Learn about company cultures, hiring processes, and real career paths in AI.</p>
         </div>
         <div>
-          <h3 class="font-bold text-red-600 mb-2">💻 Hack Nights</h3>
+          <h3 class="font-bold text-accent mb-2">💻 Hack Nights</h3>
           <p class="text-gray-700">Collaborate on real AI projects. Build portfolio pieces, learn from peers, and create work that impresses recruiters and employers.</p>
         </div>
       </div>
     </section>
 
     <!-- Newsletter Signup -->
-    <section class="mt-12 bg-blue-600 rounded-lg p-8 text-center text-white">
+    <section class="newsletter">
       <h2 class="text-2xl font-bold mb-4">Never Miss an Event</h2>
       <p class="mb-6">Subscribe to get Job Club events delivered to your inbox every week.</p>
       <form class="max-w-md mx-auto flex gap-2">
@@ -171,9 +59,9 @@ description: Attend Job Club events, workshops, and networking sessions led by i
           type="email" 
           placeholder="your@email.com" 
           required
-          class="flex-1 px-4 py-2 rounded text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300"
+          class="input"
         >
-        <button type="submit" class="px-6 py-2 bg-white text-blue-600 font-bold rounded hover:bg-gray-100 transition">
+        <button type="submit" class="btn-inverted">
           Subscribe
         </button>
       </form>

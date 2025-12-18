@@ -1,0 +1,30 @@
+[
+  {
+    "slug": "linkedin-ai",
+    "title": "Optimize LinkedIn for AI roles",
+    "tag": "LinkedIn",
+    "summary": "Headline, summary, and proof-of-work blocks that recruiters skim.",
+    "href": "/jobclub/resources/"
+  },
+  {
+    "slug": "consulting-starter",
+    "title": "AI Consulting Starter Kit",
+    "tag": "Consulting",
+    "summary": "Discovery scripts, pricing starter, and proposal outline to run a pilot.",
+    "href": "/jobclub/resources/"
+  },
+  {
+    "slug": "portfolio-checklist",
+    "title": "Portfolio Checklist + Examples",
+    "tag": "Portfolio",
+    "summary": "Make recruiters see your outcomes in under 60 seconds.",
+    "href": "/portfolio/"
+  },
+  {
+    "slug": "calendly-zapier",
+    "title": "Calendly + Zapier Setup",
+    "tag": "Scheduling",
+    "summary": "Automate intros, follow-ups, and CRM entry.",
+    "href": "/jobclub/resources/"
+  }
+]

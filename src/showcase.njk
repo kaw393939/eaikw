@@ -11,7 +11,7 @@ eleventyExcludeFromCollections: true
   <p class="text-fluid-body text-neutral-600 mb-12">Visual testing reference for all UI components</p>
 
   <!-- Typography Showcase -->
-  <section data-component="typography-showcase" class="mb-16 p-8 bg-neutral-50 rounded-lg">
+  <section data-component="typography-showcase" class="mb-16 panel">
     <h2 class="text-fluid-h2 font-bold mb-6">Typography</h2>
 
     <div class="space-y-4">
@@ -61,22 +61,22 @@ eleventyExcludeFromCollections: true
     <h2 class="text-fluid-h2 font-bold mb-6">Shadow System</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-      <div class="p-6 bg-white shadow-swiss-sm rounded-lg">
+      <div class="panel">
         <p class="font-medium mb-2">Subtle</p>
         <p class="text-sm text-neutral-600">shadow-swiss-sm</p>
       </div>
 
-      <div class="p-6 bg-white shadow-swiss-md rounded-lg">
+      <div class="panel">
         <p class="font-medium mb-2">Medium</p>
         <p class="text-sm text-neutral-600">shadow-swiss-md</p>
       </div>
 
-      <div class="p-6 bg-white shadow-swiss-lg rounded-lg">
+      <div class="panel">
         <p class="font-medium mb-2">Strong</p>
         <p class="text-sm text-neutral-600">shadow-swiss-lg</p>
       </div>
 
-      <div class="p-6 bg-white shadow-swiss-hover rounded-lg">
+      <div class="panel">
         <p class="font-medium mb-2">Hover</p>
         <p class="text-sm text-neutral-600">shadow-swiss-hover</p>
       </div>
@@ -88,19 +88,19 @@ eleventyExcludeFromCollections: true
     <h2 class="text-fluid-h2 font-bold mb-6">Hover Effects</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="p-8 bg-white border border-neutral-200 rounded-lg hover-lift">
+      <div class="panel">
         <p class="font-medium mb-2">Lift Effect</p>
-        <p class="text-sm text-neutral-600">hover-lift class</p>
+        <p class="text-sm text-neutral-600">lift effect neutralized</p>
       </div>
 
-      <div class="p-8 bg-white border border-neutral-200 rounded-lg hover-glow">
+      <div class="panel">
         <p class="font-medium mb-2">Glow Effect</p>
-        <p class="text-sm text-neutral-600">hover-glow class</p>
+        <p class="text-sm text-neutral-600">glow effect neutralized</p>
       </div>
 
-      <div class="p-8 bg-white border border-neutral-200 rounded-lg hover-scale">
+      <div class="panel">
         <p class="font-medium mb-2">Scale Effect</p>
-        <p class="text-sm text-neutral-600">hover-scale class</p>
+        <p class="text-sm text-neutral-600">scale effect neutralized</p>
       </div>
     </div>
   </section>
@@ -109,17 +109,14 @@ eleventyExcludeFromCollections: true
   <section data-component="glass-showcase" class="mb-16">
     <h2 class="text-fluid-h2 font-bold mb-6">Glassmorphism</h2>
 
-    <div
-      class="relative p-12 rounded-lg overflow-hidden"
-      style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
-    >
+    <div class="panel" style="background-color: var(--swiss-gray-100); color: var(--swiss-black);">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="p-6 glass-light rounded-lg">
+        <div class="panel">
           <p class="font-medium mb-2">Glass Light</p>
           <p class="text-sm">Frosted glass effect on light backgrounds</p>
         </div>
 
-        <div class="p-6 glass-dark rounded-lg text-white">
+        <div class="panel text-white">
           <p class="font-medium mb-2">Glass Dark</p>
           <p class="text-sm">Frosted glass effect on dark backgrounds</p>
         </div>
@@ -160,29 +157,21 @@ eleventyExcludeFromCollections: true
     <h2 class="text-fluid-h2 font-bold mb-6">Cards</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <article
-        class="bg-white border-2 border-neutral-900 rounded-lg overflow-hidden transition-all duration-250 hover:shadow-swiss-lg hover:-translate-y-1"
-        data-component="project-card"
-        data-testid="showcase-project-card"
-      >
+      <article class="card" data-component="project-card" data-testid="showcase-project-card">
         <div class="p-6">
           <h3 class="text-xl font-bold mb-2">
             <a href="#" class="text-neutral-900 hover:text-primary-600 transition-colors">Project Card</a>
           </h3>
           <p class="text-neutral-600 mb-4">This is a sample project card with hover effects and shadow system.</p>
           <div class="flex flex-wrap gap-2">
-            <span class="bg-neutral-50 text-neutral-600 px-2 py-1 rounded text-sm">React</span>
-            <span class="bg-neutral-50 text-neutral-600 px-2 py-1 rounded text-sm">TypeScript</span>
-            <span class="bg-neutral-50 text-neutral-600 px-2 py-1 rounded text-sm">Tailwind</span>
+            <span class="bg-neutral-50 text-neutral-600 px-2 py-1 text-sm">React</span>
+            <span class="bg-neutral-50 text-neutral-600 px-2 py-1 text-sm">TypeScript</span>
+            <span class="bg-neutral-50 text-neutral-600 px-2 py-1 text-sm">Tailwind</span>
           </div>
         </div>
       </article>
 
-      <article
-        class="bg-white border-2 border-neutral-900 rounded-lg overflow-hidden transition-all duration-250 hover:shadow-swiss-lg hover:-translate-y-1"
-        data-component="blog-card"
-        data-testid="showcase-blog-card"
-      >
+      <article class="card" data-component="blog-card" data-testid="showcase-blog-card">
         <div class="p-6">
           <h3 class="text-xl font-bold mb-2">
             <a href="#" class="text-neutral-900 hover:text-primary-600 transition-colors">Blog Card</a>
@@ -191,8 +180,8 @@ eleventyExcludeFromCollections: true
           <div class="flex items-center gap-4 text-neutral-500 text-sm">
             <time class="font-medium">November 4, 2025</time>
             <div class="flex flex-wrap gap-2">
-              <span class="bg-neutral-50 text-neutral-600 px-2 py-1 rounded text-sm">design</span>
-              <span class="bg-neutral-50 text-neutral-600 px-2 py-1 rounded text-sm">development</span>
+              <span class="bg-neutral-50 text-neutral-600 px-2 py-1 text-sm">design</span>
+              <span class="bg-neutral-50 text-neutral-600 px-2 py-1 text-sm">development</span>
             </div>
           </div>
         </div>
@@ -205,11 +194,11 @@ eleventyExcludeFromCollections: true
     <h2 class="text-fluid-h2 font-bold mb-6">Grid Patterns</h2>
 
     <div class="grid-asymmetric mb-8">
-      <div class="p-8 bg-primary-50 rounded-lg">
+      <div class="p-8 bg-primary-50">
         <p class="font-medium mb-2">Column 1 (1fr)</p>
         <p class="text-sm text-neutral-600">Asymmetric grid layout</p>
       </div>
-      <div class="p-8 bg-primary-100 rounded-lg">
+      <div class="p-8 bg-primary-100">
         <p class="font-medium mb-2">Column 2 (0.95fr)</p>
         <p class="text-sm text-neutral-600">Golden ratio proportions</p>
       </div>
@@ -224,34 +213,34 @@ eleventyExcludeFromCollections: true
       <div>
         <p class="font-medium mb-4">Primary Blues</p>
         <div class="grid grid-cols-5 md:grid-cols-10 gap-2">
-          <div class="h-16 bg-primary-50 rounded flex items-end justify-center pb-1">
+          <div class="h-16 bg-primary-50 flex items-end justify-center pb-1">
             <span class="text-xs">50</span>
           </div>
-          <div class="h-16 bg-primary-100 rounded flex items-end justify-center pb-1">
+          <div class="h-16 bg-primary-100 flex items-end justify-center pb-1">
             <span class="text-xs">100</span>
           </div>
-          <div class="h-16 bg-primary-200 rounded flex items-end justify-center pb-1">
+          <div class="h-16 bg-primary-200 flex items-end justify-center pb-1">
             <span class="text-xs">200</span>
           </div>
-          <div class="h-16 bg-primary-300 rounded flex items-end justify-center pb-1">
+          <div class="h-16 bg-primary-300 flex items-end justify-center pb-1">
             <span class="text-xs">300</span>
           </div>
-          <div class="h-16 bg-primary-400 rounded flex items-end justify-center pb-1">
+          <div class="h-16 bg-primary-400 flex items-end justify-center pb-1">
             <span class="text-xs text-white">400</span>
           </div>
-          <div class="h-16 bg-primary-500 rounded flex items-end justify-center pb-1">
+          <div class="h-16 bg-primary-500 flex items-end justify-center pb-1">
             <span class="text-xs text-white">500</span>
           </div>
-          <div class="h-16 bg-primary-600 rounded flex items-end justify-center pb-1">
+          <div class="h-16 bg-primary-600 flex items-end justify-center pb-1">
             <span class="text-xs text-white">600</span>
           </div>
-          <div class="h-16 bg-primary-700 rounded flex items-end justify-center pb-1">
+          <div class="h-16 bg-primary-700 flex items-end justify-center pb-1">
             <span class="text-xs text-white">700</span>
           </div>
-          <div class="h-16 bg-primary-800 rounded flex items-end justify-center pb-1">
+          <div class="h-16 bg-primary-800 flex items-end justify-center pb-1">
             <span class="text-xs text-white">800</span>
           </div>
-          <div class="h-16 bg-primary-900 rounded flex items-end justify-center pb-1">
+          <div class="h-16 bg-primary-900 flex items-end justify-center pb-1">
             <span class="text-xs text-white">900</span>
           </div>
         </div>
@@ -260,34 +249,34 @@ eleventyExcludeFromCollections: true
       <div>
         <p class="font-medium mb-4">Neutral Grays</p>
         <div class="grid grid-cols-5 md:grid-cols-10 gap-2">
-          <div class="h-16 bg-neutral-50 rounded border flex items-end justify-center pb-1">
+          <div class="h-16 bg-neutral-50 border flex items-end justify-center pb-1">
             <span class="text-xs">50</span>
           </div>
-          <div class="h-16 bg-neutral-100 rounded flex items-end justify-center pb-1">
+          <div class="h-16 bg-neutral-100 flex items-end justify-center pb-1">
             <span class="text-xs">100</span>
           </div>
-          <div class="h-16 bg-neutral-200 rounded flex items-end justify-center pb-1">
+          <div class="h-16 bg-neutral-200 flex items-end justify-center pb-1">
             <span class="text-xs">200</span>
           </div>
-          <div class="h-16 bg-neutral-300 rounded flex items-end justify-center pb-1">
+          <div class="h-16 bg-neutral-300 flex items-end justify-center pb-1">
             <span class="text-xs">300</span>
           </div>
-          <div class="h-16 bg-neutral-400 rounded flex items-end justify-center pb-1">
+          <div class="h-16 bg-neutral-400 flex items-end justify-center pb-1">
             <span class="text-xs">400</span>
           </div>
-          <div class="h-16 bg-neutral-500 rounded flex items-end justify-center pb-1">
+          <div class="h-16 bg-neutral-500 flex items-end justify-center pb-1">
             <span class="text-xs text-white">500</span>
           </div>
-          <div class="h-16 bg-neutral-600 rounded flex items-end justify-center pb-1">
+          <div class="h-16 bg-neutral-600 flex items-end justify-center pb-1">
             <span class="text-xs text-white">600</span>
           </div>
-          <div class="h-16 bg-neutral-700 rounded flex items-end justify-center pb-1">
+          <div class="h-16 bg-neutral-700 flex items-end justify-center pb-1">
             <span class="text-xs text-white">700</span>
           </div>
-          <div class="h-16 bg-neutral-800 rounded flex items-end justify-center pb-1">
+          <div class="h-16 bg-neutral-800 flex items-end justify-center pb-1">
             <span class="text-xs text-white">800</span>
           </div>
-          <div class="h-16 bg-neutral-900 rounded flex items-end justify-center pb-1">
+          <div class="h-16 bg-neutral-900 flex items-end justify-center pb-1">
             <span class="text-xs text-white">900</span>
           </div>
         </div>

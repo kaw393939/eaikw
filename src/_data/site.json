@@ -1,6 +1,6 @@
 {
-  "title": "Job Club - AI Career Accelerator",
-  "description": "Accelerate your AI career at NJIT with Job Club. Get mentored, build your portfolio, and land your dream role.",
+  "title": "Job Club - AI Career Accelerator (NJIT)",
+  "description": "Student-facing AI career accelerator for NJIT students to become AI consultants, startup founders, and AI-savvy developers with portfolio-first guidance.",
   "author": "NJIT Job Club",
   "url": "https://joshua31324324.github.io/eaikw",
   "social": {
@@ -9,15 +9,15 @@
     "linkedin": "https://linkedin.com/company/njit-job-club"
   },
   "jobclub": {
-    "tagline": "Turn Students Into Career-Ready AI Professionals",
-    "mission": "Provide a guided, automated onboarding experience that connects NJIT students to Discord, events, mentoring, and learning resources to build modern professional portfolios.",
+    "tagline": "Turn NJIT students into career-ready AI professionals.",
+    "mission": "Provide guided onboarding, mentor-backed sprints, and portfolio-first workflows so students can become AI consultants, founders, or AI-savvy developers.",
     "value_props": [
-      "Structured career pipeline",
-      "Discord community & mentoring",
-      "Professional portfolio guidance",
-      "Events & workshops",
-      "AI career resources",
-      "CRM & automation"
+      "Structured onboarding with checklists",
+      "Discord community and mentoring",
+      "Events, workshops, and office hours",
+      "Portfolio guidance with real examples",
+      "Automation-ready workflows (CRM, Discord)",
+      "SEO/performance-ready Eleventy stack"
     ]
   }
 }

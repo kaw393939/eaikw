@@ -54,7 +54,7 @@ layout: layouts/base.njk
       "name": "{{ site.title }}",
       "logo": {
         "@type": "ImageObject",
-        "url": "{{ '/favicon.svg' | absoluteUrl(site.url) }}"
+        "url": "{{ '/images/job-club-logo.png' | absoluteUrl(site.url) }}"
       }
     }{% if image %},
     "image": "{{ image | absoluteUrl(site.url) }}"
@@ -62,7 +62,7 @@ layout: layouts/base.njk
   }
 </script>
 
-<article class="py-6 md:py-8 lg:py-10">
+<article class="section section--md">
   <div class="swiss-container">
     {# Swiss header with asymmetric layout #}
     <header class="swiss-grid mb-6" style="border-left: 4px solid var(--swiss-red); padding-left: var(--space-md); padding-right: var(--space-md);">

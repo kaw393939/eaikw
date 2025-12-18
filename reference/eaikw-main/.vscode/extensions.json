@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "bradlc.vscode-tailwindcss",
+    "ms-vscode.vscode-json",
+    "formulahendry.auto-rename-tag",
+    "esbenp.prettier-vscode",
+    "ms-vscode.live-server",
+    "ritwickdey.liveserver",
+    "yzhang.markdown-all-in-one",
+    "davidanson.vscode-markdownlint",
+    "ronnidc.nunjucks"
+  ]
+}

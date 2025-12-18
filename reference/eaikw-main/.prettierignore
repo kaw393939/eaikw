@@ -1,0 +1,38 @@
+# Dependencies
+node_modules
+package-lock.json
+
+# Build outputs
+_site
+dist
+build
+*.bundle.js
+
+# Cache
+.cache
+.eleventy-cache
+
+# Reports
+lighthouse-report.html
+playwright-report
+test-results
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode
+.idea
+
+# Generated files
+*.min.css
+*.min.js
+
+# Nunjucks templates can be fragile with Prettier
+src/**/*.njk
+**/*.njk

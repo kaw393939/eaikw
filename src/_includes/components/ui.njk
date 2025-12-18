@@ -1,0 +1,101 @@
+{# Minimal UI macros to reduce repetitive markup across Job Club pages #}
+{% macro sectionHeader(kicker='', title='', body='', theme='light') %}
+  {% set isDark = theme == 'dark' %}
+  {% if isDark %}
+    {% set kickerColor = 'var(--swiss-gray-400)' %}
+    {% set titleColor = 'var(--swiss-white)' %}
+    {% set bodyColor = 'var(--swiss-gray-200)' %}
+  {% else %}
+    {% set kickerColor = 'var(--swiss-gray-600)' %}
+    {% set titleColor = 'var(--swiss-black)' %}
+    {% set bodyColor = 'var(--swiss-gray-700)' %}
+  {% endif %}
+  <div style="margin-bottom: var(--space-3xl);">
+    {% if kicker %}
+    <p class="text-xs uppercase tracking-widest font-bold" style="color: {{ kickerColor }}; letter-spacing: 0.2em;">{{ kicker }}</p>
+    {% endif %}
+    {% if title %}
+    <h2 class="font-black" style="font-size: var(--fluid-h2); margin-top: var(--space-md); margin-bottom: var(--space-md); letter-spacing: -0.02em; color: {{ titleColor }};">{{ title }}</h2>
+    {% endif %}
+    {% if body %}
+    <p class="text-lg" style="color: {{ bodyColor }}; max-width: 720px;">{{ body }}</p>
+    {% endif %}
+  </div>
+{% endmacro %}
+
+{% macro stepGrid(steps=[], columns=4, theme='light') %}
+  {% set isDark = theme == 'dark' %}
+  {% if isDark %}
+    {% set boxBorder = 'var(--swiss-white)' %}
+    {% set boxBg = 'transparent' %}
+    {% set kickerColor = 'var(--swiss-gray-300)' %}
+    {% set titleColor = 'var(--swiss-white)' %}
+    {% set bodyColor = 'var(--swiss-gray-200)' %}
+  {% else %}
+    {% set boxBorder = 'var(--swiss-black)' %}
+    {% set boxBg = 'var(--swiss-white)' %}
+    {% set kickerColor = 'var(--swiss-gray-600)' %}
+    {% set titleColor = 'var(--swiss-black)' %}
+    {% set bodyColor = 'var(--swiss-gray-700)' %}
+  {% endif %}
+  <div class="grid grid-cols-1 md:grid-cols-{{ columns }}" style="gap: var(--space-xl);">
+    {% for step in steps %}
+    <div class="p-4 border-2" style="border-color: {{ boxBorder }}; background: {{ boxBg }};">
+      <p class="text-xs uppercase tracking-widest font-bold" style="color: {{ kickerColor }};">{{ step.kicker or 'Step ' ~ loop.index }}</p>
+      <h3 class="font-bold" style="font-size: 1.1rem; margin-bottom: var(--space-sm); color: {{ titleColor }};">{{ step.title }}</h3>
+      {% if step.body %}<p class="text-sm" style="color: {{ bodyColor }};">{{ step.body }}</p>{% endif %}
+    </div>
+    {% endfor %}
+  </div>
+{% endmacro %}
+
+{% macro simpleCard(item={}, theme='light') %}
+  {% set isDark = theme == 'dark' %}
+  {% if isDark %}
+    {% set cardBorder = 'var(--swiss-white)' %}
+    {% set cardBg = 'transparent' %}
+    {% set kickerColor = 'var(--swiss-gray-400)' %}
+    {% set titleColor = 'var(--swiss-white)' %}
+    {% set bodyColor = 'var(--swiss-gray-200)' %}
+  {% else %}
+    {% set cardBorder = 'var(--swiss-black)' %}
+    {% set cardBg = 'var(--swiss-white)' %}
+    {% set kickerColor = 'var(--swiss-gray-600)' %}
+    {% set titleColor = 'var(--swiss-black)' %}
+    {% set bodyColor = 'var(--swiss-gray-700)' %}
+  {% endif %}
+  <div class="p-5 border-2" style="border-color: {{ cardBorder }}; background: {{ cardBg }};">
+    {% if item.kicker %}
+    <p class="text-xs uppercase tracking-widest font-bold" style="color: {{ kickerColor }};">{{ item.kicker }}</p>
+    {% endif %}
+    <h3 class="font-bold" style="font-size: 1.1rem; margin: var(--space-sm) 0; color: {{ titleColor }};">{{ item.title }}</h3>
+    {% if item.body %}<p class="text-sm" style="color: {{ bodyColor }};">{{ item.body }}</p>{% endif %}
+    {% if item.href and item.cta %}
+    <a href="{{ item.href }}" class="btn-swiss" style="margin-top: var(--space-sm);">{{ item.cta }}</a>
+    {% endif %}
+  </div>
+{% endmacro %}
+
+{% macro ctaBanner(title='', body='', primaryLabel='', primaryHref='#', secondaryLabel='', secondaryHref='', invert=false) %}
+  {% if invert %}
+    {% set bg = 'var(--swiss-black)' %}
+    {% set fg = 'var(--swiss-white)' %}
+    {% set sub = 'var(--swiss-gray-200)' %}
+  {% else %}
+    {% set bg = 'var(--swiss-white)' %}
+    {% set fg = 'var(--swiss-black)' %}
+    {% set sub = 'var(--swiss-gray-700)' %}
+  {% endif %}
+  <section style="padding-top: var(--space-4xl); padding-bottom: var(--space-5xl); background: {{ bg }}; color: {{ fg }};">
+    <div class="swiss-grid">
+      <div class="swiss-col-12 md:swiss-col-8" style="margin-bottom: var(--space-2xl);">
+        {% if title %}<h2 class="font-black" style="font-size: var(--fluid-h2); letter-spacing: -0.02em;">{{ title }}</h2>{% endif %}
+        {% if body %}<p class="text-lg" style="color: {{ sub }}; margin-top: var(--space-md);">{{ body }}</p>{% endif %}
+      </div>
+      <div class="swiss-col-12 flex flex-col sm:flex-row gap-4">
+        {% if primaryLabel %}<a href="{{ primaryHref }}" class="btn-swiss-primary">{{ primaryLabel }}</a>{% endif %}
+        {% if secondaryLabel %}<a href="{{ secondaryHref }}" class="btn-swiss">{{ secondaryLabel }}</a>{% endif %}
+      </div>
+    </div>
+  </section>
+{% endmacro %}

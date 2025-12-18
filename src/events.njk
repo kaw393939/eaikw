@@ -1,0 +1,29 @@
+---
+layout: layouts/base.njk
+title: Events - Job Club
+description: Join Job Club workshops, office hours, hack nights, and employer meetups.
+---
+
+{% import "components/ui.njk" as ui %}
+
+<section style="padding-top: var(--space-5xl); padding-bottom: var(--space-5xl);">
+  <div class="swiss-grid">
+    <div class="swiss-col-12">
+      {{ ui.sectionHeader('Events', 'Workshops, office hours, hack nights.', 'Join live sessions to practice consulting, ship features, and get feedback.') }}
+    </div>
+    {% set events = [
+      {"kicker":"Thu 6:00 PM · Zoom","title":"AI Consulting Office Hours","body":"Bring client questions or a project and get live feedback.","cta":"Add to calendar","href":"/jobclub/events/"},
+      {"kicker":"Mon 7:00 PM · Campus Lab","title":"Hack Night: Build a RAG Demo","body":"Ship a small AI demo with peers; we provide prompts and templates.","cta":"Add to calendar","href":"/jobclub/events/"},
+      {"kicker":"Sat 11:00 AM · Zoom","title":"Portfolio Review Sprint","body":"Tighten your LinkedIn, GitHub, and portfolio with mentor feedback.","cta":"Save seat","href":"/jobclub/events/"}
+    ] %}
+    <div class="swiss-col-12 grid grid-cols-1 md:grid-cols-3" style="gap: var(--space-xl);">
+      {% for event in events %}
+        {{ ui.simpleCard(event) }}
+      {% endfor %}
+    </div>
+    <div class="swiss-col-12" style="margin-top: var(--space-2xl);">
+      <a href="/jobclub/events/" class="btn-swiss-primary">View detailed schedule</a>
+      <a href="/jobclub/onboarding/" class="btn-swiss" style="margin-left: var(--space-md);">Start onboarding</a>
+    </div>
+  </div>
+</section>

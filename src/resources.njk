@@ -1,0 +1,30 @@
+---
+layout: layouts/base.njk
+title: Resources - Job Club
+description: "Career resources for AI roles: LinkedIn, GitHub, portfolio, consulting kits, and interview prep."
+---
+
+{% import "components/ui.njk" as ui %}
+
+<section style="padding-top: var(--space-5xl); padding-bottom: var(--space-5xl); background: var(--swiss-black); color: var(--swiss-white);">
+  <div class="swiss-grid">
+    <div class="swiss-col-12">
+      {{ ui.sectionHeader('Resources', 'Guides built for AI career launches.', 'Step-by-step templates for LinkedIn, GitHub, portfolios, Calendly, and consulting pilots.', 'dark') }}
+    </div>
+    {% set resources = [
+      {"kicker":"LinkedIn","title":"Optimize LinkedIn for AI roles","body":"Headline, summary, and proof-of-work blocks that recruiters skim.","cta":"Read guide","href":"/jobclub/resources/"},
+      {"kicker":"Consulting","title":"AI Consulting Starter Kit","body":"Discovery scripts, pricing starter, proposal outline to run a pilot.","cta":"Read guide","href":"/jobclub/resources/"},
+      {"kicker":"Portfolio","title":"Portfolio Checklist + Examples","body":"Make recruiters see your outcomes in under 60 seconds.","cta":"View checklist","href":"/portfolio/"},
+      {"kicker":"Scheduling","title":"Calendly + Zapier Setup","body":"Automate intros, follow-ups, and CRM entry.","cta":"View setup","href":"/jobclub/resources/"}
+    ] %}
+    <div class="swiss-col-12 grid grid-cols-1 md:grid-cols-2" style="gap: var(--space-xl);">
+      {% for res in resources %}
+        {{ ui.simpleCard(res, 'dark') }}
+      {% endfor %}
+    </div>
+    <div class="swiss-col-12" style="margin-top: var(--space-2xl);">
+      <a href="/jobclub/resources/" class="btn-swiss">Browse full resources</a>
+      <a href="/jobclub/onboarding/" class="btn-swiss-primary" style="margin-left: var(--space-md);">Start onboarding</a>
+    </div>
+  </div>
+</section>

@@ -2,7 +2,10 @@
 
 ## 📊 Project Overview
 
-Job Club is an AI-powered career accelerator platform for NJIT students with a clear mission: **Turn students into career-ready AI professionals with a guided, automated onboarding experience.** This document provides a high-level overview of the project status and how each phase contributes to this mission.
+Job Club is an AI-powered career accelerator platform for NJIT students with a
+clear mission: **Turn students into career-ready AI professionals with a guided,
+automated onboarding experience.** This document provides a high-level overview
+of the project status and how each phase contributes to this mission.
 
 ## 🏗️ Architecture Overview
 
@@ -12,7 +15,7 @@ Job Club is an AI-powered career accelerator platform for NJIT students with a c
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                  │
 │  ┌──────────────────────────────────────────────────────────┐   │
-│  │         Frontend (Eleventy + Tailwind CSS)               │   │
+│  │         Frontend (Eleventy + Vanilla CSS)               │   │
 │  │  ────────────────────────────────────────────────────   │   │
 │  │  • Home Page           • Onboarding Form                 │   │
 │  │  • About Page          • Events Listing                  │   │
@@ -46,14 +49,17 @@ Job Club is an AI-powered career accelerator platform for NJIT students with a c
 **Status:** Deployed to GitHub
 
 **Deliverables:**
-- [x] 5 main pages created (home, about, onboarding, events, resources, projects)
-- [x] Job Club branding applied (colors, fonts, tone)
-- [x] Responsive design with Tailwind CSS
+
+- [x] 5 main pages created (home, about, onboarding, events, resources,
+      projects)
+- [x] Job Club branding applied (colors, fonts, tone) [x] Responsive design with
+      Vanilla CSS
 - [x] Nunjucks templates for maintainability
 - [x] Form collection (email, career preferences, URLs)
 - [x] Project documentation (8 doc files)
 
 **Key Files:**
+
 ```
 src/jobclub/
 ├── onboarding.njk    - Student registration form
@@ -71,6 +77,7 @@ src/jobclub/
 **Status:** Implemented and pushed to GitHub
 
 **Deliverables:**
+
 - [x] Sanity CMS schemas (4 types)
 - [x] Notion DB integration
 - [x] Discord webhook integration
@@ -81,6 +88,7 @@ src/jobclub/
 - [x] Integration test suite
 
 **Key Files:**
+
 ```
 production/schemaTypes/
 ├── memberProfile.js  - Student profile schema (14 fields)
@@ -104,11 +112,13 @@ docs/integrations/
 └── phase2.yml        - Automated testing & deployment
 ```
 
-**Commits:** 
+**Commits:**
+
 - `a2cbf3a` - Phase 2 main implementation
 - `3d00424` - Phase 2 summary documentation
 
 **Data Flow:**
+
 ```
 Form Submission → Sanity CMS → Notion DB → Discord Channel → User Email
      (form data)  (storage)  (tracking)  (notification) (confirmation)
@@ -119,12 +129,14 @@ Form Submission → Sanity CMS → Notion DB → Discord Channel → User Email
 ### Phase 3: Production Readiness 🔄 IN PROGRESS
 
 #### Phase 3A: Email Integration ⏳ NOT STARTED
+
 - Email confirmations via Zapier
 - Personalized onboarding emails
 - Event reminder emails
 - Integration with Zapier/SendGrid
 
 #### Phase 3B: Analytics & Monitoring ⏳ NOT STARTED
+
 - Plausible or Fathom analytics
 - Form completion tracking
 - Event attendance metrics
@@ -132,6 +144,7 @@ Form Submission → Sanity CMS → Notion DB → Discord Channel → User Email
 - Performance dashboards
 
 #### Phase 3C: GDPR & Compliance ⏳ NOT STARTED
+
 - Cookie consent banner
 - Data export feature
 - Data deletion workflow
@@ -139,6 +152,7 @@ Form Submission → Sanity CMS → Notion DB → Discord Channel → User Email
 - GDPR-compliant analytics
 
 #### Phase 3D: CI/CD & Deployment ⏳ NOT STARTED
+
 - Complete GitHub Actions pipeline
 - Automatic Lighthouse CI tests
 - Staging environment setup
@@ -146,6 +160,7 @@ Form Submission → Sanity CMS → Notion DB → Discord Channel → User Email
 - Blue-green deployment
 
 #### Phase 3E: Advanced Features ⏳ NOT STARTED
+
 - Member onboarding checklist
 - Mentor assignment system
 - AI-powered resource recommendations
@@ -156,21 +171,21 @@ Form Submission → Sanity CMS → Notion DB → Discord Channel → User Email
 
 ## 🎯 Current Status Dashboard
 
-| Component | Phase | Status | Location |
-|-----------|-------|--------|----------|
-| Frontend Pages | 1 | ✅ Complete | `src/jobclub/` |
-| Site Configuration | 1 | ✅ Complete | `src/_data/site.json` |
-| Sanity Schemas | 2 | ✅ Complete | `production/schemaTypes/` |
-| Notion Integration | 2 | ✅ Complete | `src/lib/notionIntegration.js` |
-| Discord Integration | 2 | ✅ Complete | `src/lib/discordIntegration.js` |
-| API Routes | 2 | ✅ Complete | `src/api/routes.js` |
-| Deployment Config | 2 | ✅ Complete | `netlify.toml`, `functions/`, `api/` |
-| GitHub Actions | 2 | ✅ Complete | `.github/workflows/phase2.yml` |
-| Email Integration | 3A | ⏳ Ready | Waiting for Zapier setup |
-| Analytics | 3B | ⏳ Ready | Config files needed |
-| GDPR Compliance | 3C | ⏳ Ready | Policy review needed |
-| CI/CD Pipeline | 3D | ✅ Started | Partial implementation in phase2.yml |
-| Advanced Features | 3E | ⏳ Ready | Spec completed in Phase 1 docs |
+| Component           | Phase | Status      | Location                             |
+| ------------------- | ----- | ----------- | ------------------------------------ |
+| Frontend Pages      | 1     | ✅ Complete | `src/jobclub/`                       |
+| Site Configuration  | 1     | ✅ Complete | `src/_data/site.json`                |
+| Sanity Schemas      | 2     | ✅ Complete | `production/schemaTypes/`            |
+| Notion Integration  | 2     | ✅ Complete | `src/lib/notionIntegration.js`       |
+| Discord Integration | 2     | ✅ Complete | `src/lib/discordIntegration.js`      |
+| API Routes          | 2     | ✅ Complete | `src/api/routes.js`                  |
+| Deployment Config   | 2     | ✅ Complete | `netlify.toml`, `functions/`, `api/` |
+| GitHub Actions      | 2     | ✅ Complete | `.github/workflows/phase2.yml`       |
+| Email Integration   | 3A    | ⏳ Ready    | Waiting for Zapier setup             |
+| Analytics           | 3B    | ⏳ Ready    | Config files needed                  |
+| GDPR Compliance     | 3C    | ⏳ Ready    | Policy review needed                 |
+| CI/CD Pipeline      | 3D    | ✅ Started  | Partial implementation in phase2.yml |
+| Advanced Features   | 3E    | ⏳ Ready    | Spec completed in Phase 1 docs       |
 
 ---
 
@@ -238,12 +253,14 @@ eaikw-main/
 ## 🚀 Deployment Readiness
 
 ### ✅ Ready for Deployment
+
 - Frontend (Eleventy) → GitHub Pages
 - Sanity CMS → sanity.io hosting
 - API endpoints → Netlify Functions OR Vercel Functions
 - Static assets → GitHub / CDN
 
 ### ⏳ Configuration Needed Before Deployment
+
 1. **Sanity CMS Credentials**
    - Project ID
    - Write token
@@ -270,6 +287,7 @@ eaikw-main/
 ## 🔐 Security Considerations
 
 ✅ **Implemented:**
+
 - Write token stored in .env (not in code)
 - CORS headers configured
 - API validation on all inputs
@@ -277,6 +295,7 @@ eaikw-main/
 - Environment-based secrets
 
 ⏳ **To Implement (Phase 3C):**
+
 - GDPR consent tracking
 - Data encryption at rest
 - API key rotation strategy
@@ -288,18 +307,21 @@ eaikw-main/
 ## 📊 Metrics & Performance
 
 ### Conversion Metrics (to track)
+
 - Form completion rate
 - Form drop-off points
 - Time-to-complete
 - Device breakdown (mobile vs desktop)
 
 ### Performance Targets
+
 - Page load: < 3s
 - Form submission: < 2s
 - API response: < 500ms
 - Lighthouse score: > 85
 
 ### Current Build Size
+
 - Site bundle: ~500KB (gzipped)
 - JavaScript: ~150KB (gzipped)
 - CSS: ~50KB (gzipped)
@@ -308,11 +330,11 @@ eaikw-main/
 
 ## 👥 Team & Contributions
 
-**Project Owner:** Minwoo (mrc26@njit.edu)
-**Repository:** github.com/joshua31324324/eaikw
-**Version Control:** Git with SSH authentication
+**Project Owner:** Minwoo (mrc26@njit.edu) **Repository:**
+github.com/joshua31324324/eaikw **Version Control:** Git with SSH authentication
 
 **Commits:**
+
 - Phase 1: `8e45571` - Initial site structure
 - Phase 2: `a2cbf3a` - Backend integrations
 - Documentation: `3d00424` - Setup guides
@@ -322,18 +344,21 @@ eaikw-main/
 ## 📞 Support & Resources
 
 **Documentation:**
+
 - [Phase 2 Integration Guide](docs/integrations/PHASE_2_INTEGRATIONS.md)
 - [Quick Start (10 min setup)](docs/integrations/PHASE_2_QUICKSTART.md)
 - [Project Brief](docs/JOB_CLUB_PROJECT_BRIEF.md)
 - [Deployment Guide](docs/DEPLOYMENT.md)
 
 **External Resources:**
+
 - [Sanity CMS Docs](https://www.sanity.io/docs)
 - [Notion API Docs](https://developers.notion.com)
 - [Discord Developer Docs](https://discord.com/developers/docs)
 - [Eleventy Docs](https://www.11ty.dev)
 
 **Environment Setup:**
+
 1. Copy `.env.local.template` to `.env.local`
 2. Fill in credentials from Sanity, Notion, Discord
 3. Run `npm install`
@@ -345,18 +370,21 @@ eaikw-main/
 ## 🎉 Next Steps
 
 ### Immediate (This Week)
+
 1. ✅ Complete Phase 2 implementation (DONE)
 2. ⏳ Test all integrations locally
 3. ⏳ Get Sanity, Notion, Discord credentials
 4. ⏳ Deploy to staging environment
 
 ### Short Term (This Month)
+
 1. ⏳ Setup email integration (Phase 3A)
 2. ⏳ Add analytics tracking (Phase 3B)
 3. ⏳ Implement GDPR compliance (Phase 3C)
 4. ⏳ Complete CI/CD pipeline (Phase 3D)
 
 ### Long Term (Next Month+)
+
 1. ⏳ Launch advanced features (Phase 3E)
 2. ⏳ Mentor matching system
 3. ⏳ Member dashboard
@@ -373,6 +401,5 @@ eaikw-main/
 - Ready for team collaboration
 - Scalable architecture for future growth
 
-**Status as of:** {{ site.buildTime }}
-**Last Updated:** 2024-01-XX
+**Status as of:** {{ site.buildTime }} **Last Updated:** 2024-01-XX
 **Deployed:** https://joshua31324324.github.io/eaikw

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 140" role="img" aria-labelledby="title desc">
+  <title id="title">Job Club logo</title>
+  <desc id="desc">Wordmark reading Job Club with connected node icon.</desc>
+  <style>
+    .wordmark { fill: #12304b; font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; font-weight: 700; letter-spacing: 0.04em; }
+    .node-navy { stroke: #12304b; fill: #ffffff; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+    .node-red { stroke: #e03232; fill: #ffffff; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <text x="20" y="88" class="wordmark" font-size="56">JOB CLUB</text>
+  <g transform="translate(12 0)">
+    <line class="node-navy" x1="250" y1="70" x2="302" y2="70" />
+    <line class="node-red" x1="250" y1="70" x2="280" y2="30" />
+    <line class="node-navy" x1="250" y1="70" x2="280" y2="110" />
+    <circle class="node-red" cx="250" cy="70" r="10" />
+    <circle class="node-navy" cx="310" cy="70" r="14" />
+    <circle class="node-red" cx="292" cy="30" r="14" />
+    <circle class="node-navy" cx="292" cy="110" r="14" />
+  </g>
+</svg>

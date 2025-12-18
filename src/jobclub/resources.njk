@@ -4,6 +4,8 @@ title: Resources - Job Club
 description: Essential guides for building your AI career. Learn LinkedIn optimization, GitHub profiles, portfolio building, and more.
 ---
 
+{% import "components/ui.njk" as ui %}
+
 <div class="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
   <div class="max-w-5xl mx-auto">
     <!-- Header -->
@@ -12,118 +14,24 @@ description: Essential guides for building your AI career. Learn LinkedIn optimi
       <p class="text-xl text-gray-700">Curated guides to help you build a professional brand, optimize your portfolio, and land your dream AI role.</p>
     </div>
 
-    <!-- Resources Grid -->
+    <!-- Resources Grid (data-driven) -->
     <div class="grid md:grid-cols-2 gap-8 mb-12">
-      <!-- Resource 1 -->
-      <article class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
-        <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white text-5xl font-bold">
-          💼
-        </div>
-        <div class="p-6">
-          <h2 class="text-2xl font-bold text-gray-900 mb-2">How to Optimize Your LinkedIn for AI Jobs</h2>
-          <p class="text-gray-700 mb-4">
-            Your LinkedIn profile is often the first impression recruiters get. Learn how to craft a compelling headline, highlight your AI skills, and attract opportunities from top companies.
-          </p>
-          <div class="space-y-2 text-sm text-gray-600 mb-6">
-            <p><strong>Topics covered:</strong></p>
-            <ul class="list-disc list-inside space-y-1">
-              <li>Crafting an AI-focused headline</li>
-              <li>Writing a compelling summary</li>
-              <li>Showcasing AI projects and skills</li>
-              <li>Building your professional network</li>
-              <li>Getting recommendations and endorsements</li>
-            </ul>
-          </div>
-          <a href="#" class="inline-block px-6 py-2 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition">
-            Read Guide →
-          </a>
-        </div>
-      </article>
-
-      <!-- Resource 2 -->
-      <article class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
-        <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center text-white text-5xl font-bold">
-          🐙
-        </div>
-        <div class="p-6">
-          <h2 class="text-2xl font-bold text-gray-900 mb-2">GitHub Portfolio: Getting Interviews from Your Code</h2>
-          <p class="text-gray-700 mb-4">
-            Recruiters check GitHub. Learn how to organize your repositories, document your projects, and showcase your coding abilities in a way that gets you noticed.
-          </p>
-          <div class="space-y-2 text-sm text-gray-600 mb-6">
-            <p><strong>Topics covered:</strong></p>
-            <ul class="list-disc list-inside space-y-1">
-              <li>Setting up a standout profile</li>
-              <li>READMEs that impress</li>
-              <li>Project organization and naming</li>
-              <li>Documenting with demos and screenshots</li>
-              <li>Contributing to open source</li>
-            </ul>
-          </div>
-          <a href="#" class="inline-block px-6 py-2 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition">
-            Read Guide →
-          </a>
-        </div>
-      </article>
-
-      <!-- Resource 3 -->
-      <article class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
-        <div class="h-48 bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-white text-5xl font-bold">
-          🌐
-        </div>
-        <div class="p-6">
-          <h2 class="text-2xl font-bold text-gray-900 mb-2">AI Consulting Portfolio Starter Guide</h2>
-          <p class="text-gray-700 mb-4">
-            Want to be an AI consultant? Learn how to build a portfolio that demonstrates your ability to solve real business problems with AI, and position yourself for consulting opportunities.
-          </p>
-          <div class="space-y-2 text-sm text-gray-600 mb-6">
-            <p><strong>Topics covered:</strong></p>
-            <ul class="list-disc list-inside space-y-1">
-              <li>Selecting impactful projects</li>
-              <li>Documenting business value</li>
-              <li>Building case studies</li>
-              <li>Demonstrating ROI thinking</li>
-              <li>Networking with decision makers</li>
-            </ul>
-          </div>
-          <a href="#" class="inline-block px-6 py-2 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition">
-            Read Guide →
-          </a>
-        </div>
-      </article>
-
-      <!-- Resource 4 -->
-      <article class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
-        <div class="h-48 bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center text-white text-5xl font-bold">
-          📅
-        </div>
-        <div class="p-6">
-          <h2 class="text-2xl font-bold text-gray-900 mb-2">Professional Growth: Calendly + Zapier Setup</h2>
-          <p class="text-gray-700 mb-4">
-            Automate your professional life! Learn how to set up Calendly for easy scheduling and use Zapier to connect it with your other tools for seamless workflow.
-          </p>
-          <div class="space-y-2 text-sm text-gray-600 mb-6">
-            <p><strong>Topics covered:</strong></p>
-            <ul class="list-disc list-inside space-y-1">
-              <li>Setting up Calendly professionally</li>
-              <li>Automating with Zapier</li>
-              <li>Email workflows and follow-ups</li>
-              <li>CRM integration</li>
-              <li>Scheduling best practices</li>
-            </ul>
-          </div>
-          <a href="#" class="inline-block px-6 py-2 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition">
-            Read Guide →
-          </a>
-        </div>
-      </article>
-
+      {% for r in resources %}
+        {{ ui.simpleCard({
+          kicker: r.tag,
+          title: r.title,
+          body: r.summary,
+          cta: 'Read guide',
+          href: r.href
+        }) }}
+      {% endfor %}
+    </div>
       <!-- Resource 5 -->
-      <article class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
-        <div class="h-48 bg-gradient-to-br from-pink-500 to-pink-600 flex items-center justify-center text-white text-5xl font-bold">
+      <article class="card">
+        <div class="card__media">
           👨‍💻
         </div>
-        <div class="p-6">
+        <div class="card__body">
           <h2 class="text-2xl font-bold text-gray-900 mb-2">Interview Prep: AI Technical & Behavioral Questions</h2>
           <p class="text-gray-700 mb-4">
             Master AI interviews with comprehensive guides to technical questions, behavioral scenarios, and company-specific preparation strategies.
@@ -138,18 +46,18 @@ description: Essential guides for building your AI career. Learn LinkedIn optimi
               <li>Company-specific preparation</li>
             </ul>
           </div>
-          <a href="#" class="inline-block px-6 py-2 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition">
+          <a href="#" class="btn-swiss">
             Read Guide →
           </a>
         </div>
       </article>
 
       <!-- Resource 6 -->
-      <article class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
-        <div class="h-48 bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center text-white text-5xl font-bold">
+      <article class="card">
+        <div class="card__media">
           📝
         </div>
-        <div class="p-6">
+        <div class="card__body">
           <h2 class="text-2xl font-bold text-gray-900 mb-2">Resume Tips: Getting Past ATS & Recruiters</h2>
           <p class="text-gray-700 mb-4">
             Your resume needs to work for both ATS systems and human recruiters. Learn the tactics to optimize for both, highlight AI skills, and get interviews.
@@ -164,60 +72,59 @@ description: Essential guides for building your AI career. Learn LinkedIn optimi
               <li>Format and design tips</li>
             </ul>
           </div>
-          <a href="#" class="inline-block px-6 py-2 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition">
+          <a href="#" class="btn-swiss">
             Read Guide →
           </a>
         </div>
       </article>
     </div>
-
     <!-- Templates Section -->
-    <section class="mb-12 bg-white rounded-lg p-8 border border-gray-200">
+    <section class="mb-12 panel">
       <h2 class="text-2xl font-bold text-gray-900 mb-6">Downloadable Templates</h2>
       <div class="grid md:grid-cols-2 gap-6">
-        <div class="border border-gray-200 rounded-lg p-4 hover:shadow-lg transition">
+        <div class="panel">
           <h3 class="font-bold text-gray-900 mb-2">📋 Resume Template</h3>
           <p class="text-gray-700 mb-4">ATS-optimized resume template for AI professionals with examples.</p>
-          <a href="#" class="text-blue-600 font-bold hover:underline">Download Template →</a>
+          <a href="#" class="link-swiss">Download Template →</a>
         </div>
-        <div class="border border-gray-200 rounded-lg p-4 hover:shadow-lg transition">
+        <div class="panel">
           <h3 class="font-bold text-gray-900 mb-2">💼 Portfolio Site Template</h3>
           <p class="text-gray-700 mb-4">Ready-to-use portfolio website template built with Eleventy.</p>
-          <a href="https://github.com/kaw393939/eaikw" class="text-blue-600 font-bold hover:underline">View on GitHub →</a>
+          <a href="https://github.com/kaw393939/eaikw" class="link-swiss">View on GitHub →</a>
         </div>
-        <div class="border border-gray-200 rounded-lg p-4 hover:shadow-lg transition">
+        <div class="panel">
           <h3 class="font-bold text-gray-900 mb-2">📊 Portfolio Checklist</h3>
           <p class="text-gray-700 mb-4">Complete checklist of what to include in your professional portfolio.</p>
-          <a href="#" class="text-blue-600 font-bold hover:underline">Download Checklist →</a>
+          <a href="#" class="link-swiss">Download Checklist →</a>
         </div>
-        <div class="border border-gray-200 rounded-lg p-4 hover:shadow-lg transition">
+        <div class="panel">
           <h3 class="font-bold text-gray-900 mb-2">🎯 30-60-90 Day Plan</h3>
           <p class="text-gray-700 mb-4">Career roadmap for your first 90 days in an AI role.</p>
-          <a href="#" class="text-blue-600 font-bold hover:underline">Download Plan →</a>
+          <a href="#" class="link-swiss">Download Plan →</a>
         </div>
       </div>
     </section>
 
     <!-- Featured Learning Path -->
-    <section class="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg p-8 text-white">
+    <section class="mb-12 p-8" style="background-color: var(--swiss-black); color: var(--swiss-white);">
       <h2 class="text-2xl font-bold mb-4">Recommended Learning Path</h2>
       <div class="space-y-4">
         <div class="flex items-start">
-          <div class="flex-shrink-0 flex items-center justify-center h-8 w-8 rounded-full bg-white text-blue-600 font-bold">1</div>
+          <div class="badge-number">1</div>
           <div class="ml-4">
             <h3 class="font-bold">Month 1: Profile & Resume</h3>
             <p class="text-blue-100">Complete your LinkedIn, GitHub, and resume. Follow the LinkedIn and GitHub guides.</p>
           </div>
         </div>
         <div class="flex items-start">
-          <div class="flex-shrink-0 flex items-center justify-center h-8 w-8 rounded-full bg-white text-blue-600 font-bold">2</div>
+          <div class="badge-number">2</div>
           <div class="ml-4">
             <h3 class="font-bold">Month 2: Portfolio Projects</h3>
             <p class="text-blue-100">Build 2-3 portfolio projects. Start with the consulting or startup guide for your path.</p>
           </div>
         </div>
         <div class="flex items-start">
-          <div class="flex-shrink-0 flex items-center justify-center h-8 w-8 rounded-full bg-white text-blue-600 font-bold">3</div>
+          <div class="badge-number">3</div>
           <div class="ml-4">
             <h3 class="font-bold">Month 3: Interview Prep & Applications</h3>
             <p class="text-blue-100">Prep for interviews and start applying. Use interview guide and Calendly for scheduling.</p>

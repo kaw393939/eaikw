@@ -4,72 +4,85 @@ title: Onboarding - Job Club
 description: Start your Job Club onboarding journey. Complete your profile, get personalized guidance, and connect with mentors.
 ---
 
-<div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4 sm:px-6 lg:px-8">
-  <div class="max-w-2xl mx-auto">
+{% import "components/ui.njk" as ui %}
+
+<div class="min-h-screen py-12 px-4">
+  <div class="max-w-3xl container">
     <!-- Header -->
     <div class="text-center mb-12">
-      <h1 class="text-4xl font-bold text-gray-900 mb-4">Start Your AI Career Journey</h1>
-      <p class="text-xl text-gray-700">Join our guided pipeline to become a career-ready AI professional. Complete your profile in 5 minutes to get personalized guidance, mentoring, and automated career milestones.</p>
+      <h1 class="font-black" style="font-size:2.5rem;margin-bottom:1rem;color:var(--swiss-black);">Job Club Onboarding</h1>
+      <p class="text-lg text-gray-700">Share your info to get a personalized checklist, Discord access, and events matched to your goals. Takes ~5 minutes.</p>
+    </div>
+
+    <!-- Progress / steps -->
+    <div class="mb-10">
+      {% set steps = [
+        {"kicker":"Step 1","title":"Profile","body":"Name, email, major, graduation."},
+        {"kicker":"Step 2","title":"Goals","body":"Select your target path."},
+        {"kicker":"Step 3","title":"Links","body":"LinkedIn, GitHub, portfolio, Calendly."},
+        {"kicker":"Step 4","title":"Review & Consent","body":"Confirm sharing for checklist + Discord."}
+      ] %}
+      {{ ui.stepGrid(steps, 4) }}
     </div>
 
     <!-- Onboarding Form -->
-    <form id="jobclub-onboarding" class="bg-white rounded-lg shadow-lg p-8 mb-8" method="POST" action="/api/onboarding">
+    <form id="jobclub-onboarding" class="card" method="POST" action="/api/onboarding">
       <!-- Personal Information -->
       <fieldset class="mb-8">
         <legend class="text-xl font-bold text-gray-900 mb-6">Personal Information</legend>
         
-        <div class="grid md:grid-cols-2 gap-6">
+        <div class="grid md:grid-cols-2" style="gap: var(--space-lg);">
           <div>
             <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
-              Full Name <span class="text-red-500">*</span>
+              Full Name <span style="color:var(--swiss-red)">*</span>
             </label>
             <input 
               type="text" 
               id="name" 
               name="name" 
               required
-              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              class="input"
               placeholder="John Doe"
             >
           </div>
 
           <div>
             <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
-              Email Address <span class="text-red-500">*</span>
+              Email Address <span style="color:var(--swiss-red)">*</span>
             </label>
             <input 
               type="email" 
               id="email" 
               name="email" 
               required
-              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              class="input"
               placeholder="john@example.com"
             >
           </div>
 
           <div>
             <label for="major" class="block text-sm font-medium text-gray-700 mb-2">
-              Major / Field <span class="text-red-500">*</span>
+              Major / Field <span style="color:var(--swiss-red)">*</span>
             </label>
             <input 
               type="text" 
               id="major" 
               name="major" 
               required
-              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              class="input"
               placeholder="Computer Science, Data Science, etc."
             >
           </div>
 
           <div>
             <label for="graduation_year" class="block text-sm font-medium text-gray-700 mb-2">
-              Expected Graduation Year <span class="text-red-500">*</span>
+              Expected Graduation Year <span style="color:var(--swiss-red)">*</span>
             </label>
             <select 
               id="graduation_year" 
               name="graduation_year" 
               required
-              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              class="input"
             >
               <option value="">Select year</option>
               <option value="2025">2025</option>
@@ -85,25 +98,25 @@ description: Start your Job Club onboarding journey. Complete your profile, get 
       <fieldset class="mb-8">
         <legend class="text-xl font-bold text-gray-900 mb-6">Career Goals</legend>
         
-        <div>
-          <label for="career_goal" class="block text-sm font-medium text-gray-700 mb-2">
-            What's your primary career goal? <span class="text-red-500">*</span>
-          </label>
-          <select 
-            id="career_goal" 
-            name="career_goal" 
-            required
-            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          >
-            <option value="">Select a goal</option>
-            <option value="ai-consultant">AI Consultant</option>
-            <option value="ai-startup">AI Startup Founder</option>
-            <option value="ai-engineer">AI Software Engineer</option>
-            <option value="data-scientist">Data Scientist</option>
-            <option value="product-manager">Product Manager (AI)</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
+          <div>
+            <label for="career_goal" class="block text-sm font-medium text-gray-700 mb-2">
+              What's your primary career goal? <span style="color:var(--swiss-red)">*</span>
+            </label>
+            <select 
+              id="career_goal" 
+              name="career_goal" 
+              required
+              class="input"
+            >
+              <option value="">Select a goal</option>
+              <option value="ai-consultant">AI Consultant</option>
+              <option value="ai-startup">AI Startup Founder</option>
+              <option value="ai-engineer">AI Software Engineer</option>
+              <option value="data-scientist">Data Scientist</option>
+              <option value="product-manager">Product Manager (AI)</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
       </fieldset>
 
       <!-- Professional URLs -->
@@ -120,7 +133,7 @@ description: Start your Job Club onboarding journey. Complete your profile, get 
               type="url" 
               id="linkedin_url" 
               name="linkedin_url"
-              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              class="input"
               placeholder="https://linkedin.com/in/yourprofile"
             >
           </div>
@@ -133,7 +146,7 @@ description: Start your Job Club onboarding journey. Complete your profile, get 
               type="url" 
               id="github_url" 
               name="github_url"
-              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              class="input"
               placeholder="https://github.com/yourprofile"
             >
           </div>
@@ -146,7 +159,7 @@ description: Start your Job Club onboarding journey. Complete your profile, get 
               type="url" 
               id="portfolio_url" 
               name="portfolio_url"
-              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              class="input"
               placeholder="https://yourportfolio.com"
             >
           </div>
@@ -159,7 +172,7 @@ description: Start your Job Club onboarding journey. Complete your profile, get 
               type="url" 
               id="calendly_url" 
               name="calendly_url"
-              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              class="input"
               placeholder="https://calendly.com/yourname"
             >
           </div>
@@ -168,16 +181,16 @@ description: Start your Job Club onboarding journey. Complete your profile, get 
 
       <!-- Consent -->
       <fieldset class="mb-8">
-        <div class="flex items-start">
+        <div style="display:flex;align-items:flex-start;gap:var(--space-md);">
           <input 
             type="checkbox" 
             id="consent" 
             name="consent" 
             required
-            class="mt-1 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+            style="margin-top:0.25rem;width:1rem;height:1rem;"
           >
-          <label for="consent" class="ml-3 text-sm text-gray-700">
-            I agree to join Job Club and receive personalized guidance emails. I understand my data will be stored securely and used only for career mentoring purposes. <a href="/privacy" class="text-blue-600 hover:underline">Read our privacy policy</a>.
+          <label for="consent" class="text-sm text-gray-700">
+            I agree to join Job Club and receive personalized guidance emails. My data will be used to build my checklist and connect me to Discord/CRM. <a href="/privacy" class="link-swiss">Read our privacy policy</a>.
           </label>
         </div>
       </fieldset>
@@ -185,33 +198,45 @@ description: Start your Job Club onboarding journey. Complete your profile, get 
       <!-- Submit Button -->
       <button 
         type="submit" 
-        class="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition mb-4"
+        class="btn-swiss btn--block"
+        style="margin-top:1rem;margin-bottom:1rem;"
       >
-        Complete Onboarding
+        Complete Onboarding & Get Checklist
       </button>
 
       <p class="text-xs text-gray-600 text-center">
-        Your information is secure and will never be shared. See our <a href="/privacy" class="text-blue-600 hover:underline">privacy policy</a> for details.
+        We’ll flag missing assets (LinkedIn, GitHub, portfolio, Calendly) and email your personalized next steps.
       </p>
     </form>
 
+    <!-- What happens next -->
+    <div class="mt-12 p-6 border-2" style="border-color: var(--swiss-black);">
+      <h3 class="font-bold text-xl" style="margin-bottom: var(--space-md);">What happens next</h3>
+      <ul class="space-y-3 text-sm" style="color: var(--swiss-gray-800);">
+        <li>✔ You get a personalized checklist and guides.</li>
+        <li>✔ Discord intro post to #jobclub-intros.</li>
+        <li>✔ Events and resources matched to your goal.</li>
+        <li>✔ CRM entry for mentorship + follow-ups.</li>
+      </ul>
+    </div>
+
     <!-- Success Message (Hidden by default) -->
-    <div id="success-message" class="hidden bg-green-50 border border-green-200 rounded-lg p-6 text-center">
+    <div id="success-message" class="hidden panel">
       <h2 class="text-2xl font-bold text-green-900 mb-2">Welcome to Your AI Career Pipeline! 🎉</h2>
       <p class="text-green-800 mb-4">Check your email for your personalized career readiness checklist and guided onboarding milestones.</p>
       <p class="text-green-700">We've also added you to our mentoring community on Discord. <a href="https://discord.gg/jobclub" class="font-bold hover:underline">Join now to connect with peers on the same path</a>!</p>
     </div>
 
     <!-- Help Section -->
-    <div class="mt-12 bg-white rounded-lg p-6 border border-gray-200">
+    <div class="mt-12 panel">
       <h3 class="text-lg font-bold text-gray-900 mb-4">Need Help?</h3>
       <p class="text-gray-700 mb-4">
         If you have questions about onboarding or Job Club, reach out to us:
       </p>
       <ul class="space-y-2 text-gray-700">
-        <li>📧 Email: <a href="mailto:jobclub@njit.edu" class="text-blue-600 hover:underline">jobclub@njit.edu</a></li>
-        <li>💬 Discord: <a href="https://discord.gg/jobclub" class="text-blue-600 hover:underline">Job Club Server</a></li>
-        <li>📅 Schedule: <a href="https://calendly.com/jobclub" class="text-blue-600 hover:underline">Office Hours</a></li>
+        <li>📧 Email: <a href="mailto:jobclub@njit.edu" class="link-swiss">jobclub@njit.edu</a></li>
+        <li>💬 Discord: <a href="https://discord.gg/jobclub" class="link-swiss">Job Club Server</a></li>
+        <li>📅 Schedule: <a href="https://calendly.com/jobclub" class="link-swiss">Office Hours</a></li>
       </ul>
     </div>
   </div>

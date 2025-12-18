@@ -4,7 +4,7 @@ title: About this Site
 description: Learn about the design philosophy, technology stack, and Swiss design principles behind this portfolio website
 ---
 
-<article class="py-12 md:py-16 lg:py-20">
+<article class="section section--xl">
   <div style="max-width: 1440px; margin: 0 auto; padding-left: var(--swiss-grid-margin); padding-right: var(--swiss-grid-margin);">
     {# Swiss header with asymmetric layout #}
     <header class="swiss-grid mb-12" style="border-left: 4px solid var(--swiss-red); padding-left: var(--space-md);">
@@ -74,15 +74,15 @@ description: Learn about the design philosophy, technology stack, and Swiss desi
             </div>
             
             <div style="border-left: 2px solid var(--swiss-black); padding-left: var(--space-md);">
-              <dt class="text-xs font-bold uppercase tracking-wider mb-2" style="color: var(--swiss-gray-600);">CSS Framework</dt>
-              <dd class="font-bold" style="font-size: var(--fluid-h4);">Tailwind CSS 3.4</dd>
-              <dd class="text-sm mt-2" style="color: var(--swiss-gray-700);">Utility-first framework extended with custom Swiss design components and typography</dd>
+              <dt class="text-xs font-bold uppercase tracking-wider mb-2" style="color: var(--swiss-gray-600);">CSS</dt>
+              <dd class="font-bold" style="font-size: var(--fluid-h4);">Vanilla CSS (Custom Properties)</dd>
+              <dd class="text-sm mt-2" style="color: var(--swiss-gray-700);">Handcrafted CSS using custom properties, fluid typography, and a Swiss design system (no utility framework)</dd>
             </div>
             
             <div style="border-left: 2px solid var(--swiss-black); padding-left: var(--space-md);">
               <dt class="text-xs font-bold uppercase tracking-wider mb-2" style="color: var(--swiss-gray-600);">Interactivity</dt>
-              <dd class="font-bold" style="font-size: var(--fluid-h4);">Alpine.js</dd>
-              <dd class="text-sm mt-2" style="color: var(--swiss-gray-700);">Lightweight JavaScript for mobile menu and interactive components</dd>
+              <dd class="font-bold" style="font-size: var(--fluid-h4);">Vanilla JavaScript</dd>
+              <dd class="text-sm mt-2" style="color: var(--swiss-gray-700);">Minimal, framework-free JavaScript for mobile menu and interactive components</dd>
             </div>
           </dl>
 
@@ -139,8 +139,8 @@ description: Learn about the design philosophy, technology stack, and Swiss desi
           <h3>Performance Optimizations</h3>
           <ul>
             <li><strong>Static Generation</strong> — Pre-rendered HTML for instant loading</li>
-            <li><strong>Minimal JavaScript</strong> — Only Alpine.js for mobile menu (~15KB gzipped)</li>
-            <li><strong>CSS Purging</strong> — Tailwind removes unused styles in production</li>
+            <li><strong>Minimal JavaScript</strong> — Lightweight vanilla JavaScript for interactive components</li>
+            <li><strong>Critical CSS</strong> — Hand-tuned CSS with a small footprint and no unused utilities</li>
             <li><strong>View Transitions API</strong> — Smooth page navigation</li>
             <li><strong>Lazy Loading</strong> — Images load only when visible</li>
             <li><strong>Web Vitals Monitoring</strong> — Performance tracking built-in</li>
@@ -180,8 +180,8 @@ description: Learn about the design philosophy, technology stack, and Swiss desi
           <p>The site uses a parallel build process for optimal development experience:</p>
           
           <ol>
-            <li><strong>CSS Compilation</strong> — Tailwind processes custom CSS with Swiss components</li>
-            <li><strong>JavaScript Bundling</strong> — Alpine.js is bundled for production</li>
+            <li><strong>CSS Compilation</strong> — Hand-authored CSS is copied to the build and minified as part of the production build</li>
+            <li><strong>JavaScript Bundling</strong> — Minimal vanilla JavaScript files are copied to the build (no framework bundling required)</li>
             <li><strong>Template Processing</strong> — Nunjucks templates compile to static HTML</li>
             <li><strong>Live Reload</strong> — Dev server watches for changes and auto-refreshes</li>
           </ol>

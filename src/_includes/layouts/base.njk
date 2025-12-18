@@ -86,16 +86,16 @@
             "name": "New Jersey Institute of Technology"
           }
         },
-        {
-          "@type": "Organization",
-          "@id": "{{ site.url }}/#organization",
-          "name": "EverydayAI Community",
-          "url": "{{ site.url }}",
-          "description": "Students teaching Newark residents how to use AI every day—for health, legal help, education, budgets, and productivity.",
-          "founder": {
-            "@id": "{{ site.url }}/#person"
-          }
-        },
+                {
+                    "@type": "Organization",
+                    "@id": "{{ site.url }}/#organization",
+                    "name": "Job Club",
+                    "url": "{{ site.url }}",
+                    "description": "Job Club at NJIT: AI career accelerator with onboarding, events, resources, and portfolio guidance.",
+                    "founder": {
+                        "@id": "{{ site.url }}/#person"
+                    }
+                },
         {
           "@type": "WebSite",
           "@id": "{{ site.url }}/#website",
@@ -147,14 +147,11 @@
 <body class="font-sans antialiased text-neutral-900 bg-white min-h-screen flex flex-col">
     <!-- Swiss International Typographic Style Navigation -->
     <header data-component="header" data-testid="main-header" class="sticky top-0 z-50 no-print" style="background-color: var(--swiss-white); border-bottom: 3px solid var(--swiss-black);">
-        <nav style="max-width: 1440px; margin: 0 auto; padding-left: 1rem; padding-right: 1rem;">
+        <nav role="navigation" aria-label="Primary" style="max-width: 1440px; margin: 0 auto; padding-left: 1rem; padding-right: 1rem;">
             <div class="flex items-center justify-between" style="height: 64px;">
-                <!-- Swiss Logo/Wordmark - EverydayAI by Keith Williams -->
-                <a href="/" style="display: inline-block; line-height: 1; text-decoration: none; z-index: 60; position: relative; transition: opacity 0.2s;" class="group hover:opacity-80">
-                    <!-- Single Line Lockup with Perfect Swiss Typography -->
-                    <span class="font-black" style="font-size: clamp(1.25rem, 3vw, 1.5rem); color: var(--swiss-black); letter-spacing: -0.03em; line-height: 1;">
-                        EVERYDAY<span style="color: var(--swiss-red); font-weight: 900;">AI</span><span style="color: var(--swiss-gray-500); font-weight: 400; font-size: 0.45em; vertical-align: top; margin-left: 0.15em; letter-spacing: 0.1em;"> BY KEITH WILLIAMS</span>
-                    </span>
+                <!-- Official Job Club Logo -->
+                <a href="/" class="group hover:opacity-80" style="display: inline-flex; align-items: center; line-height: 1; text-decoration: none; z-index: 60; position: relative; transition: opacity 0.2s;">
+                    <img src="{{ '/images/job-club-logo.png' | baseUrl }}" alt="Job Club" style="height: 48px; width: auto; display: block;" loading="eager">
                 </a>
 
                 <!-- Desktop Navigation - Swiss Minimal -->
@@ -166,27 +163,27 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/townhall/" class="font-bold uppercase tracking-wider relative" style="font-size: 0.75rem; color: {% if '/townhall/' in page.url %}var(--swiss-red){% else %}var(--swiss-black){% endif %}; letter-spacing: 0.15em; transition: color 0.2s;">
-                            <span>Town Hall</span>
-                            {% if '/townhall/' in page.url %}<span style="position: absolute; bottom: -8px; left: 0; width: 100%; height: 2px; background-color: var(--swiss-red);"></span>{% endif %}
+                        <a href="/jobclub/onboarding/" class="font-bold uppercase tracking-wider relative" style="font-size: 0.75rem; color: {% if '/jobclub/onboarding/' in page.url %}var(--swiss-red){% else %}var(--swiss-black){% endif %}; letter-spacing: 0.15em; transition: color 0.2s;">
+                            <span>Onboarding</span>
+                            {% if '/jobclub/onboarding/' in page.url %}<span style="position: absolute; bottom: -8px; left: 0; width: 100%; height: 2px; background-color: var(--swiss-red);"></span>{% endif %}
                         </a>
                     </li>
                     <li>
-                        <a href="/blog/" class="font-bold uppercase tracking-wider relative" style="font-size: 0.75rem; color: {% if '/blog/' in page.url %}var(--swiss-red){% else %}var(--swiss-black){% endif %}; letter-spacing: 0.15em; transition: color 0.2s;">
-                            <span>Blog</span>
-                            {% if '/blog/' in page.url %}<span style="position: absolute; bottom: -8px; left: 0; width: 100%; height: 2px; background-color: var(--swiss-red);"></span>{% endif %}
+                        <a href="/jobclub/events/" class="font-bold uppercase tracking-wider relative" style="font-size: 0.75rem; color: {% if '/jobclub/events/' in page.url %}var(--swiss-red){% else %}var(--swiss-black){% endif %}; letter-spacing: 0.15em; transition: color 0.2s;">
+                            <span>Events</span>
+                            {% if '/jobclub/events/' in page.url %}<span style="position: absolute; bottom: -8px; left: 0; width: 100%; height: 2px; background-color: var(--swiss-red);"></span>{% endif %}
                         </a>
                     </li>
                     <li>
-                        <a href="/projects/" class="font-bold uppercase tracking-wider relative" style="font-size: 0.75rem; color: {% if '/projects/' in page.url %}var(--swiss-red){% else %}var(--swiss-black){% endif %}; letter-spacing: 0.15em; transition: color 0.2s;">
-                            <span>Projects</span>
-                            {% if '/projects/' in page.url %}<span style="position: absolute; bottom: -8px; left: 0; width: 100%; height: 2px; background-color: var(--swiss-red);"></span>{% endif %}
+                        <a href="/jobclub/resources/" class="font-bold uppercase tracking-wider relative" style="font-size: 0.75rem; color: {% if '/jobclub/resources/' in page.url %}var(--swiss-red){% else %}var(--swiss-black){% endif %}; letter-spacing: 0.15em; transition: color 0.2s;">
+                            <span>Resources</span>
+                            {% if '/jobclub/resources/' in page.url %}<span style="position: absolute; bottom: -8px; left: 0; width: 100%; height: 2px; background-color: var(--swiss-red);"></span>{% endif %}
                         </a>
                     </li>
                     <li>
-                        <a href="/about/" class="font-bold uppercase tracking-wider relative" style="font-size: 0.75rem; color: {% if page.url == '/about/' %}var(--swiss-red){% else %}var(--swiss-black){% endif %}; letter-spacing: 0.15em; transition: color 0.2s;">
+                        <a href="/jobclub/about/" class="font-bold uppercase tracking-wider relative" style="font-size: 0.75rem; color: {% if page.url == '/jobclub/about/' %}var(--swiss-red){% else %}var(--swiss-black){% endif %}; letter-spacing: 0.15em; transition: color 0.2s;">
                             <span>About</span>
-                            {% if page.url == '/about/' %}<span style="position: absolute; bottom: -8px; left: 0; width: 100%; height: 2px; background-color: var(--swiss-red);"></span>{% endif %}
+                            {% if page.url == '/jobclub/about/' %}<span style="position: absolute; bottom: -8px; left: 0; width: 100%; height: 2px; background-color: var(--swiss-red);"></span>{% endif %}
                         </a>
                     </li>
                 </ul>
@@ -228,7 +225,7 @@
             style="background-color: var(--swiss-white); top: 64px; padding: 2rem 1rem; opacity: 0; transition: opacity 0.3s ease;"
         >
             <!-- Swiss Grid Mobile Navigation -->
-            <nav>
+            <nav role="navigation" aria-label="Mobile Primary">
                 <!-- Section Number -->
                 <p class="text-xs font-bold uppercase tracking-widest mb-8" style="color: var(--swiss-gray-600); letter-spacing: 0.15em;">
                     01 — Navigation
@@ -248,39 +245,39 @@
                     </li>
                     <li class="mb-6" style="border-top: 1px solid var(--swiss-gray-300); padding-top: 1.5rem;">
                         <a 
-                            href="/townhall/" 
+                            href="/jobclub/onboarding/" 
                             class="block font-bold uppercase tracking-wider"
-                            style="font-size: clamp(1.5rem, 5vw, 2.5rem); line-height: 1.2; letter-spacing: -0.01em; {% if '/townhall/' in page.url %}color: var(--swiss-red); transform: translateX(0.5rem);{% else %}color: var(--swiss-black);{% endif %} transition: all 0.2s;"
+                            style="font-size: clamp(1.5rem, 5vw, 2.5rem); line-height: 1.2; letter-spacing: -0.01em; {% if '/jobclub/onboarding/' in page.url %}color: var(--swiss-red); transform: translateX(0.5rem);{% else %}color: var(--swiss-black);{% endif %} transition: all 0.2s;"
                         >
                             <span style="display: block; margin-bottom: 0.25rem;">02</span>
-                            <span>Town Hall</span>
+                            <span>Onboarding</span>
                         </a>
                     </li>
                     <li class="mb-6" style="border-top: 1px solid var(--swiss-gray-300); padding-top: 1.5rem;">
                         <a 
-                            href="/blog/" 
+                            href="/jobclub/events/" 
                             class="block font-bold uppercase tracking-wider"
-                            style="font-size: clamp(1.5rem, 5vw, 2.5rem); line-height: 1.2; letter-spacing: -0.01em; {% if '/blog/' in page.url %}color: var(--swiss-red); transform: translateX(0.5rem);{% else %}color: var(--swiss-black);{% endif %} transition: all 0.2s;"
+                            style="font-size: clamp(1.5rem, 5vw, 2.5rem); line-height: 1.2; letter-spacing: -0.01em; {% if '/jobclub/events/' in page.url %}color: var(--swiss-red); transform: translateX(0.5rem);{% else %}color: var(--swiss-black);{% endif %} transition: all 0.2s;"
                         >
                             <span style="display: block; margin-bottom: 0.25rem;">03</span>
-                            <span>Blog</span>
+                            <span>Events</span>
                         </a>
                     </li>
                     <li class="mb-6" style="border-top: 1px solid var(--swiss-gray-300); padding-top: 1.5rem;">
                         <a 
-                            href="/projects/" 
+                            href="/jobclub/resources/" 
                             class="block font-bold uppercase tracking-wider"
-                            style="font-size: clamp(1.5rem, 5vw, 2.5rem); line-height: 1.2; letter-spacing: -0.01em; {% if '/projects/' in page.url %}color: var(--swiss-red); transform: translateX(0.5rem);{% else %}color: var(--swiss-black);{% endif %} transition: all 0.2s;"
+                            style="font-size: clamp(1.5rem, 5vw, 2.5rem); line-height: 1.2; letter-spacing: -0.01em; {% if '/jobclub/resources/' in page.url %}color: var(--swiss-red); transform: translateX(0.5rem);{% else %}color: var(--swiss-black);{% endif %} transition: all 0.2s;"
                         >
                             <span style="display: block; margin-bottom: 0.25rem;">04</span>
-                            <span>Projects</span>
+                            <span>Resources</span>
                         </a>
                     </li>
                     <li class="mb-6" style="border-top: 1px solid var(--swiss-gray-300); padding-top: 1.5rem;">
                         <a 
-                            href="/about/" 
+                            href="/jobclub/about/" 
                             class="block font-bold uppercase tracking-wider"
-                            style="font-size: clamp(1.5rem, 5vw, 2.5rem); line-height: 1.2; letter-spacing: -0.01em; {% if page.url == '/about/' %}color: var(--swiss-red); transform: translateX(0.5rem);{% else %}color: var(--swiss-black);{% endif %} transition: all 0.2s;"
+                            style="font-size: clamp(1.5rem, 5vw, 2.5rem); line-height: 1.2; letter-spacing: -0.01em; {% if page.url == '/jobclub/about/' %}color: var(--swiss-red); transform: translateX(0.5rem);{% else %}color: var(--swiss-black);{% endif %} transition: all 0.2s;"
                         >
                             <span style="display: block; margin-bottom: 0.25rem;">05</span>
                             <span>About</span>
@@ -320,14 +317,9 @@
             <div class="grid grid-cols-1 md:grid-cols-12" style="padding-top: var(--space-5xl); padding-bottom: var(--space-4xl); gap: var(--space-3xl); border-bottom: 1px solid var(--swiss-gray-700);">
                 <!-- Brand Column -->
                 <div class="md:col-span-5">
-                    <!-- Swiss Logo/Wordmark - Footer Version -->
+                    <!-- Official Job Club Logo - Footer Version -->
                     <div style="line-height: 1; margin-bottom: var(--space-xl);">
-                        <span class="font-black" style="font-size: var(--fluid-h2); color: var(--swiss-white); letter-spacing: -0.03em; line-height: 1; display: block;">
-                            EVERYDAY<span style="color: var(--swiss-red); font-weight: 900;">AI</span>
-                        </span>
-                        <span style="color: var(--swiss-gray-500); font-weight: 400; font-size: 0.75rem; letter-spacing: 0.1em; display: block; margin-top: 0.5rem; text-transform: uppercase;">
-                            BY KEITH WILLIAMS
-                        </span>
+                        <img src="{{ '/images/job-club-logo.png' | baseUrl }}" alt="Job Club" style="height: 54px; width: auto; display: block;" loading="lazy">
                     </div>
                     <p class="leading-relaxed" style="color: var(--swiss-gray-400); max-width: 400px;">
                         {{ site.description }}
@@ -343,10 +335,10 @@
                         <dd>
                             <ul style="display: flex; flex-direction: column; gap: var(--space-md);">
                                 <li><a href="/" class="font-medium hover:underline" style="color: var(--swiss-white); transition: color 0.2s;">Home</a></li>
-                                <li><a href="/townhall/" class="font-medium hover:underline" style="color: var(--swiss-white); transition: color 0.2s;">Town Hall</a></li>
-                                <li><a href="/blog/" class="font-medium hover:underline" style="color: var(--swiss-white); transition: color 0.2s;">Blog</a></li>
-                                <li><a href="/projects/" class="font-medium hover:underline" style="color: var(--swiss-white); transition: color 0.2s;">Projects</a></li>
-                                <li><a href="/about/" class="font-medium hover:underline" style="color: var(--swiss-white); transition: color 0.2s;">About</a></li>
+                                <li><a href="/jobclub/onboarding/" class="font-medium hover:underline" style="color: var(--swiss-white); transition: color 0.2s;">Onboarding</a></li>
+                                <li><a href="/jobclub/events/" class="font-medium hover:underline" style="color: var(--swiss-white); transition: color 0.2s;">Events</a></li>
+                                <li><a href="/jobclub/resources/" class="font-medium hover:underline" style="color: var(--swiss-white); transition: color 0.2s;">Resources</a></li>
+                                <li><a href="/jobclub/about/" class="font-medium hover:underline" style="color: var(--swiss-white); transition: color 0.2s;">About</a></li>
                                 <li><a href="/about-site/" class="font-medium hover:underline" style="color: var(--swiss-gray-400); transition: color 0.2s;">About this Site</a></li>
                             </ul>
                         </dd>
@@ -413,10 +405,8 @@
                 <div class="md:text-right">
                     <p class="text-xs" style="color: var(--swiss-gray-500);">
                         Built with 
-                        <a href="https://www.11ty.dev/" target="_blank" rel="noopener noreferrer" class="font-bold hover:underline" style="color: var(--swiss-white); transition: color 0.2s;">Eleventy</a> 
-                        / 
-                        <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer" class="font-bold hover:underline" style="color: var(--swiss-white); transition: color 0.2s;">Tailwind CSS</a>
-                        / International Typographic Style
+                        <a href="https://www.11ty.dev/" target="_blank" rel="noopener noreferrer" class="font-bold hover:underline" style="color: var(--swiss-white); transition: color 0.2s;">Eleventy</a>
+                        / Swiss design system (no Tailwind)
                     </p>
                 </div>
             </div>

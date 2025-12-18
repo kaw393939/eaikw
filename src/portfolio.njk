@@ -1,0 +1,37 @@
+---
+layout: layouts/base.njk
+title: Portfolio - Job Club
+description: Build a portfolio that shows AI outcomes recruiters can skim in 60 seconds.
+---
+
+{% import "components/ui.njk" as ui %}
+
+<section style="padding-top: var(--space-5xl); padding-bottom: var(--space-5xl);">
+  <div class="swiss-grid">
+    <div class="swiss-col-12 md:swiss-col-7">
+      {{ ui.sectionHeader('Portfolio', 'Show proof, not just intent.', 'Use this checklist and examples to build a portfolio that lands interviews.') }}
+      <ul class="space-y-3" style="color: var(--swiss-gray-800); margin-bottom: var(--space-2xl);">
+        <li>✔ LinkedIn + GitHub polish with proof-of-work links</li>
+        <li>✔ 2–3 AI project writeups with problem, approach, outcome</li>
+        <li>✔ Case-study template for consulting gigs</li>
+        <li>✔ Calendly + intro blurb for quick scheduling</li>
+        <li>✔ Resume + portfolio alignment</li>
+      </ul>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="/jobclub/onboarding/" class="btn-swiss-primary">Start onboarding</a>
+        <a href="https://kaw393939.github.io/117_final_fall_2025/portfolio/" class="btn-swiss" target="_blank" rel="noopener noreferrer">See model portfolio</a>
+      </div>
+    </div>
+    <div class="swiss-col-12 md:swiss-col-5" style="padding-top: var(--space-3xl);">
+      <div class="p-5 border-2" style="border-color: var(--swiss-black);">
+        <h3 class="font-bold" style="margin-bottom: var(--space-md);">Quick wins</h3>
+        <ol class="space-y-3 list-decimal list-inside" style="color: var(--swiss-gray-800);">
+          <li>Ship one public case study with screenshots.</li>
+          <li>Add a 60-second Loom walkthrough to your best project.</li>
+          <li>Pin 3 proof links on LinkedIn and GitHub.</li>
+          <li>Enable Calendly + intro blurb for recruiter chats.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>

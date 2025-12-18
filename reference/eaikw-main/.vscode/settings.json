@@ -1,0 +1,36 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "files.associations": {
+    "*.njk": "nunjucks",
+    "*.nunjucks": "nunjucks"
+  },
+  "emmet.includeLanguages": {
+    "nunjucks": "html"
+  },
+  "html.format.templating": true,
+  "css.validate": true,
+  "scss.validate": true,
+  "javascript.validate.enable": true,
+  "typescript.validate.enable": true,
+  "markdown.extension.toc.updateOnSave": true,
+  "markdown.extension.preview.autoShowPreviewToSide": false,
+  "markdownlint.config": {
+    "MD013": false,
+    "MD033": false
+  },
+  "files.exclude": {
+    "_site/": true,
+    "node_modules/": true,
+    ".eleventy.cache/": true
+  },
+  "search.exclude": {
+    "_site/": true,
+    "node_modules/": true,
+    ".eleventy.cache/": true
+  },
+  "terminal.integrated.defaultProfile.osx": "zsh"
+}

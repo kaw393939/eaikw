@@ -8,6 +8,26 @@
 @tailwind components;
 @tailwind utilities;
 
+/* CSS Custom Properties - Swiss Design System */
+:root {
+  /* Swiss Colors */
+  --swiss-black: #000000;
+  --swiss-white: #ffffff;
+  --swiss-red: #e62e04;
+  --swiss-red-dark: #b81c00;
+  --swiss-gray-500: #757575;
+  --swiss-gray-600: #616161;
+
+  /* Spacing & Layout */
+  --swiss-grid-gutter: 2rem;
+  --swiss-grid-margin: 2rem;
+  --space-3xl: 2rem;
+  --space-4xl: 3rem;
+
+  /* Typography */
+  --fluid-body: 1rem;
+}
+
 /* Component Layer - Reusable UI Patterns */
 @layer components {
   /* Swiss Grid Container with Mathematical Precision */
@@ -548,10 +568,7 @@
 
   /* Base Typography with font features */
   html {
-    font-feature-settings:
-      "kern" 1,
-      "liga" 1,
-      "calt" 1;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
   }
 
   /* Advanced Typography Features */
@@ -563,7 +580,7 @@
   h5,
   h6 {
     overflow-wrap: break-word; /* widely supported */
-    word-wrap: break-word;     /* legacy alias */
+    word-wrap: break-word; /* legacy alias */
   }
 
   /* Hyphenation for narrow viewports */
@@ -571,20 +588,16 @@
     p,
     li,
     dd {
-      -webkit-hyphens: auto;      /* Safari, iOS Safari */
-      -ms-hyphens: auto;          /* Legacy IE */
+      -webkit-hyphens: auto; /* Safari, iOS Safari */
+      -ms-hyphens: auto; /* Legacy IE */
       hyphens: auto;
-      overflow-wrap: break-word;  /* Ensures long words break */
+      overflow-wrap: break-word; /* Ensures long words break */
     }
   }
 
   /* Additional OpenType features for improved readability */
   body {
-    font-feature-settings:
-      "kern" 1,
-      "liga" 1,
-      "calt" 1,
-      "onum" 1;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "onum" 1;
     font-variant-numeric: oldstyle-nums;
   }
 
@@ -596,10 +609,7 @@
   [data-component="header"],
   [data-component="footer"] {
     font-variant-numeric: lining-nums;
-    font-feature-settings:
-      "kern" 1,
-      "liga" 1,
-      "calt" 1;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
   }
 }
 
@@ -682,9 +692,7 @@
   /* Hover Effects - Swiss Design Micro-interactions */
   @media (hover: hover) {
     .hover-lift {
-      transition:
-        transform var(--transition-base),
-        box-shadow var(--transition-base);
+      transition: transform var(--transition-base), box-shadow var(--transition-base);
     }
 
     .hover-lift:hover {
@@ -698,9 +706,7 @@
     }
 
     .hover-glow:hover {
-      box-shadow:
-        0 0 20px rgba(37, 99, 235, 0.3),
-        0 0 40px rgba(37, 99, 235, 0.1);
+      box-shadow: 0 0 20px rgba(37, 99, 235, 0.3), 0 0 40px rgba(37, 99, 235, 0.1);
     }
 
     .hover-scale {
@@ -911,13 +917,11 @@
 
   /* Enhanced shadows for HDR with deeper blacks */
   :root {
-    --shadow-subtle:
-      0 1px 3px color(display-p3 0 0 0 / 0.12), 0 1px 2px color(display-p3 0 0 0 / 0.08);
-    --shadow-medium:
-      0 4px 12px color(display-p3 0.06 0.08 0.13 / 0.16),
+    --shadow-subtle: 0 1px 3px color(display-p3 0 0 0 / 0.12),
+      0 1px 2px color(display-p3 0 0 0 / 0.08);
+    --shadow-medium: 0 4px 12px color(display-p3 0.06 0.08 0.13 / 0.16),
       0 2px 4px color(display-p3 0.06 0.08 0.13 / 0.08);
-    --shadow-strong:
-      0 24px 48px color(display-p3 0.06 0.08 0.13 / 0.24),
+    --shadow-strong: 0 24px 48px color(display-p3 0.06 0.08 0.13 / 0.24),
       0 12px 24px color(display-p3 0.06 0.08 0.13 / 0.16);
   }
 
@@ -1032,9 +1036,7 @@
   /* Smooth hover transition with cubic bezier */
   .project-card:hover {
     transform: translateY(-4px) translateZ(0);
-    box-shadow:
-      0 10px 30px -10px rgba(0, 0, 0, 0.15),
-      0 0 0 4px var(--swiss-black);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.15), 0 0 0 4px var(--swiss-black);
   }
 
   /* High contrast mode support */
@@ -1079,5 +1081,17 @@
 @media print {
   .no-print {
     display: none !important;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 text-white border-transparent
+           hover:bg-primary-700
+           focus-visible:ring-2 focus-visible:ring-primary-500
+           focus-visible:ring-offset-2
+           active:bg-primary-800
+           disabled:opacity-50 disabled:cursor-not-allowed
+           disabled:hover:bg-primary-600;
   }
 }

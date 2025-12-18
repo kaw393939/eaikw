@@ -1,0 +1,29 @@
+[
+  {
+    "slug": "ai-consulting-office-hours",
+    "title": "AI Consulting Office Hours",
+    "when": "Thu 6:00 PM",
+    "where": "Zoom",
+    "summary": "Bring client questions or a project and get live feedback.",
+    "registerUrl": "https://calendly.com/jobclub",
+    "calendarUrl": "#"
+  },
+  {
+    "slug": "hack-night-rag-demo",
+    "title": "Hack Night: Build a RAG Demo",
+    "when": "Mon 7:00 PM",
+    "where": "Campus Lab",
+    "summary": "Ship a small AI demo with peers; we provide prompts and templates.",
+    "registerUrl": "https://calendly.com/jobclub",
+    "calendarUrl": "#"
+  },
+  {
+    "slug": "portfolio-review-sprint",
+    "title": "Portfolio Review Sprint",
+    "when": "Sat 11:00 AM",
+    "where": "Zoom",
+    "summary": "Tighten your LinkedIn, GitHub, and portfolio with mentor feedback.",
+    "registerUrl": "https://calendly.com/jobclub",
+    "calendarUrl": "#"
+  }
+]

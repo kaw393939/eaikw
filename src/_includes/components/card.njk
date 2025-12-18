@@ -1,6 +1,6 @@
 {# Project Card Component #} {% macro projectCard(project) %} {% if project and project.data %}
 <article
-  class="group relative bg-white rounded-lg border-4 border-neutral-900 overflow-hidden hover-lift"
+  class="card group"
   data-component="project-card"
 >
   {% if project.data.image %}
@@ -16,7 +16,7 @@
   </div>
   {% endif %}
 
-  <div class="p-6">
+  <div class="card__body">
     <h3 class="text-2xl font-bold mb-3 text-neutral-900">{{ project.data.title or 'Untitled Project' }}</h3>
 
     <p class="text-neutral-600 mb-4 text-fluid-body">{{ project.data.description or 'No description available.' }}</p>
@@ -24,7 +24,7 @@
     {% if project.data.tech %}
     <div class="flex flex-wrap gap-2 mb-4">
       {% for tech in project.data.tech %}
-      <span class="px-3 py-1 text-sm font-medium bg-neutral-100 text-neutral-700 border-2 border-neutral-900 rounded">
+      <span class="px-3 py-1 text-sm font-medium bg-neutral-100 text-neutral-700 border-2 border-neutral-900">
         {{ tech }}
       </span>
       {% endfor %}
@@ -60,12 +60,12 @@
   </div>
 </article>
 {% else %}
-<article class="bg-white rounded-lg border-4 border-red-900 p-6">
-  <p class="text-red-600">Project data not available</p>
+<article class="card" style="border-color: var(--swiss-red);">
+  <div class="card__body"><p class="text-red-600">Project data not available</p></div>
 </article>
 {% endif %} {% endmacro %} {# Blog Post Card Component #} {% macro postCard(post) %} {% if post and post.data %}
 <article
-  class="group bg-white rounded-lg border-4 border-neutral-900 overflow-hidden hover-lift"
+  class="card group"
   data-component="blog-card"
 >
   {% if post.data.image %}

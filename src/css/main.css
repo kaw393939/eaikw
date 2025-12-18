@@ -1,0 +1,684 @@
+/* Main vanilla CSS implementing the design tokens from README.md
+   Goal: replicate the existing layout and appearance currently produced by Tailwind
+   so the visual output remains unchanged after removing Tailwind.
+*/
+
+:root {
+  /* Swiss color system */
+  --swiss-black: #000000;
+  --swiss-white: #ffffff;
+  --swiss-red: #e53e3e;
+  --swiss-gray-100: #f7fafc;
+  --swiss-gray-200: #edf2f7;
+  --swiss-gray-300: #e2e8f0;
+  --swiss-gray-400: #cbd5e1;
+  --swiss-gray-500: #94a3b8;
+  --swiss-gray-600: #64748b;
+  --swiss-gray-700: #475569;
+  --swiss-gray-900: #0f172a;
+
+  /* Spacing scale */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
+
+  --swiss-grid-margin: 1rem; /* default page padding */
+
+  /* Section spacing helpers (semantic replacements for utility py-* classes) */
+  --section-padding-sm: var(--space-lg);
+  --section-padding-md: var(--space-2xl);
+  --section-padding-lg: var(--space-3xl);
+  --section-padding-xl: var(--space-4xl);
+
+  /* Fluid typography variables */
+  --fluid-display: clamp(3rem, 6vw, 6rem);
+  --fluid-h1: clamp(2.5rem, 5vw, 4.5rem);
+  --fluid-h2: clamp(2rem, 4vw, 3rem);
+  --fluid-h3: clamp(1.5rem, 2.5vw, 2rem);
+  --fluid-h4: clamp(1.125rem, 1.8vw, 1.25rem);
+
+  /* Fonts */
+  --font-sans: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+}
+
+/* Base reset and sensible defaults */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+img, svg { max-width: 100%; height: auto; display: block; }
+body { font-family: var(--font-sans); color: var(--swiss-black); background: var(--swiss-white); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+/* Semantic section classes */
+.section { padding-top: var(--section-padding-sm); padding-bottom: var(--section-padding-sm); }
+.section--md { padding-top: var(--section-padding-md); padding-bottom: var(--section-padding-md); }
+.section--lg { padding-top: var(--section-padding-lg); padding-bottom: var(--section-padding-lg); }
+.section--xl { padding-top: var(--section-padding-xl); padding-bottom: var(--section-padding-xl); }
+
+@media (min-width: 768px) {
+  .section--md { padding-top: var(--space-xl); padding-bottom: var(--space-xl); }
+  .section--lg { padding-top: var(--space-3xl); padding-bottom: var(--space-3xl); }
+  .section--xl { padding-top: var(--space-3xl); padding-bottom: var(--space-3xl); }
+}
+
+@media (min-width: 1024px) {
+  .section--md { padding-top: var(--space-2xl); padding-bottom: var(--space-2xl); }
+  .section--lg { padding-top: var(--space-4xl); padding-bottom: var(--space-4xl); }
+  .section--xl { padding-top: var(--space-4xl); padding-bottom: var(--space-4xl); }
+}
+  /* Fluid typography variables */
+  --fluid-display: clamp(3rem, 6vw, 6rem);
+  --fluid-h1: clamp(2.5rem, 5vw, 4.5rem);
+  --fluid-h2: clamp(2rem, 4vw, 3rem);
+  --fluid-h3: clamp(1.5rem, 2.5vw, 2rem);
+  --fluid-h4: clamp(1.125rem, 1.8vw, 1.25rem);
+
+  /* Fonts */
+  .rounded-lg {
+  --font-sans:
+    Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+  .shadow-lg {
+    "Liberation Sans", sans-serif;
+}
+  .bg-white {
+
+/* Basic reset */
+  .text-gray-900 {
+* {
+  box-sizing: border-box;
+  .text-gray-700 {
+}
+html,
+  .text-gray-600 {
+body {
+  margin: 0;
+  .text-blue-600 {
+  padding: 0;
+}
+  .bg-blue-600 {
+img,
+svg {
+  max-width: 100%;
+  .hover\:bg-blue-700:hover {
+  height: auto;
+}
+  .w-full {
+
+/* Layout utilities used in templates */
+  .px-4 {
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+  .py-2 {
+.font-sans {
+  font-family: var(--font-sans);
+}
+  .px-8 {
+  .md\:grid-cols-2 {
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .lg\:grid-cols-2 {
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  .py-3 {
+}
+.text-neutral-900 {
+  color: var(--swiss-black);
+  .text-center {
+}
+.bg-white {
+  .hidden {
+  background: var(--swiss-white);
+}
+  .space-y-2 > * + * {
+.min-h-screen {
+  min-height: 100vh;
+  .grid {
+}
+.flex {
+  .md\:grid-cols-2 {
+  display: flex;
+}
+  .gap-6 {
+.flex-col {
+  flex-direction: column;
+  .max-w-2xl {
+}
+.flex-1 {
+  .mx-auto {
+  flex: 1 1 auto;
+}
+.items-center {
+  .rounded {
+    align-items: center;
+    /* neutralize generic rounding per Swiss guidelines */
+    border-radius: 0;
+}
+  .rounded-full{border-radius:9999px}
+  .rounded-lg{border-radius:0}
+  .shadow{box-shadow:none}
+  .border {
+.justify-between {
+  justify-content: space-between;
+  .mt-12 {
+}
+.hidden {
+  .mb-12 {
+  display: none;
+}
+  .mb-4 {
+.no-print {
+  @media print {
+  .mb-8 {
+    display: none !important;
+  }
+  .text-4xl {
+}
+
+  .text-xl {
+/* Responsive breakpoints (matches Tailwind defaults used in templates) */
+@media (min-width: 768px) {
+  .text-2xl {
+  .md\:grid-cols-12 {
+    display: grid;
+  .font-medium {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .font-bold {
+  .md\:col-span-5 {
+    grid-column: span 5 / span 5;
+  .sr-only {
+  }
+  .md\:col-span-4 {
+    grid-column: span 4 / span 4;
+  }
+  .md\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+}
+@media (min-width: 1024px) {
+  .lg\:flex {
+    display: flex;
+  }
+  .lg\:hidden {
+    display: none;
+  }
+}
+
+/* Utility spacing and typography used across pages */
+.text-xs {
+  font-size: 0.75rem;
+}
+.text-sm {
+  font-size: 0.9375rem;
+}
+.text-lg {
+  font-size: 1.125rem;
+}
+.font-bold {
+  font-weight: 700;
+}
+.font-black {
+  font-weight: 900;
+}
+.tracking-wider {
+  letter-spacing: 0.08em;
+}
+.tracking-widest {
+  letter-spacing: 0.12em;
+}
+.tracking-tighter {
+  letter-spacing: -0.02em;
+}
+.leading-relaxed {
+  line-height: 1.6;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.mb-2 {
+  margin-bottom: var(--space-sm);
+}
+.mb-3 {
+  margin-bottom: var(--space-md);
+}
+.mb-4 {
+  margin-bottom: var(--space-lg);
+}
+.mb-6 {
+  margin-bottom: var(--space-2xl);
+}
+.mb-8 {
+  margin-bottom: var(--space-3xl);
+}
+.mb-12 {
+  margin-bottom: var(--space-4xl);
+}
+.mb-16 {
+  margin-bottom: var(--space-5xl);
+}
+
+/* Swiss grid and columns (semantic classes used by templates) */
+.swiss-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-lg);
+  align-items: start;
+}
+.swiss-col-1 {
+  grid-column: span 1;
+}
+.swiss-col-2 {
+  grid-column: span 2;
+}
+.swiss-col-3 {
+  grid-column: span 3;
+}
+.swiss-col-4 {
+  grid-column: span 4;
+}
+.swiss-col-5 {
+  grid-column: span 5;
+}
+.swiss-col-6 {
+  grid-column: span 6;
+}
+.swiss-col-7 {
+  grid-column: span 7;
+}
+.swiss-col-8 {
+  grid-column: span 8;
+}
+.swiss-col-9 {
+  grid-column: span 9;
+}
+.swiss-col-10 {
+  grid-column: span 10;
+}
+.swiss-col-11 {
+  grid-column: span 11;
+}
+.swiss-col-12 {
+  grid-column: span 12;
+}
+
+.swiss-divider {
+  height: 3px;
+  /* Use a solid divider per design guidelines (avoid gradients) */
+  background: var(--swiss-black);
+}
+.prose-swiss {
+  max-width: 60ch;
+}
+.btn-swiss {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--swiss-black);
+  background: transparent;
+  color: var(--swiss-black);
+  text-decoration: none;
+}
+.btn-swiss-primary {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--swiss-black);
+  background: var(--swiss-black);
+  color: var(--swiss-white);
+  text-decoration: none;
+}
+.btn-swiss-accent {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--swiss-red);
+  background: var(--swiss-red);
+  color: var(--swiss-white);
+  text-decoration: none;
+}
+
+/* Footer grid helpers (replicate layout used in base.njk) */
+.grid {
+  display: grid;
+}
+.grid-cols-1 {
+  grid-template-columns: 1fr;
+}
+.grid-cols-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Mobile menu overlay behavior - default hidden; JS toggles .open */
+#mobile-menu {
+  position: fixed;
+  inset: 0;
+  top: 64px;
+  padding: 2rem 1rem;
+  background: var(--swiss-white);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s;
+}
+#mobile-menu.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Menu button visual states */
+.menu-button {
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border-radius: 4px;
+  border: 2px solid var(--swiss-black);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu-line {
+  display: block;
+}
+.menu-button.is-open {
+  background-color: var(--swiss-black);
+}
+.menu-button.is-open .menu-line-top {
+  top: 6px;
+  transform: rotate(45deg);
+  background-color: var(--swiss-white);
+}
+.menu-button.is-open .menu-line-middle {
+  opacity: 0;
+}
+.menu-button.is-open .menu-line-bottom {
+  top: 6px;
+  transform: rotate(-45deg);
+  background-color: var(--swiss-white);
+}
+
+/* Accessibility helpers */
+.sr-only {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+/* Small utilities used in pages */
+.leading-relaxed {
+  line-height: 1.6;
+}
+.hover\:underline:hover {
+  text-decoration: underline;
+}
+
+/* Ensure body layout matches exactly */
+body {
+  font-family: var(--font-sans);
+  color: var(--swiss-black);
+  background: var(--swiss-white);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Content container max width used in templates */
+.container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--swiss-grid-margin);
+  padding-right: var(--swiss-grid-margin);
+}
+
+/* Small responsive adjustments that match the original layout */
+@media (max-width: 1023px) {
+  .hidden\:lg {
+    display: block;
+  }
+}
+
+/* final housekeeping */
+img {
+  display: block;
+}
+
+/* Add small print styles (no print) */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Form & Card utilities (replace common Tailwind utilities used in templates) */
+.card {
+  background: var(--swiss-white);
+  border: 1px solid var(--swiss-gray-300);
+  padding: var(--space-xl);
+  border-radius: 0;
+}
+.rounded-lg {
+  /* prefer square corners per design guidelines */
+  border-radius: 0;
+}
+.shadow-lg {
+  /* remove heavy decorative shadow; keep none by default */
+  box-shadow: none;
+}
+.bg-gradient-job {
+  /* gradients avoided — use neutral flat background */
+  background: var(--swiss-gray-100);
+}
+.w-full {
+  width: 100%;
+}
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.text-gray-700 {
+  color: var(--swiss-gray-700);
+}
+.text-gray-600 {
+  color: var(--swiss-gray-600);
+}
+.text-gray-900 {
+  color: var(--swiss-black);
+}
+.focus-ring:focus {
+  outline: 2px solid var(--swiss-red);
+  outline-offset: 2px;
+}
+.form-input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--swiss-gray-300);
+  border-radius: 0;
+}
+.form-select {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--swiss-gray-300);
+  border-radius: 0;
+}
+.form-button {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  background: #0ea5e9;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+}
+.hidden {
+  display: none;
+}
+.text-center {
+  text-align: center;
+}
+.mb-12 {
+  margin-bottom: 3rem;
+}
+.space-y-4 > * + * {
+  margin-top: 1rem;
+}
+
+/* Additional helpers to cover common Tailwind utilities used across templates */
+.gap-6 {
+  gap: 1.5rem;
+}
+.gap-0 {
+  gap: 0;
+}
+.inline-flex {
+  display: inline-flex;
+}
+.items-center {
+  align-items: center;
+}
+.gap-2 {
+  gap: 0.5rem;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.text-sm {
+  font-size: 0.875rem;
+}
+.text-4xl {
+  font-size: 2.25rem;
+}
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.flex{display:flex}
+.flex-col{flex-direction:column}
+.sm\:flex-row{@media (min-width:640px){flex-direction:row}}
+.sm\:block{@media (min-width:640px){display:block}}
+.sm\:px-6{@media (min-width:640px){padding-left:1.5rem;padding-right:1.5rem}}
+.lg\:px-8{@media (min-width:1024px){padding-left:2rem;padding-right:2rem}}
+.bg-gray-50{background:var(--swiss-gray-100)}
+.bg-blue-50{background:var(--swiss-gray-100)}
+.bg-blue-600{background:var(--swiss-black);color:var(--swiss-white)}
+.hover\:bg-blue-700:hover{background:var(--swiss-black);color:var(--swiss-white)}
+.justify-center{justify-content:center}
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.border-2 {
+  border-width: 2px;
+}
+.border-neutral-200 {
+  border-color: var(--swiss-gray-200);
+}
+.hover\:gap-4:hover {
+  gap: var(--space-lg);
+}
+.group-hover\:gap-4 {
+  /* fall-back: same as hover */
+}
+.max-w-2xl {
+  max-width: 42rem;
+}
+.text-center {
+  text-align: center;
+}
+.bg-white {
+  background: var(--swiss-white);
+}
+.border-neutral-200 {
+  border-color: var(--swiss-gray-200);
+}
+.transition-all {
+  transition: all 0.25s ease;
+}
+.items-stretch {
+  align-items: stretch;
+}
+
+/* Spacing helpers */
+.p-6{padding:1.5rem}
+.p-8{padding:2rem}
+.p-12{padding:3rem}
+
+/* Hover helpers for visual polish */
+.hover-lift{transition:transform 0.12s ease}
+.hover-lift:hover{transform:translateY(-2px)}
+.hover-glow:hover{ /* intentionally no glow (design system prefers minimal decoration) */ }
+
+/* Remove hover shadows globally */
+.hover\:shadow-lg:hover{box-shadow:none}
+.hover\:shadow:hover{box-shadow:none}
+.hover\:shadow-swiss-lg:hover{box-shadow:none}
+.hover-scale:hover{transform:scale(1.02)}
+.duration-250{transition-duration:250ms}
+
+/* Swiss shadow system */
+.shadow-swiss-sm{box-shadow:none}
+.shadow-swiss-md{box-shadow:none}
+.shadow-swiss-lg{box-shadow:none}
+
+/* Color helpers used by showcaser */
+.bg-primary-50{background:#eff6ff}
+.bg-primary-100{background:#e0f2fe}
+.border-neutral-900{border-color:var(--swiss-black)}
+
+/* Lists & typography helpers */
+.list-disc{list-style-type:disc}
+.list-inside{padding-left:1rem}
+.text-5xl{font-size:3rem}
+.flex-shrink-0{flex-shrink:0}
+.h-8{height:2rem}
+.w-8{width:2rem}
+.rounded-full{border-radius:9999px}
+.ml-4{margin-left:1rem}
+.text-blue-100{color:#dbeafe}
+
+/* Job Club semantic components */
+.card{background:var(--swiss-white);border:1px solid var(--swiss-gray-200);box-shadow:none;border-radius:0;overflow:hidden}
+.card__media{height:12rem;display:flex;align-items:center;justify-content:center;font-size:2.5rem;background:var(--swiss-gray-100);color:var(--swiss-black)}
+.card__body{padding:1.5rem}
+.panel{background:var(--swiss-white);border:1px solid var(--swiss-gray-200);padding:1rem;border-radius:0;box-shadow:none}
+.btn-swiss{display:inline-block;padding:.5rem 1.25rem;background:var(--swiss-black);color:var(--swiss-white);font-weight:700;text-decoration:none;border-radius:0}
+.btn-swiss:hover,.btn-swiss:focus{background:var(--swiss-red);color:var(--swiss-white);outline:none}
+.btn-outline{display:inline-block;padding:.5rem 1rem;border:2px solid var(--swiss-gray-300);color:var(--swiss-black);text-decoration:none;background:transparent}
+.link-swiss{color:var(--swiss-black);font-weight:700;text-decoration:none}
+.link-swiss:hover{text-decoration:underline}
+.badge{display:inline-block;padding:.25rem .5rem;background:var(--swiss-gray-100);color:var(--swiss-black);font-weight:700;font-size:.75rem;border-radius:9999px}
+.badge--status{background:var(--swiss-gray-200)}
+.newsletter{margin-top:1rem;background:var(--swiss-black);color:var(--swiss-white);padding:2rem;text-align:center}
+.newsletter .input{padding:.5rem .75rem;border:1px solid var(--swiss-gray-300);color:var(--swiss-black);background:var(--swiss-white);flex:1}
+.btn-inverted{background:var(--swiss-white);color:var(--swiss-black);padding:.5rem 1rem;font-weight:700;text-decoration:none;border:0}
+.btn-inverted:hover{background:var(--swiss-gray-100)}
+.avatar{width:6rem;height:6rem;display:flex;align-items:center;justify-content:center;font-weight:700;background:var(--swiss-black);color:var(--swiss-white);border-radius:0;font-size:1.5rem}
+.callout{padding:1.5rem;background:transparent;border-left:4px solid var(--swiss-black)}
+.cta{background:var(--swiss-black);color:var(--swiss-white);padding:2rem;text-align:center}
+.details--faq{padding:1rem}
+.text-accent{color:var(--swiss-black)}
+.input{width:100%;padding:.5rem .75rem;border:1px solid var(--swiss-gray-300);background:var(--swiss-white);color:var(--swiss-black);border-radius:0}
+.btn--block{display:block;width:100%;text-align:center}
+.badge-number{width:2rem;height:2rem;display:flex;align-items:center;justify-content:center;background:var(--swiss-white);color:var(--swiss-black);border:1px solid var(--swiss-gray-200);font-weight:700;border-radius:0}
