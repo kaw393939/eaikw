@@ -2,6 +2,10 @@
 
 Quick reference guide to all Phase 2 documentation.
 
+**Mission:** Turn students into career-ready AI professionals with a guided, automated onboarding experience.
+
+All documentation supports this mission by ensuring the platform guides students through a structured, automated career pipeline.
+
 ## 🎯 Start Here
 
 **New to the project?** Start with these in order:

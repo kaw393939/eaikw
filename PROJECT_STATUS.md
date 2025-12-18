@@ -2,7 +2,7 @@
 
 ## 📊 Project Overview
 
-Job Club is an AI-powered career accelerator platform for NJIT students. This document provides a high-level overview of the project status across all phases.
+Job Club is an AI-powered career accelerator platform for NJIT students with a clear mission: **Turn students into career-ready AI professionals with a guided, automated onboarding experience.** This document provides a high-level overview of the project status and how each phase contributes to this mission.
 
 ## 🏗️ Architecture Overview
 

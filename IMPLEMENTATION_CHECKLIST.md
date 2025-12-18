@@ -2,6 +2,10 @@
 
 Complete checklist for getting Phase 2 working in your environment.
 
+**Mission:** Turn students into career-ready AI professionals with a guided, automated onboarding experience.
+
+This checklist ensures all integrations support the automated onboarding pipeline that guides students toward career readiness.
+
 ## ✅ Code Implementation Status
 
 All code is implemented and ready. Check the following:

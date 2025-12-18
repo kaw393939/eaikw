@@ -1,8 +1,10 @@
 // Schema for Job Club events
+// Events guide students toward career readiness through workshops, mentoring, and networking
 export default {
   name: 'event',
   title: 'Job Club Event',
   type: 'document',
+  description: 'Career development events: workshops, office hours, networking, and skill-building sessions',
   fields: [
     {
       name: 'title',

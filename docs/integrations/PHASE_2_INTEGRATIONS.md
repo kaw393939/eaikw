@@ -2,28 +2,30 @@
 
 Complete guide for setting up and managing Job Club's backend integrations with Sanity CMS, Notion DB, and Discord.
 
+**Mission:** Turn students into career-ready AI professionals with a guided, automated onboarding experience.
+
 ## Overview
 
-Phase 2 connects the Job Club front-end forms to three backend services:
+Phase 2 implements the automated career pipeline that executes the Job Club mission. It connects the Job Club front-end forms to three backend services that guide students toward career readiness:
 
-1. **Sanity CMS** - Content management and member data storage
-2. **Notion DB** - Member tracking and progress management
-3. **Discord** - Community engagement and notifications
+1. **Sanity CMS** - Career pipeline content, milestones, and learning paths
+2. **Notion DB** - Student progress tracking and career readiness checklist
+3. **Discord** - Mentoring community and collaborative learning
 
 ## Architecture
 
 ```
-Onboarding Form (front-end)
+Student Onboarding (front-end)
     ↓
-API Endpoint (/api/onboarding)
+Guided Career Pipeline (API validation)
     ↓
-Sanity CMS (create memberProfile doc)
+Career Profile in Sanity CMS
     ↓
-Notion DB (sync member record)
+Progress Tracking in Notion DB
     ↓
-Discord (post welcome & intro)
+Community Mentoring in Discord
     ↓
-Confirmation email (future: Zapier)
+Personalized Career Checklist & Resources
 ```
 
 ## Sanity CMS Setup

@@ -1,8 +1,10 @@
 // Schema for Job Club members/students
+// Tracks student progress through the career-ready AI professional pipeline
 export default {
   name: 'memberProfile',
-  title: 'Member Profile',
+  title: 'Member Profile - Career Pipeline',
   type: 'document',
+  description: 'Student profile for tracking progress toward career-ready AI professional status',
   fields: [
     {
       name: 'name',

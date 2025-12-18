@@ -1,8 +1,10 @@
 // Schema for Job Club career resources and guides
+// Resources teach students how to build the portfolio assets needed to become career-ready AI professionals
 export default {
   name: 'resource',
   title: 'Career Resource / Guide',
   type: 'document',
+  description: 'Guides and templates for building professional portfolio assets (LinkedIn, GitHub, portfolio site, etc.)',
   fields: [
     {
       name: 'title',

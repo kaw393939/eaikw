@@ -2,11 +2,13 @@
 
 ## Overview
 
-Phase 2 of the Job Club platform is now complete. This phase implements the backend integrations that connect the front-end forms to three critical services:
+Phase 2 of the Job Club platform is now complete. This phase implements the automated backend integrations that execute the core mission: **Turn students into career-ready AI professionals with a guided, automated onboarding experience.**
 
-1. **Sanity CMS** - Content management and member data storage
-2. **Notion DB** - Member tracking and progress management  
-3. **Discord** - Community engagement and notifications
+The system connects the front-end forms to three critical services:
+
+1. **Sanity CMS** - Career pipeline milestones, resources, and member journey tracking
+2. **Notion DB** - Student progress management and career readiness checklist
+3. **Discord** - Mentoring community and automated onboarding coordination
 
 ## What Was Built
 

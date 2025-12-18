@@ -2,6 +2,10 @@
 
 Get Job Club integrations up and running in 10 minutes.
 
+**Mission:** Turn students into career-ready AI professionals with a guided, automated onboarding experience.
+
+These integrations power the automated career pipeline that starts with onboarding and guides students to professional readiness.
+
 ## Checklist
 
 - [ ] Step 1: Configure Sanity CMS
