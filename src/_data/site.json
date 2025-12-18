@@ -1,12 +1,23 @@
 {
-  "title": "Keith Williams - Portfolio",
-  "description": "Professional portfolio showcasing modern web development expertise and innovative projects",
-  "author": "Keith Williams",
-  "url": "https://www.eaikw.com",
+  "title": "Job Club - AI Career Accelerator",
+  "description": "Accelerate your AI career at NJIT with Job Club. Get mentored, build your portfolio, and land your dream role.",
+  "author": "NJIT Job Club",
+  "url": "https://joshua31324324.github.io/eaikw",
   "social": {
-    "github": "https://github.com/kaw393939",
-    "linkedin": "https://www.linkedin.com/in/keithwilliams5/",
-    "twitter": "https://twitter.com/everydayaikw",
-    "youtube": "https://www.youtube.com/@EAIKW"
+    "github": "https://github.com/joshua31324324/eaikw",
+    "discord": "https://discord.gg/jobclub",
+    "linkedin": "https://linkedin.com/company/njit-job-club"
+  },
+  "jobclub": {
+    "tagline": "Turn Students Into Career-Ready AI Professionals",
+    "mission": "Provide a guided, automated onboarding experience that connects NJIT students to Discord, events, mentoring, and learning resources to build modern professional portfolios.",
+    "value_props": [
+      "Structured career pipeline",
+      "Discord community & mentoring",
+      "Professional portfolio guidance",
+      "Events & workshops",
+      "AI career resources",
+      "CRM & automation"
+    ]
   }
 }
