@@ -221,16 +221,47 @@ description: Start your Job Club onboarding journey. Complete your profile, get 
   document.getElementById('jobclub-onboarding').addEventListener('submit', async (e) => {
     e.preventDefault();
     
-    // Collect form data
-    const formData = new FormData(e.target);
-    const data = Object.fromEntries(formData);
+    // Show loading state
+    const submitBtn = e.target.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Processing...';
     
-    // For now, just show success message
-    // In Phase 2, this will integrate with Sanity CMS and Zapier
-    document.getElementById('jobclub-onboarding').classList.add('hidden');
-    document.getElementById('success-message').classList.remove('hidden');
-    
-    console.log('Onboarding data:', data);
-    // TODO: Send to backend in Phase 2
+    try {
+      // Collect form data
+      const formData = new FormData(e.target);
+      const data = Object.fromEntries(formData);
+      
+      // Remove consent checkbox from submission
+      delete data.consent;
+      
+      // Send to API endpoint
+      const response = await fetch('/api/onboarding', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+      
+      const result = await response.json();
+      
+      if (response.ok) {
+        // Hide form, show success message
+        document.getElementById('jobclub-onboarding').classList.add('hidden');
+        document.getElementById('success-message').classList.remove('hidden');
+      } else {
+        // Show error message
+        const errorMsg = result.errors?.join(', ') || result.error || 'An error occurred';
+        alert('Error: ' + errorMsg);
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+      alert('Failed to submit form. Please try again.');
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalText;
+    }
   });
 </script>
