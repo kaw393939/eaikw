@@ -9,7 +9,7 @@
   * {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
-    color-adjust: exact !important;
+    accent-color: exact !important;
   }
 
   @page {
@@ -84,8 +84,7 @@
 
   p {
     margin-bottom: 8pt;
-    orphans: 3;
-    widows: 3;
+    break-inside: avoid;
   }
 
   /* Swiss Grid for Print */
@@ -243,11 +242,11 @@
 
   /* Page Break Utilities */
   .page-break-before {
-    break-before: always;
+    page-break-before: always;
   }
 
   .page-break-after {
-    break-after: always;
+    page-break-after: always;
   }
 
   .page-break-inside-avoid {

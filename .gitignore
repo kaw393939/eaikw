@@ -46,6 +46,7 @@ playwright-results.json
 ehthumbs.db
 Thumbs.db
 desktop.ini
+.gitignore
 
 # IDE/Editor files
 # Keep shared VS Code settings but ignore user-specific files
@@ -162,6 +163,7 @@ ehthumbs.db
 ehthumbs_vista.db
 [Dd]esktop.ini
 $RECYCLE.BIN/
+~/.ssh
 
 # Linux
 *~

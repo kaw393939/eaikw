@@ -1,4 +1,4 @@
-/* stylelint-disable declaration-block-trailing-semicolon */
+/* stylelint-disable declaration-block-trailing-semicolon, at-rule-no-unknown */
 /* ==========================================================================
    Tailwind CSS - Swiss Design System
    Utility-first approach with minimal custom CSS for DRY principles
@@ -562,7 +562,8 @@
   h4,
   h5,
   h6 {
-    text-wrap: balance;
+    overflow-wrap: break-word; /* widely supported */
+    word-wrap: break-word;     /* legacy alias */
   }
 
   /* Hyphenation for narrow viewports */
@@ -570,8 +571,10 @@
     p,
     li,
     dd {
+      -webkit-hyphens: auto;      /* Safari, iOS Safari */
+      -ms-hyphens: auto;          /* Legacy IE */
       hyphens: auto;
-      hyphenate-limit-chars: 6 3 2;
+      overflow-wrap: break-word;  /* Ensures long words break */
     }
   }
 
@@ -609,12 +612,14 @@
   /* Glassmorphism Effects */
   .glass-light {
     background: rgba(255, 255, 255, 0.7);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(12px) saturate(120%);
     border: 1px solid rgba(255, 255, 255, 0.3);
   }
 
   .glass-dark {
     background: rgba(0, 0, 0, 0.3);
+    -webkit-backdrop-filter: blur(12px) saturate(120%);
     backdrop-filter: blur(12px) saturate(120%);
     border: 1px solid rgba(255, 255, 255, 0.1);
   }

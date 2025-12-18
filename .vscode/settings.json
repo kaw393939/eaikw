@@ -12,7 +12,7 @@
     "nunjucks": "html"
   },
   "html.format.templating": true,
-  "css.validate": true,
+  "css.validate": false,
   "scss.validate": true,
   "javascript.validate.enable": true,
   "typescript.validate.enable": true,
@@ -32,5 +32,6 @@
     "node_modules/": true,
     ".eleventy.cache/": true
   },
-  "terminal.integrated.defaultProfile.osx": "zsh"
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "makefile.configureOnOpen": false
 }
